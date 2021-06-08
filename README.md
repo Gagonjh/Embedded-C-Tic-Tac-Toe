@@ -3,34 +3,5 @@ Embedded C++ Tic Tac Toe
 
 
 Klassendiagramm
-```plantuml
-@startuml
-class Spielpartie
-abstract Mitspieler
-class Human
-abstract KI
-class KI_schweer
-class KI_leicht
-class Spielfeld{
-  int Y
-  int x
-}
-class Spielsteine
-class Runden
-class Ergebnisse
-class Main
-class Display
+![NP0nJiOm38NtdC8N-6_0q04aggeBJ4meJGsrb4PLx0WGS7TIDI5MfiZVir_iDx3OA6dtnddB3Cy7eJyo8ZHsOOdM2SmaV7ACfUinxJOqVHeBdyPNTji7Ocp08xbDjFqR-lNR050GU2dlf_dLBIn80](https://user-images.githubusercontent.com/49719775/121237016-e191a400-c896-11eb-826f-80d064c34790.png)
 
-KI <|-- KI_schweer
-KI <|-- KI_leicht
-Main -- Display
-Main -- Spielpartie 
-Main -- Ergebnisse
-Mitspieler <|-- Human
-Mitspieler <|-- KI
-Spielpartie -- Spielfeld
-Spielpartie -- Mitspieler
-Spielpartie -- Runden
-Spielpartie -- Spielsteine
-@enduml
-```
