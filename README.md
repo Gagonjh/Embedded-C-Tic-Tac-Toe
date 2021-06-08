@@ -4,6 +4,7 @@ Embedded C++ Tic Tac Toe
 
 Klassendiagramm
 ```plantuml
+@startuml
 class Spielpartie
 abstract Mitspieler
 class Human
@@ -31,4 +32,5 @@ Spielpartie -- Spielfeld
 Spielpartie -- Mitspieler
 Spielpartie -- Runden
 Spielpartie -- Spielsteine
+@enduml
 ```
