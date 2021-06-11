@@ -1,10 +1,10 @@
-#ifndef FIELD_CREATOR
-#define FIELD_CREATOR
+#ifndef FIELD_H
+#define FIELD_H
 
-class Field 
+class Field
 {
 	public:
 		void drawField();
-	}
-}
+};
+
 #endif
