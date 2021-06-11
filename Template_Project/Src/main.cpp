@@ -106,7 +106,11 @@ int main(void)
     disp.clear();
   #endif
 
-  disp.printf(0,0,0,__DATE__ " " __TIME__);
+	disp.drawFrame(50,50,390,390,2, cHwDisplayGraphic::Red );
+	for(int i = 180; i<440; i+=130) {
+		disp.drawLine(i,50,i,440,2,cHwDisplayGraphic::Red);
+		disp.drawLine(50,i,440,i,2,cHwDisplayGraphic::Red);
+	}
 
   while(1)
   {
@@ -121,9 +125,9 @@ int main(void)
     cHwRTC::Properties prop;
     rtc.get( prop );
 
-    disp.printf(1,0,20,"Timer-Task: %d",   task_Example.cnt );
-    disp.printf(2,0,20,"RTOS-Task:  %.1f", rtos_task_Example.sec );
-    disp.printf(3,0,20,"BTN:%d Enc:%2d RTC:%2d", btn.get(),num, prop.second );
+//    disp.printf(1,0,20,"Timer-Task: %d",   task_Example.cnt );
+//    disp.printf(2,0,20,"RTOS-Task:  %.1f", rtos_task_Example.sec );
+//    disp.printf(3,0,20,"BTN:%d Enc:%2d RTC:%2d", btn.get(),num, prop.second );
 
     if( btn.getEvent() == cDevDigital::ACTIVATED )
     {
@@ -135,8 +139,14 @@ int main(void)
 
     #ifdef USE_GRAPHIC_DISPLAY
       cDevControlPointer::cData event = pointer.get();
-      disp.drawFrame(0,100,320,140,2, cHwDisplayGraphic::Red );
-      disp.drawText( 20,120, 18, "x:%3d y:%3d ctrl:0x%02x",  event.posX, event.posY, event.flags );
+			WORD x = event.posX-50 < 0 ? 0 : event.posX-50;
+			WORD y = event.posY-50 < 0 ? 0 : event.posY-50;
+			if(event.posX<390 && event.posX > 100 && event.posY < 390 && event.posY > 100) {
+				disp.drawFrame(x,y,100,100,2, cHwDisplayGraphic::Red );
+			}
+				
+//      disp.drawFrame(x,y,100,100,2, cHwDisplayGraphic::Red );
+      disp.drawText( 440,20, 18, "x:%3d y:%3d ctrl:0x%02x",  event.posX, event.posY, event.flags );
       disp.refresh();
     #endif
   }
