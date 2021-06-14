@@ -30,3 +30,17 @@
 *.exe
 *.out
 *.app
+
+# Untracked files:
+    [...]
+    #       Template_Project/Bin/Keil/STM32F7xx/lib.crf
+    #       Template_Project/Bin/Keil/STM32F7xx/main.build_log.htm
+    #       Template_Project/Bin/Keil/STM32F7xx/main.crf
+    #       Template_Project/Bin/Keil/STM32F7xx/main.i
+    #       Template_Project/Bin/Keil/STM32F7xx/main.inp
+    #       Template_Project/Bin/Keil/STM32F7xx/main.map
+    #       Template_Project/Bin/Keil/STM32F7xx/main_STM32F7xx_Target.dep
+    #       Template_Project/Bin/Keil/STM32F7xx/rtos.crf
+    #       Template_Project/Bin/Keil/STM32F7xx/touch_ft6206.crf
+    #       Template_Project/main_STM32F7xx.uvguix*
+    [...]
