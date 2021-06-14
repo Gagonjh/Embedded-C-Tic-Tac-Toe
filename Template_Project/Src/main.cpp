@@ -1,4 +1,7 @@
 #include "./project_headers.h"
+#include "Module/RTOS.h"
+#include "configSTM32F7xx.h"
+
 
 //*******************************************************************
 class cTask_Example : public cTaskHandler::Task
@@ -126,6 +129,10 @@ int main(void)
 				
 //      disp.drawFrame(x,y,100,100,2, cHwDisplayGraphic::Red );
       disp.drawText( 440,20, 18, "x:%3d y:%3d ctrl:0x%02x",  event.posX, event.posY, event.flags );
+			
+			
+			Field f(disp);
+			f.drawField();
       disp.refresh();
     #endif
   }
