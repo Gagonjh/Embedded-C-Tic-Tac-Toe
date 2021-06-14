@@ -22,57 +22,32 @@ Dialog DLL:      TCM.DLL V1.32.0.0
  
 <h2>Project:</h2>
 C:\Users\yasin\Desktop\C++ Projekte\Embedded-C-Tic-Tac-Toe\Template_Project\main_STM32F7xx.uvprojx
-Project File Date:  06/11/2021
+Project File Date:  06/14/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Bin\Keil_v5\ARM\ARMCC\Bin'
-Build target 'Target'
-creating preprocessor file for field.cpp...
+Rebuild target 'Target'
 creating preprocessor file for main.cpp...
-compiling field.cpp...
-Src\././field.h(10): warning:  #1-D: last line of file ends without a newline
-  #endif
-Src\field.cpp: 1 warning, 0 errors
+assembling RTOScontext.s...
+creating preprocessor file for Field.cpp...
+assembling startup_stm32f769xx.s...
+creating preprocessor file for Disp_OTM8009A.cpp...
+creating preprocessor file for Touch_FT6206.cpp...
+creating preprocessor file for RTOS.cpp...
+creating preprocessor file for lib.cpp...
+compiling Field.cpp...
+Src\Field.cpp(12): warning:  #1-D: last line of file ends without a newline
+  }
+Src\Field.cpp: 1 warning, 0 errors
 compiling main.cpp...
-Src\././field.h(10): warning:  #1-D: last line of file ends without a newline
-  #endif
-Src\main.cpp: 1 warning, 0 errors
+compiling RTOS.cpp...
+compiling Touch_FT6206.cpp...
+compiling Disp_OTM8009A.cpp...
+compiling lib.cpp...
 linking...
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol timer multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol timerSlow multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol adcHw multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol adcA multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol dacA multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol lcdResetPin multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol dispHw multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol i2c multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol touch multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol pointer multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol btnRight multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol btnLeft multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol btnCtrl multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol enc multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol btn multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol led multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol sys multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol portA multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol portB multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol portC multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol portD multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol portE multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol portF multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol portI multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol portJ multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol dacHw multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol fmc multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol hwDSI multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol disp multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol rtc multiply defined (by field.o and main.o).
-.\Bin\Keil\STM32F7xx\main.axf: Error: L6200E: Symbol cHwPinConfig::table multiply defined (by field.o and main.o).
-Not enough information to list image symbols.
-Not enough information to list load addresses in the image map.
-Finished: 2 information, 0 warning and 31 error messages.
-".\Bin\Keil\STM32F7xx\main.axf" - 31 Error(s), 2 Warning(s).
+Program Size: Code=18484 RO-data=2868 RW-data=500 ZI-data=24284  
+FromELF: creating hex file...
+".\Bin\Keil\STM32F7xx\main.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -86,7 +61,6 @@ Package Vendor: Keil
   C:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include
 
 <h2>Collection of Component Files used:</h2>
-Target not created.
 Build Time Elapsed:  00:00:03
 </pre>
 </body>

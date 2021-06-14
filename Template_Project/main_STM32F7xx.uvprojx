@@ -391,14 +391,14 @@
               <FilePath>.\Src\project_headers.h</FilePath>
             </File>
             <File>
-              <FileName>field.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Src\field.h</FilePath>
+              <FileName>Field.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Field.cpp</FilePath>
             </File>
             <File>
-              <FileName>field.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Src\field.cpp</FilePath>
+              <FileName>Field.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Field.h</FilePath>
             </File>
           </Files>
         </Group>
