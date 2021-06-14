@@ -1,6 +1,6 @@
 Dependencies for Project 'main_STM32F7xx', Target 'Target': (DO NOT MODIFY !)
-F (.\Src\main.cpp)(0x60C7364F)(--cpp -c --cpu Cortex-M7.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I ..\Src -I C:\Bin\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I .\..\EmbSysLib\Src\MCU\STM32F7xx -I .\..\EmbSysLib\Src -I .\Src-I.\RTE\_Target-IC:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-IC:\Bin\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F769xx -D_KEIL -DSTM32F769xx -D_HSE_CLK="25000" -D_HSE_BYPASS_OFF -DUSE_GRAPHIC_DISPLAY-o .\bin\keil\stm32f7xx\main.o --omf_browse .\bin\keil\stm32f7xx\main.crf --depend .\bin\keil\stm32f7xx\main.d)
-I (Src\project_headers.h)(0x60C72F95)
+F (.\Src\main.cpp)(0x60C75543)(--cpp -c --cpu Cortex-M7.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I ..\Src -I C:\Bin\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I .\..\EmbSysLib\Src\MCU\STM32F7xx -I .\..\EmbSysLib\Src -I .\Src-I.\RTE\_Target-IC:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-IC:\Bin\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F769xx -D_KEIL -DSTM32F769xx -D_HSE_CLK="25000" -D_HSE_BYPASS_OFF -DUSE_GRAPHIC_DISPLAY-o .\bin\keil\stm32f7xx\main.o --omf_browse .\bin\keil\stm32f7xx\main.crf --depend .\bin\keil\stm32f7xx\main.d)
+I (Src\project_headers.h)(0x60C750CB)
 I (Src\../../EmbSysLib/Src/lib.h)(0x60BFB768)
 I (Src\../../EmbSysLib/Src/MCU/System.h)(0x60BFB768)
 I (.\..\EmbSysLib\Src\MCU\STM32F7xx\MCU.h)(0x60BFB768)
@@ -88,17 +88,19 @@ I (Src\../../EmbSysLib/Src/Com/Device/Control/devControlEncoderRotaryKnob.h)(0x6
 I (Src\../../EmbSysLib/Src/Com/Device/Control/devControlPointer.h)(0x60BFB768)
 I (.\..\EmbSysLib\Src\Com/Hardware/Display/Touch.h)(0x60BFB768)
 I (Src\../../EmbSysLib/Src/Com/Task/TaskHandler.h)(0x60BFB768)
-I (Src\./field.h)(0x60C72F04)
-I (Src\configSTM32F7xx.h)(0x60C722DA)
+I (Src\./Field.h)(0x60C75278)
+I (Src\./Token.h)(0x60C75049)
+I (Src\./datatypes.h)(0x60C7507D)
+I (Src\./configSTM32F7xx.h)(0x60C722DA)
 I (.\..\EmbSysLib\Src\Peripheral/Touch_FT6206.h)(0x60BFB768)
 I (.\..\EmbSysLib\Src\Peripheral/Disp_Terminal.h)(0x60BFB768)
 I (.\..\EmbSysLib\Src\Peripheral/Disp_OTM8009A.h)(0x60BFB768)
 I (.\..\EmbSysLib\Src\Com/Hardware/Display/Font/Font_8x12.h)(0x60BFB768)
 I (.\..\EmbSysLib\Src\Com/Hardware/Display/Font/Font_10x20.h)(0x60BFB768)
 I (.\..\EmbSysLib\Src\Com/Hardware/Display/Font/Font_16x24.h)(0x60BFB768)
-F (.\Src\project_headers.h)(0x60C72F95)()
-F (.\Src\Field.cpp)(0x60C72F98)(--cpp -c --cpu Cortex-M7.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I ..\Src -I C:\Bin\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I .\..\EmbSysLib\Src\MCU\STM32F7xx -I .\..\EmbSysLib\Src -I .\Src-I.\RTE\_Target-IC:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-IC:\Bin\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F769xx -D_KEIL -DSTM32F769xx -D_HSE_CLK="25000" -D_HSE_BYPASS_OFF -DUSE_GRAPHIC_DISPLAY-o .\bin\keil\stm32f7xx\field.o --omf_browse .\bin\keil\stm32f7xx\field.crf --depend .\bin\keil\stm32f7xx\field.d)
-I (Src\./project_headers.h)(0x60C72F95)
+F (.\Src\project_headers.h)(0x60C750CB)()
+F (.\Src\Field.cpp)(0x60C75595)(--cpp -c --cpu Cortex-M7.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I ..\Src -I C:\Bin\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I .\..\EmbSysLib\Src\MCU\STM32F7xx -I .\..\EmbSysLib\Src -I .\Src-I.\RTE\_Target-IC:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-IC:\Bin\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F769xx -D_KEIL -DSTM32F769xx -D_HSE_CLK="25000" -D_HSE_BYPASS_OFF -DUSE_GRAPHIC_DISPLAY-o .\bin\keil\stm32f7xx\field.o --omf_browse .\bin\keil\stm32f7xx\field.crf --depend .\bin\keil\stm32f7xx\field.d)
+I (Src\./project_headers.h)(0x60C750CB)
 I (Src\./../../EmbSysLib/Src/lib.h)(0x60BFB768)
 I (Src\./../../EmbSysLib/Src/MCU/System.h)(0x60BFB768)
 I (.\..\EmbSysLib\Src\MCU\STM32F7xx\MCU.h)(0x60BFB768)
@@ -186,8 +188,15 @@ I (Src\./../../EmbSysLib/Src/Com/Device/Control/devControlEncoderRotaryKnob.h)(0
 I (Src\./../../EmbSysLib/Src/Com/Device/Control/devControlPointer.h)(0x60BFB768)
 I (.\..\EmbSysLib\Src\Com/Hardware/Display/Touch.h)(0x60BFB768)
 I (Src\./../../EmbSysLib/Src/Com/Task/TaskHandler.h)(0x60BFB768)
-I (Src\././field.h)(0x60C72F04)
-F (.\Src\Field.h)(0x60C72F04)()
+I (Src\././Field.h)(0x60C75278)
+I (Src\././Token.h)(0x60C75049)
+I (Src\././datatypes.h)(0x60C7507D)
+F (.\Src\Field.h)(0x60C75278)()
+F (.\Src\Token.cpp)(0x60C75071)(--cpp -c --cpu Cortex-M7.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I ..\Src -I C:\Bin\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I .\..\EmbSysLib\Src\MCU\STM32F7xx -I .\..\EmbSysLib\Src -I .\Src-I.\RTE\_Target-IC:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-IC:\Bin\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F769xx -D_KEIL -DSTM32F769xx -D_HSE_CLK="25000" -D_HSE_BYPASS_OFF -DUSE_GRAPHIC_DISPLAY-o .\bin\keil\stm32f7xx\token.o --omf_browse .\bin\keil\stm32f7xx\token.crf --depend .\bin\keil\stm32f7xx\token.d)
+I (Src\Token.h)(0x60C75049)
+I (Src\datatypes.h)(0x60C7507D)
+F (.\Src\datatypes.h)(0x60C7507D)()
+F (.\Src\Token.h)(0x60C75049)()
 F (..\EmbSysLib\Src\lib.h)(0x60BFB768)()
 F (..\EmbSysLib\Src\lib.cpp)(0x60BFB768)(--cpp -c --cpu Cortex-M7.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I ..\Src -I C:\Bin\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I .\..\EmbSysLib\Src\MCU\STM32F7xx -I .\..\EmbSysLib\Src -I .\Src-I.\RTE\_Target-IC:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-IC:\Bin\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F769xx -D_KEIL -DSTM32F769xx -D_HSE_CLK="25000" -D_HSE_BYPASS_OFF -DUSE_GRAPHIC_DISPLAY-o .\bin\keil\stm32f7xx\lib.o --omf_browse .\bin\keil\stm32f7xx\lib.crf --depend .\bin\keil\stm32f7xx\lib.d)
 I (..\EmbSysLib\Src\lib.h)(0x60BFB768)

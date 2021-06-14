@@ -400,6 +400,21 @@
               <FileType>5</FileType>
               <FilePath>.\Src\Field.h</FilePath>
             </File>
+            <File>
+              <FileName>Token.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Token.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>datatypes.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\datatypes.h</FilePath>
+            </File>
+            <File>
+              <FileName>Token.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Token.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
