@@ -43,6 +43,7 @@
 *.map
 *.dep
 *.joshu
+*.yasin
 
 # Untracked files:
     [...]
