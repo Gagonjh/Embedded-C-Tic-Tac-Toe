@@ -22396,25 +22396,65 @@ class cTaskHandler : public cList::Item
 #line 91 "Src\\../../EmbSysLib/Src/lib.h"
 
 #line 5 "Src\\project_headers.h"
+#line 6 "Src\\project_headers.h"
+
 #line 1 "Src\\./Field.h"
 
 
-
-
-	
-	
 	
 	class Field
 {
 	public:
+	
 	cDevDisplayGraphic& disp1;
 	
 	Field(cDevDisplayGraphic&);
 	void drawField();
 };
-#line 6 "Src\\project_headers.h"
-#line 7 "Src\\project_headers.h"
+#line 8 "Src\\project_headers.h"
+#line 1 "Src\\./Pages.h"
 
+
+
+
+
+
+
+	
+class Pages
+{
+		public:
+			cDevDisplayGraphic& disp1;
+		
+			unsigned int iColor_Mode;
+			unsigned int iColor_backround;
+			unsigned int iColor_font;
+			unsigned int iColor_boxes;
+			char* cTitel;
+			
+			
+			Pages(cDevDisplayGraphic&,int,char*);
+			
+			void changeColorMode(int);
+			
+			void drawpage(void);
+		
+			void siteSpecialcontent(void);
+			
+			void siteHeader(short int,short int,short int,short int);
+			
+			void draw_button(short int ,short int ,short int ,short int ,short int,short int,short int,short int,short int,short int, char*);
+			
+};
+
+
+
+
+
+
+
+ 
+#line 9 "Src\\project_headers.h"
 #line 2 "Src\\main.cpp"
 #line 1 "Src\\./configSTM32F7xx.h"
 
@@ -24551,23 +24591,34 @@ int main(void)
 {
 
 		Field field(disp);
-    disp.setBackColor(cHwDisplayGraphic::Navy);
+		Pages pages(disp,0,"Test");
     disp.clear();
 
 
   while(1)
   {
 
-      cDevControlPointer::cData event = pointer.get();
-			field.drawField();
-			if(event.posX<390 && event.posX > 100 && event.posY < 390 && event.posY > 100) {
-				WORD x = event.posX-50 < 0 ? 0 : event.posX-50;
-				WORD y = event.posY-50 < 0 ? 0 : event.posY-50;
-				disp.drawFrame(x,y,100,100,2, cHwDisplayGraphic::Red );
-			}
-				
+		
+			cDevControlPointer::cData event = pointer.get();
+			pages.drawpage();
+		
+		
+		
+		
+		
+		
+		
 
-			
+
+
+
+
+
+
+
+
+
+ 
 			
 
       disp.refresh();

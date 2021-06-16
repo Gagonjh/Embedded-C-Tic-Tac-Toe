@@ -22396,25 +22396,65 @@ class cTaskHandler : public cList::Item
 #line 91 "Src\\./../../EmbSysLib/Src/lib.h"
 
 #line 5 "Src\\./project_headers.h"
+#line 6 "Src\\./project_headers.h"
+
 #line 1 "Src\\././Field.h"
 
 
-
-
-	
-	
 	
 	class Field
 {
 	public:
+	
 	cDevDisplayGraphic& disp1;
 	
 	Field(cDevDisplayGraphic&);
 	void drawField();
 };
-#line 6 "Src\\./project_headers.h"
-#line 7 "Src\\./project_headers.h"
+#line 8 "Src\\./project_headers.h"
+#line 1 "Src\\././Pages.h"
 
+
+
+
+
+
+
+	
+class Pages
+{
+		public:
+			cDevDisplayGraphic& disp1;
+		
+			unsigned int iColor_Mode;
+			unsigned int iColor_backround;
+			unsigned int iColor_font;
+			unsigned int iColor_boxes;
+			char* cTitel;
+			
+			
+			Pages(cDevDisplayGraphic&,int,char*);
+			
+			void changeColorMode(int);
+			
+			void drawpage(void);
+		
+			void siteSpecialcontent(void);
+			
+			void siteHeader(short int,short int,short int,short int);
+			
+			void draw_button(short int ,short int ,short int ,short int ,short int,short int,short int,short int,short int,short int, char*);
+			
+};
+
+
+
+
+
+
+
+ 
+#line 9 "Src\\./project_headers.h"
 #line 2 "Src\\Field.cpp"
 	
 	Field::Field(cDevDisplayGraphic& konst_disp):disp1(konst_disp){}

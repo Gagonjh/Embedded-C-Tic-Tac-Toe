@@ -400,6 +400,16 @@
               <FileType>5</FileType>
               <FilePath>.\Src\Field.h</FilePath>
             </File>
+            <File>
+              <FileName>Pages.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Pages.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Pages.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Pages.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
