@@ -22420,30 +22420,43 @@ class cTaskHandler : public cList::Item
 
 
 
+extern cDevDisplayGraphic& disp1;
 	
 class Pages
 {
-		public:
-			cDevDisplayGraphic& disp1;
+	public:
+
 		
 			unsigned int iColor_Mode;
 			unsigned int iColor_backround;
 			unsigned int iColor_font;
 			unsigned int iColor_boxes;
-			char* cTitel;
 			
 			
-			Pages(cDevDisplayGraphic&,int,char*);
+				static Pages& instance()
+			{
+				static Pages _instance;
+				return _instance;
+			}
 			
 			void changeColorMode(int);
 			
 			void drawpage(void);
 			
-			void siteHeader(short int,short int,short int,short int);
+			void siteHeader(short int,short int,short int,short int,char*);
 			
 			void draw_button(short int ,short int ,short int ,short int ,short int,short int,short int,short int,short int,short int, char*);
 		
 			void choose_page(short int);
+			
+		protected:
+			Pages() {
+			changeColorMode(0);
+			} ;
+                    
+			Pages( const Pages& );
+				
+			Pages & operator = (const Pages &); 
 			
 };
 
@@ -22467,7 +22480,7 @@ class Pages
 class Menue : public Pages
 {
 		public:
-		
+			
 			
 			Menue(cDevDisplayGraphic&,int,char*);
 		
@@ -24607,12 +24620,13 @@ cHwRTC_0 rtc(cHwRTC_0::LSI);
 
 #line 3 "Src\\main.cpp"
 
+cDevDisplayGraphic& disp1 = disp;
+
 int main(void)
 {
 
 		Field field(disp);
 		
-		Pages pages(disp,0,"Weiss nicht wie du hier gelandet bist aber naja");
 		Menue menue(disp,0,"Hauptmenue");
     disp.clear();
 

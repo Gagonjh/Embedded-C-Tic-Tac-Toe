@@ -9,7 +9,7 @@
 class Menue : public Pages
 {
 		public:
-		
+			
 			//Konstruktor
 			Menue(cDevDisplayGraphic&,int,char*);
 		

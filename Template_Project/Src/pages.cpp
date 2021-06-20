@@ -3,13 +3,6 @@
 //Datum:				  	15.06.2021
 
 #include "./project_headers.h"
-
-Pages::Pages(cDevDisplayGraphic& konst_disp,int cmod, char* titel):disp1(konst_disp)
-{
-	changeColorMode(cmod);
-	cTitel = titel;
-}
-
 	
 void Pages::changeColorMode(int cmode)
 	{
@@ -35,24 +28,24 @@ void Pages::drawpage(void)
 		#ifdef USE_GRAPHIC_DISPLAY
 		disp1.clear();
     disp1.setBackColor(iColor_backround);
-		siteHeader(0,0,24,16);
+		siteHeader(0,0,24,16,"Wie bist du hier gelandet?");
 		draw_button(80,200,60,200,15,1,iColor_boxes,0x067D,24,16,"Hi");
 		#endif
 	}
 
 //Creates an box with a one line centerd text 
 	//Todo: Onclick funktion for highlight
-void Pages::siteHeader(short int box_offset_x,short int box_offset_y,short int font_hight,short int font_length)
+void Pages::siteHeader(short int box_offset_x,short int box_offset_y,short int font_hight,short int font_length,char* content)
 	{
 		short int disp_hight = 480;
 		short int disp_length = 800;
 		short int box_hight =30;
 		
-		int titel_length = std::strlen(cTitel);
+		int titel_length = std::strlen(content);
 		float titel_offset = disp_length/2-((titel_length/2)*(font_length));
 		
 		disp1.drawRectangle(box_offset_x,box_offset_y,disp_length,font_hight+box_hight,iColor_boxes);
-		disp1.drawText(box_offset_x+titel_offset,box_offset_y+box_hight/2,titel_length,cTitel);
+		disp1.drawText(box_offset_x+titel_offset,box_offset_y+box_hight/2,titel_length,content);
 		}
 	
 //Makes an Box with round corners

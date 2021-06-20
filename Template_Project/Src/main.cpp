@@ -1,12 +1,13 @@
 #include "project_headers.h"
 #include "./configSTM32F7xx.h"
 
+cDevDisplayGraphic& disp1 = disp;
+
 int main(void)
 {
   #ifdef USE_GRAPHIC_DISPLAY
 		Field field(disp);
 		//Erzeugen der Seiten
-		Pages pages(disp,0,"Weiss nicht wie du hier gelandet bist aber naja");
 		Menue menue(disp,0,"Hauptmenue");
     disp.clear();
   #endif
