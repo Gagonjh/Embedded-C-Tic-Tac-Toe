@@ -1,6 +1,6 @@
 //Author:     			Joshua Hahn  
 //Projekt:    			Tic Tac Toe
-//Letzte Änderung:  15.06.2021
+//Datum:				  	15.06.2021
 
 #include "./project_headers.h"
 
@@ -36,17 +36,12 @@ void Pages::drawpage(void)
 		disp1.clear();
     disp1.setBackColor(iColor_backround);
 		siteHeader(0,0,24,16);
-		siteSpecialcontent();
+		draw_button(80,200,60,200,15,1,iColor_boxes,0x067D,24,16,"Hi");
 		#endif
 	}
-	
-void Pages::siteSpecialcontent(void)
-	{
-		draw_button(80,200,60,200,15,1,iColor_boxes,0x067D,24,16,"Hi");
-	}
 
-//Creates an box with a one line centerd text
-	//Todo: button(future use as message window)
+//Creates an box with a one line centerd text 
+	//Todo: Onclick funktion for highlight
 void Pages::siteHeader(short int box_offset_x,short int box_offset_y,short int font_hight,short int font_length)
 	{
 		short int disp_hight = 480;
@@ -108,4 +103,21 @@ void Pages::draw_button(short int box_offset_x,short int box_offset_y,short int 
 	disp1.drawPixel(box_offset_x,box_offset_y+button_hight,0xFFFF);
 	disp1.drawPixel(box_offset_x+button_length,box_offset_y+button_hight,0xFFFF);
 	*/
+}
+void Pages::choose_page(short int page)
+{
+	switch(page) 
+			{
+				case 0:
+					
+				break;
+				case 1:
+					iColor_backround =0xFFFF;
+					iColor_font = 0x067D;
+					iColor_boxes = 0x85FA;
+				break;
+				default:
+				drawpage();
+				break;
+			}
 }

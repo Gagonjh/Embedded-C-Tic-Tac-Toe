@@ -22438,12 +22438,12 @@ class Pages
 			void changeColorMode(int);
 			
 			void drawpage(void);
-		
-			void siteSpecialcontent(void);
 			
 			void siteHeader(short int,short int,short int,short int);
 			
 			void draw_button(short int ,short int ,short int ,short int ,short int,short int,short int,short int,short int,short int, char*);
+		
+			void choose_page(short int);
 			
 };
 
@@ -22455,6 +22455,26 @@ class Pages
 
  
 #line 9 "Src\\./project_headers.h"
+#line 1 "Src\\././Menue.h"
+
+
+
+
+
+
+
+	
+class Menue : public Pages
+{
+		public:
+		
+			
+			Menue(cDevDisplayGraphic&,int,char*);
+		
+			void drawpage(void);
+};
+
+#line 10 "Src\\./project_headers.h"
 #line 2 "Src\\Field.cpp"
 	
 	Field::Field(cDevDisplayGraphic& konst_disp):disp1(konst_disp){}

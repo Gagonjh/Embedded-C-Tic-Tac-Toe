@@ -22438,12 +22438,12 @@ class Pages
 			void changeColorMode(int);
 			
 			void drawpage(void);
-		
-			void siteSpecialcontent(void);
 			
 			void siteHeader(short int,short int,short int,short int);
 			
 			void draw_button(short int ,short int ,short int ,short int ,short int,short int,short int,short int,short int,short int, char*);
+		
+			void choose_page(short int);
 			
 };
 
@@ -22455,6 +22455,26 @@ class Pages
 
  
 #line 9 "Src\\project_headers.h"
+#line 1 "Src\\./Menue.h"
+
+
+
+
+
+
+
+	
+class Menue : public Pages
+{
+		public:
+		
+			
+			Menue(cDevDisplayGraphic&,int,char*);
+		
+			void drawpage(void);
+};
+
+#line 10 "Src\\project_headers.h"
 #line 2 "Src\\main.cpp"
 #line 1 "Src\\./configSTM32F7xx.h"
 
@@ -24591,7 +24611,9 @@ int main(void)
 {
 
 		Field field(disp);
-		Pages pages(disp,0,"Test");
+		
+		Pages pages(disp,0,"Weiss nicht wie du hier gelandet bist aber naja");
+		Menue menue(disp,0,"Hauptmenue");
     disp.clear();
 
 
@@ -24600,13 +24622,9 @@ int main(void)
 
 		
 			cDevControlPointer::cData event = pointer.get();
-			pages.drawpage();
-		
-		
-		
-		
-		
-		
+			
+			menue.drawpage();
+
 		
 
 

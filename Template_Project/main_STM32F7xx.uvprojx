@@ -410,6 +410,16 @@
               <FileType>5</FileType>
               <FilePath>.\Src\Pages.h</FilePath>
             </File>
+            <File>
+              <FileName>Menue.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Menue.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Menue.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Menue.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

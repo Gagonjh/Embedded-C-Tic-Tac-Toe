@@ -5,7 +5,9 @@ int main(void)
 {
   #ifdef USE_GRAPHIC_DISPLAY
 		Field field(disp);
-		Pages pages(disp,0,"Test");
+		//Erzeugen der Seiten
+		Pages pages(disp,0,"Weiss nicht wie du hier gelandet bist aber naja");
+		Menue menue(disp,0,"Hauptmenue");
     disp.clear();
   #endif
 
@@ -14,13 +16,9 @@ int main(void)
     #ifdef USE_GRAPHIC_DISPLAY
 		//daten der toeucheingabe
 			cDevControlPointer::cData event = pointer.get();
-			pages.drawpage();
-		
-		
-		
-		
-		
-		
+			//pages.drawpage();
+			menue.drawpage();
+
 		/*Testfunktionen von Start
 			//Ausgabe des Testspielfeldes
 			field.drawField();
