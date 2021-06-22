@@ -2,8 +2,10 @@
 #define PROJECT_HEADERS_H
 
 #include "../../EmbSysLib/Src/lib.h"
-#include "Module/RTOS.h"
-#include "./field.h"
-#include "configSTM32F7xx.h"
-
+#include "../../EmbSysLib/Src/Com/Device/Display/devDisplayGraphic.h"
+#include "./Field.h"
+#include "./Pages.h"
+#include "./Menue.h"
+#include "./Settings.h"
+#include "./Display.h"
 #endif

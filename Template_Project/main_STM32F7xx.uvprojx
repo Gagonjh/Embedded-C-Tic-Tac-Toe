@@ -391,14 +391,54 @@
               <FilePath>.\Src\project_headers.h</FilePath>
             </File>
             <File>
-              <FileName>field.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Src\field.h</FilePath>
+              <FileName>Field.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Field.cpp</FilePath>
             </File>
             <File>
-              <FileName>field.cpp</FileName>
+              <FileName>Field.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Field.h</FilePath>
+            </File>
+            <File>
+              <FileName>Pages.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Src\field.cpp</FilePath>
+              <FilePath>.\Src\Pages.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Pages.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Pages.h</FilePath>
+            </File>
+            <File>
+              <FileName>Menue.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Menue.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Menue.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Menue.h</FilePath>
+            </File>
+            <File>
+              <FileName>Settings.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Settings.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Settings.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Settings.h</FilePath>
+            </File>
+            <File>
+              <FileName>Display.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Display.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Display.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Display.h</FilePath>
             </File>
           </Files>
         </Group>
