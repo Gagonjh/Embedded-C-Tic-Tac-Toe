@@ -3,6 +3,12 @@
 //Datum:				  	15.06.2021
 
 #include "./project_headers.h"
+
+Pages::Pages() {
+			//Menue& menueinstance = Menue::instance();
+			changeColorMode(0);
+				
+}			
 	
 void Pages::changeColorMode(int cmode)
 	{
@@ -37,7 +43,7 @@ void Pages::drawpage(void)
 	//Todo: Onclick funktion for highlight
 void Pages::siteHeader(short int box_offset_x,short int box_offset_y,short int font_hight,short int font_length,char* content)
 	{
-		short int disp_hight = 480;
+		//short int disp_hight = 480;
 		short int disp_length = 800;
 		short int box_hight =30;
 		
@@ -113,4 +119,10 @@ void Pages::choose_page(short int page)
 				drawpage();
 				break;
 			}
+}
+
+short int Pages::display_current_page(void)
+{
+	Menue::instance().drawpage();
+	return 0;
 }

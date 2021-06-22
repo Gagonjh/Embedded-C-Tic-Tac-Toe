@@ -22397,7 +22397,6 @@ class cTaskHandler : public cList::Item
 
 #line 5 "Src\\project_headers.h"
 #line 6 "Src\\project_headers.h"
-
 #line 1 "Src\\./Field.h"
 
 
@@ -22411,7 +22410,7 @@ class cTaskHandler : public cList::Item
 	Field(cDevDisplayGraphic&);
 	void drawField();
 };
-#line 8 "Src\\project_headers.h"
+#line 7 "Src\\project_headers.h"
 #line 1 "Src\\./Pages.h"
 
 
@@ -22431,13 +22430,15 @@ class Pages
 			unsigned int iColor_backround;
 			unsigned int iColor_font;
 			unsigned int iColor_boxes;
-			
+			unsigned int iCurrent_Page;
+	
 			
 				static Pages& instance()
 			{
 				static Pages _instance;
 				return _instance;
 			}
+			~Pages() {}
 			
 			void changeColorMode(int);
 			
@@ -22448,16 +22449,14 @@ class Pages
 			void draw_button(short int ,short int ,short int ,short int ,short int,short int,short int,short int,short int,short int, char*);
 		
 			void choose_page(short int);
+			short int display_current_page(void);
 			
 		protected:
-			Pages() {
-			changeColorMode(0);
-			} ;
+			Pages();
                     
 			Pages( const Pages& );
 				
 			Pages & operator = (const Pages &); 
-			
 };
 
 
@@ -22467,7 +22466,7 @@ class Pages
 
 
  
-#line 9 "Src\\project_headers.h"
+#line 8 "Src\\project_headers.h"
 #line 1 "Src\\./Menue.h"
 
 
@@ -22476,18 +22475,77 @@ class Pages
 
 
 
-	
+extern short int iButtons_cor_M[10][4];
+
 class Menue : public Pages
 {
 		public:
+      
+						
+				static Menue& instance()
+			{
+				static Menue _instance;
+				return _instance;
+			}
+			~Menue() {}
+		
+			void drawpage(void);
 			
 			
-			Menue(cDevDisplayGraphic&,int,char*);
+			private:
+			Menue() {
+			} ;
+                    
+			Menue( const Menue& );
+				
+			Menue & operator = (const Menue &); 
+};
+
+#line 9 "Src\\project_headers.h"
+#line 1 "Src\\./Settings.h"
+
+
+
+
+
+
+
+extern short int iButtons_cor_S[10][4];
+
+class Settings : public Pages
+{
+		public:
+      
+			
+		
+			
+			Settings(cDevDisplayGraphic&,int,char*);
 		
 			void drawpage(void);
 };
 
 #line 10 "Src\\project_headers.h"
+#line 1 "Src\\./Display.h"
+
+
+
+
+
+
+
+class Display
+{
+		public:
+
+			
+			Display();
+			
+			
+			int output(int ,int);
+		
+};
+
+#line 11 "Src\\project_headers.h"
 #line 2 "Src\\main.cpp"
 #line 1 "Src\\./configSTM32F7xx.h"
 
@@ -24621,13 +24679,14 @@ cHwRTC_0 rtc(cHwRTC_0::LSI);
 #line 3 "Src\\main.cpp"
 
 cDevDisplayGraphic& disp1 = disp;
+Pages& pages_Instance = Pages::instance();
 
 int main(void)
 {
 
 		Field field(disp);
-		
-		Menue menue(disp,0,"Hauptmenue");
+
+
     disp.clear();
 
 
@@ -24636,8 +24695,7 @@ int main(void)
 
 		
 			cDevControlPointer::cData event = pointer.get();
-			
-			menue.drawpage();
+		
 
 		
 
@@ -24651,8 +24709,9 @@ int main(void)
 
 
  
-			
-
+		
+		
+		pages_Instance.display_current_page();
       disp.refresh();
 
   }

@@ -3,6 +3,8 @@
 ".\bin\keil\stm32f7xx\field.o"
 ".\bin\keil\stm32f7xx\pages.o"
 ".\bin\keil\stm32f7xx\menue.o"
+".\bin\keil\stm32f7xx\settings.o"
+".\bin\keil\stm32f7xx\display.o"
 ".\bin\keil\stm32f7xx\lib.o"
 ".\bin\keil\stm32f7xx\rtoscontext.o"
 ".\bin\keil\stm32f7xx\startup_stm32f769xx.o"

@@ -2,13 +2,14 @@
 #include "./configSTM32F7xx.h"
 
 cDevDisplayGraphic& disp1 = disp;
+Pages& pages_Instance = Pages::instance();
 
 int main(void)
 {
   #ifdef USE_GRAPHIC_DISPLAY
 		Field field(disp);
-		//Erzeugen der Seiten
-		Menue menue(disp,0,"Hauptmenue");
+
+
     disp.clear();
   #endif
 
@@ -17,8 +18,7 @@ int main(void)
     #ifdef USE_GRAPHIC_DISPLAY
 		//daten der toeucheingabe
 			cDevControlPointer::cData event = pointer.get();
-			//pages.drawpage();
-			menue.drawpage();
+		
 
 		/*Testfunktionen von Start
 			//Ausgabe des Testspielfeldes
@@ -32,8 +32,9 @@ int main(void)
 				
 //      disp.drawText( 440,20, 18, "x:%3d y:%3d ctrl:0x%02x",  event.posX, event.posY, event.flags );
 			*/
-			
-
+		//menueinstance.drawpage();
+		
+		pages_Instance.display_current_page();
       disp.refresh();
     #endif
   }
