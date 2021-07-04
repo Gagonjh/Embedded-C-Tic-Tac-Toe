@@ -6,5 +6,6 @@
 #include "../../EmbSysLib/Src/Com/Device/Display/devDisplayGraphic.h"
 #include "./datatypes.h"
 #include "./Token.h"
-
+#include "./Controller.h"
+#include "./Cells.h"
 #endif

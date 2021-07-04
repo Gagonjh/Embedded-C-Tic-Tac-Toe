@@ -22423,20 +22423,61 @@ class Token
 	
 	
 	
-	class Field
+class Field
 {
 	public:
-	cDevDisplayGraphic& disp1;
-	
-	Field(cDevDisplayGraphic&);
-	void drawField();
-	void drawToken(Token);
+		cDevDisplayGraphic& disp1;
+		Field(cDevDisplayGraphic&);
+		void drawField();
+		void drawToken(Token);
 };
 #line 6 "Src\\project_headers.h"
 #line 7 "Src\\project_headers.h"
 #line 8 "Src\\project_headers.h"
 #line 9 "Src\\project_headers.h"
+#line 1 "Src\\./Controller.h"
+#line 4 "Src\\./Controller.h"
+#line 1 "Src\\././Cells.h"
+#line 4 "Src\\././Cells.h"
 
+class Cells {
+	private:
+		void initializeCells();
+		void initializeDefaultRows();
+	public:
+		short* topRow;
+		short* centerRow;
+		short* bottomRow;
+		short* leftColumn;
+		short* centerColumn;
+		short* rightColumn;
+		short* downDiagonal;
+		short* upDiagonal;
+		Coordinates* cells;
+		bool rowIsComplete(cDevDisplayGraphic& display);
+		Cells();
+};
+
+#line 5 "Src\\./Controller.h"
+#line 6 "Src\\./Controller.h"
+
+extern short currentPlayer;
+extern short round;
+
+class Controller {
+	private:
+		cDevDisplayGraphic& display;
+		Cells cells;
+		short cellsCount;
+		Field field;
+	public:
+		Controller(cDevDisplayGraphic&, Cells, short, Field);
+		void control(short, short);
+		short isGameOver();
+};
+
+#line 10 "Src\\project_headers.h"
+#line 11 "Src\\project_headers.h"
 #line 2 "Src\\main.cpp"
 #line 1 "Src\\./configSTM32F7xx.h"
 
@@ -24568,79 +24609,51 @@ cHwRTC_0 rtc(cHwRTC_0::LSI);
 
 
 #line 3 "Src\\main.cpp"
-WORD cells[3][3][3] = {
-												{
-													{115,115,0},
-													{245,115,0},
-													{375,115,0}
-												},
-												{
-													{115,245,0},
-													{245,245,0},
-													{375,245,0}
-												},
-												{
-													{115,375,0},
-													{245,375,0},
-													{375,375,0}
-												}
-											};
+
+cDevDisplayGraphic& disp1 = disp;
+
 int main(void)
 {
-	short currentPlayer = 0;
 
 		Field field(disp);
     disp.setBackColor(cHwDisplayGraphic::Navy);
     disp.clear();
-
-
-  while(1)
-  {
-
-      cDevControlPointer::cData event = pointer.get();
-			field.drawField();
-			if(event.posX<390 && event.posX > 100 && event.posY < 390 && event.posY > 100) 
-					{
-						for(int i = 0; i<3; i++) 
+		Cells defaultCells;
+		Controller controller(disp1,defaultCells, 9, field);
+		short posX=0;
+		short posY=0;
+		short isNotGameOver = 1;
+		while(1)
+		{
+			while(isNotGameOver == 1)
+			{
+					cDevControlPointer::cData event = pointer.get();
+					if(event.flags == event.CTRL_DWN && posX == -1 && posY == -1)
 						{
-							for(int j = 0; j<3; j++) 
-							{
-								Coordinates cellCoords = {cells[i][j][0],cells[i][j][1]};
-								WORD *cellValue = &cells[i][j][2];
-								disp.drawText( 440,20, 18, "%d", *cellValue);
-								short xDiff = abs(cellCoords.x - event.posX);
-								short yDiff = abs(cellCoords.y - event.posY);
-								if(xDiff < 50 && yDiff<50) 
-									{
-										if(*cellValue==0) 
-											{
-												Token playerToken(cellCoords,currentPlayer);
-												field.drawToken(playerToken);
-												*cellValue = (WORD) 1;
-												disp.drawText( 440,20, 18, "Set value to 1");
-												currentPlayer=(currentPlayer+1)%2;
-											}
-										event.posX = 0;
-										event.posY = 0;
-									}
-								if(event.posX == 0 && event.posY == 0) 
-									{
-										break;
-									}
-							}
-							if(event.posX == 0 && event.posY == 0) 
-								{
-									break;
-								}
+							posX = event.posX;
+							posY = event.posY;
 						}
+					else
+						{
+							posX = -1;
+							posY = -1;
+						}
+					field.drawField();
+					
+					if(posX !=-1 && posY != -1) 
+						{
+							controller.control(posX, posY);
+						}
+					
+					disp.refresh();
+					if(controller.isGameOver()!=-1)
+					{
+						isNotGameOver = 0;
 					}
+			}
+			disp1.drawText( 440,200, 18, "Game over");
+		}
 
-			
-			
-
-      disp.refresh();
-
-  }
 }
 
 

@@ -1,4 +1,4 @@
-#line 1 "Src\\Field.cpp"
+#line 1 "Src\\Cells.cpp"
 #line 1 "Src\\./project_headers.h"
 
 
@@ -22478,32 +22478,96 @@ class Controller {
 
 #line 10 "Src\\./project_headers.h"
 #line 11 "Src\\./project_headers.h"
-#line 2 "Src\\Field.cpp"
-	
-Field::Field(cDevDisplayGraphic& konst_disp):disp1(konst_disp){}
+#line 2 "Src\\Cells.cpp"
 
-Cells cells();
-	
-void Field::drawField()
+void Cells::initializeCells()
 {
-	disp1.drawFrame(50,50,390,390,2, cHwDisplayGraphic::Red );
-	for(int i = 180; i<440; i+=130) {
-		disp1.drawLine(i,50,i,440,2,cHwDisplayGraphic::Red);
-		disp1.drawLine(50,i,440,i,2,cHwDisplayGraphic::Red);
+	cells= new Coordinates[9];
+	Coordinates newCells[9] = {
+												{115,115,0},
+												{245,115,0},
+												{375,115,0},
+												{115,245,0},
+												{245,245,0},
+												{375,245,0},
+												{115,375,0},
+												{245,375,0},
+												{375,375,0}
+										};
+	for(int i = 0; i<9; i++)
+	{
+				cells[i] = newCells[i];
 	}
 }
 
-void Field::drawToken(Token token)
+void Cells::initializeDefaultRows()
 {
-	switch(token.player)
+	topRow = new short[3];
+	centerRow = new short[3];
+	bottomRow = new short[3];
+	leftColumn = new short[3];
+	centerColumn = new short[3];
+	rightColumn = new short[3];
+	downDiagonal = new short[3];
+	upDiagonal = new short[3];
+	for(short i = 0; i<3; i++)
 	{
-		case 1:
-			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 45, cHwDisplayGraphic::Red);
-			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 42, cHwDisplayGraphic::Navy);
-			break;
-		case 2:
-			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 45, cHwDisplayGraphic::Cyan);
-			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 42, cHwDisplayGraphic::Navy);
-			break;
+		topRow[i] = i;
+		centerRow[i] = 3+i;
+		bottomRow[i] = 6+i;
+		leftColumn[i] = 0+3*i;
+		centerColumn[i] = (i*3)+1;
+		rightColumn[i] = (i*3)+2;
+		downDiagonal[i] = i*(3+1);
+		upDiagonal[i] = 6-(i*2);
 	}
+}
+
+
+Cells::Cells()
+{
+	initializeCells();
+	initializeDefaultRows();
+};
+
+bool Cells::rowIsComplete(cDevDisplayGraphic& display)
+{
+	short rowValues[8] = {0,0,0,0,0,0,0,0};
+	for(int i = 0;i<3;i++)
+	{
+		rowValues[0] += cells[topRow[i]].player == 0 ? 0 : cells[topRow[i]].player+2;
+		rowValues[1] += cells[centerRow[i]].player == 0 ? 0 : cells[centerRow[i]].player+2;
+		rowValues[2] += cells[bottomRow[i]].player == 0 ? 0 : cells[bottomRow[i]].player+2;
+		rowValues[3] += cells[leftColumn[i]].player == 0 ? 0 : cells[leftColumn[i]].player+2;
+		rowValues[4] += cells[centerColumn[i]].player == 0 ? 0 : cells[centerColumn[i]].player+2;
+		rowValues[5] += cells[rightColumn[i]].player == 0 ? 0 : cells[rightColumn[i]].player+2;
+		rowValues[6] += cells[upDiagonal[i]].player == 0 ? 0 : cells[upDiagonal[i]].player+2;
+		rowValues[7] += cells[downDiagonal[i]].player == 0 ? 0 : cells[downDiagonal[i]].player+2;
+	}
+
+
+
+
+
+
+
+
+
+ 
+	for(int i=0; i<8; i++) 
+		{
+				display.drawText( 440,1*20, 18, "Row value %d", rowValues[0]);
+				display.drawText( 440,2*20, 18, "Row value %d", rowValues[1]);
+				display.drawText( 440,3*20, 18, "Row value %d", rowValues[2]);
+				display.drawText( 440,4*20, 18, "Row value %d", rowValues[3]);
+				display.drawText( 440,5*20, 18, "Row value %d", rowValues[4]);
+				display.drawText( 440,6*20, 18, "Row value %d", rowValues[5]);
+				display.drawText( 440,7*20, 18, "Row value %d", rowValues[6]);
+				display.drawText( 440,8*20, 18, "Row value %d", rowValues[7]);
+			if(rowValues[i] == 9 || rowValues[i] == 12) 
+				{
+					return true;
+				}
+		}
+	return false;
 }

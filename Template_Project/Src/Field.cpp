@@ -2,6 +2,8 @@
 	
 Field::Field(cDevDisplayGraphic& konst_disp):disp1(konst_disp){}
 
+Cells cells();
+	
 void Field::drawField()
 {
 	disp1.drawFrame(50,50,390,390,2, cHwDisplayGraphic::Red );
@@ -15,11 +17,11 @@ void Field::drawToken(Token token)
 {
 	switch(token.player)
 	{
-		case 0:
+		case 1:
 			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 45, cHwDisplayGraphic::Red);
 			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 42, cHwDisplayGraphic::Navy);
 			break;
-		case 1:
+		case 2:
 			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 45, cHwDisplayGraphic::Cyan);
 			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 42, cHwDisplayGraphic::Navy);
 			break;

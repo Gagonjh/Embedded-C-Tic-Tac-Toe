@@ -1,78 +1,50 @@
 #include "project_headers.h"
 #include "./configSTM32F7xx.h"
-WORD cells[3][3][3] = {
-												{
-													{115,115,0},
-													{245,115,0},
-													{375,115,0}
-												},
-												{
-													{115,245,0},
-													{245,245,0},
-													{375,245,0}
-												},
-												{
-													{115,375,0},
-													{245,375,0},
-													{375,375,0}
-												}
-											};
+
+cDevDisplayGraphic& disp1 = disp;
+
 int main(void)
 {
-	short currentPlayer = 0;
   #ifdef USE_GRAPHIC_DISPLAY
 		Field field(disp);
     disp.setBackColor(cHwDisplayGraphic::Navy);
     disp.clear();
-  #endif
-
-  while(1)
-  {
-    #ifdef USE_GRAPHIC_DISPLAY
-      cDevControlPointer::cData event = pointer.get();
-			field.drawField();
-			if(event.posX<390 && event.posX > 100 && event.posY < 390 && event.posY > 100) 
-					{
-						for(int i = 0; i<3; i++) 
+		Cells defaultCells;
+		Controller controller(disp1,defaultCells, 9, field);
+		short posX=0;
+		short posY=0;
+		short isNotGameOver = 1;
+		while(1)
+		{
+			while(isNotGameOver == 1)
+			{
+					cDevControlPointer::cData event = pointer.get();
+					if(event.flags == event.CTRL_DWN && posX == -1 && posY == -1)
 						{
-							for(int j = 0; j<3; j++) 
-							{
-								Coordinates cellCoords = {cells[i][j][0],cells[i][j][1]};
-								WORD *cellValue = &cells[i][j][2];
-								disp.drawText( 440,20, 18, "%d", *cellValue);
-								short xDiff = abs(cellCoords.x - event.posX);
-								short yDiff = abs(cellCoords.y - event.posY);
-								if(xDiff < 50 && yDiff<50) 
-									{
-										if(*cellValue==0) 
-											{
-												Token playerToken(cellCoords,currentPlayer);
-												field.drawToken(playerToken);
-												*cellValue = (WORD) 1;
-												disp.drawText( 440,20, 18, "Set value to 1");
-												currentPlayer=(currentPlayer+1)%2;
-											}
-										event.posX = 0;
-										event.posY = 0;
-									}
-								if(event.posX == 0 && event.posY == 0) 
-									{
-										break;
-									}
-							}
-							if(event.posX == 0 && event.posY == 0) 
-								{
-									break;
-								}
+							posX = event.posX;
+							posY = event.posY;
 						}
+					else
+						{
+							posX = -1;
+							posY = -1;
+						}
+					field.drawField();
+					//disp1.drawText( 440,120, 18, "%d %d", posX, posY);
+					if(posX !=-1 && posY != -1) 
+						{
+							controller.control(posX, posY);
+						}
+					//disp1.drawText( 440,150, 18, "currentPlayer %d", currentPlayer);
+					disp.refresh();
+					if(controller.isGameOver()!=-1)
+					{
+						isNotGameOver = 0;
 					}
-//      disp.drawText( 440,20, 18, "x:%3d y:%3d ctrl:0x%02x",  event.posX, event.posY, event.flags );
-			
-			
-
-      disp.refresh();
-    #endif
-  }
+			}
+			disp1.drawText( 440,200, 18, "Game over");
+		}
+	#endif
 }
 
 //EOF

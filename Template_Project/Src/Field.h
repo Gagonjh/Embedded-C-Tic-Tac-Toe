@@ -5,13 +5,12 @@
 	//extern Field(cDevDisplayGraphic&);
 	//extern void drawField();
 	
-	class Field
+class Field
 {
 	public:
-	cDevDisplayGraphic& disp1;
-	
-	Field(cDevDisplayGraphic&);
-	void drawField();
-	void drawToken(Token);
+		cDevDisplayGraphic& disp1;
+		Field(cDevDisplayGraphic&);
+		void drawField();
+		void drawToken(Token);
 };
 #endif

@@ -415,6 +415,26 @@
               <FileType>5</FileType>
               <FilePath>.\Src\Token.h</FilePath>
             </File>
+            <File>
+              <FileName>Controller.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Controller.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Controller.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Controller.h</FilePath>
+            </File>
+            <File>
+              <FileName>Cells.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Cells.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Cells.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Cells.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

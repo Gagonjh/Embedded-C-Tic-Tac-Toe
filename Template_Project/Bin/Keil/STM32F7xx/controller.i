@@ -1,4 +1,4 @@
-#line 1 "Src\\Field.cpp"
+#line 1 "Src\\Controller.cpp"
 #line 1 "Src\\./project_headers.h"
 
 
@@ -22478,32 +22478,57 @@ class Controller {
 
 #line 10 "Src\\./project_headers.h"
 #line 11 "Src\\./project_headers.h"
-#line 2 "Src\\Field.cpp"
-	
-Field::Field(cDevDisplayGraphic& konst_disp):disp1(konst_disp){}
+#line 2 "Src\\Controller.cpp"
 
-Cells cells();
-	
-void Field::drawField()
-{
-	disp1.drawFrame(50,50,390,390,2, cHwDisplayGraphic::Red );
-	for(int i = 180; i<440; i+=130) {
-		disp1.drawLine(i,50,i,440,2,cHwDisplayGraphic::Red);
-		disp1.drawLine(50,i,440,i,2,cHwDisplayGraphic::Red);
-	}
-}
+short currentPlayer=1;
+short round=0;
 
-void Field::drawToken(Token token)
+Controller::Controller(cDevDisplayGraphic& display, Cells cellsToControl, short cellsCount, Field field):display(display),cells(cellsToControl), cellsCount(cellsCount), field(field){};
+
+void Controller::control(short posX, short posY)
 {
-	switch(token.player)
-	{
-		case 1:
-			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 45, cHwDisplayGraphic::Red);
-			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 42, cHwDisplayGraphic::Navy);
-			break;
-		case 2:
-			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 45, cHwDisplayGraphic::Cyan);
-			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 42, cHwDisplayGraphic::Navy);
-			break;
-	}
+		if(this->cellsCount == 9)
+			{
+				if(posX<390 && posX > 100 && posY < 390 && posY > 100) 
+					{
+						for(int i = 0; i<cellsCount; i++)
+							{
+								Coordinates cellCoords = {cells.cells[i].x,cells.cells[i].y};
+								short xDiff = abs(cellCoords.x - posX);
+								short yDiff = abs(cellCoords.y - posY);
+								if(xDiff < 50 && yDiff<50) 
+									{
+										if(cells.cells[i].player==0)
+											{
+												Token playerToken(cellCoords,currentPlayer);
+												field.drawToken(playerToken);
+												cells.cells[i].player = currentPlayer;
+												currentPlayer=currentPlayer%2+1;
+												round++;
+											}
+									}
+							}
+					}
+			}
+};
+
+
+
+
+
+ 
+short Controller::isGameOver()
+{
+	if(this->cells.rowIsComplete(display)) 
+		{
+			return currentPlayer;
+		}
+	else if(round==9)
+		{
+			return 0;
+		} 
+	else 
+		{
+			return -1;
+		}
 }
