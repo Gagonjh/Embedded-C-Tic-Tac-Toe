@@ -435,6 +435,16 @@
               <FileType>5</FileType>
               <FilePath>.\Src\Cells.h</FilePath>
             </File>
+            <File>
+              <FileName>Game.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Game.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Game.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Game.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -22426,8 +22426,6 @@ class Token
 class Field
 {
 	public:
-		cDevDisplayGraphic& disp1;
-		Field(cDevDisplayGraphic&);
 		void drawField();
 		void drawToken(Token);
 };
@@ -22476,10 +22474,30 @@ class Controller {
 
 #line 10 "Src\\./project_headers.h"
 #line 11 "Src\\./project_headers.h"
+#line 1 "Src\\././Game.h"
+
+
+
+class Game
+{
+	private:
+		short posX;
+		short posY;
+		Controller controller;
+		short gameMode;
+		Cells defaultCells;
+		Field field;
+	public:
+		void ttt_classic(short,short,bool);
+		Game(short,Controller, Field);
+};
+
+#line 12 "Src\\./project_headers.h"
+
+
+extern cDevDisplayGraphic& disp1;
 #line 2 "Src\\Field.cpp"
 	
-Field::Field(cDevDisplayGraphic& konst_disp):disp1(konst_disp){}
-
 Cells cells();
 	
 void Field::drawField()

@@ -8,4 +8,8 @@
 #include "./Token.h"
 #include "./Controller.h"
 #include "./Cells.h"
+#include "./Game.h"
+
+
+extern cDevDisplayGraphic& disp1;
 #endif

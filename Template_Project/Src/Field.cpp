@@ -1,7 +1,5 @@
 #include "./project_headers.h"
 	
-Field::Field(cDevDisplayGraphic& konst_disp):disp1(konst_disp){}
-
 Cells cells();
 	
 void Field::drawField()
