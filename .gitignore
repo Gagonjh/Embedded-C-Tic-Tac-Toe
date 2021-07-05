@@ -31,6 +31,20 @@
 *.out
 *.app
 
+# Keil
+*.uvoptx
+*.uvprojx
+*.crf
+*.i
+*.htm
+*.lnp
+*.axf
+*.hex
+*.map
+*.dep
+*.joshu
+*.yasin
+
 # Untracked files:
     [...]
     #       Template_Project/Bin/Keil/STM32F7xx/lib.crf
