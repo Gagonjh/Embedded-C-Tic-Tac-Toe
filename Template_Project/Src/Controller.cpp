@@ -1,17 +1,16 @@
 #include "./project_headers.h"
 
-short currentPlayer=1;
-short round=0;
-
-Controller::Controller(cDevDisplayGraphic& display, Cells cellsToControl, short cellsCount, Field field):display(display),cells(cellsToControl), cellsCount(cellsCount), field(field){};
+Controller::Controller(Cells cellsToControl, Field field):cells(cellsToControl),field(field)
+{
+	currentPlayer=1;
+	round=0;
+};
 
 void Controller::control(short posX, short posY)
 {
-		if(this->cellsCount == 9)
-			{
 				if(posX<390 && posX > 100 && posY < 390 && posY > 100) 
 					{
-						for(int i = 0; i<cellsCount; i++)
+						for(int i = 0; i<9; i++)
 							{
 								Coordinates cellCoords = {cells.cells[i].x,cells.cells[i].y};
 								short xDiff = abs(cellCoords.x - posX);
@@ -20,16 +19,15 @@ void Controller::control(short posX, short posY)
 									{
 										if(cells.cells[i].player==0)
 											{
-												Token playerToken(cellCoords,currentPlayer);
+												Token playerToken(cellCoords,this->currentPlayer);
 												field.drawToken(playerToken);
-												cells.cells[i].player = currentPlayer;
-												currentPlayer=currentPlayer%2+1;
+												cells.cells[i].player = this->currentPlayer;
+												this->currentPlayer=this->currentPlayer%2+1;
 												round++;
 											}
 									}
 							}
 					}
-			}
 };
 
 /**
@@ -37,18 +35,20 @@ void Controller::control(short posX, short posY)
  *
  * @return -1 if nothing is decided yet, 0 if it's a draw or 1 or 2 if player 1 or player 2 has won.
  */
-short Controller::isGameOver()
+short Controller::getGameState()
 {
-	if(this->cells.rowIsComplete(display)) 
+	short state = 0;
+	if(this->cells.rowIsComplete()) 
 		{
-			return currentPlayer;
+			state = this->currentPlayer == 1 ? 2 : 1;
 		}
 	else if(round==9)
 		{
-			return 0;
+			state = 0;
 		} 
 	else 
 		{
-			return -1;
+			state = -1;
 		}
+	return state;
 }

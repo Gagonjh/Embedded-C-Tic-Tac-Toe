@@ -22454,44 +22454,40 @@ class Cells {
 		short* downDiagonal;
 		short* upDiagonal;
 		Coordinates* cells;
-		bool rowIsComplete(cDevDisplayGraphic& display);
+		bool rowIsComplete();
 		Cells();
 };
 
 #line 5 "Src\\././Controller.h"
 #line 6 "Src\\././Controller.h"
 
-extern short currentPlayer;
-extern short round;
-
 class Controller {
 	private:
-		cDevDisplayGraphic& display;
+		short currentPlayer;
+		short round;
 		Cells cells;
-		short cellsCount;
 		Field field;
 	public:
-		Controller(cDevDisplayGraphic&, Cells, short, Field);
+		Controller(Cells, Field);
 		void control(short, short);
-		short isGameOver();
+		short getGameState();
 };
 
 #line 10 "Src\\./project_headers.h"
 #line 11 "Src\\./project_headers.h"
 #line 2 "Src\\Controller.cpp"
 
-short currentPlayer=1;
-short round=0;
-
-Controller::Controller(cDevDisplayGraphic& display, Cells cellsToControl, short cellsCount, Field field):display(display),cells(cellsToControl), cellsCount(cellsCount), field(field){};
+Controller::Controller(Cells cellsToControl, Field field):cells(cellsToControl),field(field)
+{
+	currentPlayer=1;
+	round=0;
+};
 
 void Controller::control(short posX, short posY)
 {
-		if(this->cellsCount == 9)
-			{
 				if(posX<390 && posX > 100 && posY < 390 && posY > 100) 
 					{
-						for(int i = 0; i<cellsCount; i++)
+						for(int i = 0; i<9; i++)
 							{
 								Coordinates cellCoords = {cells.cells[i].x,cells.cells[i].y};
 								short xDiff = abs(cellCoords.x - posX);
@@ -22500,16 +22496,15 @@ void Controller::control(short posX, short posY)
 									{
 										if(cells.cells[i].player==0)
 											{
-												Token playerToken(cellCoords,currentPlayer);
+												Token playerToken(cellCoords,this->currentPlayer);
 												field.drawToken(playerToken);
-												cells.cells[i].player = currentPlayer;
-												currentPlayer=currentPlayer%2+1;
+												cells.cells[i].player = this->currentPlayer;
+												this->currentPlayer=this->currentPlayer%2+1;
 												round++;
 											}
 									}
 							}
 					}
-			}
 };
 
 
@@ -22517,18 +22512,20 @@ void Controller::control(short posX, short posY)
 
 
  
-short Controller::isGameOver()
+short Controller::getGameState()
 {
-	if(this->cells.rowIsComplete(display)) 
+	short state = 0;
+	if(this->cells.rowIsComplete()) 
 		{
-			return currentPlayer;
+			state = this->currentPlayer == 1 ? 2 : 1;
 		}
 	else if(round==9)
 		{
-			return 0;
+			state = 0;
 		} 
 	else 
 		{
-			return -1;
+			state = -1;
 		}
+	return state;
 }

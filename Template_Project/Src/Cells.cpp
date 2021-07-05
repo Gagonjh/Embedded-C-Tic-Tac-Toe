@@ -50,7 +50,7 @@ Cells::Cells()
 	initializeDefaultRows();
 };
 
-bool Cells::rowIsComplete(cDevDisplayGraphic& display)
+bool Cells::rowIsComplete()
 {
 	short rowValues[8] = {0,0,0,0,0,0,0,0};
 	for(int i = 0;i<3;i++)
@@ -64,26 +64,8 @@ bool Cells::rowIsComplete(cDevDisplayGraphic& display)
 		rowValues[6] += cells[upDiagonal[i]].player == 0 ? 0 : cells[upDiagonal[i]].player+2;
 		rowValues[7] += cells[downDiagonal[i]].player == 0 ? 0 : cells[downDiagonal[i]].player+2;
 	}
-/*
-				display.drawText( 440,1*20, 18, "Row value %d", topRow[0]);
-				display.drawText( 440,2*20, 18, "Row value %d", centerRow[0]);
-				display.drawText( 440,3*20, 18, "Row value %d", bottomRow[0]);
-				display.drawText( 440,4*20, 18, "Row value %d", leftColumn[0]);
-				display.drawText( 440,5*20, 18, "Row value %d", centerColumn[0]);
-				display.drawText( 440,6*20, 18, "Row value %d", rightColumn[0]);
-				display.drawText( 440,7*20, 18, "Row value %d", downDiagonal[0]);
-				display.drawText( 440,8*20, 18, "Row value %d", upDiagonal[0]);
-*/
 	for(int i=0; i<8; i++) 
 		{
-				display.drawText( 440,1*20, 18, "Row value %d", rowValues[0]);
-				display.drawText( 440,2*20, 18, "Row value %d", rowValues[1]);
-				display.drawText( 440,3*20, 18, "Row value %d", rowValues[2]);
-				display.drawText( 440,4*20, 18, "Row value %d", rowValues[3]);
-				display.drawText( 440,5*20, 18, "Row value %d", rowValues[4]);
-				display.drawText( 440,6*20, 18, "Row value %d", rowValues[5]);
-				display.drawText( 440,7*20, 18, "Row value %d", rowValues[6]);
-				display.drawText( 440,8*20, 18, "Row value %d", rowValues[7]);
 			if(rowValues[i] == 9 || rowValues[i] == 12) 
 				{
 					return true;

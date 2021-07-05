@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Bin\Keil\STM32F7xx\main.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Bin\Keil\STM32F7xx\main.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Sun Jul 04 21:18:00 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Mon Jul 05 15:51:58 2021
 <BR><P>
 <H3>Maximum Stack Usage =        324 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -547,7 +547,7 @@ Global Symbols
 <P><STRONG><a name="[1cf]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[101]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 312 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 296 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; Cells::Cells() &rArr; Cells::initializeCells() &rArr; operator new[] (unsigned) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -966,7 +966,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009A::init()
-<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::Controller(cDevDisplayGraphic&, Cells, short, Field)
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::Controller(Cells, Field)
 <LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cells::initializeCells()
 </UL>
@@ -1632,15 +1632,15 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f769xx.o(RESET)
 </UL>
-<P><STRONG><a name="[146]"></a>Controller::isGameOver()</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, controller.o(i._ZN10Controller10isGameOverEv))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = Controller::isGameOver() &rArr; Cells::rowIsComplete(cDevDisplayGraphic&)
+<P><STRONG><a name="[146]"></a>Controller::getGameState()</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, controller.o(i._ZN10Controller12getGameStateEv))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = Controller::getGameState() &rArr; Cells::rowIsComplete()
 </UL>
-<BR>[Calls]<UL><LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cells::rowIsComplete(cDevDisplayGraphic&)
+<BR>[Calls]<UL><LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cells::rowIsComplete()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[148]"></a>Controller::control(short, short)</STRONG> (Thumb, 244 bytes, Stack size 64 bytes, controller.o(i._ZN10Controller7controlEss))
+<P><STRONG><a name="[148]"></a>Controller::control(short, short)</STRONG> (Thumb, 220 bytes, Stack size 64 bytes, controller.o(i._ZN10Controller7controlEss))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = Controller::control(short, short) &rArr; Field::drawToken(Token)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Token::Token(coordinates, short)
@@ -1649,15 +1649,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[14b]"></a>Controller::Controller(cDevDisplayGraphic&, Cells, short, Field)</STRONG> (Thumb, 36 bytes, Stack size 32 bytes, controller.o(i._ZN10ControllerC1ER18cDevDisplayGraphic5Cellss5Field))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Controller::Controller(cDevDisplayGraphic&, Cells, short, Field) &rArr; __aeabi_memcpy4
+<P><STRONG><a name="[14b]"></a>Controller::Controller(Cells, Field)</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, controller.o(i._ZN10ControllerC1E5Cells5Field))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Controller::Controller(Cells, Field) &rArr; __aeabi_memcpy4
 </UL>
 <BR>[Calls]<UL><LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[1e1]"></a>Controller::Controller__sub_object(cDevDisplayGraphic&, Cells, short, Field)</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, controller.o(i._ZN10ControllerC1ER18cDevDisplayGraphic5Cellss5Field), UNUSED)
+<P><STRONG><a name="[1e1]"></a>Controller::Controller__sub_object(Cells, Field)</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, controller.o(i._ZN10ControllerC1E5Cells5Field), UNUSED)
 
 <P><STRONG><a name="[158]"></a>cDevAnalog::cDevAnalog(unsigned char, float, float)</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, lib.o(i._ZN10cDevAnalogC1Ehff))
 <BR><BR>[Called By]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cDevAnalogOut::cDevAnalogOut__sub_object(unsigned char, float, float)
@@ -2113,10 +2113,10 @@ Global Symbols
 
 <P><STRONG><a name="[1ed]"></a>cDevControlEncoderJoystick::cDevControlEncoderJoystick__sub_object(cDevDigital*, cDevDigital*, cDevDigital*, cHwTimer*, unsigned short)</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, lib.o(i._ZN26cDevControlEncoderJoystickC1EP11cDevDigitalS1_S1_P8cHwTimert), UNUSED)
 
-<P><STRONG><a name="[147]"></a>Cells::rowIsComplete(cDevDisplayGraphic&)</STRONG> (Thumb, 742 bytes, Stack size 48 bytes, cells.o(i._ZN5Cells13rowIsCompleteER18cDevDisplayGraphic))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = Cells::rowIsComplete(cDevDisplayGraphic&)
+<P><STRONG><a name="[147]"></a>Cells::rowIsComplete()</STRONG> (Thumb, 526 bytes, Stack size 20 bytes, cells.o(i._ZN5Cells13rowIsCompleteEv))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = Cells::rowIsComplete()
 </UL>
-<BR>[Called By]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::isGameOver()
+<BR>[Called By]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::getGameState()
 </UL>
 
 <P><STRONG><a name="[179]"></a>Cells::initializeCells()</STRONG> (Thumb, 62 bytes, Stack size 120 bytes, cells.o(i._ZN5Cells15initializeCellsEv))
@@ -2691,8 +2691,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
 </UL>
 
-<P><STRONG><a name="[102]"></a>main</STRONG> (Thumb, 194 bytes, Stack size 128 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = main &rArr; Cells::Cells() &rArr; Cells::initializeCells() &rArr; operator new[] (unsigned) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
+<P><STRONG><a name="[102]"></a>main</STRONG> (Thumb, 310 bytes, Stack size 112 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 296<LI>Call Chain = main &rArr; Cells::Cells() &rArr; Cells::initializeCells() &rArr; operator new[] (unsigned) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Field::Field(cDevDisplayGraphic&)
 <LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Field::drawField()
@@ -2701,9 +2701,9 @@ Global Symbols
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cDevDisplayGraphic::clear()
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cDevDisplayGraphic::setBackColor(unsigned short)
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cDevControlPointer::get()
-<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::Controller(cDevDisplayGraphic&, Cells, short, Field)
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::Controller(Cells, Field)
 <LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::control(short, short)
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::isGameOver()
+<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::getGameState()
 <LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main

@@ -22454,26 +22454,23 @@ class Cells {
 		short* downDiagonal;
 		short* upDiagonal;
 		Coordinates* cells;
-		bool rowIsComplete(cDevDisplayGraphic& display);
+		bool rowIsComplete();
 		Cells();
 };
 
 #line 5 "Src\\././Controller.h"
 #line 6 "Src\\././Controller.h"
 
-extern short currentPlayer;
-extern short round;
-
 class Controller {
 	private:
-		cDevDisplayGraphic& display;
+		short currentPlayer;
+		short round;
 		Cells cells;
-		short cellsCount;
 		Field field;
 	public:
-		Controller(cDevDisplayGraphic&, Cells, short, Field);
+		Controller(Cells, Field);
 		void control(short, short);
-		short isGameOver();
+		short getGameState();
 };
 
 #line 10 "Src\\./project_headers.h"
@@ -22530,7 +22527,7 @@ Cells::Cells()
 	initializeDefaultRows();
 };
 
-bool Cells::rowIsComplete(cDevDisplayGraphic& display)
+bool Cells::rowIsComplete()
 {
 	short rowValues[8] = {0,0,0,0,0,0,0,0};
 	for(int i = 0;i<3;i++)
@@ -22544,26 +22541,8 @@ bool Cells::rowIsComplete(cDevDisplayGraphic& display)
 		rowValues[6] += cells[upDiagonal[i]].player == 0 ? 0 : cells[upDiagonal[i]].player+2;
 		rowValues[7] += cells[downDiagonal[i]].player == 0 ? 0 : cells[downDiagonal[i]].player+2;
 	}
-
-
-
-
-
-
-
-
-
- 
 	for(int i=0; i<8; i++) 
 		{
-				display.drawText( 440,1*20, 18, "Row value %d", rowValues[0]);
-				display.drawText( 440,2*20, 18, "Row value %d", rowValues[1]);
-				display.drawText( 440,3*20, 18, "Row value %d", rowValues[2]);
-				display.drawText( 440,4*20, 18, "Row value %d", rowValues[3]);
-				display.drawText( 440,5*20, 18, "Row value %d", rowValues[4]);
-				display.drawText( 440,6*20, 18, "Row value %d", rowValues[5]);
-				display.drawText( 440,7*20, 18, "Row value %d", rowValues[6]);
-				display.drawText( 440,8*20, 18, "Row value %d", rowValues[7]);
 			if(rowValues[i] == 9 || rowValues[i] == 12) 
 				{
 					return true;

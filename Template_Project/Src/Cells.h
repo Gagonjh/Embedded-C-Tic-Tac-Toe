@@ -16,7 +16,7 @@ class Cells {
 		short* downDiagonal;
 		short* upDiagonal;
 		Coordinates* cells;
-		bool rowIsComplete(cDevDisplayGraphic& display);
+		bool rowIsComplete();
 		Cells();
 };
 

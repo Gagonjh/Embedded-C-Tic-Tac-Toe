@@ -22454,26 +22454,23 @@ class Cells {
 		short* downDiagonal;
 		short* upDiagonal;
 		Coordinates* cells;
-		bool rowIsComplete(cDevDisplayGraphic& display);
+		bool rowIsComplete();
 		Cells();
 };
 
 #line 5 "Src\\./Controller.h"
 #line 6 "Src\\./Controller.h"
 
-extern short currentPlayer;
-extern short round;
-
 class Controller {
 	private:
-		cDevDisplayGraphic& display;
+		short currentPlayer;
+		short round;
 		Cells cells;
-		short cellsCount;
 		Field field;
 	public:
-		Controller(cDevDisplayGraphic&, Cells, short, Field);
+		Controller(Cells, Field);
 		void control(short, short);
-		short isGameOver();
+		short getGameState();
 };
 
 #line 10 "Src\\project_headers.h"
@@ -24615,17 +24612,21 @@ cDevDisplayGraphic& disp1 = disp;
 int main(void)
 {
 
-		Field field(disp);
-    disp.setBackColor(cHwDisplayGraphic::Navy);
-    disp.clear();
-		Cells defaultCells;
-		Controller controller(disp1,defaultCells, 9, field);
+		short winningPlayer=0;
 		short posX=0;
 		short posY=0;
-		short isNotGameOver = 1;
+		short isGameOver=1;
 		while(1)
 		{
-			while(isNotGameOver == 1)
+			Cells defaultCells;
+			Field field(disp);
+			Controller controller(defaultCells, field);
+			disp.setBackColor(cHwDisplayGraphic::Navy);
+			disp.clear();
+			isGameOver = 0;
+			field.drawField();
+			disp.refresh();
+			while(isGameOver == 0)
 			{
 					cDevControlPointer::cData event = pointer.get();
 					if(event.flags == event.CTRL_DWN && posX == -1 && posY == -1)
@@ -24638,20 +24639,31 @@ int main(void)
 							posX = -1;
 							posY = -1;
 						}
-					field.drawField();
-					
 					if(posX !=-1 && posY != -1) 
 						{
 							controller.control(posX, posY);
+							short state = controller.getGameState();
+							switch(state)
+							{
+								case -1: isGameOver=0; break;
+								case 	0: isGameOver=1; winningPlayer=0; break;
+								case  1: isGameOver=1; winningPlayer=1; break;
+								case  2: isGameOver=1; winningPlayer=2; break;
+							}
+							disp.refresh();
 						}
-					
-					disp.refresh();
-					if(controller.isGameOver()!=-1)
-					{
-						isNotGameOver = 0;
-					}
 			}
-			disp1.drawText( 440,200, 18, "Game over");
+			if(winningPlayer != 0)
+			{
+				while(1)
+				{
+					cDevControlPointer::cData event = pointer.get();
+					disp1.drawText( 440,220, 18, "Player %d has won!", winningPlayer);
+					disp1.drawText( 440,250, 18, "Game over");
+					disp.refresh();
+					if(event.flags == event.CTRL_DWN) break;
+				}
+			}
 		}
 
 }

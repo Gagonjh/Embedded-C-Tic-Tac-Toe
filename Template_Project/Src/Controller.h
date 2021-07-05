@@ -4,19 +4,16 @@
 #include "./Cells.h"
 #include "./Field.h"
 
-extern short currentPlayer;
-extern short round;
-
 class Controller {
 	private:
-		cDevDisplayGraphic& display;
+		short currentPlayer;
+		short round;
 		Cells cells;
-		short cellsCount;
 		Field field;
 	public:
-		Controller(cDevDisplayGraphic&, Cells, short, Field);
+		Controller(Cells, Field);
 		void control(short, short);
-		short isGameOver();
+		short getGameState();
 };
 
 #endif

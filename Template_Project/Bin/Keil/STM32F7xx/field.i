@@ -22454,26 +22454,23 @@ class Cells {
 		short* downDiagonal;
 		short* upDiagonal;
 		Coordinates* cells;
-		bool rowIsComplete(cDevDisplayGraphic& display);
+		bool rowIsComplete();
 		Cells();
 };
 
 #line 5 "Src\\././Controller.h"
 #line 6 "Src\\././Controller.h"
 
-extern short currentPlayer;
-extern short round;
-
 class Controller {
 	private:
-		cDevDisplayGraphic& display;
+		short currentPlayer;
+		short round;
 		Cells cells;
-		short cellsCount;
 		Field field;
 	public:
-		Controller(cDevDisplayGraphic&, Cells, short, Field);
+		Controller(Cells, Field);
 		void control(short, short);
-		short isGameOver();
+		short getGameState();
 };
 
 #line 10 "Src\\./project_headers.h"
