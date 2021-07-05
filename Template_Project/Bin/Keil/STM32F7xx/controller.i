@@ -22469,6 +22469,7 @@ class Controller {
 		Field field;
 	public:
 		Controller(Cells, Field);
+		void aiMove();
 		void control(short, short);
 		short getGameState();
 };
@@ -22485,26 +22486,23 @@ Controller::Controller(Cells cellsToControl, Field field):cells(cellsToControl),
 
 void Controller::control(short posX, short posY)
 {
-				if(posX<390 && posX > 100 && posY < 390 && posY > 100) 
-					{
-						for(int i = 0; i<9; i++)
-							{
-								Coordinates cellCoords = {cells.cells[i].x,cells.cells[i].y};
-								short xDiff = abs(cellCoords.x - posX);
-								short yDiff = abs(cellCoords.y - posY);
-								if(xDiff < 50 && yDiff<50) 
-									{
-										if(cells.cells[i].player==0)
-											{
-												Token playerToken(cellCoords,this->currentPlayer);
-												field.drawToken(playerToken);
-												cells.cells[i].player = this->currentPlayer;
-												this->currentPlayer=this->currentPlayer%2+1;
-												round++;
-											}
-									}
-							}
-					}
+	for(int i = 0; i<9; i++)
+		{
+			Coordinates cellCoords = {cells.cells[i].x,cells.cells[i].y};
+			short xDiff = abs(cellCoords.x - posX);
+			short yDiff = abs(cellCoords.y - posY);
+			if(xDiff < 50 && yDiff<50) 
+				{
+					if(cells.cells[i].player==0)
+						{
+							Token playerToken(cellCoords,this->currentPlayer);
+							field.drawToken(playerToken);
+							cells.cells[i].player = this->currentPlayer;
+							this->currentPlayer=this->currentPlayer%2+1;
+							round++;
+						}
+				}
+		}
 };
 
 
@@ -22528,4 +22526,17 @@ short Controller::getGameState()
 			state = -1;
 		}
 	return state;
+}
+
+void Controller::aiMove()
+{
+	while(1)
+	{
+		int value = rand()%9;
+		if(this->cells.cells[value].player==0)
+		{
+			this->control(cells.cells[value].x,cells.cells[value].y);
+			break;
+		}
+	}
 }

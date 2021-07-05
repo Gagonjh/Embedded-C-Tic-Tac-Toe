@@ -22469,6 +22469,7 @@ class Controller {
 		Field field;
 	public:
 		Controller(Cells, Field);
+		void aiMove();
 		void control(short, short);
 		short getGameState();
 };
