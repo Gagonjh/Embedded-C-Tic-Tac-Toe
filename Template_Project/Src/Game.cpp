@@ -8,27 +8,17 @@ Game::Game(short gameMode,Controller controller, Field field):controller(control
 	disp1.refresh();
 }
 
-void Game::ttt_classic(short eventPosX,short eventPosY, bool isPressed)
+void Game::ttt_classic(short eventPosX,short eventPosY)
 {
-	if(isPressed && posX == -1 && posY == -1)
-		{
-			posX = eventPosX;
-			posY = eventPosY;
-		}
-	else
-		{
-			posX = -1;
-			posY = -1;
-		}
 	if(posX<390 && posX > 100 && posY < 390 && posY > 100) 
 		{
 			controller.control(posX, posY);
-			short state = controller.getGameState();
 			disp1.refresh();
-			if(gameMode==1) 
+			if(gameMode==1)
 				{
 						controller.aiMove();
 				}
+			return controller.getGameState();
 		}
-	disp1.refresh();
+	return -1;
 }

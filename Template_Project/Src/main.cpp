@@ -6,7 +6,7 @@
  *  \date      08.06.2021
  */
 
-#include "project_headers.h"
+#include "./project_headers.h"
 #include "./configSTM32F7xx.h"
 
 cDevDisplayGraphic& disp1 = disp;
@@ -19,13 +19,6 @@ int main(void)
 		Controller controller(defaultCells, field);
 		Game game(gameMode,controller,field);
 		disp.refresh();
-  #ifdef USE_GRAPHIC_DISPLAY
-		while(1)
-			{
-				cDevControlPointer::cData event = pointer.get();
-				game.ttt_classic(event.posX,event.posY, event.flags==event.CTRL_DWN);
-			}
-	#endif
 		Pages& pages_Instance = Pages::instance();
 
 		int posX = -1;
@@ -39,7 +32,7 @@ int main(void)
   while(1)
   {
     #ifdef USE_GRAPHIC_DISPLAY
-		//daten der toeucheingabe
+		//daten der toucheingabe
 			cDevControlPointer::cData event = pointer.get();
 			if(event.flags == event.CTRL_DWN &&(posX == -1)&& (posY == -1))
 			{
@@ -51,7 +44,7 @@ int main(void)
 				posX = -1;
 				posY = -1;
 			}
-			
+			game.ttt_classic(posX,posY);
 /*
 			//TEST: Augabe von quadraten auf dem Display im gw�hlten bereich der Touch eingabe
 			if(posX<750 && posX > 50 && posY < 750 && posY > 50) {
