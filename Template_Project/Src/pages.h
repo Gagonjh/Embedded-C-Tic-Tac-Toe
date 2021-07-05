@@ -4,18 +4,16 @@
 
 #ifndef PAGES_H
 #define PAGES_H
-
-extern cDevDisplayGraphic& disp1;
 	
 class Pages
 {
+	
+	private:
+		short int page; //Aktuelle Seite
+		short int lastPage; //Seite des letzten Aufrufs
 	public:
 
 		
-			unsigned int iColor_Mode;
-			unsigned int iColor_backround;
-			unsigned int iColor_font;
-			unsigned int iColor_boxes;
 			unsigned int iCurrent_Page;
 	
 			//Konstruktor
@@ -26,23 +24,26 @@ class Pages
 			}
 			~Pages() {}
 			//Methoden
-			void changeColorMode(int);
 			
 			void drawpage(void);
 			
 			void siteHeader(short int,short int,short int,short int,char*);
 			
 			void draw_button(short int ,short int ,short int ,short int ,short int,short int,short int,short int,short int,short int, char*);
-		
-			void choose_page(short int);
-			short int display_current_page(void);
+				
+			short int display_current_page(int, int);
 			
+			short int isPressed(int,int,short int[][5],int);
+				
 		protected:
 			Pages();// verhindert, dass ein Objekt von außerhalb von N erzeugt wird.
                     // protected, wenn man von der Klasse noch erben möchte
 			Pages( const Pages& );//verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann
 				
 			Pages & operator = (const Pages &); //Verhindert weitere Instanz durch Kopie
+		  
+
+		
 };
 
 /*

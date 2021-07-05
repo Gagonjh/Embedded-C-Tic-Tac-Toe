@@ -22418,18 +22418,16 @@ class cTaskHandler : public cList::Item
 
 
 
-
-extern cDevDisplayGraphic& disp1;
 	
 class Pages
 {
+	
+	private:
+		short int page; 
+		short int lastPage; 
 	public:
 
 		
-			unsigned int iColor_Mode;
-			unsigned int iColor_backround;
-			unsigned int iColor_font;
-			unsigned int iColor_boxes;
 			unsigned int iCurrent_Page;
 	
 			
@@ -22440,23 +22438,26 @@ class Pages
 			}
 			~Pages() {}
 			
-			void changeColorMode(int);
 			
 			void drawpage(void);
 			
 			void siteHeader(short int,short int,short int,short int,char*);
 			
 			void draw_button(short int ,short int ,short int ,short int ,short int,short int,short int,short int,short int,short int, char*);
-		
-			void choose_page(short int);
-			short int display_current_page(void);
+				
+			short int display_current_page(int, int);
 			
+			short int isPressed(int,int,short int[][5],int);
+				
 		protected:
 			Pages();
                     
 			Pages( const Pages& );
 				
 			Pages & operator = (const Pages &); 
+		  
+
+		
 };
 
 
@@ -22475,12 +22476,11 @@ class Pages
 
 
 
-extern short int iButtons_cor_M[10][4];
+extern short int iButtons_cor_M[10][5];
 
 class Menue : public Pages
 {
 		public:
-      
 						
 				static Menue& instance()
 			{
@@ -22491,8 +22491,10 @@ class Menue : public Pages
 		
 			void drawpage(void);
 			
+			short int buttonOnPagePressed(int,int);
 			
 			private:
+			
 			Menue() {
 			} ;
                     
@@ -22508,20 +22510,37 @@ class Menue : public Pages
 
 
 
+ 
 
 
-extern short int iButtons_cor_S[10][4];
+
+
+extern short int iButtons_cor_S[10][5];
 
 class Settings : public Pages
 {
 		public:
-      
 			
-		
+				static Settings& instance()
+			{
+				static Settings _instance;
+				return _instance;
+			}
+			~Settings() {}
 			
-			Settings(cDevDisplayGraphic&,int,char*);
 		
 			void drawpage(void);
+				
+			short int buttonOnPagePressed(int,int);
+		
+		private:
+			
+			Settings() {
+			} ;
+                    
+			Settings( const Settings& );
+				
+			Settings & operator = (const Settings &); 
 };
 
 #line 10 "Src\\./project_headers.h"
@@ -22546,6 +22565,165 @@ class Display
 };
 
 #line 11 "Src\\./project_headers.h"
+#line 1 "Src\\././Symbole.h"
+
+
+
+
+
+ 
+ 
+#line 12 "Src\\./project_headers.h"
+#line 1 "Src\\././Game_settings.h"
+
+
+
+
+
+ 
+
+
+
+
+extern short int iButtons_cor_GS[10][5];
+
+class Game_Settings : public Pages
+{
+		public:
+			
+				static Game_Settings& instance()
+			{
+				static Game_Settings _instance;
+				return _instance;
+			}
+			~Game_Settings() {}
+			
+		
+			void drawpage(void);
+				
+			short int buttonOnPagePressed(int,int);
+		
+		private:
+			
+			Game_Settings() {
+			} ;
+                    
+			Game_Settings( const Game_Settings& );
+				
+			Game_Settings & operator = (const Game_Settings &); 
+};
+
+#line 13 "Src\\./project_headers.h"
+#line 1 "Src\\././History.h"
+
+
+
+
+
+ 
+
+
+
+
+extern short int iButtons_cor_H[10][5];
+
+class History : public Pages
+{
+		public:
+			
+				static History& instance()
+			{
+				static History _instance;
+				return _instance;
+			}
+			~History() {}
+			
+		
+			void drawpage(void);
+				
+			short int buttonOnPagePressed(int,int);
+		
+		private:
+			
+			History() {
+			} ;
+                    
+			History( const History& );
+				
+			History & operator = (const History &); 
+};
+
+#line 14 "Src\\./project_headers.h"
+#line 1 "Src\\././Style.h"
+
+
+
+
+
+ 
+
+
+
+
+class Style
+{
+		public:
+			
+				static Style& instance()
+			{
+				static Style _instance;
+				return _instance;
+			}
+			~Style() {}
+			
+		
+			void changeActiveColorTheme(short int);
+		
+			int color_Backround;
+			int color_Font;
+			int color_Boxes;
+			int color_Player_1;
+			int color_Player_2;
+			int color_Field;
+		
+		private:
+			
+			int dark_Color_Backround;
+			int dark_Color_Font;
+			int dark_Color_Boxes ;
+			int dark_Color_Player_1;
+			int dark_Color_Player_2 ;
+			int dark_Color_Field;
+			int dark_Color_Border;
+		
+			int light_Color_Backround;
+			int light_Color_Font;
+			int light_Color_Boxes;
+			int light_Color_Player_1;
+			int light_Color_Player_2;
+			int light_Color_Field;
+		
+			int ru_Color_Backround;
+			int ru_Color_Font;
+			int ru_Color_Boxes;
+			int ru_Color_Player_1;
+			int ru_Color_Player_2;
+			int ru_Color_Field;
+		
+			Style();
+                    
+			Style( const Style& );
+				
+			Style & operator = (const Style &); 
+			
+			
+			
+};
+
+#line 15 "Src\\./project_headers.h"
+
+
+extern cDevDisplayGraphic& disp1;
 #line 2 "Src\\Field.cpp"
 	
 	Field::Field(cDevDisplayGraphic& konst_disp):disp1(konst_disp){}

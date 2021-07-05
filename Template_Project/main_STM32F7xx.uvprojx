@@ -431,14 +431,44 @@
               <FilePath>.\Src\Settings.h</FilePath>
             </File>
             <File>
-              <FileName>Display.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Src\Display.cpp</FilePath>
+              <FileName>Symbole.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Symbole.h</FilePath>
             </File>
             <File>
-              <FileName>Display.h</FileName>
+              <FileName>Symbole.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Symbole.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Game_settings.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Game_settings.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Game_settings.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Src\Display.h</FilePath>
+              <FilePath>.\Src\Game_settings.h</FilePath>
+            </File>
+            <File>
+              <FileName>History.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\History.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>History.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\History.h</FilePath>
+            </File>
+            <File>
+              <FileName>Style.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Style.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Style.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Style.h</FilePath>
             </File>
           </Files>
         </Group>

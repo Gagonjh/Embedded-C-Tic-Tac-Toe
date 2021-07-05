@@ -1,42 +1,28 @@
-//Author:     			Joshua Hahn  
-//Projekt:    			Tic Tac Toe
-//Datum:				  	15.06.2021
+/*! 
+ *  \brief     Dient der Ausgabe auf dem Display
+ *  \details   Die Klasse dient als Parent für die einzelnen Ansichten. Sie stellt darüber hinaus funktionalitäten für die Child Klassen bereit und regelt den Aufruf dieser. Sie ist somit das Bindeglied zwischen der Ausgabe und dem funktionalen teil des Programmes.
+ *  \author    Joshua Hahn
+ *  \date      15.06.2021
+ *  \bug    	 Beim ersten aufrufen der funktion hat das Display die Standart Hintergrundfarbe
+ */
+
 
 #include "./project_headers.h"
 
-Pages::Pages() {
+Pages::Pages() 
+{
 			//Menue& menueinstance = Menue::instance();
-			changeColorMode(0);
-				
+			page = 0;
+			lastPage = -1;
 }			
-	
-void Pages::changeColorMode(int cmode)
-	{
-		switch(cmode) 
-			{
-				case 0:
-					iColor_backround = 0x530C;
-					iColor_font = 0xEE02;
-					iColor_boxes = 0x94F4;
-				break;
-				case 1:
-					iColor_backround =0xFFFF;
-					iColor_font = 0x067D;
-					iColor_boxes = 0x85FA;
-				break;
-				default:
-				break;
-			}
-	}
+
 
 void Pages::drawpage(void)
 	{
-		#ifdef USE_GRAPHIC_DISPLAY
-		disp1.clear();
-    disp1.setBackColor(iColor_backround);
+    disp1.setBackColor(Style::instance().color_Backround);
+		disp1.setTextColor(Style::instance().color_Font);
 		siteHeader(0,0,24,16,"Wie bist du hier gelandet?");
-		draw_button(80,200,60,200,15,1,iColor_boxes,0x067D,24,16,"Hi");
-		#endif
+		draw_button(80,200,60,200,15,1,Style::instance().color_Boxes,0x067D,24,16,"Hi");
 	}
 
 //Creates an box with a one line centerd text 
@@ -50,7 +36,7 @@ void Pages::siteHeader(short int box_offset_x,short int box_offset_y,short int f
 		int titel_length = std::strlen(content);
 		float titel_offset = disp_length/2-((titel_length/2)*(font_length));
 		
-		disp1.drawRectangle(box_offset_x,box_offset_y,disp_length,font_hight+box_hight,iColor_boxes);
+		disp1.drawRectangle(box_offset_x,box_offset_y,disp_length,font_hight+box_hight,Style::instance().color_Boxes);
 		disp1.drawText(box_offset_x+titel_offset,box_offset_y+box_hight/2,titel_length,content);
 		}
 	
@@ -103,26 +89,83 @@ void Pages::draw_button(short int box_offset_x,short int box_offset_y,short int 
 	disp1.drawPixel(box_offset_x+button_length,box_offset_y+button_hight,0xFFFF);
 	*/
 }
-void Pages::choose_page(short int page)
+
+short int Pages::display_current_page(int posX,int posY)
 {
-	switch(page) 
+	//Auswertung aller Button
+	//disp1.drawText(440,120,18, "%d",page); 	//Test
+	//Seite 0 Hautpmenü
+	if(page == 0 && (posX >= 0 || posY >= 0 ))
+	{
+			page = Menue::instance().buttonOnPagePressed(posX,posY);
+	}
+	//Seite 1 Spiel Einstellungen/Startseite 
+	else if(page == 1 && (posX >= 0 || posY >= 0 ))
+	{
+			page = Settings::instance().buttonOnPagePressed(posX,posY);
+	}
+	//Seite 2 Spiel Einstellungen/Startseite 
+	else if(page == 2 && (posX >= 0 || posY >= 0 ))
+	{
+			page = History::instance().buttonOnPagePressed(posX,posY);
+	}
+	//Seite 3 Einstellungen 
+	else if(page == 3 && (posX >= 0 || posY >= 0 ))
+	{
+			page = Settings::instance().buttonOnPagePressed(posX,posY);
+	}
+	if(page == -1)	//!Auffangen von Touches auf leerer fläche
+	{
+		page = lastPage;
+	}
+	
+	//Ausgabe der aktuellen seite anhand ihrer Nummer
+	
+	if(page != lastPage)
+	{
+		disp1.clear();
+		switch(page) 
 			{
 				case 0:
-					
+					Menue::instance().drawpage();
 				break;
 				case 1:
-					iColor_backround =0xFFFF;
-					iColor_font = 0x067D;
-					iColor_boxes = 0x85FA;
+					Game_Settings::instance().drawpage();
+					//test case
+					//drawpage();
+					//disp1.drawCircle(80,80,60,0xEE02);
+				break;
+				case 2:
+					//test case,
+					//drawpage();
+					//disp1.drawCircle(80,80,60,0xEE02);
+				History::instance().drawpage();
+
+				break;
+				case 3:
+					Settings::instance().drawpage();
 				break;
 				default:
-				drawpage();
+				
 				break;
 			}
+	}
+	lastPage = page;
+	
+	//Anzeige der Seite
+	
+		
+	return 0;
 }
 
-short int Pages::display_current_page(void)
+short int Pages::isPressed(int posX,int posY,short int buttons_cor[][5],int button)
 {
-	Menue::instance().drawpage();
-	return 0;
+	if((posX > buttons_cor[button][0] && posX < buttons_cor[button][1]) && (posY > buttons_cor[button][2] && posY < buttons_cor[button][3]))
+	{
+		return buttons_cor[button][4];
+	}
+	else
+	{
+		return -1;
+	}
 }

@@ -5,12 +5,11 @@
 #ifndef MENUE_H
 #define MENUE_H
 
-extern short int iButtons_cor_M[10][4];
+extern short int iButtons_cor_M[10][5];
 
 class Menue : public Pages
 {
 		public:
-      
 						//Konstruktor
 				static Menue& instance()
 			{
@@ -21,8 +20,10 @@ class Menue : public Pages
 		
 			void drawpage(void);
 			
+			short int buttonOnPagePressed(int,int);
 			
 			private:
+			
 			Menue() {
 			} ;// verhindert, dass ein Objekt von außerhalb von N erzeugt wird.
                     // protected, wenn man von der Klasse noch erben möchte
