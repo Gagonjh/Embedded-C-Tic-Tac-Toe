@@ -102,7 +102,7 @@ short int Pages::display_current_page(int posX,int posY)
 	//Seite 1 Spiel Einstellungen/Startseite 
 	else if(page == 1 && (posX >= 0 || posY >= 0 ))
 	{
-			page = Settings::instance().buttonOnPagePressed(posX,posY);
+			page = Game_Settings::instance().buttonOnPagePressed(posX,posY);
 	}
 	//Seite 2 Spiel Einstellungen/Startseite 
 	else if(page == 2 && (posX >= 0 || posY >= 0 ))
