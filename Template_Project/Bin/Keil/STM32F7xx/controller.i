@@ -22618,7 +22618,7 @@ class Settings : public Pages
 		
 		private:
 			Settings() {} ;
-			void highlight_selected_colormode_button(short int);
+			void highlight_selected_colormode_button();
 			void highlight_selected_game_mode();
 		
 			Settings( const Settings& );

@@ -20,9 +20,9 @@ short int iButtons_cor_S[10][5] =
 				{0,0,0,0,0} 					//! Button 10:
 			};//[*][0]=x start, [*][1]=x end, [*][2]=y start & [*][3]=y end, [*][4]=-2 Ein button auf der seite mit funktion
 			
-void Settings::highlight_selected_colormode_button(short int color_mode)
+void Settings::highlight_selected_colormode_button()
 {
-	switch(color_mode)
+	switch(Style::instance().color_Mode)
 	{
 		case 0: disp1.drawCircle(410,120,50,0x17E0); break;
 		case 1: disp1.drawCircle(300,120,50,0x17E0); break;
@@ -55,7 +55,7 @@ void Settings::drawpage()
 	disp1.drawCircle(410,120,40,0x7BCF);
 	disp1.drawCircle(520,120,50,Style::instance().color_Field);
 	disp1.drawCircle(520,120,40,0x98A2);
-	highlight_selected_colormode_button(Style::instance().color_Mode);
+	highlight_selected_colormode_button();
 //Game mode change Buttons
 	disp1.drawText(40,270,"Spielmodus:");
 	disp1.drawFrame(260,260,220,40,2,Style::instance().color_Field);
