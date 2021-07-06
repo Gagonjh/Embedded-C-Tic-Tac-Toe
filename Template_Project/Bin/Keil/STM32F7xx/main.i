@@ -1,9 +1,17 @@
 #line 1 "Src\\main.cpp"
-#line 1 "Src\\project_headers.h"
 
 
 
-#line 1 "Src\\../../EmbSysLib/Src/lib.h"
+
+
+
+ 
+
+#line 1 "Src\\./project_headers.h"
+
+
+
+#line 1 "Src\\./../../EmbSysLib/Src/lib.h"
 
 
 
@@ -23,7 +31,7 @@
 
 
 
-#line 1 "Src\\../../EmbSysLib/Src/MCU/System.h"
+#line 1 "Src\\./../../EmbSysLib/Src/MCU/System.h"
 
 
 
@@ -163,7 +171,7 @@ extern "C"
   void SystemInit(void);
 }
 
-#line 21 "Src\\../../EmbSysLib/Src/lib.h"
+#line 21 "Src\\./../../EmbSysLib/Src/lib.h"
 #line 1 ".\\..\\EmbSysLib\\Src\\MCU\\STM32F7xx\\MCU.h"
 
 
@@ -18242,12 +18250,12 @@ class cHwUSB_0 : public cHwUSB
 
 
 
-#line 22 "Src\\../../EmbSysLib/Src/lib.h"
+#line 22 "Src\\./../../EmbSysLib/Src/lib.h"
 
 
 
 
-#line 1 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
 
 
 
@@ -18264,12 +18272,12 @@ class cHwUSB_0 : public cHwUSB
 
 
 
-#line 18 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetApp.h"
+#line 18 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetApp.h"
 
 
 
-#line 5 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetApp.h"
+#line 5 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetApp.h"
 
 class cNetApplication : public cList::Item
 {
@@ -18312,13 +18320,13 @@ class cNetApplication : public cList::Item
   friend class cNetWinTransport;
 };
 
-#line 19 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetTransport.h"
+#line 19 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetTransport.h"
 
 
 
-#line 5 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetTransport.h"
-#line 6 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetTransport.h"
+#line 5 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetTransport.h"
+#line 6 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetTransport.h"
 
 
 #line 1 "C:\\Bin\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdarg.h"
@@ -18449,9 +18457,9 @@ class cNetApplication : public cList::Item
 
  
 
-#line 9 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetTransport.h"
-#line 10 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetTransport.h"
-#line 11 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetTransport.h"
+#line 9 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetTransport.h"
+#line 10 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetTransport.h"
+#line 11 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetTransport.h"
 
 
 
@@ -18624,15 +18632,15 @@ class cNetTransport
 
 }; 
 
-#line 20 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
+#line 20 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
 
 
 
-#line 1 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetARP.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetARP.h"
 
 
 
-#line 5 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetARP.h"
+#line 5 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetARP.h"
 
 #pragma pack(1)
 
@@ -18702,24 +18710,24 @@ class cNetARP
 
 }; 
 
-#line 24 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetDHCP.h"
+#line 24 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetDHCP.h"
 
 
 
 
 
-#line 1 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetUDP.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetUDP.h"
 
 
 
-#line 1 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetIP.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetIP.h"
 
 
 
 
-#line 6 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetIP.h"
-#line 7 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetIP.h"
+#line 6 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetIP.h"
+#line 7 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetIP.h"
 
 
 #pragma pack(1)
@@ -18888,7 +18896,7 @@ class cNetIP
 
 }; 
 
-#line 5 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetUDP.h"
+#line 5 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetUDP.h"
 
 #pragma pack(1)
 
@@ -19002,7 +19010,7 @@ class cNetUDP : public cNetTransport
 
 }; 
 
-#line 7 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetDHCP.h"
+#line 7 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetDHCP.h"
 
 
 #pragma pack(1)
@@ -19090,13 +19098,13 @@ class cNetDHCP : public cNetApplication
     
 }; 
 
-#line 25 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetICMP.h"
+#line 25 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetICMP.h"
 
 
 
 
-#line 6 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetICMP.h"
+#line 6 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetICMP.h"
 
 #pragma pack(1)
 
@@ -19147,8 +19155,8 @@ class cNetICMP
 
 }; 
 
-#line 26 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/NetTCP.h"
+#line 26 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/NetTCP.h"
 
 
 
@@ -19323,21 +19331,21 @@ class cNetTCP : public cNetTransport
 
 }; 
 
-#line 27 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
-#line 28 "Src\\../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
+#line 27 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
+#line 28 "Src\\./../../EmbSysLib/Src/Com/Hardware/Net/Net.h"
 
 
-#line 27 "Src\\../../EmbSysLib/Src/lib.h"
-
-
-
+#line 27 "Src\\./../../EmbSysLib/Src/lib.h"
 
 
 
 
 
 
-#line 1 "Src\\../../EmbSysLib/Src/Com/Std/Std.h"
+
+
+
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Std/Std.h"
 
 
 
@@ -19354,9 +19362,9 @@ class cNetTCP : public cNetTransport
 
 
 
-#line 18 "Src\\../../EmbSysLib/Src/Com/Std/Std.h"
-#line 19 "Src\\../../EmbSysLib/Src/Com/Std/Std.h"
-#line 20 "Src\\../../EmbSysLib/Src/Com/Std/Std.h"
+#line 18 "Src\\./../../EmbSysLib/Src/Com/Std/Std.h"
+#line 19 "Src\\./../../EmbSysLib/Src/Com/Std/Std.h"
+#line 20 "Src\\./../../EmbSysLib/Src/Com/Std/Std.h"
 
 
 
@@ -19423,8 +19431,8 @@ template <class T> inline T SIGN( T x )
 
 const float PI = (float)3.1415926535897932384626433832795;
 
-#line 37 "Src\\../../EmbSysLib/Src/lib.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Std/StaticArray.h"
+#line 37 "Src\\./../../EmbSysLib/Src/lib.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Std/StaticArray.h"
 
 
 
@@ -19530,8 +19538,8 @@ template <class T, WORD size> class cStaticArray
 
 
 
-#line 38 "Src\\../../EmbSysLib/Src/lib.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Std/CRC.h"
+#line 38 "Src\\./../../EmbSysLib/Src/lib.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Std/CRC.h"
 
 
 
@@ -19627,10 +19635,10 @@ class cCRC
 
 }; 
 
-#line 39 "Src\\../../EmbSysLib/Src/lib.h"
-#line 40 "Src\\../../EmbSysLib/Src/lib.h"
-#line 41 "Src\\../../EmbSysLib/Src/lib.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Std/SharedMem.h"
+#line 39 "Src\\./../../EmbSysLib/Src/lib.h"
+#line 40 "Src\\./../../EmbSysLib/Src/lib.h"
+#line 41 "Src\\./../../EmbSysLib/Src/lib.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Std/SharedMem.h"
 
 
 
@@ -19645,7 +19653,7 @@ class cCRC
 
 
 
-#line 16 "Src\\../../EmbSysLib/Src/Com/Std/SharedMem.h"
+#line 16 "Src\\./../../EmbSysLib/Src/Com/Std/SharedMem.h"
 
 
 
@@ -19695,9 +19703,9 @@ template <class T> class cSharedMem
 
 }; 
 
-#line 42 "Src\\../../EmbSysLib/Src/lib.h"
-#line 43 "Src\\../../EmbSysLib/Src/lib.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Std/Timer.h"
+#line 42 "Src\\./../../EmbSysLib/Src/lib.h"
+#line 43 "Src\\./../../EmbSysLib/Src/lib.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Std/Timer.h"
 
 
 
@@ -19801,7 +19809,7 @@ class cTimer
 
 }; 
 
-#line 44 "Src\\../../EmbSysLib/Src/lib.h"
+#line 44 "Src\\./../../EmbSysLib/Src/lib.h"
 
 
 
@@ -19809,22 +19817,7 @@ class cTimer
 
 
 
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/Analog/devAnalogInADC.h"
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/Analog/devAnalogIn.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/Analog/devAnalogInADC.h"
 
 
 
@@ -19839,7 +19832,22 @@ class cTimer
 
 
 
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/Analog/devAnalog.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/Analog/devAnalogIn.h"
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/Analog/devAnalog.h"
 
 
 
@@ -19885,7 +19893,7 @@ class cDevAnalog
 
 }; 
 
-#line 16 "Src\\../../EmbSysLib/Src/Com/Device/Analog/devAnalogIn.h"
+#line 16 "Src\\./../../EmbSysLib/Src/Com/Device/Analog/devAnalogIn.h"
 
 
 
@@ -19944,8 +19952,8 @@ class cDevAnalogIn : public cDevAnalog
 
 }; 
 
-#line 16 "Src\\../../EmbSysLib/Src/Com/Device/Analog/devAnalogInADC.h"
-#line 17 "Src\\../../EmbSysLib/Src/Com/Device/Analog/devAnalogInADC.h"
+#line 16 "Src\\./../../EmbSysLib/Src/Com/Device/Analog/devAnalogInADC.h"
+#line 17 "Src\\./../../EmbSysLib/Src/Com/Device/Analog/devAnalogInADC.h"
 
 
 
@@ -19986,8 +19994,8 @@ class cDevAnalogInADC : public cDevAnalogIn
 
 }; 
 
-#line 52 "Src\\../../EmbSysLib/Src/lib.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/Analog/devAnalogOutDAC.h"
+#line 52 "Src\\./../../EmbSysLib/Src/lib.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/Analog/devAnalogOutDAC.h"
 
 
 
@@ -20003,7 +20011,7 @@ class cDevAnalogInADC : public cDevAnalogIn
 
 
 
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/Analog/devAnalogOut.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/Analog/devAnalogOut.h"
 
 
 
@@ -20018,7 +20026,7 @@ class cDevAnalogInADC : public cDevAnalogIn
 
 
 
-#line 16 "Src\\../../EmbSysLib/Src/Com/Device/Analog/devAnalogOut.h"
+#line 16 "Src\\./../../EmbSysLib/Src/Com/Device/Analog/devAnalogOut.h"
 
 
 
@@ -20066,8 +20074,8 @@ class cDevAnalogOut : public cDevAnalog
 
 }; 
 
-#line 17 "Src\\../../EmbSysLib/Src/Com/Device/Analog/devAnalogOutDAC.h"
-#line 18 "Src\\../../EmbSysLib/Src/Com/Device/Analog/devAnalogOutDAC.h"
+#line 17 "Src\\./../../EmbSysLib/Src/Com/Device/Analog/devAnalogOutDAC.h"
+#line 18 "Src\\./../../EmbSysLib/Src/Com/Device/Analog/devAnalogOutDAC.h"
 
 
 
@@ -20109,8 +20117,8 @@ class cDevAnalogOutDAC : public cDevAnalogOut
 
 }; 
 
-#line 53 "Src\\../../EmbSysLib/Src/lib.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/Analog/devAnalogOutPWM.h"
+#line 53 "Src\\./../../EmbSysLib/Src/lib.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/Analog/devAnalogOutPWM.h"
 
 
 
@@ -20126,7 +20134,7 @@ class cDevAnalogOutDAC : public cDevAnalogOut
 
 
 
-#line 17 "Src\\../../EmbSysLib/Src/Com/Device/Analog/devAnalogOutPWM.h"
+#line 17 "Src\\./../../EmbSysLib/Src/Com/Device/Analog/devAnalogOutPWM.h"
 #line 1 ".\\..\\EmbSysLib\\Src\\Com/Device/Digital/devDigital.h"
 
 
@@ -20317,8 +20325,8 @@ class cDevDigital
 
 }; 
 
-#line 18 "Src\\../../EmbSysLib/Src/Com/Device/Analog/devAnalogOutPWM.h"
-#line 19 "Src\\../../EmbSysLib/Src/Com/Device/Analog/devAnalogOutPWM.h"
+#line 18 "Src\\./../../EmbSysLib/Src/Com/Device/Analog/devAnalogOutPWM.h"
+#line 19 "Src\\./../../EmbSysLib/Src/Com/Device/Analog/devAnalogOutPWM.h"
 
 
 
@@ -20418,13 +20426,13 @@ class cDevAnalogOutPWMemul : public cDevAnalogOut,
 
 }; 
 
-#line 54 "Src\\../../EmbSysLib/Src/lib.h"
+#line 54 "Src\\./../../EmbSysLib/Src/lib.h"
 
 
 
 
-#line 59 "Src\\../../EmbSysLib/Src/lib.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/Digital/devDigitalIndicator.h"
+#line 59 "Src\\./../../EmbSysLib/Src/lib.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/Digital/devDigitalIndicator.h"
 
 
 
@@ -20439,7 +20447,7 @@ class cDevAnalogOutPWMemul : public cDevAnalogOut,
 
 
 
-#line 16 "Src\\../../EmbSysLib/Src/Com/Device/Digital/devDigitalIndicator.h"
+#line 16 "Src\\./../../EmbSysLib/Src/Com/Device/Digital/devDigitalIndicator.h"
 
 
 
@@ -20554,12 +20562,12 @@ class cDevDigitalIndicator : public cList::Item
 
 }; 
 
-#line 60 "Src\\../../EmbSysLib/Src/lib.h"
+#line 60 "Src\\./../../EmbSysLib/Src/lib.h"
 
 
 
 
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/Display/devDisplay.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/Display/devDisplay.h"
 
 
 
@@ -20617,8 +20625,8 @@ class cDevDisplay
 
 }; 
 
-#line 65 "Src\\../../EmbSysLib/Src/lib.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/Display/devDisplayChar.h"
+#line 65 "Src\\./../../EmbSysLib/Src/lib.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/Display/devDisplayChar.h"
 
 
 
@@ -20712,8 +20720,8 @@ class cHwDisplay
 
 }; 
 
-#line 16 "Src\\../../EmbSysLib/Src/Com/Device/Display/devDisplayChar.h"
-#line 17 "Src\\../../EmbSysLib/Src/Com/Device/Display/devDisplayChar.h"
+#line 16 "Src\\./../../EmbSysLib/Src/Com/Device/Display/devDisplayChar.h"
+#line 17 "Src\\./../../EmbSysLib/Src/Com/Device/Display/devDisplayChar.h"
 
 
 
@@ -20782,8 +20790,8 @@ class cDevDisplayChar : public cDevDisplay
 
 }; 
 
-#line 66 "Src\\../../EmbSysLib/Src/lib.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/Display/devDisplayGraphic.h"
+#line 66 "Src\\./../../EmbSysLib/Src/lib.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/Display/devDisplayGraphic.h"
 
 
 
@@ -21193,8 +21201,8 @@ class cHwDisplayGraphic : public cHwDisplay
 
 }; 
 
-#line 15 "Src\\../../EmbSysLib/Src/Com/Device/Display/devDisplayGraphic.h"
-#line 16 "Src\\../../EmbSysLib/Src/Com/Device/Display/devDisplayGraphic.h"
+#line 15 "Src\\./../../EmbSysLib/Src/Com/Device/Display/devDisplayGraphic.h"
+#line 16 "Src\\./../../EmbSysLib/Src/Com/Device/Display/devDisplayGraphic.h"
 
 
 
@@ -21383,12 +21391,12 @@ class cDevDisplayGraphic : public cDevDisplay
 
 }; 
 
-#line 67 "Src\\../../EmbSysLib/Src/lib.h"
+#line 67 "Src\\./../../EmbSysLib/Src/lib.h"
 
 
 
 
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/Memory/devMemory.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/Memory/devMemory.h"
 
 
 
@@ -21403,7 +21411,7 @@ class cDevDisplayGraphic : public cDevDisplay
 
 
 
-#line 16 "Src\\../../EmbSysLib/Src/Com/Device/Memory/devMemory.h"
+#line 16 "Src\\./../../EmbSysLib/Src/Com/Device/Memory/devMemory.h"
 
 
 
@@ -21558,8 +21566,8 @@ template <class T> class cDevMemoryFragment
 
 };
 
-#line 72 "Src\\../../EmbSysLib/Src/lib.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/Memory/devMemoryFlash.h"
+#line 72 "Src\\./../../EmbSysLib/Src/lib.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/Memory/devMemoryFlash.h"
 
 
 
@@ -21574,7 +21582,7 @@ template <class T> class cDevMemoryFragment
 
 
 
-#line 16 "Src\\../../EmbSysLib/Src/Com/Device/Memory/devMemoryFlash.h"
+#line 16 "Src\\./../../EmbSysLib/Src/Com/Device/Memory/devMemoryFlash.h"
 
 
 
@@ -21694,12 +21702,12 @@ template <class T> class cDevMemoryFlash
 
 }; 
 
-#line 73 "Src\\../../EmbSysLib/Src/lib.h"
+#line 73 "Src\\./../../EmbSysLib/Src/lib.h"
 
 
 
 
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/TextIO/devTextIO_UART.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/TextIO/devTextIO_UART.h"
 
 
 
@@ -21714,7 +21722,7 @@ template <class T> class cDevMemoryFlash
 
 
 
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/TextIO/devTextIO.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/TextIO/devTextIO.h"
 
 
 
@@ -21816,8 +21824,8 @@ class cDevTextIO
 
 }; 
 
-#line 16 "Src\\../../EmbSysLib/Src/Com/Device/TextIO/devTextIO_UART.h"
-#line 17 "Src\\../../EmbSysLib/Src/Com/Device/TextIO/devTextIO_UART.h"
+#line 16 "Src\\./../../EmbSysLib/Src/Com/Device/TextIO/devTextIO_UART.h"
+#line 17 "Src\\./../../EmbSysLib/Src/Com/Device/TextIO/devTextIO_UART.h"
 
 
 
@@ -21855,12 +21863,12 @@ class cDevTextIO_UART : public cDevTextIO
  
 }; 
 
-#line 78 "Src\\../../EmbSysLib/Src/lib.h"
+#line 78 "Src\\./../../EmbSysLib/Src/lib.h"
 
 
 
 
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/Control/devControlEncoder.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/Control/devControlEncoder.h"
 
 
 
@@ -21873,8 +21881,8 @@ class cDevTextIO_UART : public cDevTextIO
 
 
 
-#line 14 "Src\\../../EmbSysLib/Src/Com/Device/Control/devControlEncoder.h"
-#line 15 "Src\\../../EmbSysLib/Src/Com/Device/Control/devControlEncoder.h"
+#line 14 "Src\\./../../EmbSysLib/Src/Com/Device/Control/devControlEncoder.h"
+#line 15 "Src\\./../../EmbSysLib/Src/Com/Device/Control/devControlEncoder.h"
 
 
 
@@ -21961,8 +21969,8 @@ class cDevControlEncoder : public cList::Item
 
 };
 
-#line 83 "Src\\../../EmbSysLib/Src/lib.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/Control/devControlEncoderJoystick.h"
+#line 83 "Src\\./../../EmbSysLib/Src/lib.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/Control/devControlEncoderJoystick.h"
 
 
 
@@ -21975,7 +21983,7 @@ class cDevControlEncoder : public cList::Item
 
 
 
-#line 14 "Src\\../../EmbSysLib/Src/Com/Device/Control/devControlEncoderJoystick.h"
+#line 14 "Src\\./../../EmbSysLib/Src/Com/Device/Control/devControlEncoderJoystick.h"
 
 
 
@@ -22018,8 +22026,8 @@ class cDevControlEncoderJoystick : public cDevControlEncoder
 
 };
 
-#line 84 "Src\\../../EmbSysLib/Src/lib.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/Control/devControlEncoderRotaryKnob.h"
+#line 84 "Src\\./../../EmbSysLib/Src/lib.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/Control/devControlEncoderRotaryKnob.h"
 
 
 
@@ -22032,7 +22040,7 @@ class cDevControlEncoderJoystick : public cDevControlEncoder
 
 
 
-#line 14 "Src\\../../EmbSysLib/Src/Com/Device/Control/devControlEncoderRotaryKnob.h"
+#line 14 "Src\\./../../EmbSysLib/Src/Com/Device/Control/devControlEncoderRotaryKnob.h"
 
 
 
@@ -22067,8 +22075,8 @@ class cDevControlEncoderRotaryKnob : public cDevControlEncoder
     cDevDigital *btnRight;
 };
 
-#line 85 "Src\\../../EmbSysLib/Src/lib.h"
-#line 1 "Src\\../../EmbSysLib/Src/Com/Device/Control/devControlPointer.h"
+#line 85 "Src\\./../../EmbSysLib/Src/lib.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Device/Control/devControlPointer.h"
 
 
 
@@ -22161,7 +22169,7 @@ class cHwTouch
 
 }; 
 
-#line 14 "Src\\../../EmbSysLib/Src/Com/Device/Control/devControlPointer.h"
+#line 14 "Src\\./../../EmbSysLib/Src/Com/Device/Control/devControlPointer.h"
 
 
 
@@ -22225,12 +22233,12 @@ class cDevControlPointer
 
 };
 
-#line 86 "Src\\../../EmbSysLib/Src/lib.h"
+#line 86 "Src\\./../../EmbSysLib/Src/lib.h"
 
 
 
 
-#line 1 "Src\\../../EmbSysLib/Src/Com/Task/TaskHandler.h"
+#line 1 "Src\\./../../EmbSysLib/Src/Com/Task/TaskHandler.h"
 
 
 
@@ -22245,8 +22253,8 @@ class cDevControlPointer
 
 
 
-#line 16 "Src\\../../EmbSysLib/Src/Com/Task/TaskHandler.h"
-#line 17 "Src\\../../EmbSysLib/Src/Com/Task/TaskHandler.h"
+#line 16 "Src\\./../../EmbSysLib/Src/Com/Task/TaskHandler.h"
+#line 17 "Src\\./../../EmbSysLib/Src/Com/Task/TaskHandler.h"
 
 
 
@@ -22393,29 +22401,402 @@ class cTaskHandler : public cList::Item
 
 }; 
 
-#line 91 "Src\\../../EmbSysLib/Src/lib.h"
+#line 91 "Src\\./../../EmbSysLib/Src/lib.h"
 
-#line 5 "Src\\project_headers.h"
-#line 1 "Src\\./Field.h"
+#line 5 "Src\\./project_headers.h"
+#line 6 "Src\\./project_headers.h"
+#line 1 "Src\\././datatypes.h"
 
 
 
 
-	
-	
-	
-	class Field
+
+ 
+
+
+
+
+#line 12 "Src\\././datatypes.h"
+
+typedef struct coordinates {
+	uint16_t x;
+	uint16_t y;
+	uint8_t player;
+} Coordinates;
+
+#line 7 "Src\\./project_headers.h"
+#line 1 "Src\\././Controller.h"
+#line 4 "Src\\././Controller.h"
+#line 1 "Src\\./././Cells.h"
+#line 4 "Src\\./././Cells.h"
+
+class Cells {
+	private:
+		void initializeCells();
+		void initializeDefaultRows();
+	public:
+		BYTE* topRow;
+		BYTE* centerRow;
+		BYTE* bottomRow;
+		BYTE* leftColumn;
+		BYTE* centerColumn;
+		BYTE* rightColumn;
+		BYTE* downDiagonal;
+		BYTE* upDiagonal;
+		Coordinates* cells;
+		bool rowIsComplete();
+		Cells();
+};
+
+#line 5 "Src\\././Controller.h"
+#line 1 "Src\\./././Field.h"
+#line 1 "Src\\./././Token.h"
+
+
+
+
+
+ 
+
+#line 11 "Src\\./././Token.h"
+
+class Token
 {
 	public:
-	cDevDisplayGraphic& disp1;
-	
-	Field(cDevDisplayGraphic&);
-	void drawField();
+		const Coordinates coordinates;
+		const short player;
+		Token(Coordinates, short);
 };
-#line 6 "Src\\project_headers.h"
-#line 7 "Src\\project_headers.h"
 
-#line 2 "Src\\main.cpp"
+#line 4 "Src\\./././Field.h"
+	
+class Field
+{
+	public:
+		void drawField();
+		void drawToken(Coordinates);
+};
+#line 6 "Src\\././Controller.h"
+
+class Controller {
+	private:
+		short currentPlayer;
+		short round;
+		Cells cells;
+		Field field;
+	public:
+		Controller();
+		void aiMove();
+		bool handleUserInput(short, short);
+		short getGameState();
+};
+
+#line 8 "Src\\./project_headers.h"
+#line 9 "Src\\./project_headers.h"
+#line 1 "Src\\././Game.h"
+
+
+
+class Game
+{
+	private:
+		Controller controller;
+	public:
+		short ttt_classic(short,short);
+};
+
+#line 10 "Src\\./project_headers.h"
+#line 11 "Src\\./project_headers.h"
+#line 1 "Src\\././Pages.h"
+
+
+
+ 
+
+
+
+	
+class Pages
+{
+	
+	private:
+		short int page; 
+		short int lastPage; 
+	public:
+			unsigned int iCurrent_Page;
+	
+			
+			static Pages& instance()
+				{
+					static Pages _instance;
+					return _instance;
+				}
+			~Pages() {}
+				
+			
+			void drawpage(void);
+			void siteHeader(short int,short int,short int,short int,char*);
+			void draw_button(short int ,short int ,short int ,short int ,short int,short int,short int,short int,short int,short int, char*);
+			short int display_current_page(int, int);
+			short int isPressed(int,int,short int[][5],int);
+				
+		protected:
+			Pages();
+                    
+			Pages( const Pages& );
+				
+			Pages & operator = (const Pages &); 
+		  
+
+		
+};
+
+
+
+
+
+
+
+ 
+#line 12 "Src\\./project_headers.h"
+#line 1 "Src\\././Menue.h"
+
+
+
+
+
+
+
+extern short int iButtons_cor_M[10][5];
+
+class Menue : public Pages
+{
+		public:
+						
+				static Menue& instance()
+			{
+				static Menue _instance;
+				return _instance;
+			}
+			~Menue() {}
+		
+			void drawpage(void);
+			
+			short int buttonOnPagePressed(int,int);
+			
+			private:
+			
+			Menue() {
+			} ;
+                    
+			Menue( const Menue& );
+				
+			Menue & operator = (const Menue &); 
+};
+
+#line 13 "Src\\./project_headers.h"
+#line 1 "Src\\././Settings.h"
+
+
+
+
+
+ 
+
+
+
+
+extern short int iButtons_cor_S[10][5];
+
+class Settings : public Pages
+{
+		public:
+			
+				static Settings& instance()
+			{
+				static Settings _instance;
+				return _instance;
+			}
+			~Settings() {}
+			
+		
+			void drawpage(void);
+				
+			short int buttonOnPagePressed(int,int);
+		
+		private:
+			Settings() {} ;
+			void highlight_selected_colormode_button();
+			void highlight_selected_game_mode();
+		
+			Settings( const Settings& );
+			Settings & operator = (const Settings &); 
+};
+
+#line 14 "Src\\./project_headers.h"
+#line 1 "Src\\././Symbole.h"
+
+
+
+
+
+ 
+ 
+#line 15 "Src\\./project_headers.h"
+#line 1 "Src\\././Game_settings.h"
+
+
+
+
+
+ 
+
+
+
+
+extern short int iButtons_cor_GS[10][5];
+
+class Game_Settings : public Pages
+{
+		public:
+			
+				static Game_Settings& instance()
+			{
+				static Game_Settings _instance;
+				return _instance;
+			}
+			~Game_Settings() {}
+			
+		
+			void drawpage(void);
+				
+			short int buttonOnPagePressed(int,int);
+		
+		private:
+			
+			Game_Settings() {
+			} ;
+                    
+			Game_Settings( const Game_Settings& );
+				
+			Game_Settings & operator = (const Game_Settings &); 
+};
+
+#line 16 "Src\\./project_headers.h"
+#line 1 "Src\\././History.h"
+
+
+
+
+
+ 
+
+
+
+
+extern short int iButtons_cor_H[10][5];
+
+class History : public Pages
+{
+		public:
+			
+				static History& instance()
+			{
+				static History _instance;
+				return _instance;
+			}
+			~History() {}
+			
+		
+			void drawpage(void);
+				
+			short int buttonOnPagePressed(int,int);
+		
+		private:
+			
+			History() {
+			} ;
+                    
+			History( const History& );
+				
+			History & operator = (const History &); 
+};
+
+#line 17 "Src\\./project_headers.h"
+#line 1 "Src\\././Style.h"
+
+
+
+
+
+ 
+
+
+
+
+class Style
+{
+		public:
+			
+				static Style& instance()
+			{
+				static Style _instance;
+				return _instance;
+			}
+			~Style() {}
+			
+		
+			void changeActiveColorTheme(short int);
+		
+			int color_Backround;
+			int color_Font;
+			int color_Boxes;
+			int color_Player_1;
+			int color_Player_2;
+			int color_Field;
+			int color_Mode;
+		
+		private:
+			
+			int dark_Color_Backround;
+			int dark_Color_Font;
+			int dark_Color_Boxes ;
+			int dark_Color_Player_1;
+			int dark_Color_Player_2 ;
+			int dark_Color_Field;
+			int dark_Color_Border;
+		
+			int light_Color_Backround;
+			int light_Color_Font;
+			int light_Color_Boxes;
+			int light_Color_Player_1;
+			int light_Color_Player_2;
+			int light_Color_Field;
+		
+			int ru_Color_Backround;
+			int ru_Color_Font;
+			int ru_Color_Boxes;
+			int ru_Color_Player_1;
+			int ru_Color_Player_2;
+			int ru_Color_Field;
+		
+			Style();
+                    
+			Style( const Style& );
+				
+			Style & operator = (const Style &); 
+			
+			
+			
+};
+
+#line 18 "Src\\./project_headers.h"
+
+
+extern cDevDisplayGraphic& disp1;
+extern uint8_t gameMode;
+
+#line 10 "Src\\main.cpp"
 #line 1 "Src\\./configSTM32F7xx.h"
 
 
@@ -24545,32 +24926,86 @@ cDevDigital led( portJ, 13, cDevDigital::Out,  0 );
 cHwRTC_0 rtc(cHwRTC_0::LSI);
 
 
-#line 3 "Src\\main.cpp"
+#line 11 "Src\\main.cpp"
+
+cDevDisplayGraphic& disp1 = disp;
+uint8_t gameMode = 1;
 
 int main(void)
 {
+		Cells defaultCells;
+		Game* game;
+		disp.refresh();
+		Pages& pages_Instance = Pages::instance();
 
-		Field field(disp);
-    disp.setBackColor(cHwDisplayGraphic::Navy);
+		short posX = -1;
+		short posY = -1;
+		short page = -1;
+		short gamestate = -2;
+		
+		disp1.setBackColor(Style::instance().color_Backround);
+		disp1.setTextColor(Style::instance().color_Font);
     disp.clear();
-
 
   while(1)
   {
 
-      cDevControlPointer::cData event = pointer.get();
-			field.drawField();
-			if(event.posX<390 && event.posX > 100 && event.posY < 390 && event.posY > 100) {
-				WORD x = event.posX-50 < 0 ? 0 : event.posX-50;
-				WORD y = event.posY-50 < 0 ? 0 : event.posY-50;
-				disp.drawFrame(x,y,100,100,2, cHwDisplayGraphic::Red );
+		
+			cDevControlPointer::cData event = pointer.get();
+			if(event.flags == event.CTRL_DWN &&(posX == -1)&& (posY == -1))
+			{
+				posX = event.posX;
+				posY = event.posY;
 			}
+			else
+			{
+				posX = -1;
+				posY = -1;
+			}
+			
+			if(page == 1)
+			{
+				if(gamestate == -2)
+				{
+					game = new Game();
+					gamestate = -1;
+				}
+				else if(gamestate >= 0)
+				{
+					disp.drawText(460,240, 18, gamestate == 0 ? "Unentschieden!":"Spieler %d gewinnt!", gamestate);
+					
+					
+				}
+				else if (gamestate == -1)
+				{
+					gamestate = game -> ttt_classic(posX,posY);
+				}
+			}
+			else if(page!= 1 && gamestate != -2)
+			{
 				
-
+				gamestate = -2;
+			}
 			
-			
 
-      disp.refresh();
+
+
+
+
+
+
+
+
+
+
+
+
+ 		
+
+		
+		
+		page = pages_Instance.display_current_page(posX,posY);
+    disp.refresh();
 
   }
 }

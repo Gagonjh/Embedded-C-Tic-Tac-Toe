@@ -1,4 +1,4 @@
-#line 1 "Src\\Field.cpp"
+#line 1 "Src\\Game.cpp"
 #line 1 "Src\\./project_headers.h"
 
 
@@ -22788,28 +22788,19 @@ class Style
 extern cDevDisplayGraphic& disp1;
 extern uint8_t gameMode;
 
-#line 2 "Src\\Field.cpp"
-	
-Cells cells();
-	
-void Field::drawField()
-{
-	disp1.drawFrame(50,50,390,390,2, Style::instance().color_Field );
-	for(WORD i = 180; i<440; i+=130) {
-		disp1.drawLine(i,50,i,440,2,Style::instance().color_Field);
-		disp1.drawLine(50,i,440,i,2,Style::instance().color_Field);
-	}
-}
+#line 2 "Src\\Game.cpp"
 
-void Field::drawToken(Coordinates token)
+short Game::ttt_classic(short posX,short posY)
 {
-	switch(token.player)
-	{
-		case 1:
-			disp1.drawCircle(token.x,token.y, 45, Style::instance().color_Player_1);
-			break;
-		case 2:
-			disp1.drawCircle(token.x,token.y, 45, Style::instance().color_Player_2);
-			break;
-	}
+	if(posX<390 && posX > 100 && posY < 390 && posY > 100) 
+		{
+			bool isInputValid = controller.handleUserInput(posX, posY);
+			disp1.refresh();
+			if(gameMode==1 && isInputValid)
+				{
+						controller.aiMove();
+				}
+			return controller.getGameState();
+		}
+	return -1;
 }

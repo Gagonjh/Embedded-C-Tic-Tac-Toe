@@ -311,7 +311,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -399,6 +399,116 @@
               <FileName>Field.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Src\Field.h</FilePath>
+            </File>
+            <File>
+              <FileName>datatypes.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\datatypes.h</FilePath>
+            </File>
+            <File>
+              <FileName>Controller.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Controller.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Controller.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Controller.h</FilePath>
+            </File>
+            <File>
+              <FileName>Cells.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Cells.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Cells.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Cells.h</FilePath>
+            </File>
+            <File>
+              <FileName>Game.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Game.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Game.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Game.h</FilePath>
+            </File>
+            <File>
+              <FileName>configSTM32F7xx.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\configSTM32F7xx.h</FilePath>
+            </File>
+            <File>
+              <FileName>Game_settings.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Game_settings.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Game_settings.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Game_settings.h</FilePath>
+            </File>
+            <File>
+              <FileName>History.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\History.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>History.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\History.h</FilePath>
+            </File>
+            <File>
+              <FileName>Menue.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Menue.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Menue.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Menue.h</FilePath>
+            </File>
+            <File>
+              <FileName>pages.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\pages.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>pages.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\pages.h</FilePath>
+            </File>
+            <File>
+              <FileName>Settings.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Settings.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Settings.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Settings.h</FilePath>
+            </File>
+            <File>
+              <FileName>Style.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Style.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Style.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Style.h</FilePath>
+            </File>
+            <File>
+              <FileName>Symbole.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Symbole.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Symbole.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Symbole.h</FilePath>
             </File>
           </Files>
         </Group>

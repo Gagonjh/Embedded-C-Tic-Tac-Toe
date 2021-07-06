@@ -1,4 +1,4 @@
-#line 1 "Src\\Field.cpp"
+#line 1 "Src\\Controller.cpp"
 #line 1 "Src\\./project_headers.h"
 
 
@@ -22788,28 +22788,77 @@ class Style
 extern cDevDisplayGraphic& disp1;
 extern uint8_t gameMode;
 
-#line 2 "Src\\Field.cpp"
-	
-Cells cells();
-	
-void Field::drawField()
+#line 2 "Src\\Controller.cpp"
+
+Controller::Controller()
 {
-	disp1.drawFrame(50,50,390,390,2, Style::instance().color_Field );
-	for(WORD i = 180; i<440; i+=130) {
-		disp1.drawLine(i,50,i,440,2,Style::instance().color_Field);
-		disp1.drawLine(50,i,440,i,2,Style::instance().color_Field);
-	}
+	Field field;
+	Cells cells;
+	this -> field = field;
+	this -> cells = cells;
+	this -> field.drawField();
+	currentPlayer=1;
+	round=0;
+};
+
+bool Controller::handleUserInput(short posX, short posY)
+{
+	for(BYTE i = 0; i<9; i++)
+		{
+			Coordinates cellCoords = {cells.cells[i].x,cells.cells[i].y};
+			short xDiff = abs(cellCoords.x - posX);
+			short yDiff = abs(cellCoords.y - posY);
+			if(xDiff < 50 && yDiff<50) 
+				{
+					if(cells.cells[i].player==0)
+						{
+							cells.cells[i].player = this->currentPlayer;
+							field.drawToken(cells.cells[i]);
+							this->currentPlayer=this->currentPlayer%2+1;
+							round++;
+							return true;
+						}
+				}
+		}
+	return false;
+};
+
+
+
+
+
+ 
+short Controller::getGameState()
+{
+	short state = 0;
+	if(this->cells.rowIsComplete()) 
+		{
+			state = this->currentPlayer == 1 ? 2 : 1;
+		}
+	else if(round==9)
+		{
+			state = 0;
+		} 
+	else 
+		{
+			state = -1;
+		}
+	return state;
 }
 
-void Field::drawToken(Coordinates token)
+void Controller::aiMove()
 {
-	switch(token.player)
+	while(1)
 	{
-		case 1:
-			disp1.drawCircle(token.x,token.y, 45, Style::instance().color_Player_1);
+		if(round == 9)
+		{
 			break;
-		case 2:
-			disp1.drawCircle(token.x,token.y, 45, Style::instance().color_Player_2);
+		}
+		int value = rand()%9;
+		if(this->cells.cells[value].player==0)
+		{
+			this->handleUserInput(cells.cells[value].x,cells.cells[value].y);
 			break;
+		}
 	}
 }
