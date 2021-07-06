@@ -2,6 +2,11 @@
 
 Controller::Controller()
 {
+	Field field;
+	Cells cells;
+	this -> field = field;
+	this -> cells = cells;
+	field.drawField();
 	currentPlayer=1;
 	round=0;
 };

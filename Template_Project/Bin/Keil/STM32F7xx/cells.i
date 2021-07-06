@@ -22401,10 +22401,12 @@ class cTaskHandler : public cList::Item
 
 
 
+#line 5 "Src\\././datatypes.h"
+
 typedef struct coordinates {
-	int x;
-	int y;
-	short player;
+	uint16_t x;
+	uint16_t y;
+	uint8_t player;
 } Coordinates;
 
 #line 7 "Src\\./project_headers.h"
@@ -22430,14 +22432,14 @@ class Cells {
 		void initializeCells();
 		void initializeDefaultRows();
 	public:
-		short* topRow;
-		short* centerRow;
-		short* bottomRow;
-		short* leftColumn;
-		short* centerColumn;
-		short* rightColumn;
-		short* downDiagonal;
-		short* upDiagonal;
+		BYTE* topRow;
+		BYTE* centerRow;
+		BYTE* bottomRow;
+		BYTE* leftColumn;
+		BYTE* centerColumn;
+		BYTE* rightColumn;
+		BYTE* downDiagonal;
+		BYTE* upDiagonal;
 		Coordinates* cells;
 		bool rowIsComplete();
 		Cells();
@@ -22462,9 +22464,9 @@ class Controller {
 		Cells cells;
 		Field field;
 	public:
-		Controller(Cells, Field);
+		Controller();
 		void aiMove();
-		void control(short, short);
+		bool handleUserInput(short, short);
 		short getGameState();
 };
 
@@ -22477,15 +22479,11 @@ class Controller {
 class Game
 {
 	private:
-		short posX;
-		short posY;
 		Controller controller;
-		short gameMode;
-		Cells defaultCells;
-		Field field;
+		BYTE gameMode;
 	public:
 		short ttt_classic(short,short);
-		Game(short,Controller, Field);
+		Game(BYTE);
 };
 
 #line 11 "Src\\./project_headers.h"
@@ -22798,7 +22796,7 @@ void Cells::initializeCells()
 												{245,375,0},
 												{375,375,0}
 										};
-	for(int i = 0; i<9; i++)
+	for(BYTE i = 0; i<9; i++)
 	{
 				cells[i] = newCells[i];
 	}
@@ -22806,15 +22804,15 @@ void Cells::initializeCells()
 
 void Cells::initializeDefaultRows()
 {
-	topRow = new short[3];
-	centerRow = new short[3];
-	bottomRow = new short[3];
-	leftColumn = new short[3];
-	centerColumn = new short[3];
-	rightColumn = new short[3];
-	downDiagonal = new short[3];
-	upDiagonal = new short[3];
-	for(short i = 0; i<3; i++)
+	topRow = new BYTE[3];
+	centerRow = new BYTE[3];
+	bottomRow = new BYTE[3];
+	leftColumn = new BYTE[3];
+	centerColumn = new BYTE[3];
+	rightColumn = new BYTE[3];
+	downDiagonal = new BYTE[3];
+	upDiagonal = new BYTE[3];
+	for(BYTE i = 0; i<3; i++)
 	{
 		topRow[i] = i;
 		centerRow[i] = 3+i;
@@ -22836,8 +22834,8 @@ Cells::Cells()
 
 bool Cells::rowIsComplete()
 {
-	short rowValues[8] = {0,0,0,0,0,0,0,0};
-	for(int i = 0;i<3;i++)
+	BYTE rowValues[8] = {0,0,0,0,0,0,0,0};
+	for(BYTE i = 0;i<3;i++)
 	{
 		rowValues[0] += cells[topRow[i]].player == 0 ? 0 : cells[topRow[i]].player+2;
 		rowValues[1] += cells[centerRow[i]].player == 0 ? 0 : cells[centerRow[i]].player+2;

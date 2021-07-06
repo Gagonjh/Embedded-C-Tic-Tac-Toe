@@ -22401,10 +22401,12 @@ class cTaskHandler : public cList::Item
 
 
 
+#line 5 "Src\\././datatypes.h"
+
 typedef struct coordinates {
-	int x;
-	int y;
-	short player;
+	uint16_t x;
+	uint16_t y;
+	uint8_t player;
 } Coordinates;
 
 #line 7 "Src\\./project_headers.h"
@@ -22430,14 +22432,14 @@ class Cells {
 		void initializeCells();
 		void initializeDefaultRows();
 	public:
-		short* topRow;
-		short* centerRow;
-		short* bottomRow;
-		short* leftColumn;
-		short* centerColumn;
-		short* rightColumn;
-		short* downDiagonal;
-		short* upDiagonal;
+		BYTE* topRow;
+		BYTE* centerRow;
+		BYTE* bottomRow;
+		BYTE* leftColumn;
+		BYTE* centerColumn;
+		BYTE* rightColumn;
+		BYTE* downDiagonal;
+		BYTE* upDiagonal;
 		Coordinates* cells;
 		bool rowIsComplete();
 		Cells();
@@ -22462,9 +22464,9 @@ class Controller {
 		Cells cells;
 		Field field;
 	public:
-		Controller(Cells, Field);
+		Controller();
 		void aiMove();
-		void control(short, short);
+		bool handleUserInput(short, short);
 		short getGameState();
 };
 
@@ -22477,15 +22479,11 @@ class Controller {
 class Game
 {
 	private:
-		short posX;
-		short posY;
 		Controller controller;
-		short gameMode;
-		Cells defaultCells;
-		Field field;
+		BYTE gameMode;
 	public:
 		short ttt_classic(short,short);
-		Game(short,Controller, Field);
+		Game(BYTE);
 };
 
 #line 11 "Src\\./project_headers.h"
@@ -22789,7 +22787,7 @@ Cells cells();
 void Field::drawField()
 {
 	disp1.drawFrame(50,50,390,390,2, cHwDisplayGraphic::Red );
-	for(int i = 180; i<440; i+=130) {
+	for(WORD i = 180; i<440; i+=130) {
 		disp1.drawLine(i,50,i,440,2,cHwDisplayGraphic::Red);
 		disp1.drawLine(50,i,440,i,2,cHwDisplayGraphic::Red);
 	}

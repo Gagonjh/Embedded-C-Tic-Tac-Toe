@@ -15,17 +15,14 @@ int main(void)
 {
 		short gameMode=1;
 		Cells defaultCells;
-		Field field;
-		Controller controller(defaultCells, field);
-		Game game(gameMode,controller,field);
+		Game* game;
 		disp.refresh();
 		Pages& pages_Instance = Pages::instance();
 
 		short posX = -1;
 		short posY = -1;
 		short page = -1;
-		short gamestarted = -2;
-		short ended = 0;
+		short gamestate = -2;
 		//Fix falsche Startfarbe
 		disp1.setBackColor(Style::instance().color_Backround);
 		disp1.setTextColor(Style::instance().color_Font);
@@ -47,27 +44,24 @@ int main(void)
 				posY = -1;
 			}
 			
-			if(page = 2)
+			if(page == 1)
 			{
 				if(gamestate == -2)
 				{
-					//Konstruktor
-					
+					game = new Game(gameMode);
 				}
 				else if(gamestate >= 0)
 				{
-					//ende
+					delete game;
 					//history überschreiben
 					//ausgabe gewinner
 				}
-				game.ttt_classic(posX,posY);
-				
-				
+				gamestate = game -> ttt_classic(posX,posY);
 			}
-			else if(page!= 2 && gamestate >= 0)
+			else if(page!= 1 && gamestate >= 0)
 			{
 				//destructor
-				gamestate = -1;
+				gamestate = -2;
 			}
 			
 /*

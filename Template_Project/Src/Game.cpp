@@ -5,11 +5,6 @@ Game::Game(BYTE gameMode)
 	gameMode = gameMode;
 }
 
-void Game::newGame()
-{
-	Controller controller;
-	this->controller = controller;
-}
 
 short Game::ttt_classic(short posX,short posY)
 {

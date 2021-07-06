@@ -22401,10 +22401,12 @@ class cTaskHandler : public cList::Item
 
 
 
+#line 5 "Src\\././datatypes.h"
+
 typedef struct coordinates {
-	int x;
-	int y;
-	short player;
+	uint16_t x;
+	uint16_t y;
+	uint8_t player;
 } Coordinates;
 
 #line 7 "Src\\./project_headers.h"
@@ -22430,14 +22432,14 @@ class Cells {
 		void initializeCells();
 		void initializeDefaultRows();
 	public:
-		short* topRow;
-		short* centerRow;
-		short* bottomRow;
-		short* leftColumn;
-		short* centerColumn;
-		short* rightColumn;
-		short* downDiagonal;
-		short* upDiagonal;
+		BYTE* topRow;
+		BYTE* centerRow;
+		BYTE* bottomRow;
+		BYTE* leftColumn;
+		BYTE* centerColumn;
+		BYTE* rightColumn;
+		BYTE* downDiagonal;
+		BYTE* upDiagonal;
 		Coordinates* cells;
 		bool rowIsComplete();
 		Cells();
@@ -22462,9 +22464,9 @@ class Controller {
 		Cells cells;
 		Field field;
 	public:
-		Controller(Cells, Field);
+		Controller();
 		void aiMove();
-		void control(short, short);
+		bool handleUserInput(short, short);
 		short getGameState();
 };
 
@@ -22477,15 +22479,11 @@ class Controller {
 class Game
 {
 	private:
-		short posX;
-		short posY;
 		Controller controller;
-		short gameMode;
-		Cells defaultCells;
-		Field field;
+		BYTE gameMode;
 	public:
 		short ttt_classic(short,short);
-		Game(short,Controller, Field);
+		Game(BYTE);
 };
 
 #line 11 "Src\\./project_headers.h"
@@ -22784,21 +22782,19 @@ class Style
 extern cDevDisplayGraphic& disp1;
 #line 2 "Src\\Game.cpp"
 
-Game::Game(short gameMode,Controller controller, Field field):controller(controller),field(field)
+Game::Game(BYTE gameMode)
 {
-	this->gameMode = gameMode;
-	this->field.drawField();
-	field.drawField();
-	disp1.refresh();
+	gameMode = gameMode;
 }
 
-short Game::ttt_classic(short eventPosX,short eventPosY)
+
+short Game::ttt_classic(short posX,short posY)
 {
 	if(posX<390 && posX > 100 && posY < 390 && posY > 100) 
 		{
-			controller.control(posX, posY);
+			bool isInputValid = controller.handleUserInput(posX, posY);
 			disp1.refresh();
-			if(gameMode==1)
+			if(gameMode==1 && isInputValid)
 				{
 						controller.aiMove();
 				}

@@ -22401,10 +22401,12 @@ class cTaskHandler : public cList::Item
 
 
 
+#line 5 "Src\\././datatypes.h"
+
 typedef struct coordinates {
-	int x;
-	int y;
-	short player;
+	uint16_t x;
+	uint16_t y;
+	uint8_t player;
 } Coordinates;
 
 #line 7 "Src\\./project_headers.h"
@@ -22430,14 +22432,14 @@ class Cells {
 		void initializeCells();
 		void initializeDefaultRows();
 	public:
-		short* topRow;
-		short* centerRow;
-		short* bottomRow;
-		short* leftColumn;
-		short* centerColumn;
-		short* rightColumn;
-		short* downDiagonal;
-		short* upDiagonal;
+		BYTE* topRow;
+		BYTE* centerRow;
+		BYTE* bottomRow;
+		BYTE* leftColumn;
+		BYTE* centerColumn;
+		BYTE* rightColumn;
+		BYTE* downDiagonal;
+		BYTE* upDiagonal;
 		Coordinates* cells;
 		bool rowIsComplete();
 		Cells();
@@ -22462,9 +22464,9 @@ class Controller {
 		Cells cells;
 		Field field;
 	public:
-		Controller(Cells, Field);
+		Controller();
 		void aiMove();
-		void control(short, short);
+		bool handleUserInput(short, short);
 		short getGameState();
 };
 
@@ -22477,15 +22479,11 @@ class Controller {
 class Game
 {
 	private:
-		short posX;
-		short posY;
 		Controller controller;
-		short gameMode;
-		Cells defaultCells;
-		Field field;
+		BYTE gameMode;
 	public:
 		short ttt_classic(short,short);
-		Game(short,Controller, Field);
+		Game(BYTE);
 };
 
 #line 11 "Src\\./project_headers.h"
@@ -22784,15 +22782,20 @@ class Style
 extern cDevDisplayGraphic& disp1;
 #line 2 "Src\\Controller.cpp"
 
-Controller::Controller(Cells cellsToControl, Field field):cells(cellsToControl),field(field)
+Controller::Controller()
 {
+	Field field;
+	Cells cells;
+	this -> field = field;
+	this -> cells = cells;
+	field.drawField();
 	currentPlayer=1;
 	round=0;
 };
 
-void Controller::control(short posX, short posY)
+bool Controller::handleUserInput(short posX, short posY)
 {
-	for(int i = 0; i<9; i++)
+	for(BYTE i = 0; i<9; i++)
 		{
 			Coordinates cellCoords = {cells.cells[i].x,cells.cells[i].y};
 			short xDiff = abs(cellCoords.x - posX);
@@ -22806,9 +22809,11 @@ void Controller::control(short posX, short posY)
 							cells.cells[i].player = this->currentPlayer;
 							this->currentPlayer=this->currentPlayer%2+1;
 							round++;
+							return true;
 						}
 				}
 		}
+	return false;
 };
 
 
@@ -22841,7 +22846,7 @@ void Controller::aiMove()
 		int value = rand()%9;
 		if(this->cells.cells[value].player==0)
 		{
-			this->control(cells.cells[value].x,cells.cells[value].y);
+			this->handleUserInput(cells.cells[value].x,cells.cells[value].y);
 			break;
 		}
 	}

@@ -22409,10 +22409,12 @@ class cTaskHandler : public cList::Item
 
 
 
+#line 5 "Src\\././datatypes.h"
+
 typedef struct coordinates {
-	int x;
-	int y;
-	short player;
+	uint16_t x;
+	uint16_t y;
+	uint8_t player;
 } Coordinates;
 
 #line 7 "Src\\./project_headers.h"
@@ -22438,14 +22440,14 @@ class Cells {
 		void initializeCells();
 		void initializeDefaultRows();
 	public:
-		short* topRow;
-		short* centerRow;
-		short* bottomRow;
-		short* leftColumn;
-		short* centerColumn;
-		short* rightColumn;
-		short* downDiagonal;
-		short* upDiagonal;
+		BYTE* topRow;
+		BYTE* centerRow;
+		BYTE* bottomRow;
+		BYTE* leftColumn;
+		BYTE* centerColumn;
+		BYTE* rightColumn;
+		BYTE* downDiagonal;
+		BYTE* upDiagonal;
 		Coordinates* cells;
 		bool rowIsComplete();
 		Cells();
@@ -22470,9 +22472,9 @@ class Controller {
 		Cells cells;
 		Field field;
 	public:
-		Controller(Cells, Field);
+		Controller();
 		void aiMove();
-		void control(short, short);
+		bool handleUserInput(short, short);
 		short getGameState();
 };
 
@@ -22485,15 +22487,11 @@ class Controller {
 class Game
 {
 	private:
-		short posX;
-		short posY;
 		Controller controller;
-		short gameMode;
-		Cells defaultCells;
-		Field field;
+		BYTE gameMode;
 	public:
 		short ttt_classic(short,short);
-		Game(short,Controller, Field);
+		Game(BYTE);
 };
 
 #line 11 "Src\\./project_headers.h"
@@ -24928,15 +24926,14 @@ int main(void)
 {
 		short gameMode=1;
 		Cells defaultCells;
-		Field field;
-		Controller controller(defaultCells, field);
-		Game game(gameMode,controller,field);
+		Game* game;
 		disp.refresh();
 		Pages& pages_Instance = Pages::instance();
 
 		short posX = -1;
 		short posY = -1;
 		short page = -1;
+		short gamestate = -2;
 		
 		disp1.setBackColor(Style::instance().color_Backround);
 		disp1.setTextColor(Style::instance().color_Font);
@@ -24958,9 +24955,24 @@ int main(void)
 				posY = -1;
 			}
 			
-			if(page = 2)
+			if(page == 1)
 			{
-				game.ttt_classic(posX,posY);
+				if(gamestate == -2)
+				{
+					game = new Game(gameMode);
+				}
+				else if(gamestate >= 0)
+				{
+					delete game;
+					
+					
+				}
+				gamestate = game -> ttt_classic(posX,posY);
+			}
+			else if(page!= 1 && gamestate >= 0)
+			{
+				
+				gamestate = -2;
 			}
 			
 
