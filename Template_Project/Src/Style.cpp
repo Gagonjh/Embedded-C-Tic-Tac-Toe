@@ -1,7 +1,7 @@
 /*! 
  *  \brief     Dient der Ausgabe auf dem Display
  *  \details   Die Klasse dient als Parent für die einzelnen Ansichten. Sie stellt darüber hinaus funktionalitäten für die Child Klassen bereit und regelt den Aufruf dieser. Sie ist somit das Bindeglied zwischen der Ausgabe und dem funktionalen teil des Programmes.
- *  \author    Joshua Hahn
+ *  \author    Joshua Hahn, Yasin Calli
  *  \date      21.06.2021
  */
  
@@ -40,10 +40,13 @@ Style::Style()
 			color_Player_1 = dark_Color_Player_1;
 			color_Player_2 = dark_Color_Player_2;
 			color_Field = dark_Color_Field;
+			
+			color_Mode = 0;
 }			
 
 void Style::changeActiveColorTheme(short int cmode)
 {
+	color_Mode = cmode;
 	switch(cmode) 
 			{
 				case 0:
@@ -75,7 +78,4 @@ void Style::changeActiveColorTheme(short int cmode)
 			}
 	disp1.setBackColor(color_Backround);
 	disp1.setTextColor(color_Font);
-	disp1.clear();
-	Settings::instance().drawpage();
-			
 }

@@ -1,7 +1,7 @@
 /*! 
  *  \brief     Dient der Ausgabe auf dem Display
  *  \details   Die Klasse dient als Parent für die einzelnen Ansichten. Sie stellt darüber hinaus funktionalitäten für die Child Klassen bereit und regelt den Aufruf dieser. Sie ist somit das Bindeglied zwischen der Ausgabe und dem funktionalen teil des Programmes.
- *  \author    Joshua Hahn
+ *  \author    Joshua Hahn, Yasin Calli
  *  \date      21.06.2021
  */
 
@@ -28,6 +28,7 @@ class Style
 			int color_Player_1;
 			int color_Player_2;
 			int color_Field;
+			int color_Mode;
 		
 		private:
 			//dark 0

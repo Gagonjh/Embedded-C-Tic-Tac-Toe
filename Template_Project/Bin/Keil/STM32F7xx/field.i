@@ -22401,7 +22401,14 @@ class cTaskHandler : public cList::Item
 
 
 
-#line 5 "Src\\././datatypes.h"
+
+
+ 
+
+
+
+
+#line 12 "Src\\././datatypes.h"
 
 typedef struct coordinates {
 	uint16_t x;
@@ -22410,18 +22417,6 @@ typedef struct coordinates {
 } Coordinates;
 
 #line 7 "Src\\./project_headers.h"
-#line 1 "Src\\././Token.h"
-#line 4 "Src\\././Token.h"
-
-class Token
-{
-	public:
-		const Coordinates coordinates;
-		const short player;
-		Token(Coordinates, short);
-};
-
-#line 8 "Src\\./project_headers.h"
 #line 1 "Src\\././Controller.h"
 #line 4 "Src\\././Controller.h"
 #line 1 "Src\\./././Cells.h"
@@ -22447,13 +22442,31 @@ class Cells {
 
 #line 5 "Src\\././Controller.h"
 #line 1 "Src\\./././Field.h"
+#line 1 "Src\\./././Token.h"
+
+
+
+
+
+ 
+
+#line 11 "Src\\./././Token.h"
+
+class Token
+{
+	public:
+		const Coordinates coordinates;
+		const short player;
+		Token(Coordinates, short);
+};
+
 #line 4 "Src\\./././Field.h"
 	
 class Field
 {
 	public:
 		void drawField();
-		void drawToken(Token);
+		void drawToken(Coordinates);
 };
 #line 6 "Src\\././Controller.h"
 
@@ -22470,8 +22483,8 @@ class Controller {
 		short getGameState();
 };
 
+#line 8 "Src\\./project_headers.h"
 #line 9 "Src\\./project_headers.h"
-#line 10 "Src\\./project_headers.h"
 #line 1 "Src\\././Game.h"
 
 
@@ -22480,18 +22493,17 @@ class Game
 {
 	private:
 		Controller controller;
-		BYTE gameMode;
 	public:
 		short ttt_classic(short,short);
-		Game(BYTE);
 };
 
+#line 10 "Src\\./project_headers.h"
 #line 11 "Src\\./project_headers.h"
-#line 12 "Src\\./project_headers.h"
 #line 1 "Src\\././Pages.h"
 
 
 
+ 
 
 
 
@@ -22503,27 +22515,21 @@ class Pages
 		short int page; 
 		short int lastPage; 
 	public:
-
-		
 			unsigned int iCurrent_Page;
 	
 			
-				static Pages& instance()
-			{
-				static Pages _instance;
-				return _instance;
-			}
+			static Pages& instance()
+				{
+					static Pages _instance;
+					return _instance;
+				}
 			~Pages() {}
-			
+				
 			
 			void drawpage(void);
-			
 			void siteHeader(short int,short int,short int,short int,char*);
-			
 			void draw_button(short int ,short int ,short int ,short int ,short int,short int,short int,short int,short int,short int, char*);
-				
 			short int display_current_page(int, int);
-			
 			short int isPressed(int,int,short int[][5],int);
 				
 		protected:
@@ -22544,7 +22550,7 @@ class Pages
 
 
  
-#line 13 "Src\\./project_headers.h"
+#line 12 "Src\\./project_headers.h"
 #line 1 "Src\\././Menue.h"
 
 
@@ -22580,7 +22586,7 @@ class Menue : public Pages
 			Menue & operator = (const Menue &); 
 };
 
-#line 14 "Src\\./project_headers.h"
+#line 13 "Src\\./project_headers.h"
 #line 1 "Src\\././Settings.h"
 
 
@@ -22611,16 +22617,15 @@ class Settings : public Pages
 			short int buttonOnPagePressed(int,int);
 		
 		private:
-			
-			Settings() {
-			} ;
-                    
-			Settings( const Settings& );
+			Settings() {} ;
+			void highlight_selected_colormode_button(short int);
 				
+		
+			Settings( const Settings& );
 			Settings & operator = (const Settings &); 
 };
 
-#line 15 "Src\\./project_headers.h"
+#line 14 "Src\\./project_headers.h"
 #line 1 "Src\\././Symbole.h"
 
 
@@ -22629,7 +22634,7 @@ class Settings : public Pages
 
  
  
-#line 16 "Src\\./project_headers.h"
+#line 15 "Src\\./project_headers.h"
 #line 1 "Src\\././Game_settings.h"
 
 
@@ -22669,7 +22674,7 @@ class Game_Settings : public Pages
 			Game_Settings & operator = (const Game_Settings &); 
 };
 
-#line 17 "Src\\./project_headers.h"
+#line 16 "Src\\./project_headers.h"
 #line 1 "Src\\././History.h"
 
 
@@ -22709,7 +22714,7 @@ class History : public Pages
 			History & operator = (const History &); 
 };
 
-#line 18 "Src\\./project_headers.h"
+#line 17 "Src\\./project_headers.h"
 #line 1 "Src\\././Style.h"
 
 
@@ -22741,6 +22746,7 @@ class Style
 			int color_Player_1;
 			int color_Player_2;
 			int color_Field;
+			int color_Mode;
 		
 		private:
 			
@@ -22776,10 +22782,12 @@ class Style
 			
 };
 
-#line 19 "Src\\./project_headers.h"
+#line 18 "Src\\./project_headers.h"
 
 
 extern cDevDisplayGraphic& disp1;
+extern uint8_t gameMode;
+
 #line 2 "Src\\Field.cpp"
 	
 Cells cells();
@@ -22793,17 +22801,15 @@ void Field::drawField()
 	}
 }
 
-void Field::drawToken(Token token)
+void Field::drawToken(Coordinates token)
 {
 	switch(token.player)
 	{
 		case 1:
-			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 45, cHwDisplayGraphic::Red);
-			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 42, cHwDisplayGraphic::Navy);
+			disp1.drawCircle(token.x,token.y, 45, cHwDisplayGraphic::Red);
 			break;
 		case 2:
-			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 45, cHwDisplayGraphic::Cyan);
-			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 42, cHwDisplayGraphic::Navy);
+			disp1.drawCircle(token.x,token.y, 45, cHwDisplayGraphic::Cyan);
 			break;
 	}
 }

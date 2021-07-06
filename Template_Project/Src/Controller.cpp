@@ -6,7 +6,7 @@ Controller::Controller()
 	Cells cells;
 	this -> field = field;
 	this -> cells = cells;
-	field.drawField();
+	this -> field.drawField();
 	currentPlayer=1;
 	round=0;
 };
@@ -22,9 +22,8 @@ bool Controller::handleUserInput(short posX, short posY)
 				{
 					if(cells.cells[i].player==0)
 						{
-							Token playerToken(cellCoords,this->currentPlayer);
-							field.drawToken(playerToken);
 							cells.cells[i].player = this->currentPlayer;
+							field.drawToken(cells.cells[i]);
 							this->currentPlayer=this->currentPlayer%2+1;
 							round++;
 							return true;

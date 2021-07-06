@@ -6,6 +6,6 @@ class Field
 {
 	public:
 		void drawField();
-		void drawToken(Token);
+		void drawToken(Coordinates);
 };
 #endif

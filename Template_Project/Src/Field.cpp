@@ -11,17 +11,15 @@ void Field::drawField()
 	}
 }
 
-void Field::drawToken(Token token)
+void Field::drawToken(Coordinates token)
 {
 	switch(token.player)
 	{
 		case 1:
-			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 45, cHwDisplayGraphic::Red);
-			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 42, cHwDisplayGraphic::Navy);
+			disp1.drawCircle(token.x,token.y, 45, cHwDisplayGraphic::Red);
 			break;
 		case 2:
-			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 45, cHwDisplayGraphic::Cyan);
-			disp1.drawCircle(token.coordinates.x,token.coordinates.y, 42, cHwDisplayGraphic::Navy);
+			disp1.drawCircle(token.x,token.y, 45, cHwDisplayGraphic::Cyan);
 			break;
 	}
 }

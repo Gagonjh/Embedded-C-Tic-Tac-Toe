@@ -1,7 +1,6 @@
 --cpu Cortex-M7.fp.sp
 ".\bin\keil\stm32f7xx\main.o"
 ".\bin\keil\stm32f7xx\field.o"
-".\bin\keil\stm32f7xx\token.o"
 ".\bin\keil\stm32f7xx\controller.o"
 ".\bin\keil\stm32f7xx\cells.o"
 ".\bin\keil\stm32f7xx\game.o"

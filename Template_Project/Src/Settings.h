@@ -27,12 +27,11 @@ class Settings : public Pages
 			short int buttonOnPagePressed(int,int);
 		
 		private:
-			
-			Settings() {
-			} ;// verhindert, dass ein Objekt von außerhalb von N erzeugt wird.
-                    // protected, wenn man von der Klasse noch erben möchte
-			Settings( const Settings& );//verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann
+			Settings() {} ;// verhindert, dass ein Objekt von außerhalb von N erzeugt wird.
+			void highlight_selected_colormode_button(short int);
 				
+		// protected, wenn man von der Klasse noch erben möchte
+			Settings( const Settings& );//verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann
 			Settings & operator = (const Settings &); //Verhindert weitere Instanz durch Kopie
 };
 

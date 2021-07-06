@@ -4,7 +4,6 @@
 #include "../../EmbSysLib/Src/lib.h"
 #include "../../EmbSysLib/Src/Com/Device/Display/devDisplayGraphic.h"
 #include "./datatypes.h"
-#include "./Token.h"
 #include "./Controller.h"
 #include "./Cells.h"
 #include "./Game.h"
@@ -19,4 +18,6 @@
 
 
 extern cDevDisplayGraphic& disp1;
+extern uint8_t gameMode;
+
 #endif

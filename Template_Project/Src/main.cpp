@@ -10,10 +10,10 @@
 #include "./configSTM32F7xx.h"
 
 cDevDisplayGraphic& disp1 = disp;
+uint8_t gameMode = 1;
 
 int main(void)
 {
-		short gameMode=1;
 		Cells defaultCells;
 		Game* game;
 		disp.refresh();
@@ -48,17 +48,21 @@ int main(void)
 			{
 				if(gamestate == -2)
 				{
-					game = new Game(gameMode);
+					game = new Game();
+					gamestate = -1;
 				}
 				else if(gamestate >= 0)
 				{
-					delete game;
+					disp.drawText(460,240, 18, gamestate == 0 ? "Unentschieden!":"Spieler %d gewinnt!", gamestate);
 					//history überschreiben
 					//ausgabe gewinner
 				}
-				gamestate = game -> ttt_classic(posX,posY);
+				else if (gamestate == -1)
+				{
+					gamestate = game -> ttt_classic(posX,posY);
+				}
 			}
-			else if(page!= 1 && gamestate >= 0)
+			else if(page!= 1 && gamestate != -2)
 			{
 				//destructor
 				gamestate = -2;
