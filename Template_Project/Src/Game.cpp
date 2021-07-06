@@ -1,20 +1,17 @@
 #include "./project_headers.h"
 
-Game::Game(short gameMode,Controller controller, Field field):controller(controller),field(field)
+Game::Game(BYTE gameMode)
 {
-	this->gameMode = gameMode;
-	this->field.drawField();
-	field.drawField();
-	disp1.refresh();
+	gameMode = gameMode;
 }
 
-short Game::ttt_classic(short eventPosX,short eventPosY)
+short Game::ttt_classic(short posX,short posY)
 {
 	if(posX<390 && posX > 100 && posY < 390 && posY > 100) 
 		{
-			controller.control(posX, posY);
+			bool isInputValid = controller.handleUserInput(posX, posY);
 			disp1.refresh();
-			if(gameMode==1)
+			if(gameMode==1 && isInputValid)
 				{
 						controller.aiMove();
 				}

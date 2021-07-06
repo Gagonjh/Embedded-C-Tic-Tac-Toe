@@ -1,14 +1,14 @@
 #include "./project_headers.h"
 
-Controller::Controller(Cells cellsToControl, Field field):cells(cellsToControl),field(field)
+Controller::Controller()
 {
 	currentPlayer=1;
 	round=0;
 };
 
-void Controller::control(short posX, short posY)
+bool Controller::handleUserInput(short posX, short posY)
 {
-	for(int i = 0; i<9; i++)
+	for(BYTE i = 0; i<9; i++)
 		{
 			Coordinates cellCoords = {cells.cells[i].x,cells.cells[i].y};
 			short xDiff = abs(cellCoords.x - posX);
@@ -22,9 +22,11 @@ void Controller::control(short posX, short posY)
 							cells.cells[i].player = this->currentPlayer;
 							this->currentPlayer=this->currentPlayer%2+1;
 							round++;
+							return true;
 						}
 				}
 		}
+	return false;
 };
 
 /**
@@ -57,7 +59,7 @@ void Controller::aiMove()
 		int value = rand()%9;
 		if(this->cells.cells[value].player==0)
 		{
-			this->control(cells.cells[value].x,cells.cells[value].y);
+			this->handleUserInput(cells.cells[value].x,cells.cells[value].y);
 			break;
 		}
 	}
