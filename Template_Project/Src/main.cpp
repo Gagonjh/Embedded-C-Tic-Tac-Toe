@@ -21,8 +21,9 @@ int main(void)
 		disp.refresh();
 		Pages& pages_Instance = Pages::instance();
 
-		int posX = -1;
-		int posY = -1;	
+		short posX = -1;
+		short posY = -1;
+		short page = -1;
 		//Fix falsche Startfarbe
 		disp1.setBackColor(Style::instance().color_Backround);
 		disp1.setTextColor(Style::instance().color_Font);
@@ -43,7 +44,12 @@ int main(void)
 				posX = -1;
 				posY = -1;
 			}
-			game.ttt_classic(posX,posY);
+			
+			if(page = 2)
+			{
+				game.ttt_classic(posX,posY);
+			}
+			
 /*
 			//TEST: Augabe von quadraten auf dem Display im gw�hlten bereich der Touch eingabe
 			if(posX<750 && posX > 50 && posY < 750 && posY > 50) {
@@ -61,7 +67,7 @@ int main(void)
 //      disp.drawText( 440,20, 18, "x:%3d y:%3d ctrl:0x%02x",  event.posX, event.posY, event.flags );
 		//menueinstance.drawpage();
 		
-		pages_Instance.display_current_page(posX,posY);
+		page = pages_Instance.display_current_page(posX,posY);
     disp.refresh();
     #endif
   }

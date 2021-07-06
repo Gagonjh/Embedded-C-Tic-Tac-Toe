@@ -24934,8 +24934,9 @@ int main(void)
 		disp.refresh();
 		Pages& pages_Instance = Pages::instance();
 
-		int posX = -1;
-		int posY = -1;	
+		short posX = -1;
+		short posY = -1;
+		short page = -1;
 		
 		disp1.setBackColor(Style::instance().color_Backround);
 		disp1.setTextColor(Style::instance().color_Font);
@@ -24956,7 +24957,12 @@ int main(void)
 				posX = -1;
 				posY = -1;
 			}
-			game.ttt_classic(posX,posY);
+			
+			if(page = 2)
+			{
+				game.ttt_classic(posX,posY);
+			}
+			
 
 
 
@@ -24974,7 +24980,7 @@ int main(void)
 
 		
 		
-		pages_Instance.display_current_page(posX,posY);
+		page = pages_Instance.display_current_page(posX,posY);
     disp.refresh();
 
   }

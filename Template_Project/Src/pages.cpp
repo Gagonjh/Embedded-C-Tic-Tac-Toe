@@ -155,7 +155,7 @@ short int Pages::display_current_page(int posX,int posY)
 	//Anzeige der Seite
 	
 		
-	return 0;
+	return lastPage;
 }
 
 short int Pages::isPressed(int posX,int posY,short int buttons_cor[][5],int button)
