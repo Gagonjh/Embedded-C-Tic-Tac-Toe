@@ -22850,6 +22850,10 @@ void Controller::aiMove()
 {
 	while(1)
 	{
+		if(round == 9)
+		{
+			break;
+		}
 		int value = rand()%9;
 		if(this->cells.cells[value].player==0)
 		{

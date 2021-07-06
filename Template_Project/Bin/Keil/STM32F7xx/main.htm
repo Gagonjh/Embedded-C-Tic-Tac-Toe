@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Bin\Keil\STM32F7xx\main.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Bin\Keil\STM32F7xx\main.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Tue Jul 06 16:55:49 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Tue Jul 06 17:13:39 2021
 <BR><P>
 <H3>Maximum Stack Usage =        324 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -962,9 +962,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Full
 <LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_heap_descriptor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new[] (unsigned)
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
 </UL>
 
 <P><STRONG><a name="[118]"></a>free</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, h1_free.o(.text))
@@ -1039,9 +1039,9 @@ Global Symbols
 <P><STRONG><a name="[15c]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_memcpy4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009A::init()
-<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::Controller()
+<BR>[Called By]<UL><LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::Controller()
 <LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cells::initializeCells()
+<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009A::init()
 </UL>
 
 <P><STRONG><a name="[1f7]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
@@ -1731,11 +1731,11 @@ Global Symbols
 <LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::aiMove()
 </UL>
 
-<P><STRONG><a name="[158]"></a>Controller::aiMove()</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, controller.o(i._ZN10Controller6aiMoveEv))
+<P><STRONG><a name="[158]"></a>Controller::aiMove()</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, controller.o(i._ZN10Controller6aiMoveEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = Controller::aiMove() &rArr; Controller::handleUserInput(short, short) &rArr; Field::drawToken(coordinates)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rand
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::handleUserInput(short, short)
+<BR>[Calls]<UL><LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::handleUserInput(short, short)
+<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rand
 </UL>
 <BR>[Called By]<UL><LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Game::ttt_classic(short, short)
 </UL>
@@ -1743,9 +1743,9 @@ Global Symbols
 <P><STRONG><a name="[15a]"></a>Controller::Controller()</STRONG> (Thumb, 50 bytes, Stack size 48 bytes, controller.o(i._ZN10ControllerC1Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = Controller::Controller() &rArr; Cells::Cells() &rArr; Cells::initializeCells() &rArr; operator new[] (unsigned) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cells::Cells()
+<BR>[Calls]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cells::Cells()
 <LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Field::drawField()
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1776,12 +1776,12 @@ Global Symbols
 <P><STRONG><a name="[15e]"></a>cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)</STRONG> (Thumb, 442 bytes, Stack size 40 bytes, lib.o(i._ZN10cHwTimer_NC1ENS_7TimerIdEj))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned) &rArr; __aeabi_dmul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_EnableIRQ(IRQn_Type)
+<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
 <LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
 <LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_EnableIRQ(IRQn_Type)
 <LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::cList()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___8_main_cpp_sys
@@ -1868,10 +1868,10 @@ Global Symbols
 <P><STRONG><a name="[16c]"></a>Game_Settings::buttonOnPagePressed(int, int)</STRONG> (Thumb, 60 bytes, Stack size 24 bytes, game_settings.o(i._ZN13Game_Settings19buttonOnPagePressedEii))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = Game_Settings::buttonOnPagePressed(int, int) &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
+<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
 <LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::isPressed(int, int, short(*)[5], int)
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
 </UL>
@@ -1888,9 +1888,9 @@ Global Symbols
 <P><STRONG><a name="[173]"></a>Game_Settings::instance()</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, pages.o(i._ZN13Game_Settings8instanceEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = Game_Settings::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
 </UL>
@@ -2007,8 +2007,8 @@ Global Symbols
 <P><STRONG><a name="[17d]"></a>cHwDisp_OTM8009A::init()</STRONG> (Thumb, 1976 bytes, Stack size 32 bytes, disp_otm8009a.o(i._ZN16cHwDisp_OTM8009A4initEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = cHwDisp_OTM8009A::init() &rArr; __aeabi_memcpy4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
-<LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::delayMilliSec(unsigned short)
+<BR>[Calls]<UL><LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::delayMilliSec(unsigned short)
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009Aram::cHwDisp_OTM8009Aram(cHwDSI&, cHwPort::Pin&, cHwDisp_OTM8009A::Orientation, cHwDisplayFont, unsigned char)
 </UL>
@@ -2258,8 +2258,8 @@ Global Symbols
 <P><STRONG><a name="[191]"></a>Cells::initializeCells()</STRONG> (Thumb, 62 bytes, Stack size 72 bytes, cells.o(i._ZN5Cells15initializeCellsEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = Cells::initializeCells() &rArr; operator new[] (unsigned) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
-<LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new[] (unsigned)
+<BR>[Calls]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new[] (unsigned)
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cells::Cells()
 </UL>
@@ -2318,9 +2318,9 @@ Global Symbols
 <P><STRONG><a name="[197]"></a>Menue::instance()</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, pages.o(i._ZN5Menue8instanceEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = Menue::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
 </UL>
@@ -2333,8 +2333,8 @@ Global Symbols
 <P><STRONG><a name="[196]"></a>Pages::siteHeader(short, short, short, short, char*)</STRONG> (Thumb, 146 bytes, Stack size 56 bytes, pages.o(i._ZN5Pages10siteHeaderEssssPc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = Pages::siteHeader(short, short, short, short, char*) &rArr; Style::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::instance()
+<BR>[Calls]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::instance()
+<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Settings::drawpage()
 <LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menue::drawpage()
@@ -2345,8 +2345,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 104 + In Cycle
 <LI>Call Chain = Pages::draw_button(short, short, short, short, short, short, short, short, short, short, char*) &rArr;  Pages::draw_button(short, short, short, short, short, short, short, short, short, short, char*) (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::draw_button(short, short, short, short, short, short, short, short, short, short, char*)
+<BR>[Calls]<UL><LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::draw_button(short, short, short, short, short, short, short, short, short, short, char*)
+<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Settings::drawpage()
 <LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menue::drawpage()
@@ -2377,9 +2377,9 @@ Global Symbols
 <P><STRONG><a name="[194]"></a>Pages::instance()</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, menue.o(i._ZN5Pages8instanceEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = Pages::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Settings::buttonOnPagePressed(int, int)
 <LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menue::buttonOnPagePressed(int, int)
@@ -2424,9 +2424,9 @@ Global Symbols
 <P><STRONG><a name="[171]"></a>Style::instance()</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, main.o(i._ZN5Style8instanceEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = Style::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::Style()
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
-<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::Style()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Settings::drawpage()
@@ -2514,8 +2514,8 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.constdata__ZTV6cHwDSI)
 </UL>
 <P><STRONG><a name="[18c]"></a>cHwDSI::DisplayRefresh()</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, disp_otm8009a.o(i._ZN6cHwDSI14DisplayRefreshEv))
-<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009Aram::refresh()
-<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009Aram::cHwDisp_OTM8009Aram(cHwDSI&, cHwPort::Pin&, cHwDisp_OTM8009A::Orientation, cHwDisplayFont, unsigned char)
+<BR><BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009Aram::cHwDisp_OTM8009Aram(cHwDSI&, cHwPort::Pin&, cHwDisp_OTM8009A::Orientation, cHwDisplayFont, unsigned char)
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009Aram::refresh()
 </UL>
 
 <P><STRONG><a name="[18e]"></a>cHwDSI::Init(unsigned short, unsigned short, bool)</STRONG> (Thumb, 356 bytes, Stack size 32 bytes, disp_otm8009a.o(i._ZN6cHwDSI4InitEttb))
@@ -2566,10 +2566,10 @@ Global Symbols
 <P><STRONG><a name="[19b]"></a>History::buttonOnPagePressed(int, int)</STRONG> (Thumb, 60 bytes, Stack size 24 bytes, history.o(i._ZN7History19buttonOnPagePressedEii))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = History::buttonOnPagePressed(int, int) &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
+<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
 <LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::isPressed(int, int, short(*)[5], int)
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
 </UL>
@@ -2587,9 +2587,9 @@ Global Symbols
 <P><STRONG><a name="[19a]"></a>History::instance()</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, pages.o(i._ZN7History8instanceEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = History::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
 </UL>
@@ -2640,9 +2640,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::delayMicroSec(unsigned short)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009A::cHwDisp_OTM8009A__sub_object(cHwDSI&, cHwPort::Pin&, cHwDisp_OTM8009A::Orientation, cHwDisplayFont, unsigned char)
+<BR>[Called By]<UL><LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwFMC::SDRAM_Init()
+<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009A::cHwDisp_OTM8009A__sub_object(cHwDSI&, cHwPort::Pin&, cHwDisp_OTM8009A::Orientation, cHwDisplayFont, unsigned char)
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009A::init()
-<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwFMC::SDRAM_Init()
 </UL>
 
 <P><STRONG><a name="[1a8]"></a>cSystem::disableWatchdog()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, lib.o(i._ZN7cSystem15disableWatchdogEv))
@@ -2684,14 +2684,14 @@ Global Symbols
 <P><STRONG><a name="[19d]"></a>Settings::buttonOnPagePressed(int, int)</STRONG> (Thumb, 280 bytes, Stack size 40 bytes, settings.o(i._ZN8Settings19buttonOnPagePressedEii))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = Settings::buttonOnPagePressed(int, int) &rArr; Settings::drawpage() &rArr; Pages::siteHeader(short, short, short, short, char*) &rArr; Style::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
+<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
 <LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::instance()
 <LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::changeActiveColorTheme(short)
 <LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Settings::drawpage()
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::instance()
 <LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::isPressed(int, int, short(*)[5], int)
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
 </UL>
@@ -2724,9 +2724,9 @@ Global Symbols
 <P><STRONG><a name="[19c]"></a>Settings::instance()</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, pages.o(i._ZN8Settings8instanceEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = Settings::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
 </UL>
@@ -3036,11 +3036,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 320 + Unknown Stack Size
 <LI>Call Chain = main &rArr; Pages::display_current_page(int, int) &rArr; Settings::buttonOnPagePressed(int, int) &rArr; Settings::drawpage() &rArr; Pages::siteHeader(short, short, short, short, char*) &rArr; Style::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
-<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
+<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
 <LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
 <LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cells::Cells()
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Game::ttt_classic(short, short)
@@ -3050,6 +3046,10 @@ Global Symbols
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cDevControlPointer::get()
 <LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::Controller()
 <LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::instance()
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
+<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
@@ -3107,8 +3107,8 @@ Global Symbols
 <P><STRONG><a name="[164]"></a>__aeabi_ddiv</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, ddiv.o(x$fpl$ddiv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_ddiv
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDSI::Init(unsigned short, unsigned short, bool)
-<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
+<BR>[Called By]<UL><LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
+<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDSI::Init(unsigned short, unsigned short, bool)
 </UL>
 
 <P><STRONG><a name="[1ca]"></a>_ddiv</STRONG> (Thumb, 552 bytes, Stack size 32 bytes, ddiv.o(x$fpl$ddiv), UNUSED)
@@ -3119,8 +3119,8 @@ Global Symbols
 <P><STRONG><a name="[165]"></a>__aeabi_d2uiz</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, dfixu.o(x$fpl$dfixu))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_d2uiz
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDSI::Init(unsigned short, unsigned short, bool)
-<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
+<BR>[Called By]<UL><LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
+<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDSI::Init(unsigned short, unsigned short, bool)
 </UL>
 
 <P><STRONG><a name="[1cc]"></a>_dfixu</STRONG> (Thumb, 90 bytes, Stack size 32 bytes, dfixu.o(x$fpl$dfixu), UNUSED)
@@ -3136,8 +3136,8 @@ Global Symbols
 <P><STRONG><a name="[162]"></a>__aeabi_dmul</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, dmul.o(x$fpl$dmul))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_dmul
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDSI::Init(unsigned short, unsigned short, bool)
-<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
+<BR>[Called By]<UL><LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
+<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDSI::Init(unsigned short, unsigned short, bool)
 </UL>
 
 <P><STRONG><a name="[1cd]"></a>_dmul</STRONG> (Thumb, 332 bytes, Stack size 32 bytes, dmul.o(x$fpl$dmul), UNUSED)
