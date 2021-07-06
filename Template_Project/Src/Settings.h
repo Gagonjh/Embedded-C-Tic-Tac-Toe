@@ -29,7 +29,7 @@ class Settings : public Pages
 		private:
 			Settings() {} ;// verhindert, dass ein Objekt von außerhalb von N erzeugt wird.
 			void highlight_selected_colormode_button(short int);
-				
+			void highlight_selected_game_mode();
 		// protected, wenn man von der Klasse noch erben möchte
 			Settings( const Settings& );//verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann
 			Settings & operator = (const Settings &); //Verhindert weitere Instanz durch Kopie

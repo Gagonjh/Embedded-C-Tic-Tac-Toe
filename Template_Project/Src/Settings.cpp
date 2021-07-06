@@ -31,6 +31,16 @@ void Settings::highlight_selected_colormode_button(short int color_mode)
 	}
 }
 
+void Settings::highlight_selected_game_mode()
+{
+	switch(gameMode)
+	{
+		case 0: disp1.drawFrame(260,260,220,40,2,0x17E0); break;
+		case 1: 	disp1.drawFrame(500,260,220,40,2,0x17E0); break;
+		default: break;
+	}
+}
+
 void Settings::drawpage()
 {
   disp1.setBackColor(Style::instance().color_Backround);
@@ -52,7 +62,7 @@ void Settings::drawpage()
 	disp1.drawText(280,270,"vs. Spieler");
 	disp1.drawFrame(500,260,220,40,2,Style::instance().color_Field);
 	disp1.drawText(550,270,"vs. Bot");
-	disp1.drawText(260,320,12, gameMode == 0 ? "Game mode: vs. Spieler" : "Game mode: vs. Bot");
+	highlight_selected_game_mode();
 }
 
 short int Settings::buttonOnPagePressed(int posX,int posY)

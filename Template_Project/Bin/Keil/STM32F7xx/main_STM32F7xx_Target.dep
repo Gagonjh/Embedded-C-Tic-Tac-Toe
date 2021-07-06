@@ -96,7 +96,7 @@ I (Src\./././Token.h)(0x60E463B2)
 I (Src\././Game.h)(0x60E4661E)
 I (Src\././Pages.h)(0x60E4633B)
 I (Src\././Menue.h)(0x60E420AF)
-I (Src\././Settings.h)(0x60E46328)
+I (Src\././Settings.h)(0x60E46EC9)
 I (Src\././Symbole.h)(0x60E420AF)
 I (Src\././Game_settings.h)(0x60E420AF)
 I (Src\././History.h)(0x60E420AF)
@@ -206,7 +206,7 @@ I (Src\./././Token.h)(0x60E463B2)
 I (Src\././Game.h)(0x60E4661E)
 I (Src\././Pages.h)(0x60E4633B)
 I (Src\././Menue.h)(0x60E420AF)
-I (Src\././Settings.h)(0x60E46328)
+I (Src\././Settings.h)(0x60E46EC9)
 I (Src\././Symbole.h)(0x60E420AF)
 I (Src\././Game_settings.h)(0x60E420AF)
 I (Src\././History.h)(0x60E420AF)
@@ -310,7 +310,7 @@ I (Src\./././Token.h)(0x60E463B2)
 I (Src\././Game.h)(0x60E4661E)
 I (Src\././Pages.h)(0x60E4633B)
 I (Src\././Menue.h)(0x60E420AF)
-I (Src\././Settings.h)(0x60E46328)
+I (Src\././Settings.h)(0x60E46EC9)
 I (Src\././Symbole.h)(0x60E420AF)
 I (Src\././Game_settings.h)(0x60E420AF)
 I (Src\././History.h)(0x60E420AF)
@@ -413,7 +413,7 @@ I (Src\./././Token.h)(0x60E463B2)
 I (Src\././Game.h)(0x60E4661E)
 I (Src\././Pages.h)(0x60E4633B)
 I (Src\././Menue.h)(0x60E420AF)
-I (Src\././Settings.h)(0x60E46328)
+I (Src\././Settings.h)(0x60E46EC9)
 I (Src\././Symbole.h)(0x60E420AF)
 I (Src\././Game_settings.h)(0x60E420AF)
 I (Src\././History.h)(0x60E420AF)
@@ -516,7 +516,7 @@ I (Src\./././Token.h)(0x60E463B2)
 I (Src\././Game.h)(0x60E4661E)
 I (Src\././Pages.h)(0x60E4633B)
 I (Src\././Menue.h)(0x60E420AF)
-I (Src\././Settings.h)(0x60E46328)
+I (Src\././Settings.h)(0x60E46EC9)
 I (Src\././Symbole.h)(0x60E420AF)
 I (Src\././Game_settings.h)(0x60E420AF)
 I (Src\././History.h)(0x60E420AF)
@@ -620,7 +620,7 @@ I (Src\./././Token.h)(0x60E463B2)
 I (Src\././Game.h)(0x60E4661E)
 I (Src\././Pages.h)(0x60E4633B)
 I (Src\././Menue.h)(0x60E420AF)
-I (Src\././Settings.h)(0x60E46328)
+I (Src\././Settings.h)(0x60E46EC9)
 I (Src\././Symbole.h)(0x60E420AF)
 I (Src\././Game_settings.h)(0x60E420AF)
 I (Src\././History.h)(0x60E420AF)
@@ -723,7 +723,7 @@ I (Src\./././Token.h)(0x60E463B2)
 I (Src\././Game.h)(0x60E4661E)
 I (Src\././Pages.h)(0x60E4633B)
 I (Src\././Menue.h)(0x60E420AF)
-I (Src\././Settings.h)(0x60E46328)
+I (Src\././Settings.h)(0x60E46EC9)
 I (Src\././Symbole.h)(0x60E420AF)
 I (Src\././Game_settings.h)(0x60E420AF)
 I (Src\././History.h)(0x60E420AF)
@@ -826,7 +826,7 @@ I (Src\./././Token.h)(0x60E463B2)
 I (Src\././Game.h)(0x60E4661E)
 I (Src\././Pages.h)(0x60E4633B)
 I (Src\././Menue.h)(0x60E420AF)
-I (Src\././Settings.h)(0x60E46328)
+I (Src\././Settings.h)(0x60E46EC9)
 I (Src\././Symbole.h)(0x60E420AF)
 I (Src\././Game_settings.h)(0x60E420AF)
 I (Src\././History.h)(0x60E420AF)
@@ -929,13 +929,13 @@ I (Src\./././Token.h)(0x60E463B2)
 I (Src\././Game.h)(0x60E4661E)
 I (Src\././Pages.h)(0x60E4633B)
 I (Src\././Menue.h)(0x60E420AF)
-I (Src\././Settings.h)(0x60E46328)
+I (Src\././Settings.h)(0x60E46EC9)
 I (Src\././Symbole.h)(0x60E420AF)
 I (Src\././Game_settings.h)(0x60E420AF)
 I (Src\././History.h)(0x60E420AF)
 I (Src\././Style.h)(0x60E4632E)
 F (.\Src\pages.h)(0x60E4633B)()
-F (.\Src\Settings.cpp)(0x60E46D70)(--cpp -c --cpu Cortex-M7.fp.sp -D__EVAL -g -O1 --apcs=interwork --split_sections -I ..\Src -I C:\Bin\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I .\..\EmbSysLib\Src\MCU\STM32F7xx -I .\..\EmbSysLib\Src -I .\Src-I.\RTE\_Target-IC:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-IC:\Bin\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F769xx -D_KEIL -DSTM32F769xx -D_HSE_CLK="25000" -D_HSE_BYPASS_OFF -DUSE_GRAPHIC_DISPLAY-o .\bin\keil\stm32f7xx\settings.o --omf_browse .\bin\keil\stm32f7xx\settings.crf --depend .\bin\keil\stm32f7xx\settings.d)
+F (.\Src\Settings.cpp)(0x60E46EF0)(--cpp -c --cpu Cortex-M7.fp.sp -D__EVAL -g -O1 --apcs=interwork --split_sections -I ..\Src -I C:\Bin\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I .\..\EmbSysLib\Src\MCU\STM32F7xx -I .\..\EmbSysLib\Src -I .\Src-I.\RTE\_Target-IC:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-IC:\Bin\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F769xx -D_KEIL -DSTM32F769xx -D_HSE_CLK="25000" -D_HSE_BYPASS_OFF -DUSE_GRAPHIC_DISPLAY-o .\bin\keil\stm32f7xx\settings.o --omf_browse .\bin\keil\stm32f7xx\settings.crf --depend .\bin\keil\stm32f7xx\settings.d)
 I (Src\./project_headers.h)(0x60E46629)
 I (Src\./../../EmbSysLib/Src/lib.h)(0x60E06256)
 I (Src\./../../EmbSysLib/Src/MCU/System.h)(0x60E06256)
@@ -1032,12 +1032,12 @@ I (Src\./././Token.h)(0x60E463B2)
 I (Src\././Game.h)(0x60E4661E)
 I (Src\././Pages.h)(0x60E4633B)
 I (Src\././Menue.h)(0x60E420AF)
-I (Src\././Settings.h)(0x60E46328)
+I (Src\././Settings.h)(0x60E46EC9)
 I (Src\././Symbole.h)(0x60E420AF)
 I (Src\././Game_settings.h)(0x60E420AF)
 I (Src\././History.h)(0x60E420AF)
 I (Src\././Style.h)(0x60E4632E)
-F (.\Src\Settings.h)(0x60E46328)()
+F (.\Src\Settings.h)(0x60E46EC9)()
 F (.\Src\Style.cpp)(0x60E46CE2)(--cpp -c --cpu Cortex-M7.fp.sp -D__EVAL -g -O1 --apcs=interwork --split_sections -I ..\Src -I C:\Bin\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I .\..\EmbSysLib\Src\MCU\STM32F7xx -I .\..\EmbSysLib\Src -I .\Src-I.\RTE\_Target-IC:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-IC:\Bin\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F769xx -D_KEIL -DSTM32F769xx -D_HSE_CLK="25000" -D_HSE_BYPASS_OFF -DUSE_GRAPHIC_DISPLAY-o .\bin\keil\stm32f7xx\style.o --omf_browse .\bin\keil\stm32f7xx\style.crf --depend .\bin\keil\stm32f7xx\style.d)
 I (Src\./project_headers.h)(0x60E46629)
 I (Src\./../../EmbSysLib/Src/lib.h)(0x60E06256)
@@ -1135,7 +1135,7 @@ I (Src\./././Token.h)(0x60E463B2)
 I (Src\././Game.h)(0x60E4661E)
 I (Src\././Pages.h)(0x60E4633B)
 I (Src\././Menue.h)(0x60E420AF)
-I (Src\././Settings.h)(0x60E46328)
+I (Src\././Settings.h)(0x60E46EC9)
 I (Src\././Symbole.h)(0x60E420AF)
 I (Src\././Game_settings.h)(0x60E420AF)
 I (Src\././History.h)(0x60E420AF)
@@ -1238,7 +1238,7 @@ I (Src\./././Token.h)(0x60E463B2)
 I (Src\././Game.h)(0x60E4661E)
 I (Src\././Pages.h)(0x60E4633B)
 I (Src\././Menue.h)(0x60E420AF)
-I (Src\././Settings.h)(0x60E46328)
+I (Src\././Settings.h)(0x60E46EC9)
 I (Src\././Symbole.h)(0x60E420AF)
 I (Src\././Game_settings.h)(0x60E420AF)
 I (Src\././History.h)(0x60E420AF)
