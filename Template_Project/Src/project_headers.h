@@ -12,7 +12,6 @@
 #include "./Pages.h"
 #include "./Menue.h"
 #include "./Settings.h"
-#include "./Display.h"
 #include "./Symbole.h"
 #include "./Game_settings.h"
 #include "./History.h"

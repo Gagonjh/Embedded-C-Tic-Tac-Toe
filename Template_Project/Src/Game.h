@@ -11,7 +11,7 @@ class Game
 		Cells defaultCells;
 		Field field;
 	public:
-		void ttt_classic(short,short,bool);
+		short ttt_classic(short,short);
 		Game(short,Controller, Field);
 };
 

@@ -22396,8 +22396,7 @@ class cTaskHandler : public cList::Item
 #line 91 "Src\\./../../EmbSysLib/Src/lib.h"
 
 #line 5 "Src\\./project_headers.h"
-#line 1 "Src\\././Field.h"
-#line 1 "Src\\././Token.h"
+#line 6 "Src\\./project_headers.h"
 #line 1 "Src\\././datatypes.h"
 
 
@@ -22408,6 +22407,8 @@ typedef struct coordinates {
 	short player;
 } Coordinates;
 
+#line 7 "Src\\./project_headers.h"
+#line 1 "Src\\././Token.h"
 #line 4 "Src\\././Token.h"
 
 class Token
@@ -22418,21 +22419,7 @@ class Token
 		Token(Coordinates, short);
 };
 
-#line 4 "Src\\././Field.h"
-
-	
-	
-	
-class Field
-{
-	public:
-		void drawField();
-		void drawToken(Token);
-};
-#line 6 "Src\\./project_headers.h"
-#line 7 "Src\\./project_headers.h"
 #line 8 "Src\\./project_headers.h"
-#line 9 "Src\\./project_headers.h"
 #line 1 "Src\\././Controller.h"
 #line 4 "Src\\././Controller.h"
 #line 1 "Src\\./././Cells.h"
@@ -22457,6 +22444,15 @@ class Cells {
 };
 
 #line 5 "Src\\././Controller.h"
+#line 1 "Src\\./././Field.h"
+#line 4 "Src\\./././Field.h"
+	
+class Field
+{
+	public:
+		void drawField();
+		void drawToken(Token);
+};
 #line 6 "Src\\././Controller.h"
 
 class Controller {
@@ -22472,8 +22468,8 @@ class Controller {
 		short getGameState();
 };
 
+#line 9 "Src\\./project_headers.h"
 #line 10 "Src\\./project_headers.h"
-#line 11 "Src\\./project_headers.h"
 #line 1 "Src\\././Game.h"
 
 
@@ -22488,11 +22484,301 @@ class Game
 		Cells defaultCells;
 		Field field;
 	public:
-		void ttt_classic(short,short,bool);
+		short ttt_classic(short,short);
 		Game(short,Controller, Field);
 };
 
+#line 11 "Src\\./project_headers.h"
 #line 12 "Src\\./project_headers.h"
+#line 1 "Src\\././Pages.h"
+
+
+
+
+
+
+	
+class Pages
+{
+	
+	private:
+		short int page; 
+		short int lastPage; 
+	public:
+
+		
+			unsigned int iCurrent_Page;
+	
+			
+				static Pages& instance()
+			{
+				static Pages _instance;
+				return _instance;
+			}
+			~Pages() {}
+			
+			
+			void drawpage(void);
+			
+			void siteHeader(short int,short int,short int,short int,char*);
+			
+			void draw_button(short int ,short int ,short int ,short int ,short int,short int,short int,short int,short int,short int, char*);
+				
+			short int display_current_page(int, int);
+			
+			short int isPressed(int,int,short int[][5],int);
+				
+		protected:
+			Pages();
+                    
+			Pages( const Pages& );
+				
+			Pages & operator = (const Pages &); 
+		  
+
+		
+};
+
+
+
+
+
+
+
+ 
+#line 13 "Src\\./project_headers.h"
+#line 1 "Src\\././Menue.h"
+
+
+
+
+
+
+
+extern short int iButtons_cor_M[10][5];
+
+class Menue : public Pages
+{
+		public:
+						
+				static Menue& instance()
+			{
+				static Menue _instance;
+				return _instance;
+			}
+			~Menue() {}
+		
+			void drawpage(void);
+			
+			short int buttonOnPagePressed(int,int);
+			
+			private:
+			
+			Menue() {
+			} ;
+                    
+			Menue( const Menue& );
+				
+			Menue & operator = (const Menue &); 
+};
+
+#line 14 "Src\\./project_headers.h"
+#line 1 "Src\\././Settings.h"
+
+
+
+
+
+ 
+
+
+
+
+extern short int iButtons_cor_S[10][5];
+
+class Settings : public Pages
+{
+		public:
+			
+				static Settings& instance()
+			{
+				static Settings _instance;
+				return _instance;
+			}
+			~Settings() {}
+			
+		
+			void drawpage(void);
+				
+			short int buttonOnPagePressed(int,int);
+		
+		private:
+			
+			Settings() {
+			} ;
+                    
+			Settings( const Settings& );
+				
+			Settings & operator = (const Settings &); 
+};
+
+#line 15 "Src\\./project_headers.h"
+#line 1 "Src\\././Symbole.h"
+
+
+
+
+
+ 
+ 
+#line 16 "Src\\./project_headers.h"
+#line 1 "Src\\././Game_settings.h"
+
+
+
+
+
+ 
+
+
+
+
+extern short int iButtons_cor_GS[10][5];
+
+class Game_Settings : public Pages
+{
+		public:
+			
+				static Game_Settings& instance()
+			{
+				static Game_Settings _instance;
+				return _instance;
+			}
+			~Game_Settings() {}
+			
+		
+			void drawpage(void);
+				
+			short int buttonOnPagePressed(int,int);
+		
+		private:
+			
+			Game_Settings() {
+			} ;
+                    
+			Game_Settings( const Game_Settings& );
+				
+			Game_Settings & operator = (const Game_Settings &); 
+};
+
+#line 17 "Src\\./project_headers.h"
+#line 1 "Src\\././History.h"
+
+
+
+
+
+ 
+
+
+
+
+extern short int iButtons_cor_H[10][5];
+
+class History : public Pages
+{
+		public:
+			
+				static History& instance()
+			{
+				static History _instance;
+				return _instance;
+			}
+			~History() {}
+			
+		
+			void drawpage(void);
+				
+			short int buttonOnPagePressed(int,int);
+		
+		private:
+			
+			History() {
+			} ;
+                    
+			History( const History& );
+				
+			History & operator = (const History &); 
+};
+
+#line 18 "Src\\./project_headers.h"
+#line 1 "Src\\././Style.h"
+
+
+
+
+
+ 
+
+
+
+
+class Style
+{
+		public:
+			
+				static Style& instance()
+			{
+				static Style _instance;
+				return _instance;
+			}
+			~Style() {}
+			
+		
+			void changeActiveColorTheme(short int);
+		
+			int color_Backround;
+			int color_Font;
+			int color_Boxes;
+			int color_Player_1;
+			int color_Player_2;
+			int color_Field;
+		
+		private:
+			
+			int dark_Color_Backround;
+			int dark_Color_Font;
+			int dark_Color_Boxes ;
+			int dark_Color_Player_1;
+			int dark_Color_Player_2 ;
+			int dark_Color_Field;
+			int dark_Color_Border;
+		
+			int light_Color_Backround;
+			int light_Color_Font;
+			int light_Color_Boxes;
+			int light_Color_Player_1;
+			int light_Color_Player_2;
+			int light_Color_Field;
+		
+			int ru_Color_Backround;
+			int ru_Color_Font;
+			int ru_Color_Boxes;
+			int ru_Color_Player_1;
+			int ru_Color_Player_2;
+			int ru_Color_Field;
+		
+			Style();
+                    
+			Style( const Style& );
+				
+			Style & operator = (const Style &); 
+			
+			
+			
+};
+
+#line 19 "Src\\./project_headers.h"
 
 
 extern cDevDisplayGraphic& disp1;
@@ -22506,27 +22792,17 @@ Game::Game(short gameMode,Controller controller, Field field):controller(control
 	disp1.refresh();
 }
 
-void Game::ttt_classic(short eventPosX,short eventPosY, bool isPressed)
+short Game::ttt_classic(short eventPosX,short eventPosY)
 {
-	if(isPressed && posX == -1 && posY == -1)
-		{
-			posX = eventPosX;
-			posY = eventPosY;
-		}
-	else
-		{
-			posX = -1;
-			posY = -1;
-		}
 	if(posX<390 && posX > 100 && posY < 390 && posY > 100) 
 		{
 			controller.control(posX, posY);
-			short state = controller.getGameState();
 			disp1.refresh();
-			if(gameMode==1) 
+			if(gameMode==1)
 				{
 						controller.aiMove();
 				}
+			return controller.getGameState();
 		}
-	disp1.refresh();
+	return -1;
 }

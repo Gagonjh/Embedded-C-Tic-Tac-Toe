@@ -8,7 +8,7 @@ Game::Game(short gameMode,Controller controller, Field field):controller(control
 	disp1.refresh();
 }
 
-void Game::ttt_classic(short eventPosX,short eventPosY)
+short Game::ttt_classic(short eventPosX,short eventPosY)
 {
 	if(posX<390 && posX > 100 && posY < 390 && posY > 100) 
 		{

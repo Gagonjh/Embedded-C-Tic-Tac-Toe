@@ -27,7 +27,6 @@ int main(void)
 		disp1.setBackColor(Style::instance().color_Backround);
 		disp1.setTextColor(Style::instance().color_Font);
     disp.clear();
-  #endif
 
   while(1)
   {
