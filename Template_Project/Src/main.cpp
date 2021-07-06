@@ -66,6 +66,7 @@ int main(void)
 			}
 			else if(page!= 2 && gamestate >= 0)
 			{
+				//destructor
 				gamestate = -1;
 			}
 			

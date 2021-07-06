@@ -11,7 +11,7 @@ class Controller {
 		Cells cells;
 		Field field;
 	public:
-		Controller(Cells, Field);
+		Controller();
 		void aiMove();
 		bool handleUserInput(short, short);
 		short getGameState();
