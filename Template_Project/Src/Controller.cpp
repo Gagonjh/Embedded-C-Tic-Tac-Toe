@@ -6,25 +6,27 @@ Controller::Controller(Cells cellsToControl, Field field):cells(cellsToControl),
 	round=0;
 };
 
-void Controller::control(short posX, short posY)
+bool Controller::handleUserInput(short posX, short posY)
 {
-	for(int i = 0; i<9; i++)
-		{
-			Coordinates cellCoords = {cells.cells[i].x,cells.cells[i].y};
-			short xDiff = abs(cellCoords.x - posX);
-			short yDiff = abs(cellCoords.y - posY);
-			if(xDiff < 50 && yDiff<50) 
-				{
-					if(cells.cells[i].player==0)
-						{
-							Token playerToken(cellCoords,this->currentPlayer);
-							field.drawToken(playerToken);
-							cells.cells[i].player = this->currentPlayer;
-							this->currentPlayer=this->currentPlayer%2+1;
-							round++;
-						}
-				}
-		}
+    for(int i = 0; i<9; i++)
+        {
+            Coordinates cellCoords = {cells.cells[i].x,cells.cells[i].y};
+            short xDiff = abs(cellCoords.x - posX);
+            short yDiff = abs(cellCoords.y - posY);
+            if(xDiff < 50 && yDiff<50) 
+                {
+                    if(cells.cells[i].player==0)
+                        {
+                            Token playerToken(cellCoords,this->currentPlayer);
+                            field.drawToken(playerToken);
+                            cells.cells[i].player = this->currentPlayer;
+                            this->currentPlayer=this->currentPlayer%2+1;
+                            round++;
+                            return true;
+                        }
+                }
+        }
+    return false;
 };
 
 /**

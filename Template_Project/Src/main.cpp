@@ -24,6 +24,8 @@ int main(void)
 		short posX = -1;
 		short posY = -1;
 		short page = -1;
+		short gamestarted = -2;
+		short ended = 0;
 		//Fix falsche Startfarbe
 		disp1.setBackColor(Style::instance().color_Backround);
 		disp1.setTextColor(Style::instance().color_Font);
@@ -47,7 +49,24 @@ int main(void)
 			
 			if(page = 2)
 			{
+				if(gamestate == -2)
+				{
+					//Konstruktor
+					
+				}
+				else if(gamestate >= 0)
+				{
+					//ende
+					//history überschreiben
+					//ausgabe gewinner
+				}
 				game.ttt_classic(posX,posY);
+				
+				
+			}
+			else if(page!= 2 && gamestate >= 0)
+			{
+				gamestate = -1;
 			}
 			
 /*

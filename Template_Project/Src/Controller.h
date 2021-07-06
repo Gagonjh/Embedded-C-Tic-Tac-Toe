@@ -13,7 +13,7 @@ class Controller {
 	public:
 		Controller(Cells, Field);
 		void aiMove();
-		void control(short, short);
+		bool handleUserInput(short, short);
 		short getGameState();
 };
 
