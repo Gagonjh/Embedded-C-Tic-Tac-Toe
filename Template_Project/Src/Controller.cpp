@@ -37,7 +37,7 @@ bool Controller::handleUserInput(short posX, short posY)
 							field -> drawToken(cells -> cells[i]);
 							this->currentPlayer=this->currentPlayer%2+1;
 							round++;
-							return !this->cells->rowIsComplete();
+							return true;
 						}
 				}
 		}
@@ -71,7 +71,7 @@ void Controller::aiMove(uint8_t ranDOOMizer)
 {
 	while(1)
 	{
-		if(round == 9)
+		if(getGameState()>-1)
 		{
 			break;
 		}
