@@ -11,9 +11,9 @@ short Game::ttt_classic(short posX,short posY, uint8_t ranDOOM)
 {
 	if(posX<390 && posX > 100 && posY < 390 && posY > 100) 
 		{
-			bool isInputValid = controller -> handleUserInput(posX, posY);
+			bool isAiAllowedToPlay = controller -> handleUserInput(posX, posY);
 			disp1.refresh();
-			if(gameMode==1 && isInputValid)
+			if(gameMode==1 && isAiAllowedToPlay)
 				{
 						controller -> aiMove(ranDOOM);
 				}
