@@ -1,5 +1,5 @@
 Dependencies for Project 'main_STM32F7xx', Target 'Target': (DO NOT MODIFY !)
-F (.\Src\main.cpp)(0x60E58DC0)(--cpp -c --cpu Cortex-M7.fp.sp -D__EVAL -g -O1 --apcs=interwork --split_sections -I ..\Src -I C:\Bin\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I .\..\EmbSysLib\Src\MCU\STM32F7xx -I .\..\EmbSysLib\Src -I .\Src-I.\RTE\_Target-IC:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-IC:\Bin\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F769xx -D_KEIL -DSTM32F769xx -D_HSE_CLK="25000" -D_HSE_BYPASS_OFF -DUSE_GRAPHIC_DISPLAY-o .\bin\keil\stm32f7xx\main.o --omf_browse .\bin\keil\stm32f7xx\main.crf --depend .\bin\keil\stm32f7xx\main.d)
+F (.\Src\main.cpp)(0x60E5CFC0)(--cpp -c --cpu Cortex-M7.fp.sp -D__EVAL -g -O1 --apcs=interwork --split_sections -I ..\Src -I C:\Bin\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I .\..\EmbSysLib\Src\MCU\STM32F7xx -I .\..\EmbSysLib\Src -I .\Src-I.\RTE\_Target-IC:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-IC:\Bin\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F769xx -D_KEIL -DSTM32F769xx -D_HSE_CLK="25000" -D_HSE_BYPASS_OFF -DUSE_GRAPHIC_DISPLAY-o .\bin\keil\stm32f7xx\main.o --omf_browse .\bin\keil\stm32f7xx\main.crf --depend .\bin\keil\stm32f7xx\main.d)
 I (Src\./Project_Headers.h)(0x60E56DD3)
 I (Src\./../../EmbSysLib/Src/lib.h)(0x60C704E4)
 I (Src\./../../EmbSysLib/Src/MCU/System.h)(0x60C704E4)
@@ -97,7 +97,7 @@ I (Src\././Game.h)(0x60E569ED)
 I (Src\././Pages.h)(0x60E56B74)
 I (Src\././Page_Menue.h)(0x60E571F1)
 I (Src\././Page_Settings.h)(0x60E57149)
-I (Src\././Symbole.h)(0x60E56AA3)
+I (Src\././Symbole.h)(0x60E5B531)
 I (Src\././Page_Game.h)(0x60E5861F)
 I (Src\././Page_History.h)(0x60E571AB)
 I (Src\././Style.h)(0x60E5725B)
@@ -206,7 +206,7 @@ I (Src\././Game.h)(0x60E569ED)
 I (Src\././Pages.h)(0x60E56B74)
 I (Src\././Page_Menue.h)(0x60E571F1)
 I (Src\././Page_Settings.h)(0x60E57149)
-I (Src\././Symbole.h)(0x60E56AA3)
+I (Src\././Symbole.h)(0x60E5B531)
 I (Src\././Page_Game.h)(0x60E5861F)
 I (Src\././Page_History.h)(0x60E571AB)
 I (Src\././Style.h)(0x60E5725B)
@@ -310,7 +310,7 @@ I (Src\././Game.h)(0x60E569ED)
 I (Src\././Pages.h)(0x60E56B74)
 I (Src\././Page_Menue.h)(0x60E571F1)
 I (Src\././Page_Settings.h)(0x60E57149)
-I (Src\././Symbole.h)(0x60E56AA3)
+I (Src\././Symbole.h)(0x60E5B531)
 I (Src\././Page_Game.h)(0x60E5861F)
 I (Src\././Page_History.h)(0x60E571AB)
 I (Src\././Style.h)(0x60E5725B)
@@ -413,7 +413,7 @@ I (Src\././Game.h)(0x60E569ED)
 I (Src\././Pages.h)(0x60E56B74)
 I (Src\././Page_Menue.h)(0x60E571F1)
 I (Src\././Page_Settings.h)(0x60E57149)
-I (Src\././Symbole.h)(0x60E56AA3)
+I (Src\././Symbole.h)(0x60E5B531)
 I (Src\././Page_Game.h)(0x60E5861F)
 I (Src\././Page_History.h)(0x60E571AB)
 I (Src\././Style.h)(0x60E5725B)
@@ -516,7 +516,7 @@ I (Src\././Game.h)(0x60E569ED)
 I (Src\././Pages.h)(0x60E56B74)
 I (Src\././Page_Menue.h)(0x60E571F1)
 I (Src\././Page_Settings.h)(0x60E57149)
-I (Src\././Symbole.h)(0x60E56AA3)
+I (Src\././Symbole.h)(0x60E5B531)
 I (Src\././Page_Game.h)(0x60E5861F)
 I (Src\././Page_History.h)(0x60E571AB)
 I (Src\././Style.h)(0x60E5725B)
@@ -620,12 +620,12 @@ I (Src\././Game.h)(0x60E569ED)
 I (Src\././Pages.h)(0x60E56B74)
 I (Src\././Page_Menue.h)(0x60E571F1)
 I (Src\././Page_Settings.h)(0x60E57149)
-I (Src\././Symbole.h)(0x60E56AA3)
+I (Src\././Symbole.h)(0x60E5B531)
 I (Src\././Page_Game.h)(0x60E5861F)
 I (Src\././Page_History.h)(0x60E571AB)
 I (Src\././Style.h)(0x60E5725B)
 F (.\Src\Style.h)(0x60E5725B)()
-F (.\Src\Symbole.cpp)(0x60E56E35)(--cpp -c --cpu Cortex-M7.fp.sp -D__EVAL -g -O1 --apcs=interwork --split_sections -I ..\Src -I C:\Bin\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I .\..\EmbSysLib\Src\MCU\STM32F7xx -I .\..\EmbSysLib\Src -I .\Src-I.\RTE\_Target-IC:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-IC:\Bin\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F769xx -D_KEIL -DSTM32F769xx -D_HSE_CLK="25000" -D_HSE_BYPASS_OFF -DUSE_GRAPHIC_DISPLAY-o .\bin\keil\stm32f7xx\symbole.o --omf_browse .\bin\keil\stm32f7xx\symbole.crf --depend .\bin\keil\stm32f7xx\symbole.d)
+F (.\Src\Symbole.cpp)(0x60E5B7AD)(--cpp -c --cpu Cortex-M7.fp.sp -D__EVAL -g -O1 --apcs=interwork --split_sections -I ..\Src -I C:\Bin\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I .\..\EmbSysLib\Src\MCU\STM32F7xx -I .\..\EmbSysLib\Src -I .\Src-I.\RTE\_Target-IC:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-IC:\Bin\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F769xx -D_KEIL -DSTM32F769xx -D_HSE_CLK="25000" -D_HSE_BYPASS_OFF -DUSE_GRAPHIC_DISPLAY-o .\bin\keil\stm32f7xx\symbole.o --omf_browse .\bin\keil\stm32f7xx\symbole.crf --depend .\bin\keil\stm32f7xx\symbole.d)
 I (Src\./Project_Headers.h)(0x60E56DD3)
 I (Src\./../../EmbSysLib/Src/lib.h)(0x60C704E4)
 I (Src\./../../EmbSysLib/Src/MCU/System.h)(0x60C704E4)
@@ -723,11 +723,11 @@ I (Src\././Game.h)(0x60E569ED)
 I (Src\././Pages.h)(0x60E56B74)
 I (Src\././Page_Menue.h)(0x60E571F1)
 I (Src\././Page_Settings.h)(0x60E57149)
-I (Src\././Symbole.h)(0x60E56AA3)
+I (Src\././Symbole.h)(0x60E5B531)
 I (Src\././Page_Game.h)(0x60E5861F)
 I (Src\././Page_History.h)(0x60E571AB)
 I (Src\././Style.h)(0x60E5725B)
-F (.\Src\Symbole.h)(0x60E56AA3)()
+F (.\Src\Symbole.h)(0x60E5B531)()
 F (.\Src\Page_Game.cpp)(0x60E58C9C)(--cpp -c --cpu Cortex-M7.fp.sp -D__EVAL -g -O1 --apcs=interwork --split_sections -I ..\Src -I C:\Bin\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I .\..\EmbSysLib\Src\MCU\STM32F7xx -I .\..\EmbSysLib\Src -I .\Src-I.\RTE\_Target-IC:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-IC:\Bin\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F769xx -D_KEIL -DSTM32F769xx -D_HSE_CLK="25000" -D_HSE_BYPASS_OFF -DUSE_GRAPHIC_DISPLAY-o .\bin\keil\stm32f7xx\page_game.o --omf_browse .\bin\keil\stm32f7xx\page_game.crf --depend .\bin\keil\stm32f7xx\page_game.d)
 I (Src\./Project_Headers.h)(0x60E56DD3)
 I (Src\./../../EmbSysLib/Src/lib.h)(0x60C704E4)
@@ -826,7 +826,7 @@ I (Src\././Game.h)(0x60E569ED)
 I (Src\././Pages.h)(0x60E56B74)
 I (Src\././Page_Menue.h)(0x60E571F1)
 I (Src\././Page_Settings.h)(0x60E57149)
-I (Src\././Symbole.h)(0x60E56AA3)
+I (Src\././Symbole.h)(0x60E5B531)
 I (Src\././Page_Game.h)(0x60E5861F)
 I (Src\././Page_History.h)(0x60E571AB)
 I (Src\././Style.h)(0x60E5725B)
@@ -929,12 +929,12 @@ I (Src\././Game.h)(0x60E569ED)
 I (Src\././Pages.h)(0x60E56B74)
 I (Src\././Page_Menue.h)(0x60E571F1)
 I (Src\././Page_Settings.h)(0x60E57149)
-I (Src\././Symbole.h)(0x60E56AA3)
+I (Src\././Symbole.h)(0x60E5B531)
 I (Src\././Page_Game.h)(0x60E5861F)
 I (Src\././Page_History.h)(0x60E571AB)
 I (Src\././Style.h)(0x60E5725B)
 F (.\Src\Page_History.h)(0x60E571AB)()
-F (.\Src\Page_Menue.cpp)(0x60E57204)(--cpp -c --cpu Cortex-M7.fp.sp -D__EVAL -g -O1 --apcs=interwork --split_sections -I ..\Src -I C:\Bin\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I .\..\EmbSysLib\Src\MCU\STM32F7xx -I .\..\EmbSysLib\Src -I .\Src-I.\RTE\_Target-IC:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-IC:\Bin\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F769xx -D_KEIL -DSTM32F769xx -D_HSE_CLK="25000" -D_HSE_BYPASS_OFF -DUSE_GRAPHIC_DISPLAY-o .\bin\keil\stm32f7xx\page_menue.o --omf_browse .\bin\keil\stm32f7xx\page_menue.crf --depend .\bin\keil\stm32f7xx\page_menue.d)
+F (.\Src\Page_Menue.cpp)(0x60E5E7C8)(--cpp -c --cpu Cortex-M7.fp.sp -D__EVAL -g -O1 --apcs=interwork --split_sections -I ..\Src -I C:\Bin\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I .\..\EmbSysLib\Src\MCU\STM32F7xx -I .\..\EmbSysLib\Src -I .\Src-I.\RTE\_Target-IC:\Bin\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-IC:\Bin\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F769xx -D_KEIL -DSTM32F769xx -D_HSE_CLK="25000" -D_HSE_BYPASS_OFF -DUSE_GRAPHIC_DISPLAY-o .\bin\keil\stm32f7xx\page_menue.o --omf_browse .\bin\keil\stm32f7xx\page_menue.crf --depend .\bin\keil\stm32f7xx\page_menue.d)
 I (Src\./Project_Headers.h)(0x60E56DD3)
 I (Src\./../../EmbSysLib/Src/lib.h)(0x60C704E4)
 I (Src\./../../EmbSysLib/Src/MCU/System.h)(0x60C704E4)
@@ -1032,7 +1032,7 @@ I (Src\././Game.h)(0x60E569ED)
 I (Src\././Pages.h)(0x60E56B74)
 I (Src\././Page_Menue.h)(0x60E571F1)
 I (Src\././Page_Settings.h)(0x60E57149)
-I (Src\././Symbole.h)(0x60E56AA3)
+I (Src\././Symbole.h)(0x60E5B531)
 I (Src\././Page_Game.h)(0x60E5861F)
 I (Src\././Page_History.h)(0x60E571AB)
 I (Src\././Style.h)(0x60E5725B)
@@ -1135,7 +1135,7 @@ I (Src\././Game.h)(0x60E569ED)
 I (Src\././Pages.h)(0x60E56B74)
 I (Src\././Page_Menue.h)(0x60E571F1)
 I (Src\././Page_Settings.h)(0x60E57149)
-I (Src\././Symbole.h)(0x60E56AA3)
+I (Src\././Symbole.h)(0x60E5B531)
 I (Src\././Page_Game.h)(0x60E5861F)
 I (Src\././Page_History.h)(0x60E571AB)
 I (Src\././Style.h)(0x60E5725B)
@@ -1238,7 +1238,7 @@ I (Src\././Game.h)(0x60E569ED)
 I (Src\././Pages.h)(0x60E56B74)
 I (Src\././Page_Menue.h)(0x60E571F1)
 I (Src\././Page_Settings.h)(0x60E57149)
-I (Src\././Symbole.h)(0x60E56AA3)
+I (Src\././Symbole.h)(0x60E5B531)
 I (Src\././Page_Game.h)(0x60E5861F)
 I (Src\././Page_History.h)(0x60E571AB)
 I (Src\././Style.h)(0x60E5725B)

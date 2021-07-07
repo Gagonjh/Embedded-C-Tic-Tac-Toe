@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Bin\Keil\STM32F7xx\main.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Bin\Keil\STM32F7xx\main.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Wed Jul 07 13:19:46 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Wed Jul 07 20:03:11 2021
 <BR><P>
 <H3>Maximum Stack Usage =        344 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1024,11 +1024,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::instance()
 <LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::instance()
 <LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::instance()
+<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::buttonOnPagePressed(int, int)
+<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::buttonOnPagePressed(int, int)
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::instance()
 <LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::instance()
 <LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Menue::instance()
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::buttonOnPagePressed(int, int)
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::buttonOnPagePressed(int, int)
 </UL>
 
 <P><STRONG><a name="[1a3]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, strlen.o(.text))
@@ -1761,7 +1761,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
 </UL>
 
-<P><STRONG><a name="[162]"></a>Page_Menue::drawpage()</STRONG> (Thumb, 268 bytes, Stack size 64 bytes, page_menue.o(i._ZN10Page_Menue8drawpageEv))
+<P><STRONG><a name="[162]"></a>Page_Menue::drawpage()</STRONG> (Thumb, 518 bytes, Stack size 64 bytes, page_menue.o(i._ZN10Page_Menue8drawpageEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = Page_Menue::drawpage() &rArr; Pages::siteHeader(short, short, short, short, char*) &rArr; Style::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::draw_button(short, short, short, short, short, short, short, short, short, short, char*)
@@ -1808,14 +1808,14 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[169]"></a>cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)</STRONG> (Thumb, 442 bytes, Stack size 40 bytes, lib.o(i._ZN10cHwTimer_NC1ENS_7TimerIdEj))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned) &rArr; __aeabi_dmul
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned) &rArr; __aeabi_d2uiz
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
-<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
+<BR>[Calls]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
 <LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_EnableIRQ(IRQn_Type)
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
 <LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::cList()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___8_main_cpp_sys
@@ -2304,7 +2304,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> disp_otm8009a.o(.constdata__ZTV19cHwDisp_OTM8009Aram)
 </UL>
 <P><STRONG><a name="[19a]"></a>cHwDisp_OTM8009Aram::cHwDisp_OTM8009Aram(cHwDSI&, cHwPort::Pin&, cHwDisp_OTM8009A::Orientation, cHwDisplayFont, unsigned char)</STRONG> (Thumb, 206 bytes, Stack size 40 bytes, disp_otm8009a.o(i._ZN19cHwDisp_OTM8009AramC1ER6cHwDSIRN7cHwPort3PinEN16cHwDisp_OTM8009A11OrientationE14cHwDisplayFonth))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = cHwDisp_OTM8009Aram::cHwDisp_OTM8009Aram(cHwDSI&, cHwPort::Pin&, cHwDisp_OTM8009A::Orientation, cHwDisplayFont, unsigned char) &rArr; cHwDSI::Init(unsigned short, unsigned short, bool) &rArr; __aeabi_dmul
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = cHwDisp_OTM8009Aram::cHwDisp_OTM8009Aram(cHwDSI&, cHwPort::Pin&, cHwDisp_OTM8009A::Orientation, cHwDisplayFont, unsigned char) &rArr; cHwDSI::Init(unsigned short, unsigned short, bool) &rArr; __aeabi_d2uiz
 </UL>
 <BR>[Calls]<UL><LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDSI::Init(unsigned short, unsigned short, bool)
 <LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDSI::DisplayRefresh()
@@ -2454,9 +2454,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = Pages::display_current_page(int, int) &rArr; Page_Settings::buttonOnPagePressed(int, int) &rArr; Page_Settings::drawpage() &rArr; Pages::siteHeader(short, short, short, short, char*) &rArr; Style::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::instance()
-<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::instance()
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::instance()
-<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Menue::instance()
 <LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::drawpage()
 <LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::buttonOnPagePressed(int, int)
 <LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Menue::drawpage()
@@ -2465,6 +2462,9 @@ Global Symbols
 <LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::buttonOnPagePressed(int, int)
 <LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::drawpage()
 <LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::buttonOnPagePressed(int, int)
+<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::instance()
+<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::instance()
+<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Menue::instance()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -2493,11 +2493,11 @@ Global Symbols
 <P><STRONG><a name="[168]"></a>Pages::Pages()</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, pages.o(i._ZN5PagesC1Ev))
 <BR><BR>[Called By]<UL><LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::Page_Game()
 <LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::instance()
+<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::buttonOnPagePressed(int, int)
+<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::buttonOnPagePressed(int, int)
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::instance()
 <LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::instance()
 <LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Menue::instance()
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::buttonOnPagePressed(int, int)
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::buttonOnPagePressed(int, int)
 </UL>
 
 <P><STRONG><a name="[21f]"></a>Pages::Pages__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, pages.o(i._ZN5PagesC1Ev), UNUSED)
@@ -2615,11 +2615,11 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[19b]"></a>cHwDSI::Init(unsigned short, unsigned short, bool)</STRONG> (Thumb, 356 bytes, Stack size 32 bytes, disp_otm8009a.o(i._ZN6cHwDSI4InitEttb))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = cHwDSI::Init(unsigned short, unsigned short, bool) &rArr; __aeabi_dmul
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = cHwDSI::Init(unsigned short, unsigned short, bool) &rArr; __aeabi_d2uiz
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
+<BR>[Calls]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
 <LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009Aram::cHwDisp_OTM8009Aram(cHwDSI&, cHwPort::Pin&, cHwDisp_OTM8009A::Orientation, cHwDisplayFont, unsigned char)
 </UL>
@@ -3051,11 +3051,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::instance()
 <LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::instance()
 <LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::instance()
+<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::buttonOnPagePressed(int, int)
+<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::buttonOnPagePressed(int, int)
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::instance()
 <LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::instance()
 <LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Menue::instance()
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::buttonOnPagePressed(int, int)
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::buttonOnPagePressed(int, int)
 </UL>
 
 <P><STRONG><a name="[93]"></a>__cxa_pure_virtual</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, lib.o(i.__cxa_pure_virtual))
@@ -3204,15 +3204,15 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1ce]"></a>__fpl_dnaninf</STRONG> (Thumb, 156 bytes, Stack size 16 bytes, dnaninf.o(x$fpl$dnaninf), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dmul
-<LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dfixu
+<BR><BR>[Called By]<UL><LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dfixu
 <LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ddiv
 <LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_d2f
+<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dmul
 </UL>
 
 <P><STRONG><a name="[1d0]"></a>__fpl_dretinf</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, dretinf.o(x$fpl$dretinf), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dmul
-<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ddiv
+<BR><BR>[Called By]<UL><LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ddiv
+<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dmul
 </UL>
 
 <P><STRONG><a name="[fd]"></a>_fp_init</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, fpinit.o(x$fpl$fpinit))

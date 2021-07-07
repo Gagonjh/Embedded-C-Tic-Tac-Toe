@@ -22689,8 +22689,36 @@ class Page_Settings : public Pages
 
 
 
+
  
  
+
+
+
+class Symbole
+{
+		public:
+			
+				static Symbole& instance()
+			{
+				static Symbole _instance;
+				return _instance;
+			}
+			~Symbole() {}
+				
+			const static WORD sym_home[];
+			const static WORD test[];
+		
+		private:
+			
+			Symbole(){
+			};
+                    
+			Symbole( const Symbole& );
+				
+			Symbole & operator = (const Symbole &); 
+
+};
 #line 23 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Page_Game.h"
 
@@ -25066,7 +25094,9 @@ int main(void)
 
 			
 		
-			
+		
+		
+		
 		page = pages_Instance.display_current_page(posX,posY);
     disp.refresh();
 

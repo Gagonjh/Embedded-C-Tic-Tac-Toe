@@ -1,18 +1,36 @@
 /*! 
  *  \brief     
  *  \details   
- *  \author    Joshua Hahn
- *  \date      05.07.2021
+ *  \author    	Joshua Hahn
+ *  \date      	05.07.2021
+ *  \bug				Speicher von Keil ist voll sobalt man größere erstellt
  */
  
- #ifndef PAGES_H
-#define PAGES_H
+ #ifndef SYMBOLE_H
+#define SYMBOLE_H
 
-/*
-#define sym_home_width 20
-#define sym_home_height 20
-extern static unsigned char sym_home[];
-*/
+class Symbole
+{
+		public:
+			//Konstruktor und übergabe der Instanz
+				static Symbole& instance()
+			{
+				static Symbole _instance;
+				return _instance;
+			}
+			~Symbole() {}
+				
+			const static WORD sym_home[];
+			const static WORD test[];
+		
+		private:
+			
+			Symbole(){
+			};// verhindert, dass ein Objekt von außerhalb von N erzeugt wird.
+                    // protected, wenn man von der Klasse noch erben möchte
+			Symbole( const Symbole& );//verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann
+				
+			Symbole & operator = (const Symbole &); //Verhindert weitere Instanz durch Kopie
 
-
+};
 #endif
