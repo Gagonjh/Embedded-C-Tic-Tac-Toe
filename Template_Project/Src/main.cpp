@@ -55,6 +55,7 @@ int main(void)
 				else if(gamestate >= 0)
 				{
 					disp.drawText(460,240, 18, gamestate == 0 ? "Unentschieden!":"Spieler %d gewinnt!", gamestate);
+					
 					//history überschreiben
 					//ausgabe gewinner
 				}
@@ -91,5 +92,3 @@ int main(void)
     #endif
   }
 }
-
-//EOF

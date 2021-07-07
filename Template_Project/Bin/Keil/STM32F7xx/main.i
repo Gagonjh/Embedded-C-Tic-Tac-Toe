@@ -22618,16 +22618,16 @@ class Pages
 
 extern short int iButtons_cor_M[10][5];
 
-class Menue : public Pages
+class Page_Menue : public Pages
 {
 		public:
 						
-				static Menue& instance()
+				static Page_Menue& instance()
 			{
-				static Menue _instance;
+				static Page_Menue _instance;
 				return _instance;
 			}
-			~Menue() {}
+			~Page_Menue() {}
 		
 			void drawpage(void);
 			
@@ -22635,12 +22635,12 @@ class Menue : public Pages
 			
 			private:
 			
-			Menue() {
+			Page_Menue() {
 			} ;
                     
-			Menue( const Menue& );
+			Page_Menue( const Page_Menue& );
 				
-			Menue & operator = (const Menue &); 
+			Page_Menue & operator = (const Page_Menue &); 
 };
 
 #line 21 "Src\\./Project_Headers.h"
@@ -22657,16 +22657,16 @@ class Menue : public Pages
 
 extern short int iButtons_cor_S[10][5];
 
-class Settings : public Pages
+class Page_Settings : public Pages
 {
 		public:
 			
-				static Settings& instance()
+				static Page_Settings& instance()
 			{
-				static Settings _instance;
+				static Page_Settings _instance;
 				return _instance;
 			}
-			~Settings() {}
+			~Page_Settings() {}
 			
 		
 			void drawpage(void);
@@ -22674,12 +22674,12 @@ class Settings : public Pages
 			short int buttonOnPagePressed(int,int);
 		
 		private:
-			Settings() {} ;
+			Page_Settings() {} ;
 			void highlight_selected_colormode_button();
 			void highlight_selected_game_mode();
 		
-			Settings( const Settings& );
-			Settings & operator = (const Settings &); 
+			Page_Settings( const Page_Settings& );
+			Page_Settings & operator = (const Page_Settings &); 
 };
 
 #line 22 "Src\\./Project_Headers.h"
@@ -22705,16 +22705,16 @@ class Settings : public Pages
 
 extern short int iButtons_cor_GS[10][5];
 
-class Game_Settings : public Pages
+class Page_Game : public Pages
 {
 		public:
 			
-				static Game_Settings& instance()
+				static Page_Game& instance()
 			{
-				static Game_Settings _instance;
+				static Page_Game _instance;
 				return _instance;
 			}
-			~Game_Settings() {}
+			~Page_Game() {}
 			
 		
 			void drawpage(void);
@@ -22723,12 +22723,12 @@ class Game_Settings : public Pages
 		
 		private:
 			
-			Game_Settings() {
+			Page_Game() {
 			} ;
                     
-			Game_Settings( const Game_Settings& );
+			Page_Game( const Page_Game& );
 				
-			Game_Settings & operator = (const Game_Settings &); 
+			Page_Game & operator = (const Page_Game &); 
 };
 
 #line 24 "Src\\./Project_Headers.h"
@@ -22745,16 +22745,16 @@ class Game_Settings : public Pages
 
 extern short int iButtons_cor_H[10][5];
 
-class History : public Pages
+class Page_History : public Pages
 {
 		public:
 			
-				static History& instance()
+				static Page_History& instance()
 			{
-				static History _instance;
+				static Page_History _instance;
 				return _instance;
 			}
-			~History() {}
+			~Page_History() {}
 			
 		
 			void drawpage(void);
@@ -22763,17 +22763,16 @@ class History : public Pages
 		
 		private:
 			
-			History() {
+			Page_History() {
 			} ;
                     
-			History( const History& );
+			Page_History( const Page_History& );
 				
-			History & operator = (const History &); 
+			Page_History & operator = (const Page_History &); 
 };
 
 #line 25 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Style.h"
-
 
 
 
@@ -25026,6 +25025,7 @@ int main(void)
 					disp.drawText(460,240, 18, gamestate == 0 ? "Unentschieden!":"Spieler %d gewinnt!", gamestate);
 					
 					
+					
 				}
 				else if (gamestate == -1)
 				{
@@ -25060,5 +25060,3 @@ int main(void)
 
   }
 }
-
-

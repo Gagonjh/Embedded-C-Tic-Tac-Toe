@@ -22,19 +22,19 @@
 			};//[*][0]=x start, [*][1]=x end, [*][2]=y start & [*][3]=y end 
 
 
-void Game_Settings::drawpage()
+void Page_Game::drawpage()
 {
   disp1.setBackColor(Style::instance().color_Backround);
 	disp1.setTextColor(Style::instance().color_Font);
 	draw_button(iButtons_cor_GS[0][0],iButtons_cor_GS[0][2],iButtons_cor_GS[0][3]-iButtons_cor_GS[0][2],iButtons_cor_GS[0][1]-iButtons_cor_GS[0][0],15,1,Style::instance().color_Boxes,Style::instance().color_Field,24,16,"Hauptmenu");
 }
 
-short int Game_Settings::buttonOnPagePressed(int posX,int posY)
+short int Page_Game::buttonOnPagePressed(int posX,int posY)
 {
 	short int p = -1;
 	if(p == -1)
 	{
-			p = Game_Settings::instance().isPressed(posX,posY,iButtons_cor_GS,0);
+			p = Page_Game::instance().isPressed(posX,posY,iButtons_cor_GS,0);
 	}
 	return p;
 }

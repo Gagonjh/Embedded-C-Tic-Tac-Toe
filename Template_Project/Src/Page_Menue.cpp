@@ -21,7 +21,7 @@
 			};//[*][0]=x start, [*][1]=x end, [*][2]=y start & [*][3]=y end 
 
 
-void Menue::drawpage()
+void Page_Menue::drawpage()
 {
   disp1.setBackColor(Style::instance().color_Backround);
 	disp1.setTextColor(Style::instance().color_Font);
@@ -32,7 +32,7 @@ void Menue::drawpage()
 	draw_button(iButtons_cor_M[2][0],iButtons_cor_M[2][2],iButtons_cor_M[2][3]-iButtons_cor_M[2][2],iButtons_cor_M[2][1]-iButtons_cor_M[2][0],15,1,Style::instance().color_Boxes,Style::instance().color_Field,24,16,"Einstellungen");
 }
 
-short int Menue::buttonOnPagePressed(int posX,int posY)
+short int Page_Menue::buttonOnPagePressed(int posX,int posY)
 {
 	short int p = -1;
 	if(p == -1)

@@ -96,22 +96,22 @@ short int Pages::display_current_page(int posX,int posY)
 	//Seite 0 Hautpmenü
 	if(page == 0 && (posX >= 0 || posY >= 0 ))
 	{
-			page = Menue::instance().buttonOnPagePressed(posX,posY);
+			page = Page_Menue::instance().buttonOnPagePressed(posX,posY);
 	}
 	//Seite 1 Spiel Einstellungen/Startseite 
 	else if(page == 1 && (posX >= 0 || posY >= 0 ))
 	{
-			page = Game_Settings::instance().buttonOnPagePressed(posX,posY);
+			page = Page_Game::instance().buttonOnPagePressed(posX,posY);
 	}
 	//Seite 2 Spiel Einstellungen/Startseite 
 	else if(page == 2 && (posX >= 0 || posY >= 0 ))
 	{
-			page = History::instance().buttonOnPagePressed(posX,posY);
+			page = Page_History::instance().buttonOnPagePressed(posX,posY);
 	}
 	//Seite 3 Einstellungen 
 	else if(page == 3 && (posX >= 0 || posY >= 0 ))
 	{
-			page = Settings::instance().buttonOnPagePressed(posX,posY);
+			page = Page_Settings::instance().buttonOnPagePressed(posX,posY);
 	}
 	if(page == -1)	//!Auffangen von Touches auf leerer fläche
 	{
@@ -126,10 +126,10 @@ short int Pages::display_current_page(int posX,int posY)
 		switch(page) 
 			{
 				case 0:
-					Menue::instance().drawpage();
+					Page_Menue::instance().drawpage();
 				break;
 				case 1:
-					Game_Settings::instance().drawpage();
+					Page_Game::instance().drawpage();
 					//test case
 					//drawpage();
 					//disp1.drawCircle(80,80,60,0xEE02);
@@ -138,11 +138,11 @@ short int Pages::display_current_page(int posX,int posY)
 					//test case,
 					//drawpage();
 					//disp1.drawCircle(80,80,60,0xEE02);
-				History::instance().drawpage();
+				Page_History::instance().drawpage();
 
 				break;
 				case 3:
-					Settings::instance().drawpage();
+					Page_Settings::instance().drawpage();
 				break;
 				default:
 				

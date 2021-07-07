@@ -2,7 +2,6 @@
  *  \brief     	
  *  \details   	
  *  \author    	Joshua Hahn
- *  \author			Yasin Calli
  *  \date      	21.06.2021
  */
  

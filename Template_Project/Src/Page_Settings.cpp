@@ -21,7 +21,7 @@ short int iButtons_cor_S[10][5] =
 				{0,0,0,0,0} 					//! Button 10:
 			};//[*][0]=x start, [*][1]=x end, [*][2]=y start & [*][3]=y end, [*][4]=-2 Ein button auf der seite mit funktion
 			
-void Settings::highlight_selected_colormode_button()
+void Page_Settings::highlight_selected_colormode_button()
 {
 	switch(Style::instance().color_Mode)
 	{
@@ -32,7 +32,7 @@ void Settings::highlight_selected_colormode_button()
 	}
 }
 
-void Settings::highlight_selected_game_mode()
+void Page_Settings::highlight_selected_game_mode()
 {
 	switch(gameMode)
 	{
@@ -42,7 +42,7 @@ void Settings::highlight_selected_game_mode()
 	}
 }
 
-void Settings::drawpage()
+void Page_Settings::drawpage()
 {
   disp1.setBackColor(Style::instance().color_Backround);
 	disp1.setTextColor(Style::instance().color_Font);
@@ -66,7 +66,7 @@ void Settings::drawpage()
 	highlight_selected_game_mode();
 }
 
-short int Settings::buttonOnPagePressed(int posX,int posY)
+short int Page_Settings::buttonOnPagePressed(int posX,int posY)
 {
 	short int p = -1;
 	if(p == -1)
@@ -128,7 +128,7 @@ short int Settings::buttonOnPagePressed(int posX,int posY)
 	{
 		p = -1;
 		disp1.clear();
-		Settings::instance().drawpage();
+		Page_Settings::instance().drawpage();
 	}
 	return p;
 }

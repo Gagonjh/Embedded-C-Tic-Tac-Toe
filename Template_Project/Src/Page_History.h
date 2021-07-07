@@ -5,21 +5,21 @@
  *  \date      05.07.2021
  */
 
-#ifndef HISTORY_H
-#define HISTORY_H
+#ifndef PAGE_HISTORY_H
+#define PAGE_HISTORY_H
 
 extern short int iButtons_cor_H[10][5];
 
-class History : public Pages
+class Page_History : public Pages
 {
 		public:
 			//Konstruktor und übergabe der Instanz
-				static History& instance()
+				static Page_History& instance()
 			{
-				static History _instance;
+				static Page_History _instance;
 				return _instance;
 			}
-			~History() {}
+			~Page_History() {}
 			
 		//Public Methoden
 			void drawpage(void);
@@ -28,12 +28,12 @@ class History : public Pages
 		
 		private:
 			
-			History() {
+			Page_History() {
 			} ;// verhindert, dass ein Objekt von außerhalb von N erzeugt wird.
                     // protected, wenn man von der Klasse noch erben möchte
-			History( const History& );//verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann
+			Page_History( const Page_History& );//verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann
 				
-			History & operator = (const History &); //Verhindert weitere Instanz durch Kopie
+			Page_History & operator = (const Page_History &); //Verhindert weitere Instanz durch Kopie
 };
 
 #endif

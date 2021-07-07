@@ -21,7 +21,7 @@
 			};//[*][0]=x start, [*][1]=x end, [*][2]=y start & [*][3]=y end 
 
 
-void History::drawpage()
+void Page_History::drawpage()
 {
 	disp1.clear();
   disp1.setBackColor(Style::instance().color_Backround);
@@ -29,7 +29,7 @@ void History::drawpage()
 	draw_button(iButtons_cor_S[0][0],iButtons_cor_S[0][2],iButtons_cor_S[0][3]-iButtons_cor_S[0][2],iButtons_cor_S[0][1]-iButtons_cor_S[0][0],15,1,Style::instance().color_Boxes,Style::instance().color_Field,24,16,"H");
 }
 
-short int History::buttonOnPagePressed(int posX,int posY)
+short int Page_History::buttonOnPagePressed(int posX,int posY)
 {
 	short int p = -1;
 	if(p == -1)
