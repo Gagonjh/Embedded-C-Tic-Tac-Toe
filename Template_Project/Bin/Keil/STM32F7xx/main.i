@@ -7,7 +7,15 @@
 
  
 
-#line 1 "Src\\./project_headers.h"
+#line 1 "Src\\./Project_Headers.h"
+
+
+
+
+
+
+ 
+
 
 
 
@@ -22403,8 +22411,8 @@ class cTaskHandler : public cList::Item
 
 #line 91 "Src\\./../../EmbSysLib/Src/lib.h"
 
-#line 5 "Src\\./project_headers.h"
-#line 6 "Src\\./project_headers.h"
+#line 13 "Src\\./Project_Headers.h"
+#line 14 "Src\\./Project_Headers.h"
 #line 1 "Src\\././datatypes.h"
 
 
@@ -22424,11 +22432,25 @@ typedef struct coordinates {
 	uint8_t player;
 } Coordinates;
 
-#line 7 "Src\\./project_headers.h"
+#line 15 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Controller.h"
-#line 4 "Src\\././Controller.h"
+
+
+
+
+
+ 
+
+#line 11 "Src\\././Controller.h"
 #line 1 "Src\\./././Cells.h"
-#line 4 "Src\\./././Cells.h"
+
+
+
+
+
+ 
+
+#line 11 "Src\\./././Cells.h"
 
 class Cells {
 	private:
@@ -22446,10 +22468,19 @@ class Cells {
 		Coordinates* cells;
 		bool rowIsComplete();
 		Cells();
+	
+		~ Cells ();
 };
 
-#line 5 "Src\\././Controller.h"
+#line 12 "Src\\././Controller.h"
 #line 1 "Src\\./././Field.h"
+
+
+
+
+ 
+
+
 #line 1 "Src\\./././Token.h"
 
 
@@ -22468,7 +22499,7 @@ class Token
 		Token(Coordinates, short);
 };
 
-#line 4 "Src\\./././Field.h"
+#line 11 "Src\\./././Field.h"
 	
 class Field
 {
@@ -22476,38 +22507,53 @@ class Field
 		void drawField();
 		void drawToken(Coordinates);
 };
-#line 6 "Src\\././Controller.h"
+#line 13 "Src\\././Controller.h"
 
 class Controller {
 	private:
 		short currentPlayer;
 		short round;
-		Cells cells;
-		Field field;
+		Cells* cells;
+		Field* field;
 	public:
 		Controller();
+		~ Controller ();
 		void aiMove();
 		bool handleUserInput(short, short);
 		short getGameState();
 };
 
-#line 8 "Src\\./project_headers.h"
-#line 9 "Src\\./project_headers.h"
+#line 16 "Src\\./Project_Headers.h"
+#line 17 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Game.h"
+
+
+
+
+
+ 
+
+
 
 
 
 class Game
 {
 	private:
-		Controller controller;
+		Controller* controller;
 	public:
 		short ttt_classic(short,short);
+	Game();
+	~ Game ();
+	
 };
 
-#line 10 "Src\\./project_headers.h"
-#line 11 "Src\\./project_headers.h"
+#line 18 "Src\\./Project_Headers.h"
+#line 19 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Pages.h"
+
+
+
 
 
 
@@ -22558,11 +22604,14 @@ class Pages
 
 
  
-#line 12 "Src\\./project_headers.h"
-#line 1 "Src\\././Menue.h"
+#line 20 "Src\\./Project_Headers.h"
+#line 1 "Src\\././Page_Menue.h"
 
 
 
+
+
+ 
 
 
 
@@ -22594,8 +22643,8 @@ class Menue : public Pages
 			Menue & operator = (const Menue &); 
 };
 
-#line 13 "Src\\./project_headers.h"
-#line 1 "Src\\././Settings.h"
+#line 21 "Src\\./Project_Headers.h"
+#line 1 "Src\\././Page_Settings.h"
 
 
 
@@ -22633,7 +22682,7 @@ class Settings : public Pages
 			Settings & operator = (const Settings &); 
 };
 
-#line 14 "Src\\./project_headers.h"
+#line 22 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Symbole.h"
 
 
@@ -22642,8 +22691,8 @@ class Settings : public Pages
 
  
  
-#line 15 "Src\\./project_headers.h"
-#line 1 "Src\\././Game_settings.h"
+#line 23 "Src\\./Project_Headers.h"
+#line 1 "Src\\././Page_Game.h"
 
 
 
@@ -22682,8 +22731,8 @@ class Game_Settings : public Pages
 			Game_Settings & operator = (const Game_Settings &); 
 };
 
-#line 16 "Src\\./project_headers.h"
-#line 1 "Src\\././History.h"
+#line 24 "Src\\./Project_Headers.h"
+#line 1 "Src\\././Page_History.h"
 
 
 
@@ -22722,8 +22771,9 @@ class History : public Pages
 			History & operator = (const History &); 
 };
 
-#line 17 "Src\\./project_headers.h"
+#line 25 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Style.h"
+
 
 
 
@@ -22790,7 +22840,7 @@ class Style
 			
 };
 
-#line 18 "Src\\./project_headers.h"
+#line 26 "Src\\./Project_Headers.h"
 
 
 extern cDevDisplayGraphic& disp1;
@@ -24963,6 +25013,7 @@ int main(void)
 				posY = -1;
 			}
 			
+			
 			if(page == 1)
 			{
 				if(gamestate == -2)
@@ -24983,8 +25034,8 @@ int main(void)
 			}
 			else if(page!= 1 && gamestate != -2)
 			{
-				
 				gamestate = -2;
+				delete game;
 			}
 			
 

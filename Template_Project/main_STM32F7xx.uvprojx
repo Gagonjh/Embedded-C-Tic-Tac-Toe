@@ -386,11 +386,6 @@
               <FilePath>.\Src\main.cpp</FilePath>
             </File>
             <File>
-              <FileName>project_headers.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Src\project_headers.h</FilePath>
-            </File>
-            <File>
               <FileName>Field.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>.\Src\Field.cpp</FilePath>
@@ -441,56 +436,6 @@
               <FilePath>.\Src\configSTM32F7xx.h</FilePath>
             </File>
             <File>
-              <FileName>Game_settings.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Src\Game_settings.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Game_settings.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Src\Game_settings.h</FilePath>
-            </File>
-            <File>
-              <FileName>History.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Src\History.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>History.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Src\History.h</FilePath>
-            </File>
-            <File>
-              <FileName>Menue.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Src\Menue.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Menue.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Src\Menue.h</FilePath>
-            </File>
-            <File>
-              <FileName>pages.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Src\pages.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>pages.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Src\pages.h</FilePath>
-            </File>
-            <File>
-              <FileName>Settings.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Src\Settings.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Settings.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Src\Settings.h</FilePath>
-            </File>
-            <File>
               <FileName>Style.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>.\Src\Style.cpp</FilePath>
@@ -509,6 +454,61 @@
               <FileName>Symbole.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Src\Symbole.h</FilePath>
+            </File>
+            <File>
+              <FileName>Page_Game.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Page_Game.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Page_Game.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Page_Game.h</FilePath>
+            </File>
+            <File>
+              <FileName>Page_History.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Page_History.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Page_History.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Page_History.h</FilePath>
+            </File>
+            <File>
+              <FileName>Page_Menue.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Page_Menue.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Page_Menue.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Page_Menue.h</FilePath>
+            </File>
+            <File>
+              <FileName>Page_Settings.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Page_Settings.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Page_Settings.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Page_Settings.h</FilePath>
+            </File>
+            <File>
+              <FileName>Pages.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\Pages.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Pages.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Pages.h</FilePath>
+            </File>
+            <File>
+              <FileName>Project_Headers.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Project_Headers.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -1,5 +1,5 @@
 /*! 
- *  \brief     Dient der Ausgabe auf dem Display
+ *  \brief     
  *  \details   Koodinaten
  *  \author    Yasin Calli
  *  \date      06.07.2021

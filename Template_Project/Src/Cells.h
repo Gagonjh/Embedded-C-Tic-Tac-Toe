@@ -1,3 +1,10 @@
+/*! 
+ *  \brief     	
+ *  \details   
+ *  \author			Yasin Calli 
+ *  \author    	Joshua Hahn
+ */
+
 #ifndef CELLS_H
 #define CELLS_H
 #include "./datatypes.h"
@@ -18,6 +25,8 @@ class Cells {
 		Coordinates* cells;
 		bool rowIsComplete();
 		Cells();
+	
+		~ Cells ();
 };
 
 #endif

@@ -3,11 +3,10 @@
  *  \details   Die Klasse dient als Parent für die einzelnen Ansichten. Sie stellt darüber hinaus funktionalitäten für die Child Klassen bereit und regelt den Aufruf dieser. Sie ist somit das Bindeglied zwischen der Ausgabe und dem funktionalen teil des Programmes.
  *  \author    Joshua Hahn
  *  \date      15.06.2021
- *  \bug    	 Beim ersten aufrufen der funktion hat das Display die Standart Hintergrundfarbe
  */
 
 
-#include "./project_headers.h"
+#include "./Project_Headers.h"
 
 Pages::Pages() 
 {

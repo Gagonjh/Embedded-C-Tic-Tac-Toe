@@ -1,3 +1,11 @@
+/*! 
+ *  \brief     	
+ *  \details   	
+ *  \author    	Joshua Hahn
+ *  \author			Yasin Calli
+ *  \date      	21.06.2021
+ */
+
 #ifndef PROJECT_HEADERS_H
 #define PROJECT_HEADERS_H
 
@@ -9,11 +17,11 @@
 #include "./Game.h"
 #include "./Field.h"
 #include "./Pages.h"
-#include "./Menue.h"
-#include "./Settings.h"
+#include "./Page_Menue.h"
+#include "./Page_Settings.h"
 #include "./Symbole.h"
-#include "./Game_settings.h"
-#include "./History.h"
+#include "./Page_Game.h"
+#include "./Page_History.h"
 #include "./Style.h"
 
 

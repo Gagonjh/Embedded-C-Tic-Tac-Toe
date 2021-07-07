@@ -1,4 +1,25 @@
-#include "./project_headers.h"
+/*! 
+ *  \brief     	
+ *  \details   
+ *  \author			Yasin Calli 
+ *  \author    	Joshua Hahn
+ */
+
+#include "./Project_Headers.h"
+
+Cells::~Cells()
+{
+	delete cells;
+	delete topRow;
+	delete centerRow;
+	delete bottomRow;
+	delete leftColumn;
+	delete centerColumn;
+	delete rightColumn;
+	delete downDiagonal;
+	delete upDiagonal;
+}
+
 
 void Cells::initializeCells()
 {

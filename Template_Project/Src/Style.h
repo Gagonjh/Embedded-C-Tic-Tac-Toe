@@ -1,8 +1,9 @@
 /*! 
- *  \brief     Dient der Ausgabe auf dem Display
- *  \details   Die Klasse dient als Parent für die einzelnen Ansichten. Sie stellt darüber hinaus funktionalitäten für die Child Klassen bereit und regelt den Aufruf dieser. Sie ist somit das Bindeglied zwischen der Ausgabe und dem funktionalen teil des Programmes.
- *  \author    Joshua Hahn, Yasin Calli
- *  \date      21.06.2021
+ *  \brief     	
+ *  \details   	
+ *  \author    	Joshua Hahn
+ *  \author			Yasin Calli
+ *  \date      	21.06.2021
  */
 
 #ifndef STYLE_H

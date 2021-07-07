@@ -6,7 +6,7 @@
  *  \date      08.06.2021
  */
 
-#include "./project_headers.h"
+#include "./Project_Headers.h"
 #include "./configSTM32F7xx.h"
 
 cDevDisplayGraphic& disp1 = disp;
@@ -44,6 +44,7 @@ int main(void)
 				posY = -1;
 			}
 			
+			//Game
 			if(page == 1)
 			{
 				if(gamestate == -2)
@@ -64,8 +65,8 @@ int main(void)
 			}
 			else if(page!= 1 && gamestate != -2)
 			{
-				//destructor
 				gamestate = -2;
+				delete game;
 			}
 			
 /*
@@ -84,7 +85,7 @@ int main(void)
 */		
 //      disp.drawText( 440,20, 18, "x:%3d y:%3d ctrl:0x%02x",  event.posX, event.posY, event.flags );
 		//menueinstance.drawpage();
-		
+		//Ausgabe der Page
 		page = pages_Instance.display_current_page(posX,posY);
     disp.refresh();
     #endif

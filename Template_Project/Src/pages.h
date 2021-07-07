@@ -1,5 +1,8 @@
 /*!
- *	\author    	Joshua Hahn, Yasin Calli
+ *  \brief     Dient der Ausgabe auf dem Display
+ *  \details   Die Klasse dient als Parent für die einzelnen Ansichten. Sie stellt darüber hinaus funktionalitäten für die Child Klassen bereit und regelt den Aufruf dieser. Sie ist somit das Bindeglied zwischen der Ausgabe und dem funktionalen teil des Programmes.
+ *	\author    	Joshua Hahn
+ *  \author			Yasin Calli 
  *  \date      	15.06.2021
 */
 

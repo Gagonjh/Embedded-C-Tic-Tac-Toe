@@ -1,29 +1,40 @@
-#include "./project_headers.h"
+/*! 
+ *  \brief     	
+ *  \details   
+ *  \author			Yasin Calli 
+ *  \author    	Joshua Hahn
+ */
+
+#include "./Project_Headers.h"
 
 Controller::Controller()
 {
-	Field field;
-	Cells cells;
-	this -> field = field;
-	this -> cells = cells;
-	this -> field.drawField();
+	field = new Field;
+	cells = new Cells;
+	field -> drawField();
 	currentPlayer=1;
 	round=0;
 };
+
+Controller::~Controller()
+{
+	delete field;
+	delete cells;
+}
 
 bool Controller::handleUserInput(short posX, short posY)
 {
 	for(BYTE i = 0; i<9; i++)
 		{
-			Coordinates cellCoords = {cells.cells[i].x,cells.cells[i].y};
+			Coordinates cellCoords = {cells -> cells[i].x,cells -> cells[i].y};
 			short xDiff = abs(cellCoords.x - posX);
 			short yDiff = abs(cellCoords.y - posY);
 			if(xDiff < 50 && yDiff<50) 
 				{
-					if(cells.cells[i].player==0)
+					if(cells -> cells[i].player==0)
 						{
-							cells.cells[i].player = this->currentPlayer;
-							field.drawToken(cells.cells[i]);
+							cells -> cells[i].player = this->currentPlayer;
+							field -> drawToken(cells -> cells[i]);
 							this->currentPlayer=this->currentPlayer%2+1;
 							round++;
 							return true;
@@ -41,7 +52,7 @@ bool Controller::handleUserInput(short posX, short posY)
 short Controller::getGameState()
 {
 	short state = 0;
-	if(this->cells.rowIsComplete()) 
+	if(this->cells -> rowIsComplete()) 
 		{
 			state = this->currentPlayer == 1 ? 2 : 1;
 		}
@@ -65,9 +76,9 @@ void Controller::aiMove()
 			break;
 		}
 		int value = rand()%9;
-		if(this->cells.cells[value].player==0)
+		if(this->cells -> cells[value].player==0)
 		{
-			this->handleUserInput(cells.cells[value].x,cells.cells[value].y);
+			this->handleUserInput(cells -> cells[value].x,cells -> cells[value].y);
 			break;
 		}
 	}

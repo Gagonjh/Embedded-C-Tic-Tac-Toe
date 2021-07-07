@@ -1,6 +1,9 @@
-//Author:     			Joshua Hahn  
-//Projekt:    			Tic Tac Toe
-//Datum:						16.06.2021
+/*! 
+ *  \brief     
+ *  \details   
+ *  \author    Joshua Hahn
+ *  \date      16.06.2021
+ */
 
 #ifndef MENUE_H
 #define MENUE_H

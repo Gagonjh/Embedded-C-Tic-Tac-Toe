@@ -1,8 +1,11 @@
-//Author:     			Joshua Hahn  
-//Projekt:    			Tic Tac Toe
-//Datum:					  16.06.2021
+/*! 
+ *  \brief     	
+ *  \details   	
+ *  \author    	Joshua Hahn
+ *  \date      	16.06.2021
+ */
 
-#include "./project_headers.h"
+#include "./Project_Headers.h"
  short int iButtons_cor_M[10][5] =
 	{
 				{80,360,220,280,1}, 	//Button 1 :Spielen
