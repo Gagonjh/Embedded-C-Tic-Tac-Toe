@@ -98,7 +98,9 @@ int main(void)
 
 			
 		//Ausgabe der Page
-			
+		//disp.drawBitmap(20,20,30,30,Symbole::instance().test);
+		
+		
 		page = pages_Instance.display_current_page(posX,posY);
     disp.refresh();
     #endif
