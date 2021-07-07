@@ -14,7 +14,7 @@ class Game
 	private:
 		Controller* controller;
 	public:
-		short ttt_classic(short,short);
+		short ttt_classic(short,short,uint8_t);
 	Game();
 	~ Game ();
 	

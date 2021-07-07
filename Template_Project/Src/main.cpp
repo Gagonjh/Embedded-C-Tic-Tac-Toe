@@ -18,7 +18,8 @@ int main(void)
 		Game* game;
 		disp.refresh();
 		Pages& pages_Instance = Pages::instance();
-
+		
+		uint8_t ranDOOM = 0;
 		short posX = -1;
 		short posY = -1;
 		short page = -1;
@@ -30,6 +31,7 @@ int main(void)
 
   while(1)
   {
+		ranDOOM = (ranDOOM+1)%69;
     #ifdef USE_GRAPHIC_DISPLAY
 		//daten der toucheingabe
 			cDevControlPointer::cData event = pointer.get();
@@ -61,7 +63,7 @@ int main(void)
 				}
 				else if (gamestate == -1)
 				{
-					gamestate = game -> ttt_classic(posX,posY);
+					gamestate = game -> ttt_classic(posX,posY,ranDOOM);
 				}
 				else if( Page_Game::instance().restart_state == 2)
 				{

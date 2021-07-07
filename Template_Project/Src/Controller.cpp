@@ -67,7 +67,7 @@ short Controller::getGameState()
 	return state;
 }
 
-void Controller::aiMove()
+void Controller::aiMove(uint8_t ranDOOMizer)
 {
 	while(1)
 	{
@@ -75,7 +75,7 @@ void Controller::aiMove()
 		{
 			break;
 		}
-		int value = rand()%9;
+		int value = (rand()+ranDOOMizer)%9;
 		if(this->cells -> cells[value].player==0)
 		{
 			this->handleUserInput(cells -> cells[value].x,cells -> cells[value].y);
