@@ -7,10 +7,17 @@
  */
 
 #include "./Project_Headers.h"
+
+Page_Game::Page_Game() 
+{
+			//Menue& menueinstance = Menue::instance();
+			restart_state = 0;	//! Button wird nicht angezeigt und ausgewertet
+}	
+
  short int iButtons_cor_GS[10][5] =
 	{
 				{565,795,415,475,0}, 	//Button 1 :Hauptmenü
-				{0,0,0,0,0}, 					//Button 2 :
+				{460,660,300,360,-2}, //Button 2 :Game Restart
 				{0,0,0,0,0}, 					//Button 3 :
 				{0,0,0,0,0}, 					//Button 4 :
 				{0,0,0,0,0}, 					//Button 5 :
@@ -35,6 +42,18 @@ short int Page_Game::buttonOnPagePressed(int posX,int posY)
 	if(p == -1)
 	{
 			p = Page_Game::instance().isPressed(posX,posY,iButtons_cor_GS,0);
+	}
+	if(p == -1 && restart_state == 1)
+	{
+			p = Page_Game::instance().isPressed(posX,posY,iButtons_cor_GS,1);
+			Page_Game::instance().restart_state = 2;
+	}
+		//Return to default value
+	if(p==-2)
+	{
+		p = -1;
+		disp1.clear();
+		Page_Game::instance().drawpage();
 	}
 	return p;
 }

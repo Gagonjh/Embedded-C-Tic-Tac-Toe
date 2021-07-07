@@ -52,21 +52,28 @@ int main(void)
 					game = new Game();
 					gamestate = -1;
 				}
-				else if(gamestate >= 0)
+				else if(gamestate >= 0 && Page_Game::instance().restart_state != 2)
 				{
 					disp.drawText(460,240, 18, gamestate == 0 ? "Unentschieden!":"Spieler %d gewinnt!", gamestate);
-					
+					Page_Game::instance().restart_state = 1; 	//! 1 restart Button aktiviert
+					Pages::instance().draw_button(iButtons_cor_GS[1][0],iButtons_cor_GS[1][2],iButtons_cor_GS[1][3]-iButtons_cor_GS[1][2],iButtons_cor_GS[1][1]-iButtons_cor_GS[1][0],15,1,Style::instance().color_Boxes,Style::instance().color_Field,24,16,"Revanche!");
 					//history überschreiben
-					//ausgabe gewinner
 				}
 				else if (gamestate == -1)
 				{
 					gamestate = game -> ttt_classic(posX,posY);
 				}
+				else if( Page_Game::instance().restart_state == 2)
+				{
+					gamestate = -2;
+					Page_Game::instance().restart_state = 0; 	//! 0 restart Button deaktiviert
+					delete game;
+				}
 			}
-			else if(page!= 1 && gamestate != -2)
+			else if((page!= 1 && gamestate != -2)) //! 2 restart des games
 			{
 				gamestate = -2;
+				Page_Game::instance().restart_state = 0; 	//! 0 restart Button deaktiviert
 				delete game;
 			}
 			
@@ -86,7 +93,10 @@ int main(void)
 */		
 //      disp.drawText( 440,20, 18, "x:%3d y:%3d ctrl:0x%02x",  event.posX, event.posY, event.flags );
 		//menueinstance.drawpage();
+
+			
 		//Ausgabe der Page
+			
 		page = pages_Instance.display_current_page(posX,posY);
     disp.refresh();
     #endif

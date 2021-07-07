@@ -22717,18 +22717,20 @@ class Page_Game : public Pages
 			~Page_Game() {}
 			
 		
+		short restart_state;
+		
 			void drawpage(void);
 				
 			short int buttonOnPagePressed(int,int);
 		
-		private:
-			
-			Page_Game() {
-			} ;
+		private:	
+		
+			Page_Game();
                     
 			Page_Game( const Page_Game& );
 				
 			Page_Game & operator = (const Page_Game &); 
+			
 };
 
 #line 24 "Src\\./Project_Headers.h"
@@ -25020,21 +25022,28 @@ int main(void)
 					game = new Game();
 					gamestate = -1;
 				}
-				else if(gamestate >= 0)
+				else if(gamestate >= 0 && Page_Game::instance().restart_state != 2)
 				{
 					disp.drawText(460,240, 18, gamestate == 0 ? "Unentschieden!":"Spieler %d gewinnt!", gamestate);
-					
-					
+					Page_Game::instance().restart_state = 1; 	
+					Pages::instance().draw_button(iButtons_cor_GS[1][0],iButtons_cor_GS[1][2],iButtons_cor_GS[1][3]-iButtons_cor_GS[1][2],iButtons_cor_GS[1][1]-iButtons_cor_GS[1][0],15,1,Style::instance().color_Boxes,Style::instance().color_Field,24,16,"Revanche!");
 					
 				}
 				else if (gamestate == -1)
 				{
 					gamestate = game -> ttt_classic(posX,posY);
 				}
+				else if( Page_Game::instance().restart_state == 2)
+				{
+					gamestate = -2;
+					Page_Game::instance().restart_state = 0; 	
+					delete game;
+				}
 			}
-			else if(page!= 1 && gamestate != -2)
+			else if((page!= 1 && gamestate != -2)) 
 			{
 				gamestate = -2;
+				Page_Game::instance().restart_state = 0; 	
 				delete game;
 			}
 			
@@ -25054,7 +25063,10 @@ int main(void)
  		
 
 		
+
+			
 		
+			
 		page = pages_Instance.display_current_page(posX,posY);
     disp.refresh();
 

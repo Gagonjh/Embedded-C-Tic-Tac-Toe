@@ -22716,18 +22716,20 @@ class Page_Game : public Pages
 			~Page_Game() {}
 			
 		
+		short restart_state;
+		
 			void drawpage(void);
 				
 			short int buttonOnPagePressed(int,int);
 		
-		private:
-			
-			Page_Game() {
-			} ;
+		private:	
+		
+			Page_Game();
                     
 			Page_Game( const Page_Game& );
 				
 			Page_Game & operator = (const Page_Game &); 
+			
 };
 
 #line 24 "Src\\./Project_Headers.h"

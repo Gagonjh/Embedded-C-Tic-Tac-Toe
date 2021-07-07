@@ -21,19 +21,21 @@ class Page_Game : public Pages
 			}
 			~Page_Game() {}
 			
+		
+		short restart_state;
 		//Public Methoden
 			void drawpage(void);
 				
 			short int buttonOnPagePressed(int,int);
 		
-		private:
-			
-			Page_Game() {
-			} ;// verhindert, dass ein Objekt von außerhalb von N erzeugt wird.
+		private:	
+		
+			Page_Game();// verhindert, dass ein Objekt von außerhalb von N erzeugt wird.
                     // protected, wenn man von der Klasse noch erben möchte
 			Page_Game( const Page_Game& );//verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann
 				
 			Page_Game & operator = (const Page_Game &); //Verhindert weitere Instanz durch Kopie
+			
 };
 
 #endif
