@@ -20,7 +20,7 @@ class Controller {
 	public:
 		Controller();
 		~ Controller ();
-		void aiMove();
+		void aiMove(uint8_t);
 		bool handleUserInput(short, short);
 		short getGameState();
 };

@@ -7,7 +7,7 @@
 
 #include "./Project_Headers.h"
 
-short Game::ttt_classic(short posX,short posY)
+short Game::ttt_classic(short posX,short posY, uint8_t ranDOOM)
 {
 	if(posX<390 && posX > 100 && posY < 390 && posY > 100) 
 		{
@@ -15,7 +15,7 @@ short Game::ttt_classic(short posX,short posY)
 			disp1.refresh();
 			if(gameMode==1 && isInputValid)
 				{
-						controller -> aiMove();
+						controller -> aiMove(ranDOOM);
 				}
 			return controller -> getGameState();
 		}
