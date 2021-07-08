@@ -1,6 +1,5 @@
 #include "./Project_Headers.h"
 
-/*!
 /*! 
 	\author	Yasin Calli
 	\details Fuehrt den Zug der/des Spieler/s, abhaengig von der getippten Position, und die der KI, abhaengig von einem zusaetzlichen numerischen Wert, aus.
