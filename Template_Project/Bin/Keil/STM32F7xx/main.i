@@ -22481,25 +22481,8 @@ class Cells {
  
 
 
-#line 1 "Src\\./././Token.h"
 
 
-
-
-
- 
-
-#line 11 "Src\\./././Token.h"
-
-class Token
-{
-	public:
-		const Coordinates coordinates;
-		const short player;
-		Token(Coordinates, short);
-};
-
-#line 11 "Src\\./././Field.h"
 	
 class Field
 {
@@ -25037,11 +25020,6 @@ int main(void)
 		disp1.setBackColor(Style::instance().color_Backround);
 		disp1.setTextColor(Style::instance().color_Font);
     disp.clear();
-
-	
-
-
-	
 	
   while(1)
   {
@@ -25094,24 +25072,6 @@ int main(void)
 				Page_Game::instance().restart_state = 0; 	
 				delete game;
 			}
-			
-
-
-
-
-
-
-
-
-
-
-
-
-
- 		
-
-		
-
 			
 		
 		
