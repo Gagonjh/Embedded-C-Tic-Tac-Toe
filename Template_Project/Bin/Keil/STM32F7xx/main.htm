@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Bin\Keil\STM32F7xx\main.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Bin\Keil\STM32F7xx\main.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu Jul 08 19:06:43 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu Jul 08 20:32:18 2021
 <BR><P>
 <H3>Maximum Stack Usage =        376 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -964,12 +964,12 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Full
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_heap_descriptor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Game::Game()
+<BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
+<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Game::Game()
 <LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::Page_History()
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new[] (unsigned)
 <LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::Controller()
-<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
 </UL>
 
 <P><STRONG><a name="[119]"></a>free</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, h1_free.o(.text))
@@ -1027,10 +1027,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
 <LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_ddtor_pointer_addr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::instance()
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::instance()
-<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Menue::instance()
-<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Game::ttt_classic(short, short, unsigned char)
+<BR>[Called By]<UL><LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Game::ttt_classic(short, short, unsigned char)
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::instance()
 <LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::instance()
@@ -1039,6 +1036,9 @@ Global Symbols
 <LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::buttonOnPagePressed(int, int)
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Symbole::instance()
 <LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Field::drawToken(coordinates)
+<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::instance()
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::instance()
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Menue::instance()
 </UL>
 
 <P><STRONG><a name="[1ab]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, strlen.o(.text))
@@ -1051,8 +1051,8 @@ Global Symbols
 <P><STRONG><a name="[18e]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_memcpy4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cells::initializeCells()
-<LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009A::init()
+<BR>[Called By]<UL><LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009A::init()
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cells::initializeCells()
 </UL>
 
 <P><STRONG><a name="[20a]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
@@ -1750,9 +1750,9 @@ Global Symbols
 <P><STRONG><a name="[159]"></a>Controller::aiMove(unsigned char)</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, controller.o(i._ZN10Controller6aiMoveEh))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = Controller::aiMove(unsigned char) &rArr; Controller::handleUserInput(short, short) &rArr; Field::drawToken(coordinates) &rArr; Symbole::drawPiece(short, short, short) &rArr; Symbole::drawSickle(short, short, short) &rArr; Style::instance() &rArr; Style::Style() &rArr; Symbole::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::handleUserInput(short, short)
+<BR>[Calls]<UL><LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rand
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::handleUserInput(short, short)
 <LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::getGameState()
-<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rand
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Game::ttt_classic(short, short, unsigned char)
 </UL>
@@ -1760,9 +1760,9 @@ Global Symbols
 <P><STRONG><a name="[15b]"></a>Controller::Controller()</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, controller.o(i._ZN10ControllerC1Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = Controller::Controller() &rArr; Field::drawField() &rArr; Style::instance() &rArr; Style::Style() &rArr; Symbole::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cells::Cells()
+<BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cells::Cells()
 <LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Field::drawField()
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Game::Game()
 </UL>
@@ -1772,8 +1772,8 @@ Global Symbols
 <P><STRONG><a name="[15e]"></a>Controller::~Controller()</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, controller.o(i._ZN10ControllerD1Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Controller::~Controller() &rArr; Cells::~Cells() &rArr; operator delete (void*) &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cells::~Cells()
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
+<BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
+<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cells::~Cells()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Game::~Game()
 </UL>
@@ -1802,9 +1802,9 @@ Global Symbols
 <P><STRONG><a name="[167]"></a>Page_Menue::instance()</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, pages.o(i._ZN10Page_Menue8instanceEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = Page_Menue::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
+<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
 </UL>
@@ -1878,10 +1878,10 @@ Global Symbols
 <P><STRONG><a name="[174]"></a>Page_History::buttonOnPagePressed(int, int)</STRONG> (Thumb, 60 bytes, Stack size 24 bytes, page_history.o(i._ZN12Page_History19buttonOnPagePressedEii))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = Page_History::buttonOnPagePressed(int, int) &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
-<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::isPressed(int, int, short(*)[5], int)
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
+<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
+<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::isPressed(int, int, short(*)[5], int)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
 </UL>
@@ -1899,9 +1899,9 @@ Global Symbols
 <P><STRONG><a name="[176]"></a>Page_History::instance()</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, pages.o(i._ZN12Page_History8instanceEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = Page_History::instance() &rArr; Page_History::Page_History() &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::Page_History()
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::Page_History()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
 </UL>
@@ -1913,12 +1913,12 @@ Global Symbols
 <P><STRONG><a name="[177]"></a>Page_History::Page_History()</STRONG> (Thumb, 60 bytes, Stack size 48 bytes, page_history.o(i._ZN12Page_HistoryC1Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = Page_History::Page_History() &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
 </UL>
-<BR>[Called By]<UL><LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::instance()
-<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::instance()
 </UL>
 
 <P><STRONG><a name="[221]"></a>Page_History::Page_History__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 48 bytes, page_history.o(i._ZN12Page_HistoryC1Ev), UNUSED)
@@ -1988,14 +1988,14 @@ Global Symbols
 <P><STRONG><a name="[17d]"></a>Page_Settings::buttonOnPagePressed(int, int)</STRONG> (Thumb, 280 bytes, Stack size 40 bytes, page_settings.o(i._ZN13Page_Settings19buttonOnPagePressedEii))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = Page_Settings::buttonOnPagePressed(int, int) &rArr; Page_Settings::drawpage() &rArr; Pages::siteHeader(short, short, short, short, char*) &rArr; Style::instance() &rArr; Style::Style() &rArr; Symbole::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
+<BR>[Calls]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
+<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
 <LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::instance()
 <LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::instance()
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::drawpage()
 <LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::isPressed(int, int, short(*)[5], int)
 <LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::changeActiveColorTheme(short)
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
-<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
 </UL>
@@ -2030,9 +2030,9 @@ Global Symbols
 <P><STRONG><a name="[182]"></a>Page_Settings::instance()</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, pages.o(i._ZN13Page_Settings8instanceEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = Page_Settings::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
+<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
 </UL>
@@ -2149,8 +2149,8 @@ Global Symbols
 <P><STRONG><a name="[18c]"></a>cHwDisp_OTM8009A::init()</STRONG> (Thumb, 1976 bytes, Stack size 32 bytes, disp_otm8009a.o(i._ZN16cHwDisp_OTM8009A4initEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = cHwDisp_OTM8009A::init() &rArr; __aeabi_memcpy4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::delayMilliSec(unsigned short)
-<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<BR>[Calls]<UL><LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::delayMilliSec(unsigned short)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009Aram::cHwDisp_OTM8009Aram(cHwDSI&, cHwPort::Pin&, cHwDisp_OTM8009A::Orientation, cHwDisplayFont, unsigned char)
 </UL>
@@ -2384,14 +2384,14 @@ Global Symbols
 <P><STRONG><a name="[1a0]"></a>Game::ttt_classic(short, short, unsigned char)</STRONG> (Thumb, 184 bytes, Stack size 24 bytes, game.o(i._ZN4Game11ttt_classicEssh))
 <BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = Game::ttt_classic(short, short, unsigned char) &rArr; Controller::aiMove(unsigned char) &rArr; Controller::handleUserInput(short, short) &rArr; Field::drawToken(coordinates) &rArr; Symbole::drawPiece(short, short, short) &rArr; Symbole::drawSickle(short, short, short) &rArr; Style::instance() &rArr; Style::Style() &rArr; Symbole::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::Page_Game()
+<BR>[Calls]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
+<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::Page_Game()
 <LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::output_Current_Player(short)
 <LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::aiMove(unsigned char)
 <LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::getcurrentPlayer()
 <LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::handleUserInput(short, short)
 <LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::getGameState()
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
-<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -2399,8 +2399,8 @@ Global Symbols
 <P><STRONG><a name="[1a4]"></a>Game::Game()</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, game.o(i._ZN4GameC1Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = Game::Game() &rArr; Controller::Controller() &rArr; Field::drawField() &rArr; Style::instance() &rArr; Style::Style() &rArr; Symbole::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::Controller()
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::Controller()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -2410,8 +2410,8 @@ Global Symbols
 <P><STRONG><a name="[1a5]"></a>Game::~Game()</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, game.o(i._ZN4GameD1Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Game::~Game() &rArr; Controller::~Controller() &rArr; Cells::~Cells() &rArr; operator delete (void*) &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::~Controller()
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
+<BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
+<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::~Controller()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -2427,8 +2427,8 @@ Global Symbols
 <P><STRONG><a name="[1a6]"></a>Cells::initializeCells()</STRONG> (Thumb, 62 bytes, Stack size 72 bytes, cells.o(i._ZN5Cells15initializeCellsEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = Cells::initializeCells() &rArr; operator new[] (unsigned) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new[] (unsigned)
-<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<BR>[Calls]<UL><LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new[] (unsigned)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cells::Cells()
 </UL>
@@ -2474,10 +2474,10 @@ Global Symbols
 <P><STRONG><a name="[158]"></a>Field::drawToken(coordinates)</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, field.o(i._ZN5Field9drawTokenE11coordinates))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = Field::drawToken(coordinates) &rArr; Symbole::drawPiece(short, short, short) &rArr; Symbole::drawSickle(short, short, short) &rArr; Style::instance() &rArr; Style::Style() &rArr; Symbole::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Symbole::Symbole()
-<LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Symbole::drawPiece(short, short, short)
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
+<LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Symbole::Symbole()
+<LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Symbole::drawPiece(short, short, short)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Controller::handleUserInput(short, short)
 </UL>
@@ -2485,8 +2485,8 @@ Global Symbols
 <P><STRONG><a name="[165]"></a>Pages::siteHeader(short, short, short, short, char*)</STRONG> (Thumb, 144 bytes, Stack size 56 bytes, pages.o(i._ZN5Pages10siteHeaderEssssPc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = Pages::siteHeader(short, short, short, short, char*) &rArr; Style::instance() &rArr; Style::Style() &rArr; Symbole::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::instance()
-<LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<BR>[Calls]<UL><LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::instance()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::drawpage()
 <LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Menue::drawpage()
@@ -2497,8 +2497,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 104 + In Cycle
 <LI>Call Chain = Pages::draw_button(short, short, short, short, short, short, short, short, short, short, char*) &rArr;  Pages::draw_button(short, short, short, short, short, short, short, short, short, short, char*) (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::draw_button(short, short, short, short, short, short, short, short, short, short, char*)
-<LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<BR>[Calls]<UL><LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::draw_button(short, short, short, short, short, short, short, short, short, short, char*)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::draw_button(short, short, short, short, short, short, short, short, short, short, char*)
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -2511,10 +2511,7 @@ Global Symbols
 <P><STRONG><a name="[1ac]"></a>Pages::display_current_page(int, int)</STRONG> (Thumb, 222 bytes, Stack size 16 bytes, pages.o(i._ZN5Pages20display_current_pageEii))
 <BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = Pages::display_current_page(int, int) &rArr; Page_Settings::buttonOnPagePressed(int, int) &rArr; Page_Settings::drawpage() &rArr; Pages::siteHeader(short, short, short, short, char*) &rArr; Style::instance() &rArr; Style::Style() &rArr; Symbole::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::instance()
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::instance()
-<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Menue::instance()
-<LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::instance()
+<BR>[Calls]<UL><LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::instance()
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::drawpage()
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::buttonOnPagePressed(int, int)
 <LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Menue::drawpage()
@@ -2523,6 +2520,9 @@ Global Symbols
 <LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::buttonOnPagePressed(int, int)
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::drawpage()
 <LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::buttonOnPagePressed(int, int)
+<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::instance()
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::instance()
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Menue::instance()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -2530,9 +2530,9 @@ Global Symbols
 <P><STRONG><a name="[161]"></a>Pages::instance()</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, main.o(i._ZN5Pages8instanceEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = Pages::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
+<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::Pages()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::buttonOnPagePressed(int, int)
@@ -2549,13 +2549,13 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[169]"></a>Pages::Pages()</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, pages.o(i._ZN5PagesC1Ev))
-<BR><BR>[Called By]<UL><LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::instance()
-<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Menue::instance()
-<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::Page_Game()
+<BR><BR>[Called By]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::Page_Game()
 <LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::Page_History()
 <LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::instance()
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::buttonOnPagePressed(int, int)
 <LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::buttonOnPagePressed(int, int)
+<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::instance()
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Menue::instance()
 </UL>
 
 <P><STRONG><a name="[231]"></a>Pages::Pages__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, pages.o(i._ZN5PagesC1Ev), UNUSED)
@@ -2578,9 +2578,9 @@ Global Symbols
 <P><STRONG><a name="[164]"></a>Style::instance()</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, main.o(i._ZN5Style8instanceEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = Style::instance() &rArr; Style::Style() &rArr; Symbole::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::Style()
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
+<LI><a href="#[1b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::Style()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::drawpage()
@@ -2677,8 +2677,8 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.constdata__ZTV6cHwDSI)
 </UL>
 <P><STRONG><a name="[19c]"></a>cHwDSI::DisplayRefresh()</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, disp_otm8009a.o(i._ZN6cHwDSI14DisplayRefreshEv))
-<BR><BR>[Called By]<UL><LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009Aram::cHwDisp_OTM8009Aram(cHwDSI&, cHwPort::Pin&, cHwDisp_OTM8009A::Orientation, cHwDisplayFont, unsigned char)
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009Aram::refresh()
+<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009Aram::refresh()
+<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009Aram::cHwDisp_OTM8009Aram(cHwDSI&, cHwPort::Pin&, cHwDisp_OTM8009A::Orientation, cHwDisplayFont, unsigned char)
 </UL>
 
 <P><STRONG><a name="[19e]"></a>cHwDSI::Init(unsigned short, unsigned short, bool)</STRONG> (Thumb, 356 bytes, Stack size 32 bytes, disp_otm8009a.o(i._ZN6cHwDSI4InitEttb))
@@ -2764,9 +2764,9 @@ Global Symbols
 <P><STRONG><a name="[1b0]"></a>Symbole::instance()</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, style.o(i._ZN7Symbole8instanceEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = Symbole::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Symbole::Symbole()
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
+<LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Symbole::Symbole()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::Style()
 <LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::changeActiveColorTheme(short)
@@ -2792,8 +2792,8 @@ Global Symbols
 <P><STRONG><a name="[238]"></a>Symbole::Symbole__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, symbole.o(i._ZN7SymboleC1Ev), UNUSED)
 
 <P><STRONG><a name="[92]"></a>Symbole::~Symbole()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, field.o(i._ZN7SymboleD1Ev))
-<BR>[Address Reference Count : 2]<UL><LI> style.o(i._ZN7Symbole8instanceEv)
-<LI> field.o(i._ZN5Field9drawTokenE11coordinates)
+<BR>[Address Reference Count : 2]<UL><LI> field.o(i._ZN5Field9drawTokenE11coordinates)
+<LI> style.o(i._ZN7Symbole8instanceEv)
 </UL>
 <P><STRONG><a name="[239]"></a>Symbole::~Symbole__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, field.o(i._ZN7SymboleD1Ev), UNUSED)
 
@@ -2838,9 +2838,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::delayMicroSec(unsigned short)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwFMC::SDRAM_Init()
-<LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009A::cHwDisp_OTM8009A__sub_object(cHwDSI&, cHwPort::Pin&, cHwDisp_OTM8009A::Orientation, cHwDisplayFont, unsigned char)
+<BR>[Called By]<UL><LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009A::cHwDisp_OTM8009A__sub_object(cHwDSI&, cHwPort::Pin&, cHwDisp_OTM8009A::Orientation, cHwDisplayFont, unsigned char)
 <LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_OTM8009A::init()
+<LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwFMC::SDRAM_Init()
 </UL>
 
 <P><STRONG><a name="[1be]"></a>cSystem::disableWatchdog()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, lib.o(i._ZN7cSystem15disableWatchdogEv))
@@ -3099,9 +3099,9 @@ Global Symbols
 <P><STRONG><a name="[1ad]"></a>Page_Game::instance()</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, main.o(i._ZN9Page_Game8instanceEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = Page_Game::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::Page_Game()
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
+<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::Page_Game()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -3194,10 +3194,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[168]"></a>__cxa_guard_acquire</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, cxa_guard_acquire.o(i.__cxa_guard_acquire))
-<BR><BR>[Called By]<UL><LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::instance()
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::instance()
-<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Menue::instance()
-<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Game::ttt_classic(short, short, unsigned char)
+<BR><BR>[Called By]<UL><LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Game::ttt_classic(short, short, unsigned char)
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::instance()
 <LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::instance()
@@ -3206,6 +3203,9 @@ Global Symbols
 <LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::buttonOnPagePressed(int, int)
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Symbole::instance()
 <LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Field::drawToken(coordinates)
+<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Settings::instance()
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_History::instance()
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Menue::instance()
 </UL>
 
 <P><STRONG><a name="[94]"></a>__cxa_pure_virtual</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, lib.o(i.__cxa_pure_virtual))
@@ -3243,7 +3243,11 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 376 + Unknown Stack Size
 <LI>Call Chain = main &rArr; Pages::display_current_page(int, int) &rArr; Page_Settings::buttonOnPagePressed(int, int) &rArr; Page_Settings::drawpage() &rArr; Pages::siteHeader(short, short, short, short, char*) &rArr; Style::instance() &rArr; Style::Style() &rArr; Symbole::instance() &rArr; __aeabi_atexit &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
+<BR>[Calls]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::display_current_page(int, int)
 <LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::draw_button(short, short, short, short, short, short, short, short, short, short, char*)
 <LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cells::Cells()
 <LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Game::~Game()
@@ -3258,10 +3262,6 @@ Global Symbols
 <LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Page_Game::instance()
 <LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Style::instance()
 <LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pages::instance()
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
-<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
@@ -3319,8 +3319,8 @@ Global Symbols
 <P><STRONG><a name="[170]"></a>__aeabi_ddiv</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, ddiv.o(x$fpl$ddiv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_ddiv
 </UL>
-<BR>[Called By]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
-<LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDSI::Init(unsigned short, unsigned short, bool)
+<BR>[Called By]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDSI::Init(unsigned short, unsigned short, bool)
+<LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
 </UL>
 
 <P><STRONG><a name="[1dd]"></a>_ddiv</STRONG> (Thumb, 552 bytes, Stack size 32 bytes, ddiv.o(x$fpl$ddiv), UNUSED)
@@ -3331,8 +3331,8 @@ Global Symbols
 <P><STRONG><a name="[171]"></a>__aeabi_d2uiz</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, dfixu.o(x$fpl$dfixu))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_d2uiz
 </UL>
-<BR>[Called By]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
-<LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDSI::Init(unsigned short, unsigned short, bool)
+<BR>[Called By]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDSI::Init(unsigned short, unsigned short, bool)
+<LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
 </UL>
 
 <P><STRONG><a name="[1df]"></a>_dfixu</STRONG> (Thumb, 90 bytes, Stack size 32 bytes, dfixu.o(x$fpl$dfixu), UNUSED)
@@ -3348,8 +3348,8 @@ Global Symbols
 <P><STRONG><a name="[16e]"></a>__aeabi_dmul</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, dmul.o(x$fpl$dmul))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_dmul
 </UL>
-<BR>[Called By]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
-<LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDSI::Init(unsigned short, unsigned short, bool)
+<BR>[Called By]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDSI::Init(unsigned short, unsigned short, bool)
+<LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
 </UL>
 
 <P><STRONG><a name="[1e0]"></a>_dmul</STRONG> (Thumb, 332 bytes, Stack size 32 bytes, dmul.o(x$fpl$dmul), UNUSED)

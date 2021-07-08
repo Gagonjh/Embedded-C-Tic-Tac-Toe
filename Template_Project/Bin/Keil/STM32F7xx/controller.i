@@ -22480,25 +22480,8 @@ class Cells {
  
 
 
-#line 1 "Src\\./././Token.h"
 
 
-
-
-
- 
-
-#line 11 "Src\\./././Token.h"
-
-class Token
-{
-	public:
-		const Coordinates coordinates;
-		const short player;
-		Token(Coordinates, short);
-};
-
-#line 11 "Src\\./././Field.h"
 	
 class Field
 {
