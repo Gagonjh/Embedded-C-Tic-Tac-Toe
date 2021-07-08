@@ -14,6 +14,10 @@ class Game
 	private:
 		Controller* controller;
 	public:
+		//! Zugverzoegerung der KI
+		/*!
+			Ein wert der in jedem durchlauf hochgezaehlt wird und den KI-Zug zeitlich verzögert.
+		*/
 		short unsigned waitAi;
 		short ttt_classic(short,short,uint8_t);
 	Game();

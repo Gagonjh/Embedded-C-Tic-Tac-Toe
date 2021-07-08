@@ -1,12 +1,21 @@
 /*! 
- *  \brief     	
- *  \details   
+ *  \brief     	Fuehrt Zuege aus.
+ *  \details   	Steuert die KI und den gesamtablauf eines Zuges.
  *  \author			Yasin Calli 
  *  \author    	Joshua Hahn
  */
 
 #include "./Project_Headers.h"
 
+
+//! Fuehrt den Zug der/des Spieler/s, abhaengig von der getippten Position, und die der KI, abhaengig von einem zusaetzlichen numerischen Wert, aus.
+/*!
+	\param posX ist die x Koordinate auf dem Bildschirm auf den der/die Spieler/in getippt hat.
+	\param posY ist die y Koordinate auf dem Bildschirm auf den der/die Spieler/in getippt hat.
+	\param ranDOOM ist ein beliebiger Wert der die KI daran hindert nach jedem Neustart des Systems die gleichen Zuege auszufuehren.
+	\return Gibt -1 für eine laufende Partie, 0 für Unentschieden, 1 oder 2 für Spieler 1 oder 2 "hat gewonnen" zurueck.
+	\sa getGameState()
+*/
 short Game::ttt_classic(short posX,short posY, uint8_t ranDOOM)
 {
 		Page_Game::instance().output_Current_Player(controller -> getcurrentPlayer() );	//! Ausgabe des aktiven Spielers
@@ -16,7 +25,7 @@ short Game::ttt_classic(short posX,short posY, uint8_t ranDOOM)
 			disp1.refresh();
 			return controller -> getGameState();
 		}
-		//AI move
+		//KI Zug
 		if(gameMode==1 && controller -> getcurrentPlayer() == 2)
 				{
 					if(waitAi == 20)
@@ -33,12 +42,21 @@ short Game::ttt_classic(short posX,short posY, uint8_t ranDOOM)
 
 	return -1;
 }
+
+//! Kontruktor der Game Klasse
+/*!
+	Erstellt einen neuen Controller und intialisiert die KI-Zugverzoegerung.
+*/
 Game::Game()
 {
 	controller = new Controller;
 	waitAi = 0;
 }
 
+//! Destruktor der Game Klasse
+/*!
+	Loescht den Controller der bei der Initialisierung neu erzeugt wurde.
+*/
 Game::~Game()
 {
 	delete controller;
