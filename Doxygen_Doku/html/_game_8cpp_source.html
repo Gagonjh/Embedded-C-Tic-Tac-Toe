@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tic Tac Toe: Template_Project/Src/Game.cpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Tic Tac Toe
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_game_8cpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Game.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_game_8cpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_project___headers_8h.html">./Project_Headers.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_game.html#a9b0055a9558b82afdb1cb90cd27c7fc9">   10</a></span>&#160;<span class="keywordtype">short</span> <a class="code" href="class_game.html#a9b0055a9558b82afdb1cb90cd27c7fc9">Game::ttt_classic</a>(<span class="keywordtype">short</span> posX,<span class="keywordtype">short</span> posY, uint8_t ranDOOM)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929">Page_Game::instance</a>().<a class="code" href="class_page___game.html#a6be3e42f603aa0c0a315ec04a154ad80">output_Current_Player</a>(<a class="code" href="class_game.html#a88da61aa4eab9ed1c7c51fe6271491b3">controller</a> -&gt; getcurrentPlayer() ); </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">if</span>(posX&lt;390 &amp;&amp; posX &gt; 100 &amp;&amp; posY &lt; 390 &amp;&amp; posY &gt; 100 &amp;&amp; <a class="code" href="class_game.html#a88da61aa4eab9ed1c7c51fe6271491b3">controller</a> -&gt; getcurrentPlayer() != 2) </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordtype">bool</span> isInputValid = <a class="code" href="class_game.html#a88da61aa4eab9ed1c7c51fe6271491b3">controller</a> -&gt; handleUserInput(posX, posY);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.refresh();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_game.html#a88da61aa4eab9ed1c7c51fe6271491b3">controller</a> -&gt; getGameState();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">//AI move</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="main_8cpp.html#aa1f04c89745ecf0a24895b20e1756cc0">gameMode</a>==1 &amp;&amp; <a class="code" href="class_game.html#a88da61aa4eab9ed1c7c51fe6271491b3">controller</a> -&gt; getcurrentPlayer() == 2)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                    <span class="keywordflow">if</span>(<a class="code" href="class_game.html#a4fcb4d5c5bdc5c189ebf536529ff0858">waitAi</a> == 20)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                        <a class="code" href="class_game.html#a88da61aa4eab9ed1c7c51fe6271491b3">controller</a> -&gt; aiMove(ranDOOM);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                        <a class="code" href="class_game.html#a4fcb4d5c5bdc5c189ebf536529ff0858">waitAi</a> = 0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                        <a class="code" href="class_game.html#a4fcb4d5c5bdc5c189ebf536529ff0858">waitAi</a>++;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="class_game.html#a88da61aa4eab9ed1c7c51fe6271491b3">controller</a> -&gt; getGameState();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_game.html#ad59df6562a58a614fda24622d3715b65">   36</a></span>&#160;<a class="code" href="class_game.html#ad59df6562a58a614fda24622d3715b65">Game::Game</a>()</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_game.html#a88da61aa4eab9ed1c7c51fe6271491b3">controller</a> = <span class="keyword">new</span> <a class="code" href="class_controller.html">Controller</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_game.html#a4fcb4d5c5bdc5c189ebf536529ff0858">waitAi</a> = 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;Game::~Game()</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_game.html#a88da61aa4eab9ed1c7c51fe6271491b3">controller</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="ttc" id="a_project___headers_8h_html"><div class="ttname"><a href="_project___headers_8h.html">Project_Headers.h</a></div></div>
+<div class="ttc" id="aclass_controller_html"><div class="ttname"><a href="class_controller.html">Controller</a></div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00014">Controller.h:14</a></div></div>
+<div class="ttc" id="aclass_game_html_a4fcb4d5c5bdc5c189ebf536529ff0858"><div class="ttname"><a href="class_game.html#a4fcb4d5c5bdc5c189ebf536529ff0858">Game::waitAi</a></div><div class="ttdeci">short unsigned waitAi</div><div class="ttdef"><b>Definition:</b> <a href="_game_8h_source.html#l00017">Game.h:17</a></div></div>
+<div class="ttc" id="aclass_game_html_a88da61aa4eab9ed1c7c51fe6271491b3"><div class="ttname"><a href="class_game.html#a88da61aa4eab9ed1c7c51fe6271491b3">Game::controller</a></div><div class="ttdeci">Controller * controller</div><div class="ttdef"><b>Definition:</b> <a href="_game_8h_source.html#l00015">Game.h:15</a></div></div>
+<div class="ttc" id="aclass_game_html_a9b0055a9558b82afdb1cb90cd27c7fc9"><div class="ttname"><a href="class_game.html#a9b0055a9558b82afdb1cb90cd27c7fc9">Game::ttt_classic</a></div><div class="ttdeci">short ttt_classic(short, short, uint8_t)</div><div class="ttdef"><b>Definition:</b> <a href="_game_8cpp_source.html#l00010">Game.cpp:10</a></div></div>
+<div class="ttc" id="aclass_game_html_ad59df6562a58a614fda24622d3715b65"><div class="ttname"><a href="class_game.html#ad59df6562a58a614fda24622d3715b65">Game::Game</a></div><div class="ttdeci">Game()</div><div class="ttdef"><b>Definition:</b> <a href="_game_8cpp_source.html#l00036">Game.cpp:36</a></div></div>
+<div class="ttc" id="aclass_page___game_html_a18c31ac43ddadb0a6eb8889ecc7ad929"><div class="ttname"><a href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929">Page_Game::instance</a></div><div class="ttdeci">static Page_Game &amp; instance()</div><div class="ttdef"><b>Definition:</b> <a href="_page___game_8h_source.html#l00017">Page_Game.h:17</a></div></div>
+<div class="ttc" id="aclass_page___game_html_a6be3e42f603aa0c0a315ec04a154ad80"><div class="ttname"><a href="class_page___game.html#a6be3e42f603aa0c0a315ec04a154ad80">Page_Game::output_Current_Player</a></div><div class="ttdeci">void output_Current_Player(short)</div><div class="ttdef"><b>Definition:</b> <a href="_page___game_8cpp_source.html#l00061">Page_Game.cpp:61</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a9cfdc59922fc042bda22a60539d05a54"><div class="ttname"><a href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a></div><div class="ttdeci">cDevDisplayGraphic &amp; disp1</div><div class="ttdoc">Main Klasse des Projektes.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00012">main.cpp:12</a></div></div>
+<div class="ttc" id="amain_8cpp_html_aa1f04c89745ecf0a24895b20e1756cc0"><div class="ttname"><a href="main_8cpp.html#aa1f04c89745ecf0a24895b20e1756cc0">gameMode</a></div><div class="ttdeci">uint8_t gameMode</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00013">main.cpp:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_ff280c14b06ca38fd2038841405cdc9e.html">Template_Project</a></li><li class="navelem"><a class="el" href="dir_3dbd3740f0f5b740019bd1a9de84774f.html">Src</a></li><li class="navelem"><a class="el" href="_game_8cpp.html">Game.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
