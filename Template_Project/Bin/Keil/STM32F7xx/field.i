@@ -22520,6 +22520,7 @@ class Controller {
 		void aiMove(uint8_t);
 		bool handleUserInput(short, short);
 		short getGameState();
+		short getcurrentPlayer(void);
 };
 
 #line 16 "Src\\./Project_Headers.h"
@@ -22541,6 +22542,7 @@ class Game
 	private:
 		Controller* controller;
 	public:
+		short unsigned waitAi;
 		short ttt_classic(short,short,uint8_t);
 	Game();
 	~ Game ();
@@ -22705,18 +22707,24 @@ class Symbole
 			}
 			~Symbole() {}
 				
-			const static WORD sym_home[];
-			const static WORD test[];
-		
+		void drawPiece(short,short,short);
+		void setPlayerSim(short,short);
+				
 		private:
-			
-			Symbole(){
-			};
+				
+			short simP1;
+			short simP2;
+		
+			Symbole();
                     
 			Symbole( const Symbole& );
 				
 			Symbole & operator = (const Symbole &); 
-
+			
+			void drawSickle(short,short,short);
+			void drawHammer(short,short,short);
+			void drawCircle(short,short,short);
+			void drawX(short,short,short);
 };
 #line 23 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Page_Game.h"
@@ -22730,7 +22738,7 @@ class Symbole
 
 
 
-extern short int iButtons_cor_GS[10][5];
+extern short int iButtons_cor_G[10][5];
 
 class Page_Game : public Pages
 {
@@ -22891,13 +22899,5 @@ void Field::drawField()
 
 void Field::drawToken(Coordinates token)
 {
-	switch(token.player)
-	{
-		case 1:
-			disp1.drawCircle(token.x,token.y, 45, Style::instance().color_Player_1);
-			break;
-		case 2:
-			disp1.drawCircle(token.x,token.y, 45, Style::instance().color_Player_2);
-			break;
-	}
+	Symbole::instance().drawPiece(token.x,token.y,token.player);
 }

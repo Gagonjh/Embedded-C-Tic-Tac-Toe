@@ -23,6 +23,7 @@ class Controller {
 		void aiMove(uint8_t);
 		bool handleUserInput(short, short);
 		short getGameState();
+		short getcurrentPlayer(void);
 };
 
 #endif

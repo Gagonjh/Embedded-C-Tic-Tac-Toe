@@ -20,13 +20,5 @@ void Field::drawField()
 
 void Field::drawToken(Coordinates token)
 {
-	switch(token.player)
-	{
-		case 1:
-			disp1.drawCircle(token.x,token.y, 45, Style::instance().color_Player_1);
-			break;
-		case 2:
-			disp1.drawCircle(token.x,token.y, 45, Style::instance().color_Player_2);
-			break;
-	}
+	Symbole::instance().drawPiece(token.x,token.y,token.player);
 }

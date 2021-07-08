@@ -14,10 +14,10 @@ Page_Game::Page_Game()
 			restart_state = 0;	//! Button wird nicht angezeigt und ausgewertet
 }	
 
- short int iButtons_cor_GS[10][5] =
+ short int iButtons_cor_G[10][5] =
 	{
 				{565,795,415,475,0}, 	//Button 1 :Hauptmenü
-				{460,660,300,360,-2}, //Button 2 :Game Restart
+				{520,720,220,280,-2}, //Button 2 :Game Restart
 				{0,0,0,0,0}, 					//Button 3 :
 				{0,0,0,0,0}, 					//Button 4 :
 				{0,0,0,0,0}, 					//Button 5 :
@@ -33,7 +33,7 @@ void Page_Game::drawpage()
 {
   disp1.setBackColor(Style::instance().color_Backround);
 	disp1.setTextColor(Style::instance().color_Font);
-	draw_button(iButtons_cor_GS[0][0],iButtons_cor_GS[0][2],iButtons_cor_GS[0][3]-iButtons_cor_GS[0][2],iButtons_cor_GS[0][1]-iButtons_cor_GS[0][0],15,1,Style::instance().color_Boxes,Style::instance().color_Field,24,16,"Hauptmenu");
+	draw_button(iButtons_cor_G[0][0],iButtons_cor_G[0][2],iButtons_cor_G[0][3]-iButtons_cor_G[0][2],iButtons_cor_G[0][1]-iButtons_cor_G[0][0],15,1,Style::instance().color_Boxes,Style::instance().color_Field,24,16,"Hauptmenu");
 }
 
 short int Page_Game::buttonOnPagePressed(int posX,int posY)
@@ -41,11 +41,11 @@ short int Page_Game::buttonOnPagePressed(int posX,int posY)
 	short int p = -1;
 	if(p == -1)
 	{
-			p = Page_Game::instance().isPressed(posX,posY,iButtons_cor_GS,0);
+			p = Page_Game::instance().isPressed(posX,posY,iButtons_cor_G,0);
 	}
 	if(p == -1 && restart_state == 1)
 	{
-			p = Page_Game::instance().isPressed(posX,posY,iButtons_cor_GS,1);
+			p = Page_Game::instance().isPressed(posX,posY,iButtons_cor_G,1);
 			Page_Game::instance().restart_state = 2;
 	}
 		//Return to default value
@@ -60,5 +60,5 @@ short int Page_Game::buttonOnPagePressed(int posX,int posY)
 
 void Page_Game::output_Current_Player(short player)
 {
-	disp1.drawText(500,200,18,"Es spielt Player: %d",player);
+				disp1.drawText(470,50,18,"Es spielt Player: %d",player);
 }

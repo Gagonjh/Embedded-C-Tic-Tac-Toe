@@ -22520,6 +22520,7 @@ class Controller {
 		void aiMove(uint8_t);
 		bool handleUserInput(short, short);
 		short getGameState();
+		short getcurrentPlayer(void);
 };
 
 #line 16 "Src\\./Project_Headers.h"
@@ -22541,6 +22542,7 @@ class Game
 	private:
 		Controller* controller;
 	public:
+		short unsigned waitAi;
 		short ttt_classic(short,short,uint8_t);
 	Game();
 	~ Game ();
@@ -22705,18 +22707,24 @@ class Symbole
 			}
 			~Symbole() {}
 				
-			const static WORD sym_home[];
-			const static WORD test[];
-		
+		void drawPiece(short,short,short);
+		void setPlayerSim(short,short);
+				
 		private:
-			
-			Symbole(){
-			};
+				
+			short simP1;
+			short simP2;
+		
+			Symbole();
                     
 			Symbole( const Symbole& );
 				
 			Symbole & operator = (const Symbole &); 
-
+			
+			void drawSickle(short,short,short);
+			void drawHammer(short,short,short);
+			void drawCircle(short,short,short);
+			void drawX(short,short,short);
 };
 #line 23 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Page_Game.h"
@@ -22730,7 +22738,7 @@ class Symbole
 
 
 
-extern short int iButtons_cor_GS[10][5];
+extern short int iButtons_cor_G[10][5];
 
 class Page_Game : public Pages
 {
@@ -22880,21 +22888,34 @@ extern uint8_t gameMode;
 
 short Game::ttt_classic(short posX,short posY, uint8_t ranDOOM)
 {
-	if(posX<390 && posX > 100 && posY < 390 && posY > 100) 
+		Page_Game::instance().output_Current_Player(controller -> getcurrentPlayer() );	
+	if(posX<390 && posX > 100 && posY < 390 && posY > 100 && controller -> getcurrentPlayer() != 2) 
 		{
 			bool isInputValid = controller -> handleUserInput(posX, posY);
 			disp1.refresh();
-			if(gameMode==1 && isInputValid)
-				{
-						controller -> aiMove(ranDOOM);
-				}
 			return controller -> getGameState();
 		}
+		
+		if(gameMode==1 && controller -> getcurrentPlayer() == 2)
+				{
+					if(waitAi == 20)
+					{
+						controller -> aiMove(ranDOOM);
+						waitAi = 0;
+					}
+					else
+					{
+						waitAi++;
+					}
+					return controller -> getGameState();
+				}
+
 	return -1;
 }
 Game::Game()
 {
 	controller = new Controller;
+	waitAi = 0;
 }
 
 Game::~Game()

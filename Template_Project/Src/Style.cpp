@@ -30,7 +30,7 @@ Style::Style()
 			ru_Color_Font = 0xF666;
 			ru_Color_Boxes = 0x94B2;
 			ru_Color_Player_1 = 0xF666;
-			ru_Color_Player_2 = 0x035F;
+			ru_Color_Player_2 = 0xF666;
 			ru_Color_Field = 0x528A;
 	
 		//Default
@@ -41,6 +41,7 @@ Style::Style()
 			color_Player_2 = dark_Color_Player_2;
 			color_Field = dark_Color_Field;
 			
+			Symbole::instance().setPlayerSim(0,1);
 			color_Mode = 0;
 }			
 
@@ -56,6 +57,7 @@ void Style::changeActiveColorTheme(short int cmode)
 					color_Player_1 = dark_Color_Player_1;
 					color_Player_2 = dark_Color_Player_2;
 					color_Field = dark_Color_Field;
+					Symbole::instance().setPlayerSim(0,1);
 				break;
 				case 1:
 					color_Backround = light_Color_Backround;
@@ -64,6 +66,7 @@ void Style::changeActiveColorTheme(short int cmode)
 					color_Player_1 = light_Color_Player_1;
 					color_Player_2 = light_Color_Player_2;
 					color_Field = light_Color_Field;
+					Symbole::instance().setPlayerSim(0,1);
 				break;
 				case 2:
 					color_Backround = ru_Color_Backround;
@@ -72,6 +75,7 @@ void Style::changeActiveColorTheme(short int cmode)
 					color_Player_1 = ru_Color_Player_1;
 					color_Player_2 = ru_Color_Player_2;
 					color_Field = ru_Color_Field;
+					Symbole::instance().setPlayerSim(2,3);
 				break;
 				default:
 				break;

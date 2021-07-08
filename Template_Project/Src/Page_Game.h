@@ -8,7 +8,7 @@
 #ifndef PAGE_Game_H
 #define PAGE_Game_H
 
-extern short int iButtons_cor_GS[10][5];
+extern short int iButtons_cor_G[10][5];
 
 class Page_Game : public Pages
 {

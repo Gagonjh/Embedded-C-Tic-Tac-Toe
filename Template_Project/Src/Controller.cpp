@@ -26,7 +26,7 @@ bool Controller::handleUserInput(short posX, short posY)
 {
 	for(BYTE i = 0; i<9; i++)
 		{
-			Page_Game::instance().output_Current_Player(currentPlayer%2+1);		//! Ausgabe des aktuellen Spielers
+
 			Coordinates cellCoords = {cells -> cells[i].x,cells -> cells[i].y};
 			short xDiff = abs(cellCoords.x - posX);
 			short yDiff = abs(cellCoords.y - posY);
@@ -83,4 +83,13 @@ void Controller::aiMove(uint8_t ranDOOMizer)
 			break;
 		}
 	}
+}
+
+//*******************************************************************
+// getcurrentPlayer
+// \author Joshua Hahn
+//*******************************************************************
+short Controller::getcurrentPlayer(void)
+{
+	return currentPlayer;
 }

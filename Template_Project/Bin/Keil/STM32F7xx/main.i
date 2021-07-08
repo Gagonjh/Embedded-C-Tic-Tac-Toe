@@ -22521,6 +22521,7 @@ class Controller {
 		void aiMove(uint8_t);
 		bool handleUserInput(short, short);
 		short getGameState();
+		short getcurrentPlayer(void);
 };
 
 #line 16 "Src\\./Project_Headers.h"
@@ -22542,6 +22543,7 @@ class Game
 	private:
 		Controller* controller;
 	public:
+		short unsigned waitAi;
 		short ttt_classic(short,short,uint8_t);
 	Game();
 	~ Game ();
@@ -22706,18 +22708,24 @@ class Symbole
 			}
 			~Symbole() {}
 				
-			const static WORD sym_home[];
-			const static WORD test[];
-		
+		void drawPiece(short,short,short);
+		void setPlayerSim(short,short);
+				
 		private:
-			
-			Symbole(){
-			};
+				
+			short simP1;
+			short simP2;
+		
+			Symbole();
                     
 			Symbole( const Symbole& );
 				
 			Symbole & operator = (const Symbole &); 
-
+			
+			void drawSickle(short,short,short);
+			void drawHammer(short,short,short);
+			void drawCircle(short,short,short);
+			void drawX(short,short,short);
 };
 #line 23 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Page_Game.h"
@@ -22731,7 +22739,7 @@ class Symbole
 
 
 
-extern short int iButtons_cor_GS[10][5];
+extern short int iButtons_cor_G[10][5];
 
 class Page_Game : public Pages
 {
@@ -25056,9 +25064,9 @@ int main(void)
 				}
 				else if(gamestate >= 0 && Page_Game::instance().restart_state != 2)
 				{
-					disp.drawText(460,240, 18, gamestate == 0 ? "Unentschieden!":"Spieler %d gewinnt!", gamestate);
+					disp.drawText(480,180, 18, gamestate == 0 ? "Unentschieden!":"Spieler %d gewinnt!", gamestate);
 					Page_Game::instance().restart_state = 1; 	
-					Pages::instance().draw_button(iButtons_cor_GS[1][0],iButtons_cor_GS[1][2],iButtons_cor_GS[1][3]-iButtons_cor_GS[1][2],iButtons_cor_GS[1][1]-iButtons_cor_GS[1][0],15,1,Style::instance().color_Boxes,Style::instance().color_Field,24,16,"Revanche!");
+					Pages::instance().draw_button(iButtons_cor_G[1][0],iButtons_cor_G[1][2],iButtons_cor_G[1][3]-iButtons_cor_G[1][2],iButtons_cor_G[1][1]-iButtons_cor_G[1][0],15,1,Style::instance().color_Boxes,Style::instance().color_Field,24,16,"Revanche!");
 					
 				}
 				else if (gamestate == -1)
