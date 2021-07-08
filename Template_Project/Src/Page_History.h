@@ -19,17 +19,18 @@ class Page_History : public Pages
 				static Page_History _instance;
 				return _instance;
 			}
-			~Page_History() {}
+			~Page_History();
 			
 		//Public Methoden
 			void drawpage(void);
-				
+			void newWinner(short);
 			short int buttonOnPagePressed(int,int);
-		
-		private:
 			
-			Page_History() {
-			} ;// verhindert, dass ein Objekt von außerhalb von N erzeugt wird.
+		private:
+			short hOffset;
+			short* winner;
+			
+			Page_History();// verhindert, dass ein Objekt von außerhalb von N erzeugt wird.
                     // protected, wenn man von der Klasse noch erben möchte
 			Page_History( const Page_History& );//verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann
 				

@@ -22793,17 +22793,18 @@ class Page_History : public Pages
 				static Page_History _instance;
 				return _instance;
 			}
-			~Page_History() {}
+			~Page_History();
 			
 		
 			void drawpage(void);
-				
+			void newWinner(short);
 			short int buttonOnPagePressed(int,int);
-		
-		private:
 			
-			Page_History() {
-			} ;
+		private:
+			short hOffset;
+			short* winner;
+			
+			Page_History();
                     
 			Page_History( const Page_History& );
 				

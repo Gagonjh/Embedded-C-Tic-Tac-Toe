@@ -21,7 +21,7 @@ int main(void)
 		
 		uint8_t ranDOOM = 0;
 		short posX = -1;
-		short posY = -1;
+		short posY = -1; 
 		short page = -1;
 		short gamestate = -2;
 		//Fix falsche Startfarbe
@@ -29,6 +29,11 @@ int main(void)
 		disp1.setTextColor(Style::instance().color_Font);
     disp.clear();
 
+	
+
+
+	
+	
   while(1)
   {
 		ranDOOM = (ranDOOM+1)%69;
@@ -56,10 +61,12 @@ int main(void)
 				}
 				else if(gamestate >= 0 && Page_Game::instance().restart_state != 2)
 				{
+					Page_History::instance().newWinner(gamestate); //!gewinner schreiben
 					disp.drawText(480,180, 18, gamestate == 0 ? "Unentschieden!":"Spieler %d gewinnt!", gamestate);
 					Page_Game::instance().restart_state = 1; 	//! 1 restart Button aktiviert
 					Pages::instance().draw_button(iButtons_cor_G[1][0],iButtons_cor_G[1][2],iButtons_cor_G[1][3]-iButtons_cor_G[1][2],iButtons_cor_G[1][1]-iButtons_cor_G[1][0],15,1,Style::instance().color_Boxes,Style::instance().color_Field,24,16,"Revanche!");
 					//history überschreiben
+					gamestate = -3;
 				}
 				else if (gamestate == -1)
 				{

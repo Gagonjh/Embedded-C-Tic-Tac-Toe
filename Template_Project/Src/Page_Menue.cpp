@@ -28,7 +28,7 @@ void Page_Menue::drawpage()
 	siteHeader(0,0,24,16,"Hauptmenue");
 	//draw_button(iButtons_cor[0][0],220,60,280,15,1,iColor_boxes,0x067D,24,16,"Spielen");
 	draw_button(iButtons_cor_M[0][0],iButtons_cor_M[0][2],iButtons_cor_M[0][3]-iButtons_cor_M[0][2],iButtons_cor_M[0][1]-iButtons_cor_M[0][0],15,1,Style::instance().color_Boxes,Style::instance().color_Field,24,16,"Spielen");
-	draw_button(iButtons_cor_M[1][0],iButtons_cor_M[1][2],iButtons_cor_M[1][3]-iButtons_cor_M[1][2],iButtons_cor_M[1][1]-iButtons_cor_M[1][0],15,1,Style::instance().color_Boxes,Style::instance().color_Field,24,16,"Highscore");
+	draw_button(iButtons_cor_M[1][0],iButtons_cor_M[1][2],iButtons_cor_M[1][3]-iButtons_cor_M[1][2],iButtons_cor_M[1][1]-iButtons_cor_M[1][0],15,1,Style::instance().color_Boxes,Style::instance().color_Field,24,16,"Spiel Historie");
 	draw_button(iButtons_cor_M[2][0],iButtons_cor_M[2][2],iButtons_cor_M[2][3]-iButtons_cor_M[2][2],iButtons_cor_M[2][1]-iButtons_cor_M[2][0],15,1,Style::instance().color_Boxes,Style::instance().color_Field,24,16,"Einstellungen");
 }
 
