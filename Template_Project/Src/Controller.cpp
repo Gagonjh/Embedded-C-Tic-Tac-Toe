@@ -36,7 +36,7 @@ Controller::~Controller()
 	\param posX ist die x Koordinate auf dem Bildschirm auf den der/die Spieler/in getippt hat.
 	\param posY ist die y Koordinate auf dem Bildschirm auf den der/die Spieler/in getippt hat.
 	\param ranDOOM ist ein beliebiger Wert der die KI daran hindert nach jedem Neustart des Systems die gleichen Zuege auszufuehren.
-	\return Gibt -1 für eine laufende Partie, 0 für Unentschieden, 1 oder 2 für Spieler 1 oder 2 "hat gewonnen" zurueck.
+	\return Gibt -1 fuer eine laufende Partie, 0 für Unentschieden, 1 oder 2 fuer Spieler 1 oder 2 "hat gewonnen" zurueck.
 	\sa getGameState()
 */
 bool Controller::handleUserInput(short posX, short posY)
@@ -62,11 +62,9 @@ bool Controller::handleUserInput(short posX, short posY)
 	return false;
 };
 
-/**
- * Check if game is over.
- *
- * @return -1 if nothing is decided yet, 0 if it's a draw or 1 or 2 if player 1 or player 2 has won.
- */
+/*!
+	\return Gibt -1 für eine laufende Partie, 0 für Unentschieden, 1 oder 2 für Spieler 1 oder 2 "hat gewonnen" zurueck.
+*/
 short Controller::getGameState()
 {
 	short state = 0;

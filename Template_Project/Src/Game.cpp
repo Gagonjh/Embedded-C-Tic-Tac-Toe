@@ -8,13 +8,13 @@
 #include "./Project_Headers.h"
 
 
-//! Fuehrt den Zug der/des Spieler/s, abhaengig von der getippten Position, und die der KI, abhaengig von einem zusaetzlichen numerischen Wert, aus.
 /*!
+	\details Fuehrt den Zug der/des Spieler/s, abhaengig von der getippten Position, und die der KI, abhaengig von einem zusaetzlichen numerischen Wert, aus.
 	\param posX ist die x Koordinate auf dem Bildschirm auf den der/die Spieler/in getippt hat.
 	\param posY ist die y Koordinate auf dem Bildschirm auf den der/die Spieler/in getippt hat.
 	\param ranDOOM ist ein beliebiger Wert der die KI daran hindert nach jedem Neustart des Systems die gleichen Zuege auszufuehren.
 	\return Gibt -1 für eine laufende Partie, 0 für Unentschieden, 1 oder 2 für Spieler 1 oder 2 "hat gewonnen" zurueck.
-	\sa getGameState()
+	\sa Controller::getGameState()
 */
 short Game::ttt_classic(short posX,short posY, uint8_t ranDOOM)
 {
