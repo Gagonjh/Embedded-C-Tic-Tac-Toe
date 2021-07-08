@@ -1,6 +1,6 @@
 /*! 
- *  \brief     	
- *  \details   
+ *  \brief     	Fuehrt Zuege aus.
+ *  \details   	Steuert die KI und den gesamtablauf eines Zuges.
  *  \author			Yasin Calli 
  *  \author    	Joshua Hahn
  */
