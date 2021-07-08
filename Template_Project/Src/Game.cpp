@@ -1,14 +1,7 @@
-/*! 
- *  \brief     	Fuehrt Zuege aus.
- *  \details   	Steuert die KI und den gesamtablauf eines Zuges.
- *  \author			Yasin Calli 
- *  \author    	Joshua Hahn
- */
-
 #include "./Project_Headers.h"
 
-
-/*!
+/*! 
+	\author	Yasin Calli
 	\details Fuehrt den Zug der/des Spieler/s, abhaengig von der getippten Position, und die der KI, abhaengig von einem zusaetzlichen numerischen Wert, aus.
 	\param posX ist die x Koordinate auf dem Bildschirm auf den der/die Spieler/in getippt hat.
 	\param posY ist die y Koordinate auf dem Bildschirm auf den der/die Spieler/in getippt hat.
