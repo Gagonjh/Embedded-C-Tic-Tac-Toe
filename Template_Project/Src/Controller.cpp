@@ -1,6 +1,6 @@
 /*! 
- *  \brief     	Steuerklasse der Eingabe und des Spielzustandes
- *  \details   
+ *  \brief     	Steuerklasse der Eingabe und des Spielzustandes.
+ *  \details   	Steuert die KI, behandelt Spielereingaben in einer Partie und gibt Informationen ueber die Partie zurueck.
  *  \author			Yasin Calli 
  *  \author    	Joshua Hahn
  */
@@ -31,13 +31,13 @@ Controller::~Controller()
 }
 
 /*!
-	\brief Behandelt Spielereingaben
-	\details Wertet die Eingabeposition des Spielers aus und setzt enstsprechend die Werte in das Cells Objekt
+	\brief Behandelt Spielereingaben.
+	\details Wertet die Eingabeposition des Spielers aus und setzt enstsprechend die Werte in das Cells Objekt.
 	\param posX ist die x Koordinate auf dem Bildschirm auf den der/die Spieler/in getippt hat.
 	\param posY ist die y Koordinate auf dem Bildschirm auf den der/die Spieler/in getippt hat.
 	\param ranDOOM ist ein beliebiger Wert der die KI daran hindert nach jedem Neustart des Systems die gleichen Zuege auszufuehren.
 	\return Gibt -1 fuer eine laufende Partie, 0 für Unentschieden, 1 oder 2 fuer Spieler 1 oder 2 "hat gewonnen" zurueck.
-	\sa getGameState()
+	\sa Game::ttt_classic()
 */
 bool Controller::handleUserInput(short posX, short posY)
 {
@@ -63,6 +63,8 @@ bool Controller::handleUserInput(short posX, short posY)
 };
 
 /*!
+	\brief Gibt der Zustand der Partie zurueck
+	\details Ueberprueft ob ein Spieler bereits eine Reihe gefuellt hat, ob alle Felder besetzt sind oder ob das Spiel noch laeuft.
 	\return Gibt -1 für eine laufende Partie, 0 für Unentschieden, 1 oder 2 für Spieler 1 oder 2 "hat gewonnen" zurueck.
 */
 short Controller::getGameState()
@@ -83,6 +85,12 @@ short Controller::getGameState()
 	return state;
 }
 
+/*!
+	\brief Fuehrt den KI-Zug aus
+	\details Fuehrt den Zug der KI aus, falls die Partie noch laeuft.
+	\param ranDOOM ist ein beliebiger Wert der die KI daran hindert nach jedem Neustart des Systems die gleichen Zuege auszufuehren.
+	\sa Controller::getGameState(), Controller::handleUserInput()
+*/
 void Controller::aiMove(uint8_t ranDOOMizer)
 {
 	while(1)
@@ -100,11 +108,10 @@ void Controller::aiMove(uint8_t ranDOOMizer)
 	}
 }
 
-//*******************************************************************
-// getcurrentPlayer
-// \author Joshua Hahn
-//*******************************************************************
-short Controller::getcurrentPlayer(void)
+/*!
+	\brief Gibt den Spieler der am Zug ist zurueck
+*/
+short Controller::getcurrentPlayer()
 {
 	return currentPlayer;
 }

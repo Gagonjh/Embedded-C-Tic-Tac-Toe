@@ -1,14 +1,9 @@
-/*! 
- *  \brief     	
- *  \details   	Die Aufgabe dieser Klasse ist das Zeichnen des Spielfeldes und der Spielsteine.
- *  \author			Yasin Calli 
- */
-
-
 #include "./Project_Headers.h"
-	
-Cells cells();
-	
+
+/*!
+	\brief Zeichnet das Feld.
+	\details Erstellt ein 3x3 groﬂes Feld auf dem Bildschirm.
+*/
 void Field::drawField()
 {
 	disp1.drawFrame(50,50,390,390,2, Style::instance().color_Field );
@@ -18,6 +13,12 @@ void Field::drawField()
 	}
 }
 
+/*!
+	\brief Zeichnet das Feld.
+	\details Zeichnet den Spielstein des Spielers der dran ist auf das Spielfeld.
+	\param token enthaelt Koordinaten und die zugehoerigen Spielerinformationen.
+	\sa Symbole::instance().drawPiece()
+*/
 void Field::drawToken(Coordinates token)
 {
 	Symbole::instance().drawPiece(token.x,token.y,token.player);

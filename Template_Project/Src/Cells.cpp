@@ -1,12 +1,16 @@
 /*! 
- *  \brief     	
- *  \details   
+ *  \brief     	Speichert den Zustand des Spielfeldes
+ *  \details   	Speicher die Informationen ueber die Reihen und Spielsteine die auf dem Feld liegen.
  *  \author			Yasin Calli 
  *  \author    	Joshua Hahn
  */
 
 #include "./Project_Headers.h"
 
+/*!
+	\brief Destruktor der Cells Klasse
+	\details Loescht alle nach der Erstellung erzeugten Koordinaten und Reiheninformationen aus dem Speicher.
+*/
 Cells::~Cells()
 {
 	delete cells;
@@ -20,7 +24,11 @@ Cells::~Cells()
 	delete upDiagonal;
 }
 
-
+/*!
+	\brief Erstellt die Spielfeldinformationen
+	\details Erstellt ein neues Koordinatenfeld und initialisiert diesen.
+	\sa Coordinates
+*/
 void Cells::initializeCells()
 {
 	cells= new Coordinates[9];
@@ -41,6 +49,10 @@ void Cells::initializeCells()
 	}
 }
 
+/*!
+	\brief Erstellt die Reiheninformationen
+	\details Erstellt mehrere BYTE Felder, welche Informationen ueber die Spielsteinfolge der Spieler speichert.
+*/
 void Cells::initializeDefaultRows()
 {
 	topRow = new BYTE[3];
@@ -64,13 +76,23 @@ void Cells::initializeDefaultRows()
 	}
 }
 
-// Weitere größen to be implemented
+/*!
+	\brief Konstruktor der Cells Klasse
+	\details Initialisiert die Felder und Reiheninformationen.
+	\sa Cells::initializeCells(), Cells::initializeDefaultRows()
+*/
 Cells::Cells()
 {
 	initializeCells();
 	initializeDefaultRows();
 };
 
+/*!
+	\brief Ueberprueft den Reihenzustand
+	\details Ueberprueft ob ein Spieler eine ganze Reihe für sich beanspruchen konnte.
+	\return Gibt true zurueck falls eine Reihe komplett ist und false wenn nicht.
+	\sa Cells::initializeCells(), Cells::initializeDefaultRows()
+*/
 bool Cells::rowIsComplete()
 {
 	BYTE rowValues[8] = {0,0,0,0,0,0,0,0};

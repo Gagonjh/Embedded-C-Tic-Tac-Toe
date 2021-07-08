@@ -1,6 +1,6 @@
 /*! 
- *  \brief     	
- *  \details   
+ *  \brief     	Bildet das Feld und die Spielsteine ab.
+ *  \details   	Zeigt das Spielfeld und die Spielsteine auf dem Bildschirm an.
  *  \author			Yasin Calli 
  */
 

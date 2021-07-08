@@ -12,6 +12,10 @@
 class Game
 {
 	private:
+		/*!
+			\brief Die Steuerung der Partie. Kontrolliert KI, Spielereingabe und Spielzustand.
+			\sa Controller
+		*/
 		Controller* controller;
 	public:
 		//! Zugverzoegerung der KI
