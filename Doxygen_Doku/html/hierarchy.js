@@ -12,6 +12,5 @@ var hierarchy =
       [ "Page_Settings", "class_page___settings.html", null ]
     ] ],
     [ "Style", "class_style.html", null ],
-    [ "Symbole", "class_symbole.html", null ],
-    [ "Token", "class_token.html", null ]
+    [ "Symbole", "class_symbole.html", null ]
 ];
