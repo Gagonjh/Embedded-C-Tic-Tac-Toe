@@ -20,6 +20,8 @@ class Page_Game : public Pages
 				return _instance;
 			}
 			~Page_Game() {}
+				
+		void output_Current_Player(short);
 			
 		
 		short restart_state;

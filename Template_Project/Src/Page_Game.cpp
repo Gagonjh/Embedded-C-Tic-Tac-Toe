@@ -57,3 +57,8 @@ short int Page_Game::buttonOnPagePressed(int posX,int posY)
 	}
 	return p;
 }
+
+void Page_Game::output_Current_Player(short player)
+{
+	disp1.drawText(500,200,18,"Es spielt Player: %d",player);
+}

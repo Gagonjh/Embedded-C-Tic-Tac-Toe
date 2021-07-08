@@ -22,37 +22,37 @@ class Style
 		//Public Methoden
 			void changeActiveColorTheme(short int);
 		//Public Variablen
-			int color_Backround;
-			int color_Font;
-			int color_Boxes;
-			int color_Player_1;
-			int color_Player_2;
-			int color_Field;
-			int color_Mode;
+			short color_Backround;
+			short color_Font;
+			short color_Boxes;
+			short color_Player_1;
+			short color_Player_2;
+			short color_Field;
+			short color_Mode;
 		
 		private:
 			//dark 0
-			int dark_Color_Backround;
-			int dark_Color_Font;
-			int dark_Color_Boxes ;
-			int dark_Color_Player_1;
-			int dark_Color_Player_2 ;
-			int dark_Color_Field;
-			int dark_Color_Border;
+			short dark_Color_Backround;
+			short dark_Color_Font;
+			short dark_Color_Boxes ;
+			short dark_Color_Player_1;
+			short dark_Color_Player_2 ;
+			short dark_Color_Field;
+			short dark_Color_Border;
 		//Light 1
-			int light_Color_Backround;
-			int light_Color_Font;
-			int light_Color_Boxes;
-			int light_Color_Player_1;
-			int light_Color_Player_2;
-			int light_Color_Field;
+			short light_Color_Backround;
+			short light_Color_Font;
+			short light_Color_Boxes;
+			short light_Color_Player_1;
+			short light_Color_Player_2;
+			short light_Color_Field;
 		//Mother Russia 2
-			int ru_Color_Backround;
-			int ru_Color_Font;
-			int ru_Color_Boxes;
-			int ru_Color_Player_1;
-			int ru_Color_Player_2;
-			int ru_Color_Field;
+			short ru_Color_Backround;
+			short ru_Color_Font;
+			short ru_Color_Boxes;
+			short ru_Color_Player_1;
+			short ru_Color_Player_2;
+			short ru_Color_Field;
 		
 			Style();// verhindert, dass ein Objekt von außerhalb von N erzeugt wird.
                     // protected, wenn man von der Klasse noch erben möchte

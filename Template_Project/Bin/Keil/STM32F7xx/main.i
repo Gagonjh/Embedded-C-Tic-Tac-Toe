@@ -22518,7 +22518,7 @@ class Controller {
 	public:
 		Controller();
 		~ Controller ();
-		void aiMove();
+		void aiMove(uint8_t);
 		bool handleUserInput(short, short);
 		short getGameState();
 };
@@ -22542,7 +22542,7 @@ class Game
 	private:
 		Controller* controller;
 	public:
-		short ttt_classic(short,short);
+		short ttt_classic(short,short,uint8_t);
 	Game();
 	~ Game ();
 	
@@ -22743,6 +22743,8 @@ class Page_Game : public Pages
 				return _instance;
 			}
 			~Page_Game() {}
+				
+		void output_Current_Player(short);
 			
 		
 		short restart_state;
@@ -22827,37 +22829,37 @@ class Style
 		
 			void changeActiveColorTheme(short int);
 		
-			int color_Backround;
-			int color_Font;
-			int color_Boxes;
-			int color_Player_1;
-			int color_Player_2;
-			int color_Field;
-			int color_Mode;
+			short color_Backround;
+			short color_Font;
+			short color_Boxes;
+			short color_Player_1;
+			short color_Player_2;
+			short color_Field;
+			short color_Mode;
 		
 		private:
 			
-			int dark_Color_Backround;
-			int dark_Color_Font;
-			int dark_Color_Boxes ;
-			int dark_Color_Player_1;
-			int dark_Color_Player_2 ;
-			int dark_Color_Field;
-			int dark_Color_Border;
+			short dark_Color_Backround;
+			short dark_Color_Font;
+			short dark_Color_Boxes ;
+			short dark_Color_Player_1;
+			short dark_Color_Player_2 ;
+			short dark_Color_Field;
+			short dark_Color_Border;
 		
-			int light_Color_Backround;
-			int light_Color_Font;
-			int light_Color_Boxes;
-			int light_Color_Player_1;
-			int light_Color_Player_2;
-			int light_Color_Field;
+			short light_Color_Backround;
+			short light_Color_Font;
+			short light_Color_Boxes;
+			short light_Color_Player_1;
+			short light_Color_Player_2;
+			short light_Color_Field;
 		
-			int ru_Color_Backround;
-			int ru_Color_Font;
-			int ru_Color_Boxes;
-			int ru_Color_Player_1;
-			int ru_Color_Player_2;
-			int ru_Color_Field;
+			short ru_Color_Backround;
+			short ru_Color_Font;
+			short ru_Color_Boxes;
+			short ru_Color_Player_1;
+			short ru_Color_Player_2;
+			short ru_Color_Field;
 		
 			Style();
                     
@@ -25016,7 +25018,8 @@ int main(void)
 		Game* game;
 		disp.refresh();
 		Pages& pages_Instance = Pages::instance();
-
+		
+		uint8_t ranDOOM = 0;
 		short posX = -1;
 		short posY = -1;
 		short page = -1;
@@ -25028,6 +25031,7 @@ int main(void)
 
   while(1)
   {
+		ranDOOM = (ranDOOM+1)%69;
 
 		
 			cDevControlPointer::cData event = pointer.get();
@@ -25059,7 +25063,7 @@ int main(void)
 				}
 				else if (gamestate == -1)
 				{
-					gamestate = game -> ttt_classic(posX,posY);
+					gamestate = game -> ttt_classic(posX,posY,ranDOOM);
 				}
 				else if( Page_Game::instance().restart_state == 2)
 				{
