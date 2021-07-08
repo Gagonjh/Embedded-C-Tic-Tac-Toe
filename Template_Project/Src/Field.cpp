@@ -1,6 +1,6 @@
 /*! 
  *  \brief     	
- *  \details   
+ *  \details   	Die Aufgabe dieser Klasse ist das Zeichnen des Spielfeldes und der Spielsteine.
  *  \author			Yasin Calli 
  */
 

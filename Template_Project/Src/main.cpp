@@ -81,24 +81,6 @@ int main(void)
 				delete game;
 			}
 			
-/*
-			//TEST: Augabe von quadraten auf dem Display im gw�hlten bereich der Touch eingabe
-			if(posX<750 && posX > 50 && posY < 750 && posY > 50) {
-				WORD x = event.posX-50 < 0 ? 0 : posX-50;
-				WORD y = event.posY-50 < 0 ? 0 : posY-50;
-				disp.drawFrame(x,y,100,100,2, cHwDisplayGraphic::Red );
-				//disp.drawText(440,150,18, "%d %d",posX,posY);
-			}
-			else
-			{
-				//disp.drawText(440,150,18, "%d %d",posX,posY);
-				//disp.drawText(440,190,18, "%d %d",event.posX,event.posY);
-			}
-*/		
-//      disp.drawText( 440,20, 18, "x:%3d y:%3d ctrl:0x%02x",  event.posX, event.posY, event.flags );
-		//menueinstance.drawpage();
-
-			
 		//Ausgabe der Page
 		//disp.drawBitmap(20,20,30,30,Symbole::instance().test);
 		
