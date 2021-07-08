@@ -42,9 +42,5 @@ var dir_3dbd3740f0f5b740019bd1a9de84774f =
     [ "Symbole.cpp", "_symbole_8cpp.html", null ],
     [ "Symbole.h", "_symbole_8h.html", [
       [ "Symbole", "class_symbole.html", "class_symbole" ]
-    ] ],
-    [ "Token.cpp", "_token_8cpp.html", null ],
-    [ "Token.h", "_token_8h.html", [
-      [ "Token", "class_token.html", "class_token" ]
     ] ]
 ];

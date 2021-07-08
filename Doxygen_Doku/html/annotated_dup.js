@@ -11,6 +11,5 @@ var annotated_dup =
     [ "Page_Settings", "class_page___settings.html", "class_page___settings" ],
     [ "Pages", "class_pages.html", "class_pages" ],
     [ "Style", "class_style.html", "class_style" ],
-    [ "Symbole", "class_symbole.html", "class_symbole" ],
-    [ "Token", "class_token.html", "class_token" ]
+    [ "Symbole", "class_symbole.html", "class_symbole" ]
 ];

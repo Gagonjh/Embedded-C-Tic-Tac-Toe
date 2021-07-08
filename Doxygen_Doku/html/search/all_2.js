@@ -20,12 +20,11 @@ var searchData=
   ['configstm32f7xx_2eh_26',['configSTM32F7xx.h',['../config_s_t_m32_f7xx_8h.html',1,'']]],
   ['configstm32l1xx_2eh_27',['configSTM32L1xx.h',['../config_s_t_m32_l1xx_8h.html',1,'']]],
   ['configvirtual_2eh_28',['configVirtual.h',['../config_virtual_8h.html',1,'']]],
-  ['controller_29',['Controller',['../class_controller.html',1,'']]],
+  ['controller_29',['Controller',['../class_controller.html',1,'Controller'],['../class_controller.html#a95c56822d667e94b031451729ce069a9',1,'Controller::Controller()']]],
   ['controller_30',['controller',['../class_game.html#a88da61aa4eab9ed1c7c51fe6271491b3',1,'Game']]],
-  ['controller_31',['Controller',['../class_controller.html#a95c56822d667e94b031451729ce069a9',1,'Controller']]],
-  ['controller_2ecpp_32',['Controller.cpp',['../_controller_8cpp.html',1,'']]],
-  ['controller_2eh_33',['Controller.h',['../_controller_8h.html',1,'']]],
-  ['coordinates_34',['coordinates',['../structcoordinates.html',1,'coordinates'],['../class_token.html#a5372d39f4d413941fe47ea84a50807da',1,'Token::coordinates()']]],
-  ['coordinates_35',['Coordinates',['../datatypes_8h.html#ae4e853d643a263355b19a68cd4e8aa0d',1,'datatypes.h']]],
-  ['currentplayer_36',['currentPlayer',['../class_controller.html#a452f9523be3d2930cf5600c612128207',1,'Controller']]]
+  ['controller_2ecpp_31',['Controller.cpp',['../_controller_8cpp.html',1,'']]],
+  ['controller_2eh_32',['Controller.h',['../_controller_8h.html',1,'']]],
+  ['coordinates_33',['coordinates',['../structcoordinates.html',1,'']]],
+  ['coordinates_34',['Coordinates',['../datatypes_8h.html#ae4e853d643a263355b19a68cd4e8aa0d',1,'datatypes.h']]],
+  ['currentplayer_35',['currentPlayer',['../class_controller.html#a452f9523be3d2930cf5600c612128207',1,'Controller']]]
 ];
