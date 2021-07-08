@@ -89,8 +89,7 @@ $(document).ready(function(){initNavTree('class_field.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
-<p><br  />
-  
+<p>Bildet das Feld und die Spielsteine ab.  
  <a href="class_field.html#details">Mehr ...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_field_8h_source.html">Field.h</a>&gt;</code></p>
@@ -98,15 +97,15 @@ $(document).ready(function(){initNavTree('class_field.html',''); initResizable()
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
 <tr class="memitem:ac031d75d9ddcfc4eb95087478eac45b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field.html#ac031d75d9ddcfc4eb95087478eac45b2">drawField</a> ()</td></tr>
+<tr class="memdesc:ac031d75d9ddcfc4eb95087478eac45b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeichnet das Feld.  <a href="class_field.html#ac031d75d9ddcfc4eb95087478eac45b2">Mehr ...</a><br /></td></tr>
 <tr class="separator:ac031d75d9ddcfc4eb95087478eac45b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d382791642f8025d25347ad2f4e9b79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field.html#a6d382791642f8025d25347ad2f4e9b79">drawToken</a> (<a class="el" href="datatypes_8h.html#ae4e853d643a263355b19a68cd4e8aa0d">Coordinates</a>)</td></tr>
+<tr class="memdesc:a6d382791642f8025d25347ad2f4e9b79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeichnet das Feld.  <a href="class_field.html#a6d382791642f8025d25347ad2f4e9b79">Mehr ...</a><br /></td></tr>
 <tr class="separator:a6d382791642f8025d25347ad2f4e9b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock"><p><br  />
- </p>
-<p><br  />
- </p><dl class="section author"><dt>Autor</dt><dd>Yasin Calli </dd></dl>
+<div class="textblock"><p>Bildet das Feld und die Spielsteine ab. </p>
+<p>Zeigt das Spielfeld und die Spielsteine auf dem Bildschirm an. </p><dl class="section author"><dt>Autor</dt><dd>Yasin Calli </dd></dl>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_field_8h_source.html#l00011">11</a> der Datei <a class="el" href="_field_8h_source.html">Field.h</a>.</p>
 </div><h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
@@ -125,14 +124,17 @@ $(document).ready(function(){initNavTree('class_field.html',''); initResizable()
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="_field_8cpp_source.html#l00012">12</a> der Datei <a class="el" href="_field_8cpp_source.html">Field.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawFrame(50,50,390,390,2, <a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Field );</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">for</span>(WORD i = 180; i&lt;440; i+=130) {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawLine(i,50,i,440,2,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Field);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawLine(50,i,440,i,2,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Field);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<p>Zeichnet das Feld. </p>
+<p>Erstellt ein 3x3 gro�es Feld auf dem Bildschirm. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_field_8cpp_source.html#l00007">7</a> der Datei <a class="el" href="_field_8cpp_source.html">Field.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawFrame(50,50,390,390,2, <a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Field );</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">for</span>(WORD i = 180; i&lt;440; i+=130) {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawLine(i,50,i,440,2,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Field);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawLine(50,i,440,i,2,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Field);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
 <div class="ttc" id="aclass_style_html_aa39efd917d75e51c7d470cbb84939e9e"><div class="ttname"><a href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a></div><div class="ttdeci">static Style &amp; instance()</div><div class="ttdef"><b>Definition:</b> <a href="_style_8h_source.html#l00015">Style.h:15</a></div></div>
 <div class="ttc" id="amain_8cpp_html_a9cfdc59922fc042bda22a60539d05a54"><div class="ttname"><a href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a></div><div class="ttdeci">cDevDisplayGraphic &amp; disp1</div><div class="ttdoc">Main Klasse des Projektes.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00012">main.cpp:12</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -140,7 +142,7 @@ Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_field_ac031d75d9ddcfc4eb95087478eac45b2_cgraph.png" border="0" usemap="#aclass_field_ac031d75d9ddcfc4eb95087478eac45b2_cgraph" alt=""/></div>
 <map name="aclass_field_ac031d75d9ddcfc4eb95087478eac45b2_cgraph" id="aclass_field_ac031d75d9ddcfc4eb95087478eac45b2_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,119,32"/>
+<area shape="rect" title="Zeichnet das Feld." alt="" coords="5,5,119,32"/>
 <area shape="rect" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e" title=" " alt="" coords="167,5,276,32"/>
 </map>
 </div>
@@ -163,21 +165,30 @@ Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="_field_8cpp_source.html#l00021">21</a> der Datei <a class="el" href="_field_8cpp_source.html">Field.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_symbole.html#a68c1d73355d8a5d18fc5106264a7c0f6">Symbole::instance</a>().<a class="code" href="class_symbole.html#aa0cc9c71ca4769fe6f2bd94cc05abad4">drawPiece</a>(token.<a class="code" href="structcoordinates.html#a6e2a37abbb6fe9d229d9916dee28032b">x</a>,token.<a class="code" href="structcoordinates.html#aeb9eb52c2b49196adcae6f5dd71e5d02">y</a>,token.<a class="code" href="structcoordinates.html#aa1c8f13ecd1dbd193e0a0fad2e778c82">player</a>);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<p>Zeichnet das Feld. </p>
+<p>Zeichnet den Spielstein des Spielers der dran ist auf das Spielfeld. </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td>enthaelt Koordinaten und die zugehoerigen Spielerinformationen. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Siehe auch</dt><dd><a class="el" href="class_symbole.html#a68c1d73355d8a5d18fc5106264a7c0f6">Symbole::instance()</a>.drawPiece() </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_field_8cpp_source.html#l00022">22</a> der Datei <a class="el" href="_field_8cpp_source.html">Field.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_symbole.html#a68c1d73355d8a5d18fc5106264a7c0f6">Symbole::instance</a>().<a class="code" href="class_symbole.html#aa0cc9c71ca4769fe6f2bd94cc05abad4">drawPiece</a>(token.<a class="code" href="structcoordinates.html#a6e2a37abbb6fe9d229d9916dee28032b">x</a>,token.<a class="code" href="structcoordinates.html#aeb9eb52c2b49196adcae6f5dd71e5d02">y</a>,token.<a class="code" href="structcoordinates.html#aa1c8f13ecd1dbd193e0a0fad2e778c82">player</a>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
 <div class="ttc" id="aclass_symbole_html_a68c1d73355d8a5d18fc5106264a7c0f6"><div class="ttname"><a href="class_symbole.html#a68c1d73355d8a5d18fc5106264a7c0f6">Symbole::instance</a></div><div class="ttdeci">static Symbole &amp; instance()</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8h_source.html#l00016">Symbole.h:16</a></div></div>
 <div class="ttc" id="aclass_symbole_html_aa0cc9c71ca4769fe6f2bd94cc05abad4"><div class="ttname"><a href="class_symbole.html#aa0cc9c71ca4769fe6f2bd94cc05abad4">Symbole::drawPiece</a></div><div class="ttdeci">void drawPiece(short, short, short)</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8cpp_source.html#l00023">Symbole.cpp:23</a></div></div>
-<div class="ttc" id="astructcoordinates_html_a6e2a37abbb6fe9d229d9916dee28032b"><div class="ttname"><a href="structcoordinates.html#a6e2a37abbb6fe9d229d9916dee28032b">coordinates::x</a></div><div class="ttdeci">uint16_t x</div><div class="ttdef"><b>Definition:</b> <a href="datatypes_8h_source.html#l00014">datatypes.h:14</a></div></div>
-<div class="ttc" id="astructcoordinates_html_aa1c8f13ecd1dbd193e0a0fad2e778c82"><div class="ttname"><a href="structcoordinates.html#aa1c8f13ecd1dbd193e0a0fad2e778c82">coordinates::player</a></div><div class="ttdeci">uint8_t player</div><div class="ttdef"><b>Definition:</b> <a href="datatypes_8h_source.html#l00016">datatypes.h:16</a></div></div>
-<div class="ttc" id="astructcoordinates_html_aeb9eb52c2b49196adcae6f5dd71e5d02"><div class="ttname"><a href="structcoordinates.html#aeb9eb52c2b49196adcae6f5dd71e5d02">coordinates::y</a></div><div class="ttdeci">uint16_t y</div><div class="ttdef"><b>Definition:</b> <a href="datatypes_8h_source.html#l00015">datatypes.h:15</a></div></div>
+<div class="ttc" id="astructcoordinates_html_a6e2a37abbb6fe9d229d9916dee28032b"><div class="ttname"><a href="structcoordinates.html#a6e2a37abbb6fe9d229d9916dee28032b">coordinates::x</a></div><div class="ttdeci">uint16_t x</div><div class="ttdef"><b>Definition:</b> <a href="datatypes_8h_source.html#l00018">datatypes.h:18</a></div></div>
+<div class="ttc" id="astructcoordinates_html_aa1c8f13ecd1dbd193e0a0fad2e778c82"><div class="ttname"><a href="structcoordinates.html#aa1c8f13ecd1dbd193e0a0fad2e778c82">coordinates::player</a></div><div class="ttdeci">uint8_t player</div><div class="ttdef"><b>Definition:</b> <a href="datatypes_8h_source.html#l00020">datatypes.h:20</a></div></div>
+<div class="ttc" id="astructcoordinates_html_aeb9eb52c2b49196adcae6f5dd71e5d02"><div class="ttname"><a href="structcoordinates.html#aeb9eb52c2b49196adcae6f5dd71e5d02">coordinates::y</a></div><div class="ttdeci">uint16_t y</div><div class="ttdef"><b>Definition:</b> <a href="datatypes_8h_source.html#l00019">datatypes.h:19</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_field_a6d382791642f8025d25347ad2f4e9b79_cgraph.png" border="0" usemap="#aclass_field_a6d382791642f8025d25347ad2f4e9b79_cgraph" alt=""/></div>
 <map name="aclass_field_a6d382791642f8025d25347ad2f4e9b79_cgraph" id="aclass_field_a6d382791642f8025d25347ad2f4e9b79_cgraph">
-<area shape="rect" title=" " alt="" coords="5,132,125,159"/>
+<area shape="rect" title="Zeichnet das Feld." alt="" coords="5,132,125,159"/>
 <area shape="rect" href="class_symbole.html#aa0cc9c71ca4769fe6f2bd94cc05abad4" title=" " alt="" coords="173,107,315,133"/>
 <area shape="rect" href="class_symbole.html#a68c1d73355d8a5d18fc5106264a7c0f6" title=" " alt="" coords="179,157,309,184"/>
 <area shape="rect" href="class_symbole.html#a38cc1a8228989983825975dddee92f18" title=" " alt="" coords="371,5,512,32"/>
