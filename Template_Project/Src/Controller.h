@@ -1,6 +1,4 @@
-/*! 
- *  \brief     	
- *  \details   
+/*!   
  *  \author			Yasin Calli 
  *  \author    	Joshua Hahn
  */

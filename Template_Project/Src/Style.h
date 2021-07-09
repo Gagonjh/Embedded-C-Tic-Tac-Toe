@@ -1,6 +1,4 @@
 /*! 
- *  \brief     	
- *  \details   	
  *  \author    	Joshua Hahn
  *  \date      	21.06.2021
  */
@@ -10,18 +8,26 @@
 
 class Style
 {
-		public:
-			//Konstruktor und übergabe der Instanz
+//Konstruktor und Destruktor
+	public:
+			//! Zugriff auf die Instanz der Klasse von Außerhalb
 				static Style& instance()
 			{
 				static Style _instance;
 				return _instance;
 			}
+			//! Destruktor Definition und Deklaration
 			~Style() {}
-			
-		//Public Methoden
-			void changeActiveColorTheme(short int);
-		//Public Variablen
+				
+	private:
+			Style();
+			//! Verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann
+			Style( const Style& );
+			//! Verhindert weitere Instanz durch Kopie	
+			Style & operator = (const Style &);
+
+//Variabeln
+	public:
 			short color_Backround;
 			short color_Font;
 			short color_Boxes;
@@ -29,38 +35,51 @@ class Style
 			short color_Player_2;
 			short color_Field;
 			short color_Mode;
-		
+	
 		private:
-			//dark 0
-			short dark_Color_Backround;
-			short dark_Color_Font;
-			short dark_Color_Boxes ;
-			short dark_Color_Player_1;
-			short dark_Color_Player_2 ;
-			short dark_Color_Field;
-			short dark_Color_Border;
-		//Light 1
-			short light_Color_Backround;
-			short light_Color_Font;
-			short light_Color_Boxes;
-			short light_Color_Player_1;
-			short light_Color_Player_2;
-			short light_Color_Field;
-		//Mother Russia 2
-			short ru_Color_Backround;
-			short ru_Color_Font;
-			short ru_Color_Boxes;
-			short ru_Color_Player_1;
-			short ru_Color_Player_2;
+			//! Dunkle Hintergrundfarbe (Anthrazit)
+			short dark_Color_Backround;			
+			//!	Dunkle Text Farbe (Weiß)
+			short dark_Color_Font;					
+			//!	Dunkle Umrandungsfarbe (Hellgrau)
+			short dark_Color_Boxes ;				
+			//!	Dunkle Spieler 1 Farbe (Grün)
+			short dark_Color_Player_1;			
+			//!	Dunkle Spieler 2 Farbe (Blau)
+			short dark_Color_Player_2 ;			
+			//!	Dunkle Feld Farbe (Orange)
+			short dark_Color_Field;					
+		
+			//! Helle Hintergrundfarbe (Weiß)
+			short light_Color_Backround;		
+			//!	Helle Text Farbe (Schwarz)
+			short light_Color_Font;					
+			//!	Helle Umrandungsfarbe (Lila)
+			short light_Color_Boxes;				
+			//!	Helle Spieler 1 Farbe (Gelb)
+			short light_Color_Player_1;			
+			//!	Helle Spieler 2 Farbe (Hellblau)
+			short light_Color_Player_2;			
+			//!	Helle Feld Farbe (Lila)
+			short light_Color_Field;				
+
+			//! Mütterchen Russlands Hintergrundfarbe (Bordeaux Rot)
+			short ru_Color_Backround;				
+			//!	Mütterchen Russlands Text Farbe (Gold Gelb)
+			short ru_Color_Font;						
+			//!	Mütterchen Russlands Umrandungsfarbe (Anthrazit)
+			short ru_Color_Boxes;						
+			//!	Mütterchen Russlands Spieler 1 Farbe (Gold Gelb)
+			short ru_Color_Player_1;				
+			//!	Mütterchen Russlands Spieler 2 Farbe (Gold Gelb)
+			short ru_Color_Player_2;				
+			//!	Mütterchen Russlands Feld Farbe (Hellgrau)
 			short ru_Color_Field;
 		
-			Style();// verhindert, dass ein Objekt von außerhalb von N erzeugt wird.
-                    // protected, wenn man von der Klasse noch erben möchte
-			Style( const Style& );//verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann
-				
-			Style & operator = (const Style &); //Verhindert weitere Instanz durch Kopie
-			
-			//Private Variablen
+//Methoden			
+		public:
+
+			void changeActiveColorTheme(short int);
 			
 };
 

@@ -8,36 +8,39 @@
 #ifndef PAGE_Game_H
 #define PAGE_Game_H
 
-extern short int iButtons_cor_G[10][5];
+//!Coordinaten und Weiterleitungsanweisung für die Seite.
+extern short int iButtons_cor_G[2][5];
 
 class Page_Game : public Pages
 {
+//Konstruktor und Destruktor
 		public:
-			//Konstruktor und übergabe der Instanz
+			//! Zugriff auf die Instanz der Klasse von Außerhalb.
 				static Page_Game& instance()
 			{
 				static Page_Game _instance;
 				return _instance;
 			}
+			//! Destruktor Definition und Deklaration.
 			~Page_Game() {}
 				
-		void output_Current_Player(short);
-			
-		
-		short restart_state;
-		//Public Methoden
-			void drawpage(void);
-				
-			short int buttonOnPagePressed(int,int);
-		
 		private:	
-		
-			Page_Game();// verhindert, dass ein Objekt von außerhalb von N erzeugt wird.
-                    // protected, wenn man von der Klasse noch erben möchte
-			Page_Game( const Page_Game& );//verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann
+			Page_Game();
+			//! Verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann.
+			Page_Game( const Page_Game& );
+			//! Verhindert weitere Instanz durch Kopie.
+			Page_Game & operator = (const Page_Game &);
 				
-			Page_Game & operator = (const Page_Game &); //Verhindert weitere Instanz durch Kopie
-			
+//Variabeln
+		public:
+			//! Dient als Schnitstelle zwischen dem Button Revance! und einer externen funktion die diese Variable abruft.
+			short restart_state;
+
+//Methoden	
+		public:
+		void output_Current_Player(short);
+		void drawpage(void);
+		short int buttonOnPagePressed(int,int);		
 };
 
 #endif

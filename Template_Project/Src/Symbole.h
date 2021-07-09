@@ -3,7 +3,7 @@
  *  \details   
  *  \author    	Joshua Hahn
  *  \date      	05.07.2021
- *  \bug				Speicher von Keil ist voll sobalt man größere erstellt
+ *  \bug				Speicher von Keil ist voll sobalt man größere Bitmaps erstellt.
  */
  
  #ifndef SYMBOLE_H
@@ -11,29 +11,38 @@
 
 class Symbole
 {
+//Konstruktor und Destruktor
 		public:
-			//Konstruktor und übergabe der Instanz
-				static Symbole& instance()
+			//! Zugriff auf die Instanz der Klasse von Außerhalb
+			static Symbole& instance()
 			{
 				static Symbole _instance;
 				return _instance;
 			}
+			//! Destruktor Definition und Deklaration
 			~Symbole() {}
 				
-		void drawPiece(short,short,short);
-		void setPlayerSim(short,short);
-				
 		private:
-				
+			Symbole();
+			//! Verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann
+			Symbole( const Symbole& );
+			//! Verhindert weitere Instanz durch Kopie
+			Symbole & operator = (const Symbole &);
+
+//Variabeln
+		private:
+			//! Symbole Player 1
 			short simP1;
+			//! Symbole Player 2
 			short simP2;
 		
-			Symbole();// verhindert, dass ein Objekt von außerhalb von N erzeugt wird.
-                    // protected, wenn man von der Klasse noch erben möchte
-			Symbole( const Symbole& );//verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann
+//Methoden	
+		public:
+			void drawPiece(short,short,short);
+			void setPlayerSim(short,short);
 				
-			Symbole & operator = (const Symbole &); //Verhindert weitere Instanz durch Kopie
-			
+		private:			
+	
 			void drawSickle(short,short,short);
 			void drawHammer(short,short,short);
 			void drawCircle(short,short,short);

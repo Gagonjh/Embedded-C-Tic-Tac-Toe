@@ -1,15 +1,19 @@
 /*! 
- *  \brief     	
- *  \details   	
+ *  \brief     	Definiert das Farbthema der Anwendung
+ *  \details   	Die Klasse stellt unterschiedliche Farbthemen für den Nutzer zur Wahl zur verfügung. Die Klasse ist ein Singleton somit gibt es nur eine Instanz auf die man mit Style::instance(). zugreifen kann.
  *  \author    	Joshua Hahn
  *  \date      	21.06.2021
  */
  
 #include "./Project_Headers.h"
 
+/*!
+	\brief Private Konstruktor der Klasse.
+	\details Initalisiert die Unterschiedlichen Farbmodi für die zu verfügung stehen
+*/
 Style::Style() 
 {
-			//Menue& menueinstance = Menue::instance();
+//! Dunkles Farbthema Case 0
 			dark_Color_Backround = 0x530C;
 			dark_Color_Font = 0xFFFF;
 			dark_Color_Boxes = 0x94F4;
@@ -17,7 +21,7 @@ Style::Style()
 			dark_Color_Player_2 = 0x137D;
 			dark_Color_Field = 0xE982;
 			
-		//Light 1
+//! Helles Farbthema Case 1
 			light_Color_Backround = 0xFFFF;
 			light_Color_Font = 0x0000;
 			light_Color_Boxes = 0xB591;
@@ -25,7 +29,7 @@ Style::Style()
 			light_Color_Player_2 = 0x9619;
 			light_Color_Field = 0x881C;
 		
-	//Mother Russia 2
+//! Mütterchen Russland Case 2
 			ru_Color_Backround = 0x98A2;
 			ru_Color_Font = 0xF666;
 			ru_Color_Boxes = 0x94B2;
@@ -33,7 +37,7 @@ Style::Style()
 			ru_Color_Player_2 = 0xF666;
 			ru_Color_Field = 0x528A;
 	
-		//Default
+//! Definition des Defaults als Dunkles Farbthema
 			color_Backround = dark_Color_Backround;
 			color_Font = dark_Color_Font;
 			color_Boxes = dark_Color_Boxes;
@@ -45,6 +49,12 @@ Style::Style()
 			color_Mode = 0;
 }			
 
+/*!
+	\brief Setzt Aktive Farbe
+	\details Wertet den übergegbenen gewünschen Farbmodus aus und überschreibt die public werte für den zugriff auserhalb der Klasse Style.
+	\param cmode stellt den neuen Fabrmodus da.
+	\param posY ist die y Koordinate auf dem Bildschirm auf den der/die Spieler/in getippt hat.
+*/
 void Style::changeActiveColorTheme(short int cmode)
 {
 	color_Mode = cmode;

@@ -22425,6 +22425,10 @@ class cTaskHandler : public cList::Item
 
 #line 12 "Src\\././datatypes.h"
 
+
+
+
+ 
 typedef struct coordinates {
 	uint16_t x;
 	uint16_t y;
@@ -22436,11 +22440,9 @@ typedef struct coordinates {
 
 
 
-
-
  
 
-#line 11 "Src\\././Controller.h"
+#line 9 "Src\\././Controller.h"
 #line 1 "Src\\./././Cells.h"
 
 
@@ -22456,14 +22458,41 @@ class Cells {
 		void initializeCells();
 		void initializeDefaultRows();
 	public:
+		
+
+ 
 		BYTE* topRow;
+		
+
+ 
 		BYTE* centerRow;
+		
+
+ 
 		BYTE* bottomRow;
+		
+
+ 
 		BYTE* leftColumn;
+		
+
+ 
 		BYTE* centerColumn;
+		
+
+ 
 		BYTE* rightColumn;
+		
+
+ 
 		BYTE* downDiagonal;
+		
+
+ 
 		BYTE* upDiagonal;
+		
+
+ 
 		Coordinates* cells;
 		bool rowIsComplete();
 		Cells();
@@ -22471,7 +22500,7 @@ class Cells {
 		~ Cells ();
 };
 
-#line 12 "Src\\././Controller.h"
+#line 10 "Src\\././Controller.h"
 #line 1 "Src\\./././Field.h"
 
 
@@ -22489,13 +22518,25 @@ class Field
 		void drawField();
 		void drawToken(Coordinates);
 };
-#line 13 "Src\\././Controller.h"
+#line 11 "Src\\././Controller.h"
 
 class Controller {
 	private:
+		
+
+ 
 		short currentPlayer;
+		
+
+ 
 		short round;
+		
+
+ 
 		Cells* cells;
+		
+
+ 
 		Field* field;
 	public:
 		Controller();
@@ -22523,8 +22564,16 @@ class Controller {
 class Game
 {
 	private:
+		
+
+
+ 
 		Controller* controller;
 	public:
+		
+		
+
+ 
 		short unsigned waitAi;
 		short ttt_classic(short,short,uint8_t);
 	Game();
@@ -22681,29 +22730,38 @@ class Page_Settings : public Pages
 
 class Symbole
 {
+
 		public:
 			
-				static Symbole& instance()
+			static Symbole& instance()
 			{
 				static Symbole _instance;
 				return _instance;
 			}
+			
 			~Symbole() {}
 				
-		void drawPiece(short,short,short);
-		void setPlayerSim(short,short);
-				
 		private:
-				
+			Symbole();
+			
+			Symbole( const Symbole& );
+			
+			Symbole & operator = (const Symbole &);
+
+
+		private:
+			
 			short simP1;
+			
 			short simP2;
 		
-			Symbole();
-                    
-			Symbole( const Symbole& );
+
+		public:
+			void drawPiece(short,short,short);
+			void setPlayerSim(short,short);
 				
-			Symbole & operator = (const Symbole &); 
-			
+		private:			
+	
 			void drawSickle(short,short,short);
 			void drawHammer(short,short,short);
 			void drawCircle(short,short,short);
@@ -22721,10 +22779,12 @@ class Symbole
 
 
 
-extern short int iButtons_cor_G[10][5];
+
+extern short int iButtons_cor_G[2][5];
 
 class Page_Game : public Pages
 {
+
 		public:
 			
 				static Page_Game& instance()
@@ -22732,25 +22792,26 @@ class Page_Game : public Pages
 				static Page_Game _instance;
 				return _instance;
 			}
+			
 			~Page_Game() {}
 				
-		void output_Current_Player(short);
-			
-		
-		short restart_state;
-		
-			void drawpage(void);
-				
-			short int buttonOnPagePressed(int,int);
-		
 		private:	
-		
 			Page_Game();
-                    
-			Page_Game( const Page_Game& );
-				
-			Page_Game & operator = (const Page_Game &); 
 			
+			Page_Game( const Page_Game& );
+			
+			Page_Game & operator = (const Page_Game &);
+				
+
+		public:
+			
+			short restart_state;
+
+
+		public:
+		void output_Current_Player(short);
+		void drawpage(void);
+		short int buttonOnPagePressed(int,int);		
 };
 
 #line 24 "Src\\./Project_Headers.h"
@@ -22799,8 +22860,6 @@ class Page_History : public Pages
 
 
 
-
-
  
 
 
@@ -22808,18 +22867,26 @@ class Page_History : public Pages
 
 class Style
 {
-		public:
+
+	public:
 			
 				static Style& instance()
 			{
 				static Style _instance;
 				return _instance;
 			}
-			~Style() {}
 			
-		
-			void changeActiveColorTheme(short int);
-		
+			~Style() {}
+				
+	private:
+			Style();
+			
+			Style( const Style& );
+			
+			Style & operator = (const Style &);
+
+
+	public:
 			short color_Backround;
 			short color_Font;
 			short color_Boxes;
@@ -22827,38 +22894,51 @@ class Style
 			short color_Player_2;
 			short color_Field;
 			short color_Mode;
-		
+	
 		private:
 			
-			short dark_Color_Backround;
-			short dark_Color_Font;
-			short dark_Color_Boxes ;
-			short dark_Color_Player_1;
-			short dark_Color_Player_2 ;
-			short dark_Color_Field;
-			short dark_Color_Border;
+			short dark_Color_Backround;			
+			
+			short dark_Color_Font;					
+			
+			short dark_Color_Boxes ;				
+			
+			short dark_Color_Player_1;			
+			
+			short dark_Color_Player_2 ;			
+			
+			short dark_Color_Field;					
 		
-			short light_Color_Backround;
-			short light_Color_Font;
-			short light_Color_Boxes;
-			short light_Color_Player_1;
-			short light_Color_Player_2;
-			short light_Color_Field;
-		
-			short ru_Color_Backround;
-			short ru_Color_Font;
-			short ru_Color_Boxes;
-			short ru_Color_Player_1;
-			short ru_Color_Player_2;
+			
+			short light_Color_Backround;		
+			
+			short light_Color_Font;					
+			
+			short light_Color_Boxes;				
+			
+			short light_Color_Player_1;			
+			
+			short light_Color_Player_2;			
+			
+			short light_Color_Field;				
+
+			
+			short ru_Color_Backround;				
+			
+			short ru_Color_Font;						
+			
+			short ru_Color_Boxes;						
+			
+			short ru_Color_Player_1;				
+			
+			short ru_Color_Player_2;				
+			
 			short ru_Color_Field;
 		
-			Style();
-                    
-			Style( const Style& );
-				
-			Style & operator = (const Style &); 
-			
-			
+
+		public:
+
+			void changeActiveColorTheme(short int);
 			
 };
 
@@ -22870,6 +22950,10 @@ extern uint8_t gameMode;
 
 #line 9 "Src\\Controller.cpp"
 
+
+
+
+ 
 Controller::Controller()
 {
 	field = new Field;
@@ -22879,12 +22963,25 @@ Controller::Controller()
 	round=0;
 };
 
+
+
+
+ 
 Controller::~Controller()
 {
 	delete field;
 	delete cells;
 }
 
+
+
+
+
+
+
+
+
+ 
 bool Controller::handleUserInput(short posX, short posY)
 {
 	for(BYTE i = 0; i<9; i++)
@@ -22931,6 +23028,12 @@ short Controller::getGameState()
 	return state;
 }
 
+
+
+
+
+
+ 
 void Controller::aiMove(uint8_t ranDOOMizer)
 {
 	while(1)
@@ -22950,9 +23053,8 @@ void Controller::aiMove(uint8_t ranDOOMizer)
 
 
 
-
-
-short Controller::getcurrentPlayer(void)
+ 
+short Controller::getcurrentPlayer()
 {
 	return currentPlayer;
 }

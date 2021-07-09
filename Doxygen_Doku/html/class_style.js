@@ -14,7 +14,6 @@ var class_style =
     [ "color_Player_1", "class_style.html#adbd96aa5320c20ac9d7a2e2406f043b3", null ],
     [ "color_Player_2", "class_style.html#a1777a52943555b1ea694200df1dde93e", null ],
     [ "dark_Color_Backround", "class_style.html#a087d23cbc0325367b53ec2a58ddf1cda", null ],
-    [ "dark_Color_Border", "class_style.html#a56961e3eb61319a9ed4219c910a6ef57", null ],
     [ "dark_Color_Boxes", "class_style.html#ae3f5b5594486d81f538ba2ca063a8557", null ],
     [ "dark_Color_Field", "class_style.html#a8e73c571c9e95e382e0e7a5cbfa7a17e", null ],
     [ "dark_Color_Font", "class_style.html#ae474a475c3f9559601b3b372990837d7", null ],
