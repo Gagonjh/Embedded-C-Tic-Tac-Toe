@@ -1,6 +1,4 @@
 /*! 
- *  \brief     
- *  \details   
  *  \author    Joshua Hahn
  *  \date      05.07.2021
  */

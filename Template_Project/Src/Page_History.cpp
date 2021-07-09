@@ -1,12 +1,20 @@
 /*! 
- *  \brief     
- *  \details   
  *  \author    Joshua Hahn
  *  \date      21.06.2021
  *  \file 
  */
 
 #include "./Project_Headers.h"
+
+ short int iButtons_cor_H[1][5] =
+	{
+				{565,795,415,475,0}, 	//Button 1 :Hauptmenü	
+	};//[*][0]=x start, [*][1]=x end, [*][2]=y start, [*][3]=y end, [*][4]= Page oder -2
+
+/*!
+	\brief Private Konstruktor der Klasse.
+	\details Initalisiert den das Gewinner Array und den Offset.
+*/
 Page_History::Page_History()
 {
 	winner = new short[18];
@@ -15,37 +23,35 @@ Page_History::Page_History()
 	{
 				winner[i] = temp[i];
 	}
-	
 	hOffset=0;
 }
 
+/*!
+	\brief Destruktor für die Klasse.
+	\details Löscht die Gewinner wird normalerweise nicht aufgerufen da die Klasse ein Singelton ist. Der Formhalber enthalten weil winner mit New deklariert ist.
+*/
 Page_History::~Page_History() 
 {
 	delete winner;
 }
 
-
-
- short int iButtons_cor_H[10][5] =
-	{
-				{565,795,415,475,0}, 	//Button 1 :Hauptmenü
-				{0,0,0,0,0}, 					//Button 2 :
-				{0,0,0,0,0}, 					//Button 3 :
-				{0,0,0,0,0}, 					//Button 4 :
-				{0,0,0,0,0}, 					//Button 5 :
-				{0,0,0,0,0}, 					//Button 6 :
-				{0,0,0,0,0}, 					//Button 7 : 
-				{0,0,0,0,0}, 					//Button 8 : 
-				{0,0,0,0,0}, 					//Button 9 :
-				{0,0,0,0,0} 					//Button 10:
-			};//[*][0]=x start, [*][1]=x end, [*][2]=y start & [*][3]=y end 
-
+/*!
+	\brief Speichert Gewinner
+	\details Der übergebene Gewinner wird im Array+Offset gespeichert das Offset wird erhöht.
+	\param Letzter Gewinner des Spiels (0 = Unendschieden/Nicht Erfasst,1 = Spieler 1,2 = Spieler 2)
+*/
 void Page_History::newWinner(short winnerLastRound)
 {
 	winner[hOffset] = winnerLastRound;
 	hOffset = (hOffset+1)%18;
 }
 
+/*!
+	\brief Gibt den Inhalt der Seite aus
+	\details Setzt die Notwendigen Farbwerte in der EmbSysLib. Und Zeichnet die Button mit der Vererbten funktion aus Pages. Überschreibt Pages::drawpage()
+	\sa Pages::draw_button()
+	\sa Pages::drawpage()
+*/
 void Page_History::drawpage()
 {
 	disp1.clear();
@@ -68,6 +74,14 @@ void Page_History::drawpage()
 	}
 }
 
+/*!
+	\brief Prüft ob ein Button gedrückt ist.
+	\details Nutzt die Vererbte funktion aus der Pages isPressed um sagen zu können ob ein Button gedrückt ist. Falls ja wird die gewünschte Funktionaität aufgerufen.
+	\param X Koordinate der Touch Eingabe.
+	\param Y Koordinate der Touch Eingabe.
+	\return Gibt die Seite zurück auf die gewechselt werden soll. 
+	\sa Pages::isPressed()
+*/
 short int Page_History::buttonOnPagePressed(int posX,int posY)
 {
 	short int p = -1;

@@ -1,18 +1,14 @@
 var searchData=
 [
-  ['server_145',['server',['../config_virtual_8h.html#a79e59cd554c2fd6a637fb808d9e15811',1,'configVirtual.h']]],
-  ['setplayersim_146',['setPlayerSim',['../class_symbole.html#a616db868db8f0fce7785f981538123b2',1,'Symbole']]],
-  ['simp1_147',['simP1',['../class_symbole.html#a627cb88f90f2e20ef96b00be02237c49',1,'Symbole']]],
-  ['simp2_148',['simP2',['../class_symbole.html#afca92d27473d0763925cc6f9866f992b',1,'Symbole']]],
-  ['siteheader_149',['siteHeader',['../class_pages.html#a9a6cfcf2dd0c1b981c55c036188d9cc7',1,'Pages']]],
-  ['spi1_150',['spi1',['../config_l_p_c1758_8h.html#a6f4c5469c0dc377fad6ec20791a745e4',1,'configLPC1758.h']]],
-  ['spi2_151',['spi2',['../config_s_t_m32_l1xx_8h.html#a886cf04b75beda56117233cd3cef889c',1,'configSTM32L1xx.h']]],
-  ['spidisplay_152',['spiDisplay',['../config_l_p_c1758_8h.html#a911379c5e8a39caec3bef995c4dc4e0c',1,'spiDisplay(spi1, port0, 6):&#160;configLPC1758.h'],['../config_s_t_m32_l1xx_8h.html#a514cde14ea5984a332fb70e00ab439b7',1,'spiDisplay(spi2, portB, 12):&#160;configSTM32L1xx.h']]],
-  ['style_153',['Style',['../class_style.html',1,'Style'],['../class_style.html#a914f187818eb30c0cebe3df5378bfa0a',1,'Style::Style()'],['../class_style.html#aa9f20562de12df6e79e0281046ba1ea2',1,'Style::Style(const Style &amp;)']]],
-  ['style_2ecpp_154',['Style.cpp',['../_style_8cpp.html',1,'']]],
-  ['style_2eh_155',['Style.h',['../_style_8h.html',1,'']]],
-  ['symbole_156',['Symbole',['../class_symbole.html',1,'Symbole'],['../class_symbole.html#a2bf6078786ea16bbac05ffdb0bc489f1',1,'Symbole::Symbole()'],['../class_symbole.html#ac3ea281d3e87e9d13d9bafdc50561179',1,'Symbole::Symbole(const Symbole &amp;)']]],
-  ['symbole_2ecpp_157',['Symbole.cpp',['../_symbole_8cpp.html',1,'']]],
-  ['symbole_2eh_158',['Symbole.h',['../_symbole_8h.html',1,'']]],
-  ['sys_159',['sys',['../config_l_p_c1758_8h.html#af8d0649c539d7951ae9000b98bff9178',1,'sys():&#160;configLPC1758.h'],['../config_s_t_m32_f7xx_8h.html#af8d0649c539d7951ae9000b98bff9178',1,'sys():&#160;configSTM32F7xx.h'],['../config_s_t_m32_l1xx_8h.html#af8d0649c539d7951ae9000b98bff9178',1,'sys():&#160;configSTM32L1xx.h'],['../config_virtual_8h.html#af8d0649c539d7951ae9000b98bff9178',1,'sys():&#160;configVirtual.h']]]
+  ['restart_5fstate_135',['restart_state',['../class_page___game.html#a4459a3df3e03d1933dc994720debb2b3',1,'Page_Game']]],
+  ['rightcolumn_136',['rightColumn',['../class_cells.html#a8b37aa8e937b32d2a71dcf6779cb406b',1,'Cells']]],
+  ['round_137',['round',['../class_controller.html#afed28b2545a99e5e7bd6f11652d143b8',1,'Controller']]],
+  ['rowiscomplete_138',['rowIsComplete',['../class_cells.html#aa7da5aa5fc83f07733632d71f5b59752',1,'Cells']]],
+  ['rtc_139',['rtc',['../config_l_p_c1758_8h.html#a453d5c99cc38d79ea3e414eda7f7ec92',1,'rtc():&#160;configLPC1758.h'],['../config_s_t_m32_l1xx_8h.html#a453d5c99cc38d79ea3e414eda7f7ec92',1,'rtc():&#160;configSTM32L1xx.h'],['../config_virtual_8h.html#a453d5c99cc38d79ea3e414eda7f7ec92',1,'rtc():&#160;configVirtual.h'],['../config_s_t_m32_f7xx_8h.html#a38dd1149e1a23729d2d023d0cc181c1a',1,'rtc(cHwRTC_0::LSI):&#160;configSTM32F7xx.h']]],
+  ['ru_5fcolor_5fbackround_140',['ru_Color_Backround',['../class_style.html#aac2db4f78f84949d06261cce4afa55b6',1,'Style']]],
+  ['ru_5fcolor_5fboxes_141',['ru_Color_Boxes',['../class_style.html#a5f62fd16405d853582f2271b55c9d9fa',1,'Style']]],
+  ['ru_5fcolor_5ffield_142',['ru_Color_Field',['../class_style.html#ad3fa9a93b6c3c84f2d4c436ec42af0d7',1,'Style']]],
+  ['ru_5fcolor_5ffont_143',['ru_Color_Font',['../class_style.html#aa1d2f8170934005909c5c0ed90c91aa3',1,'Style']]],
+  ['ru_5fcolor_5fplayer_5f1_144',['ru_Color_Player_1',['../class_style.html#aac8e7beec2f9f3423657a7312602b48f',1,'Style']]],
+  ['ru_5fcolor_5fplayer_5f2_145',['ru_Color_Player_2',['../class_style.html#a1d67343ca1a46b8d3633e3f03128d3e7',1,'Style']]]
 ];

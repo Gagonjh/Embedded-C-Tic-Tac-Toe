@@ -1,6 +1,6 @@
 /*! 
- *  \brief     
- *  \details   
+ *  \brief     	Spielsymbole(Singelton)
+ *  \details   	Hat alle Spielsymbole und die Funktionen um diese Spielern zuzuordnen.
  *  \author    	Joshua Hahn
  *  \date      	05.07.2021
  *  \bug				Speicher von Keil ist voll sobalt man größere Bitmaps erstellt.

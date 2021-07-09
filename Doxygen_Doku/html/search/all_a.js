@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['net_97',['net',['../config_virtual_8h.html#a7a3c22cbc1f7fe75af3cccec7a82d37c',1,'configVirtual.h']]],
-  ['newwinner_98',['newWinner',['../class_page___history.html#a265e2ca8e2e484eb8ad4d46100312a09',1,'Page_History']]]
+  ['main_96',['main',['../main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main.cpp']]],
+  ['main_2ecpp_97',['main.cpp',['../main_8cpp.html',1,'']]]
 ];

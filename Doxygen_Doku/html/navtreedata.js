@@ -25,6 +25,9 @@
 var NAVTREE =
 [
   [ "Tic Tac Toe", "index.html", [
+    [ "Embed C++", "index.html", [
+      [ "Introduction", "index.html#intro_sec", null ]
+    ] ],
     [ "Liste der bekannten Fehler", "bug.html", null ],
     [ "Klassen", "annotated.html", [
       [ "Auflistung der Klassen", "annotated.html", "annotated_dup" ],

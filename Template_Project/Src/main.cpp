@@ -1,3 +1,21 @@
+/*! \mainpage Embed C++
+ *
+ * \section intro_sec Introduction
+ *
+ * Dies ist die Code Dokumentation in Embedeb C++
+ * 
+ * Projekt: Tic Tac Toe
+ * 
+ * Anforderungen:
+ * 	1. Das Spiel kann in den Varianten Mensch gegen Mensch oder Mensch gegen Computer gespielt werden.
+ * 	2. Nach dem Booten des Controllers erscheinen die Tic-Tac-Toe-Spielfläche mit den erforderlichen Einstellmöglichkeiten.
+ * 	3. Der Spieler markiert das Feld, in dem sein Zeichen gesetzt werden soll, durch Berühren des Bildschirms. Mit ei ner angemessen Verzögerung besetzt dann der Computer ein Feld.
+ * 	4. Die Spielentscheidung wird textuell ausgegeben. Mit Betätigung eines Buttons kann das Spiel jederzeit neu gestartet werden.
+ *  \author    Yasin Calli
+ *  \author    Joshua Hahn
+ *
+ */
+
 /*! 
  *  \brief     Main Klasse des Projektes
  *  \details   This class is used to demonstrate a number of section commands.

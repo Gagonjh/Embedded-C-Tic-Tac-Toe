@@ -1,26 +1,25 @@
 /*! 
- *  \brief     
- *  \details  	
  *  \author    	Joshua Hahn
  *  \author			Yasin Calli 
  *  \date      	21.06.2021
  */
 
 #include "./Project_Headers.h"
-short int iButtons_cor_S[10][5] =
-	{
+short int iButtons_cor_S[6][5] =
+{
 				{565,795,415,475,0}, 	//! Button 1 :Hauptmenü
 				{300,350,120,170,-2}, //! Button 2 :Color Theme 1 weiß
 				{410,460,120,170,-2}, //! Button 3 :Color Theme 0 schwarz
 				{520,560,120,170,-2}, //! Button 4 :Color Theme 2 RU
 				{260,480,260,300,-2}, //! Button 5 :vs Spieler
 				{500,720,260,300,-2}, //! Button 6 :vs Bot
-				{0,0,0,0,0}, 					//! Button 7 : 
-				{0,0,0,0,0}, 					//! Button 8 : 
-				{0,0,0,0,0}, 					//! Button 9 :
-				{0,0,0,0,0} 					//! Button 10:
-			};//[*][0]=x start, [*][1]=x end, [*][2]=y start & [*][3]=y end, [*][4]=-2 Ein button auf der seite mit funktion
+};//[*][0]=x start, [*][1]=x end, [*][2]=y start, [*][3]=y end, [*][4]= Page oder -2
 			
+/*!
+	\brief Zeigt an was der Nutzer ausgewählt hat.
+	\details Die Nutzer Auswahl welchen Farbmodus der Nutzer möchte wird angezeigt.
+	\sa Page_Settings::isPressed()
+*/
 void Page_Settings::highlight_selected_colormode_button()
 {
 	switch(Style::instance().color_Mode)
@@ -32,6 +31,11 @@ void Page_Settings::highlight_selected_colormode_button()
 	}
 }
 
+/*!
+	\brief Zeigt an was der Nutzer ausgewählt hat.
+	\details Die Nutzer Auswahl welchen Spielmodus der Nutzer möchte wird angezeigt.
+	\sa Page_Settings::isPressed()
+*/
 void Page_Settings::highlight_selected_game_mode()
 {
 	switch(gameMode)
@@ -42,6 +46,12 @@ void Page_Settings::highlight_selected_game_mode()
 	}
 }
 
+/*!
+	\brief Gibt den Inhalt der Seite aus
+	\details Setzt die Notwendigen Farbwerte in der EmbSysLib. Und Zeichnet die Button mit der Vererbten funktion aus Pages. Überschreibt Pages::drawpage()
+	\sa Pages::draw_button()
+	\sa Pages::drawpage()
+*/
 void Page_Settings::drawpage()
 {
   disp1.setBackColor(Style::instance().color_Backround);
@@ -66,6 +76,14 @@ void Page_Settings::drawpage()
 	highlight_selected_game_mode();
 }
 
+/*!
+	\brief Prüft ob ein Button gedrückt ist.
+	\details Nutzt die Vererbte funktion aus der Pages isPressed um sagen zu können ob ein Button gedrückt ist. Falls ja wird die gewünschte Funktionaität aufgerufenund die Seite refreshed.
+	\param X Koordinate der Touch Eingabe.
+	\param Y Koordinate der Touch Eingabe.
+	\return Gibt die Seite zurück auf die gewechselt werden soll. 
+	\sa Pages::isPressed()
+*/
 short int Page_Settings::buttonOnPagePressed(int posX,int posY)
 {
 	short int p = -1;
@@ -123,7 +141,7 @@ short int Page_Settings::buttonOnPagePressed(int posX,int posY)
 				gameMode = 1;
 			}
 	}
-	//Return to default value
+	//! Falls man nicht auf eine Seite Springen soll wird eine -2 erwartet diese wird auf -1 zurückgesetzt damit die anderen button nicht mehr ausgewertet werden.
 	if(p==-2)
 	{
 		p = -1;

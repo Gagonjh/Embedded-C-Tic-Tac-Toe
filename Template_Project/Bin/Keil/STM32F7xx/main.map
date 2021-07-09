@@ -171,10 +171,10 @@ Section Cross References
     page_history.o(i._ZN12Page_HistoryC1Ev) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
     page_history.o(i._ZN12Page_HistoryD1Ev) refers to h1_free.o(.text) for free
     page_history.o(.ARM.exidx) refers to page_history.o(i._ZN12Page_HistoryD1Ev) for i._ZN12Page_HistoryD1Ev
+    page_history.o(.ARM.exidx) refers to page_history.o(i._ZN12Page_HistoryC1Ev) for i._ZN12Page_HistoryC1Ev
     page_history.o(.ARM.exidx) refers to page_history.o(i._ZN12Page_History8drawpageEv) for i._ZN12Page_History8drawpageEv
     page_history.o(.ARM.exidx) refers to page_history.o(i._ZN12Page_History9newWinnerEs) for i._ZN12Page_History9newWinnerEs
     page_history.o(.ARM.exidx) refers to page_history.o(i._ZN12Page_History19buttonOnPagePressedEii) for i._ZN12Page_History19buttonOnPagePressedEii
-    page_history.o(.ARM.exidx) refers to page_history.o(i._ZN12Page_HistoryC1Ev) for i._ZN12Page_HistoryC1Ev
     page_menue.o(i._ZN10Page_Menue19buttonOnPagePressedEii) refers to main.o(i._ZN5Pages8instanceEv) for Pages::instance()
     page_menue.o(i._ZN10Page_Menue19buttonOnPagePressedEii) refers to pages.o(i._ZN5Pages9isPressedEiiPA5_si) for Pages::isPressed(int, int, short(*)[5], int)
     page_menue.o(i._ZN10Page_Menue19buttonOnPagePressedEii) refers to page_menue.o(.data) for .data
@@ -235,10 +235,10 @@ Section Cross References
     pages.o(i._ZN5Pages8drawpageEv) refers to pages.o(i._ZN5Pages10siteHeaderEssssPc) for Pages::siteHeader(short, short, short, short, char*)
     pages.o(i._ZN5Pages8drawpageEv) refers to pages.o(i._ZN5Pages11draw_buttonEssssssssssPc) for Pages::draw_button(short, short, short, short, short, short, short, short, short, short, char*)
     pages.o(i._ZN5Pages8drawpageEv) refers to main.o(.data) for disp1
+    pages.o(.ARM.exidx) refers to pages.o(i._ZN5PagesC1Ev) for i._ZN5PagesC1Ev
     pages.o(.ARM.exidx) refers to pages.o(i._ZN5Pages11draw_buttonEssssssssssPc) for i._ZN5Pages11draw_buttonEssssssssssPc
     pages.o(.ARM.exidx) refers to pages.o(i._ZN5Pages10siteHeaderEssssPc) for i._ZN5Pages10siteHeaderEssssPc
     pages.o(.ARM.exidx) refers to pages.o(i._ZN5Pages8drawpageEv) for i._ZN5Pages8drawpageEv
-    pages.o(.ARM.exidx) refers to pages.o(i._ZN5PagesC1Ev) for i._ZN5PagesC1Ev
     pages.o(.ARM.exidx) refers to pages.o(i._ZN5Pages20display_current_pageEii) for i._ZN5Pages20display_current_pageEii
     pages.o(.ARM.exidx) refers to pages.o(i._ZN5Pages9isPressedEiiPA5_si) for i._ZN5Pages9isPressedEiiPA5_si
     lib.o(i.ADC_IRQHandler) refers to lib.o(.data) for .data
@@ -2816,7 +2816,7 @@ Removing Unused input sections from the image.
     Removing page_history.o(.ARM.exidx), (8 bytes).
     Removing page_history.o(.ARM.exidx), (8 bytes).
     Removing page_history.o(.ARM.exidx), (8 bytes).
-    Removing page_history.o(.data), (100 bytes).
+    Removing page_history.o(.data), (10 bytes).
     Removing page_menue.o(.rev16_text), (4 bytes).
     Removing page_menue.o(.revsh_text), (4 bytes).
     Removing page_menue.o(.rrx_text), (6 bytes).
@@ -3965,7 +3965,7 @@ Removing Unused input sections from the image.
     Removing touch_ft6206.o(.constdata__ZTI15cHwTouch_FT6206), (12 bytes).
     Removing touch_ft6206.o(.constdata__ZTS15cHwTouch_FT6206), (18 bytes).
 
-1211 unused section(s) (total 28837 bytes) removed from the image.
+1211 unused section(s) (total 28747 bytes) removed from the image.
 
 ==============================================================================
 
@@ -4690,38 +4690,38 @@ Image Symbol Table
     .data                                    0x20020064   Section        1  main.o(.data)
     .data                                    0x20020068   Section      276  main.o(.data)
     .data                                    0x2002017c   Section       20  page_game.o(.data)
-    .data                                    0x20020190   Section      100  page_menue.o(.data)
-    .data                                    0x200201f4   Section      100  page_settings.o(.data)
-    .data                                    0x20020258   Section      116  lib.o(.data)
-    _ZGVret                                  0x200202b0   Data           4  lib.o(.data)
-    ret                                      0x200202b4   Data           4  lib.o(.data)
-    stackPointer                             0x200202c4   Data           4  lib.o(.data)
-    stackPointer                             0x200202c8   Data           4  lib.o(.data)
-    .data__ZZN10Page_Menue8instanceEvE9_instance 0x200202cc   Section       12  pages.o(.data__ZZN10Page_Menue8instanceEvE9_instance)
-    Page_Menue::instance()::_instance        0x200202cc   Number         0  pages.o(.data__ZZN10Page_Menue8instanceEvE9_instance)
-    .data__ZZN12Page_History8instanceEvE9_instance 0x200202d8   Section        4  main.o(.data__ZZN12Page_History8instanceEvE9_instance)
-    Page_History::instance()::_instance      0x200202d8   Number         0  main.o(.data__ZZN12Page_History8instanceEvE9_instance)
-    .data__ZZN13Page_Settings8instanceEvE9_instance 0x200202dc   Section       12  page_settings.o(.data__ZZN13Page_Settings8instanceEvE9_instance)
-    Page_Settings::instance()::_instance     0x200202dc   Number         0  page_settings.o(.data__ZZN13Page_Settings8instanceEvE9_instance)
-    .data__ZZN5Pages8instanceEvE9_instance   0x200202e8   Section       12  main.o(.data__ZZN5Pages8instanceEvE9_instance)
-    Pages::instance()::_instance             0x200202e8   Number         0  main.o(.data__ZZN5Pages8instanceEvE9_instance)
-    .data__ZZN5Style8instanceEvE9_instance   0x200202f4   Section        4  main.o(.data__ZZN5Style8instanceEvE9_instance)
-    Style::instance()::_instance             0x200202f4   Number         0  main.o(.data__ZZN5Style8instanceEvE9_instance)
-    .data__ZZN7Symbole8instanceEvE9_instance 0x200202f8   Section        8  field.o(.data__ZZN7Symbole8instanceEvE9_instance)
-    Symbole::instance()::_instance           0x200202f8   Number         0  field.o(.data__ZZN7Symbole8instanceEvE9_instance)
-    .data__ZZN9Page_Game8instanceEvE9_instance 0x20020300   Section        4  main.o(.data__ZZN9Page_Game8instanceEvE9_instance)
-    Page_Game::instance()::_instance         0x20020300   Number         0  main.o(.data__ZZN9Page_Game8instanceEvE9_instance)
-    .bss                                     0x20020304   Section      432  main.o(.bss)
-    .bss                                     0x200204b4   Section      228  rand.o(.bss)
-    .bss                                     0x20020598   Section       96  libspace.o(.bss)
-    .bss__ZZN12Page_History8instanceEvE9_instance 0x200205f8   Section       16  main.o(.bss__ZZN12Page_History8instanceEvE9_instance)
-    .bss__ZZN5Style8instanceEvE9_instance    0x20020608   Section       50  main.o(.bss__ZZN5Style8instanceEvE9_instance)
-    .bss__ZZN9Page_Game8instanceEvE9_instance 0x2002063c   Section       12  main.o(.bss__ZZN9Page_Game8instanceEvE9_instance)
-    HEAP                                     0x20020648   Section     4096  startup_stm32f769xx.o(HEAP)
-    Heap_Mem                                 0x20020648   Data        4096  startup_stm32f769xx.o(HEAP)
-    STACK                                    0x20021648   Section     4096  startup_stm32f769xx.o(STACK)
-    Stack_Mem                                0x20021648   Data        4096  startup_stm32f769xx.o(STACK)
-    __initial_sp                             0x20022648   Data           0  startup_stm32f769xx.o(STACK)
+    .data                                    0x20020190   Section       30  page_menue.o(.data)
+    .data                                    0x200201ae   Section       60  page_settings.o(.data)
+    .data                                    0x200201ec   Section      116  lib.o(.data)
+    _ZGVret                                  0x20020244   Data           4  lib.o(.data)
+    ret                                      0x20020248   Data           4  lib.o(.data)
+    stackPointer                             0x20020258   Data           4  lib.o(.data)
+    stackPointer                             0x2002025c   Data           4  lib.o(.data)
+    .data__ZZN10Page_Menue8instanceEvE9_instance 0x20020260   Section       12  pages.o(.data__ZZN10Page_Menue8instanceEvE9_instance)
+    Page_Menue::instance()::_instance        0x20020260   Number         0  pages.o(.data__ZZN10Page_Menue8instanceEvE9_instance)
+    .data__ZZN12Page_History8instanceEvE9_instance 0x2002026c   Section        4  main.o(.data__ZZN12Page_History8instanceEvE9_instance)
+    Page_History::instance()::_instance      0x2002026c   Number         0  main.o(.data__ZZN12Page_History8instanceEvE9_instance)
+    .data__ZZN13Page_Settings8instanceEvE9_instance 0x20020270   Section       12  page_settings.o(.data__ZZN13Page_Settings8instanceEvE9_instance)
+    Page_Settings::instance()::_instance     0x20020270   Number         0  page_settings.o(.data__ZZN13Page_Settings8instanceEvE9_instance)
+    .data__ZZN5Pages8instanceEvE9_instance   0x2002027c   Section       12  main.o(.data__ZZN5Pages8instanceEvE9_instance)
+    Pages::instance()::_instance             0x2002027c   Number         0  main.o(.data__ZZN5Pages8instanceEvE9_instance)
+    .data__ZZN5Style8instanceEvE9_instance   0x20020288   Section        4  main.o(.data__ZZN5Style8instanceEvE9_instance)
+    Style::instance()::_instance             0x20020288   Number         0  main.o(.data__ZZN5Style8instanceEvE9_instance)
+    .data__ZZN7Symbole8instanceEvE9_instance 0x2002028c   Section        8  field.o(.data__ZZN7Symbole8instanceEvE9_instance)
+    Symbole::instance()::_instance           0x2002028c   Number         0  field.o(.data__ZZN7Symbole8instanceEvE9_instance)
+    .data__ZZN9Page_Game8instanceEvE9_instance 0x20020294   Section        4  main.o(.data__ZZN9Page_Game8instanceEvE9_instance)
+    Page_Game::instance()::_instance         0x20020294   Number         0  main.o(.data__ZZN9Page_Game8instanceEvE9_instance)
+    .bss                                     0x20020298   Section      432  main.o(.bss)
+    .bss                                     0x20020448   Section      228  rand.o(.bss)
+    .bss                                     0x2002052c   Section       96  libspace.o(.bss)
+    .bss__ZZN12Page_History8instanceEvE9_instance 0x2002058c   Section       16  main.o(.bss__ZZN12Page_History8instanceEvE9_instance)
+    .bss__ZZN5Style8instanceEvE9_instance    0x2002059c   Section       50  main.o(.bss__ZZN5Style8instanceEvE9_instance)
+    .bss__ZZN9Page_Game8instanceEvE9_instance 0x200205d0   Section       12  main.o(.bss__ZZN9Page_Game8instanceEvE9_instance)
+    HEAP                                     0x200205e0   Section     4096  startup_stm32f769xx.o(HEAP)
+    Heap_Mem                                 0x200205e0   Data        4096  startup_stm32f769xx.o(HEAP)
+    STACK                                    0x200215e0   Section     4096  startup_stm32f769xx.o(STACK)
+    Stack_Mem                                0x200215e0   Data        4096  startup_stm32f769xx.o(STACK)
+    __initial_sp                             0x200225e0   Data           0  startup_stm32f769xx.o(STACK)
 
     Global Symbols
 
@@ -5393,66 +5393,66 @@ Image Symbol Table
     gameMode                                 0x20020064   Data           1  main.o(.data)
     cHwPinConfig::table                      0x20020068   Data         276  main.o(.data)
     iButtons_cor_G                           0x2002017c   Data          20  page_game.o(.data)
-    iButtons_cor_M                           0x20020190   Data         100  page_menue.o(.data)
-    iButtons_cor_S                           0x200201f4   Data         100  page_settings.o(.data)
-    cSystem::cntInterrupt                    0x20020258   Data           1  lib.o(.data)
-    cHwRTOS_MCU::schedule                    0x2002025c   Data           4  lib.o(.data)
-    cHwRTOS_MCU::sysTic                      0x20020260   Data           4  lib.o(.data)
-    cHwADC_0::adcPtr                         0x20020264   Data           4  lib.o(.data)
-    cHwTimer_N::timerPtr_1                   0x20020268   Data           4  lib.o(.data)
-    cHwTimer_N::timerPtr_2                   0x2002026c   Data           4  lib.o(.data)
-    cHwTimer_N::timerPtr_3                   0x20020270   Data           4  lib.o(.data)
-    cHwTimer_N::timerPtr_4                   0x20020274   Data           4  lib.o(.data)
-    cHwTimer_N::timerPtr_5                   0x20020278   Data           4  lib.o(.data)
-    cHwTimer_N::timerPtr_7                   0x2002027c   Data           4  lib.o(.data)
-    cHwTimer_N::timerPtr_8                   0x20020280   Data           4  lib.o(.data)
-    cHwTimer_N::timerPtr_9                   0x20020284   Data           4  lib.o(.data)
-    cHwTimer_N::timerPtr_10                  0x20020288   Data           4  lib.o(.data)
-    cHwTimer_N::timerPtr_11                  0x2002028c   Data           4  lib.o(.data)
-    cHwTimer_N::timerPtr_14                  0x20020290   Data           4  lib.o(.data)
-    cHwUART_N::uartPtr_1                     0x20020294   Data           4  lib.o(.data)
-    cHwUART_N::uartPtr_2                     0x20020298   Data           4  lib.o(.data)
-    cHwUART_N::uartPtr_3                     0x2002029c   Data           4  lib.o(.data)
-    cHwUART_N::uartPtr_4                     0x200202a0   Data           4  lib.o(.data)
-    cHwUART_N::uartPtr_5                     0x200202a4   Data           4  lib.o(.data)
-    cHwUART_N::uartPtr_6                     0x200202a8   Data           4  lib.o(.data)
-    cHwUSB_0::usbPtr                         0x200202ac   Data           4  lib.o(.data)
-    DMATxDescToSet                           0x200202b8   Data           4  lib.o(.data)
-    DMARxDescToGet                           0x200202bc   Data           4  lib.o(.data)
-    DMA_RX_FRAME_infos                       0x200202c0   Data           4  lib.o(.data)
-    guard variable for Page_Menue::instance()::_instance 0x200202cc   Data           4  pages.o(.data__ZZN10Page_Menue8instanceEvE9_instance)
-    Page_Menue::instance()::_instance        0x200202d0   Data           8  pages.o(.data__ZZN10Page_Menue8instanceEvE9_instance)
-    guard variable for Page_History::instance()::_instance 0x200202d8   Data           4  main.o(.data__ZZN12Page_History8instanceEvE9_instance)
-    guard variable for Page_Settings::instance()::_instance 0x200202dc   Data           4  page_settings.o(.data__ZZN13Page_Settings8instanceEvE9_instance)
-    Page_Settings::instance()::_instance     0x200202e0   Data           8  page_settings.o(.data__ZZN13Page_Settings8instanceEvE9_instance)
-    guard variable for Pages::instance()::_instance 0x200202e8   Data           4  main.o(.data__ZZN5Pages8instanceEvE9_instance)
-    Pages::instance()::_instance             0x200202ec   Data           8  main.o(.data__ZZN5Pages8instanceEvE9_instance)
-    guard variable for Style::instance()::_instance 0x200202f4   Data           4  main.o(.data__ZZN5Style8instanceEvE9_instance)
-    guard variable for Symbole::instance()::_instance 0x200202f8   Data           4  field.o(.data__ZZN7Symbole8instanceEvE9_instance)
-    Symbole::instance()::_instance           0x200202fc   Data           4  field.o(.data__ZZN7Symbole8instanceEvE9_instance)
-    guard variable for Page_Game::instance()::_instance 0x20020300   Data           4  main.o(.data__ZZN9Page_Game8instanceEvE9_instance)
-    timer                                    0x20020304   Data          24  main.o(.bss)
-    timerSlow                                0x2002031c   Data          24  main.o(.bss)
-    adcHw                                    0x20020334   Data          32  main.o(.bss)
-    adcA                                     0x20020354   Data          20  main.o(.bss)
-    dacA                                     0x20020368   Data          20  main.o(.bss)
-    lcdResetPin                              0x2002037c   Data          16  main.o(.bss)
-    dispHw                                   0x2002038c   Data          72  main.o(.bss)
-    i2c                                      0x200203d4   Data          12  main.o(.bss)
-    touch                                    0x200203e0   Data          28  main.o(.bss)
-    pointer                                  0x200203fc   Data          32  main.o(.bss)
-    btnRight                                 0x2002041c   Data          24  main.o(.bss)
-    btnLeft                                  0x20020434   Data          24  main.o(.bss)
-    btnCtrl                                  0x2002044c   Data          24  main.o(.bss)
-    enc                                      0x20020464   Data          32  main.o(.bss)
-    btn                                      0x20020484   Data          24  main.o(.bss)
-    led                                      0x2002049c   Data          24  main.o(.bss)
-    _random_number_data                      0x200204b4   Data         228  rand.o(.bss)
-    __libspace_start                         0x20020598   Data          96  libspace.o(.bss)
-    Page_History::instance()::_instance      0x200205f8   Data          16  main.o(.bss__ZZN12Page_History8instanceEvE9_instance)
-    __temporary_stack_top$libspace           0x200205f8   Data           0  libspace.o(.bss)
-    Style::instance()::_instance             0x20020608   Data          50  main.o(.bss__ZZN5Style8instanceEvE9_instance)
-    Page_Game::instance()::_instance         0x2002063c   Data          12  main.o(.bss__ZZN9Page_Game8instanceEvE9_instance)
+    iButtons_cor_M                           0x20020190   Data          30  page_menue.o(.data)
+    iButtons_cor_S                           0x200201ae   Data          60  page_settings.o(.data)
+    cSystem::cntInterrupt                    0x200201ec   Data           1  lib.o(.data)
+    cHwRTOS_MCU::schedule                    0x200201f0   Data           4  lib.o(.data)
+    cHwRTOS_MCU::sysTic                      0x200201f4   Data           4  lib.o(.data)
+    cHwADC_0::adcPtr                         0x200201f8   Data           4  lib.o(.data)
+    cHwTimer_N::timerPtr_1                   0x200201fc   Data           4  lib.o(.data)
+    cHwTimer_N::timerPtr_2                   0x20020200   Data           4  lib.o(.data)
+    cHwTimer_N::timerPtr_3                   0x20020204   Data           4  lib.o(.data)
+    cHwTimer_N::timerPtr_4                   0x20020208   Data           4  lib.o(.data)
+    cHwTimer_N::timerPtr_5                   0x2002020c   Data           4  lib.o(.data)
+    cHwTimer_N::timerPtr_7                   0x20020210   Data           4  lib.o(.data)
+    cHwTimer_N::timerPtr_8                   0x20020214   Data           4  lib.o(.data)
+    cHwTimer_N::timerPtr_9                   0x20020218   Data           4  lib.o(.data)
+    cHwTimer_N::timerPtr_10                  0x2002021c   Data           4  lib.o(.data)
+    cHwTimer_N::timerPtr_11                  0x20020220   Data           4  lib.o(.data)
+    cHwTimer_N::timerPtr_14                  0x20020224   Data           4  lib.o(.data)
+    cHwUART_N::uartPtr_1                     0x20020228   Data           4  lib.o(.data)
+    cHwUART_N::uartPtr_2                     0x2002022c   Data           4  lib.o(.data)
+    cHwUART_N::uartPtr_3                     0x20020230   Data           4  lib.o(.data)
+    cHwUART_N::uartPtr_4                     0x20020234   Data           4  lib.o(.data)
+    cHwUART_N::uartPtr_5                     0x20020238   Data           4  lib.o(.data)
+    cHwUART_N::uartPtr_6                     0x2002023c   Data           4  lib.o(.data)
+    cHwUSB_0::usbPtr                         0x20020240   Data           4  lib.o(.data)
+    DMATxDescToSet                           0x2002024c   Data           4  lib.o(.data)
+    DMARxDescToGet                           0x20020250   Data           4  lib.o(.data)
+    DMA_RX_FRAME_infos                       0x20020254   Data           4  lib.o(.data)
+    guard variable for Page_Menue::instance()::_instance 0x20020260   Data           4  pages.o(.data__ZZN10Page_Menue8instanceEvE9_instance)
+    Page_Menue::instance()::_instance        0x20020264   Data           8  pages.o(.data__ZZN10Page_Menue8instanceEvE9_instance)
+    guard variable for Page_History::instance()::_instance 0x2002026c   Data           4  main.o(.data__ZZN12Page_History8instanceEvE9_instance)
+    guard variable for Page_Settings::instance()::_instance 0x20020270   Data           4  page_settings.o(.data__ZZN13Page_Settings8instanceEvE9_instance)
+    Page_Settings::instance()::_instance     0x20020274   Data           8  page_settings.o(.data__ZZN13Page_Settings8instanceEvE9_instance)
+    guard variable for Pages::instance()::_instance 0x2002027c   Data           4  main.o(.data__ZZN5Pages8instanceEvE9_instance)
+    Pages::instance()::_instance             0x20020280   Data           8  main.o(.data__ZZN5Pages8instanceEvE9_instance)
+    guard variable for Style::instance()::_instance 0x20020288   Data           4  main.o(.data__ZZN5Style8instanceEvE9_instance)
+    guard variable for Symbole::instance()::_instance 0x2002028c   Data           4  field.o(.data__ZZN7Symbole8instanceEvE9_instance)
+    Symbole::instance()::_instance           0x20020290   Data           4  field.o(.data__ZZN7Symbole8instanceEvE9_instance)
+    guard variable for Page_Game::instance()::_instance 0x20020294   Data           4  main.o(.data__ZZN9Page_Game8instanceEvE9_instance)
+    timer                                    0x20020298   Data          24  main.o(.bss)
+    timerSlow                                0x200202b0   Data          24  main.o(.bss)
+    adcHw                                    0x200202c8   Data          32  main.o(.bss)
+    adcA                                     0x200202e8   Data          20  main.o(.bss)
+    dacA                                     0x200202fc   Data          20  main.o(.bss)
+    lcdResetPin                              0x20020310   Data          16  main.o(.bss)
+    dispHw                                   0x20020320   Data          72  main.o(.bss)
+    i2c                                      0x20020368   Data          12  main.o(.bss)
+    touch                                    0x20020374   Data          28  main.o(.bss)
+    pointer                                  0x20020390   Data          32  main.o(.bss)
+    btnRight                                 0x200203b0   Data          24  main.o(.bss)
+    btnLeft                                  0x200203c8   Data          24  main.o(.bss)
+    btnCtrl                                  0x200203e0   Data          24  main.o(.bss)
+    enc                                      0x200203f8   Data          32  main.o(.bss)
+    btn                                      0x20020418   Data          24  main.o(.bss)
+    led                                      0x20020430   Data          24  main.o(.bss)
+    _random_number_data                      0x20020448   Data         228  rand.o(.bss)
+    __libspace_start                         0x2002052c   Data          96  libspace.o(.bss)
+    Page_History::instance()::_instance      0x2002058c   Data          16  main.o(.bss__ZZN12Page_History8instanceEvE9_instance)
+    __temporary_stack_top$libspace           0x2002058c   Data           0  libspace.o(.bss)
+    Style::instance()::_instance             0x2002059c   Data          50  main.o(.bss__ZZN5Style8instanceEvE9_instance)
+    Page_Game::instance()::_instance         0x200205d0   Data          12  main.o(.bss__ZZN9Page_Game8instanceEvE9_instance)
 
 
 
@@ -5462,7 +5462,7 @@ Memory Map of the image
 
   Image Entry point : 0x080001f9
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00007c98, Max: 0x00200000, ABSOLUTE, COMPRESSED[0x00007b08])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00007c2c, Max: 0x00200000, ABSOLUTE, COMPRESSED[0x00007b04])
 
     Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00007994, Max: 0x00200000, ABSOLUTE)
 
@@ -5925,7 +5925,7 @@ Memory Map of the image
     0x08007994   0x08007990   0x00000000   Data   RO         6575    .init_array         c_w.l(init_aeabi.o)
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20020000, Load base: 0x08007994, Size: 0x00002648, Max: 0x00005c00, ABSOLUTE, COMPRESSED[0x00000174])
+    Execution Region RW_IRAM1 (Exec base: 0x20020000, Load base: 0x08007994, Size: 0x000025e0, Max: 0x00005c00, ABSOLUTE, COMPRESSED[0x00000170])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -5934,25 +5934,27 @@ Memory Map of the image
     0x20020065   COMPRESSED   0x00000003   PAD
     0x20020068   COMPRESSED   0x00000114   Data   RW           12    .data               main.o
     0x2002017c   COMPRESSED   0x00000014   Data   RW         1271    .data               page_game.o
-    0x20020190   COMPRESSED   0x00000064   Data   RW         1381    .data               page_menue.o
-    0x200201f4   COMPRESSED   0x00000064   Data   RW         1427    .data               page_settings.o
-    0x20020258   COMPRESSED   0x00000074   Data   RW         2335    .data               lib.o
-    0x200202cc   COMPRESSED   0x0000000c   Data   RW         1559    .data__ZZN10Page_Menue8instanceEvE9_instance  pages.o
-    0x200202d8   COMPRESSED   0x00000004   Data   RW           95    .data__ZZN12Page_History8instanceEvE9_instance  main.o
-    0x200202dc   COMPRESSED   0x0000000c   Data   RW         1468    .data__ZZN13Page_Settings8instanceEvE9_instance  page_settings.o
-    0x200202e8   COMPRESSED   0x0000000c   Data   RW           92    .data__ZZN5Pages8instanceEvE9_instance  main.o
-    0x200202f4   COMPRESSED   0x00000004   Data   RW           97    .data__ZZN5Style8instanceEvE9_instance  main.o
-    0x200202f8   COMPRESSED   0x00000008   Data   RW          501    .data__ZZN7Symbole8instanceEvE9_instance  field.o
-    0x20020300   COMPRESSED   0x00000004   Data   RW           93    .data__ZZN9Page_Game8instanceEvE9_instance  main.o
-    0x20020304        -       0x000001b0   Zero   RW            8    .bss                main.o
-    0x200204b4        -       0x000000e4   Zero   RW         6545    .bss                c_w.l(rand.o)
-    0x20020598        -       0x00000060   Zero   RW         6945    .bss                c_w.l(libspace.o)
-    0x200205f8        -       0x00000010   Zero   RW           96    .bss__ZZN12Page_History8instanceEvE9_instance  main.o
-    0x20020608        -       0x00000032   Zero   RW           98    .bss__ZZN5Style8instanceEvE9_instance  main.o
-    0x2002063a   COMPRESSED   0x00000002   PAD
-    0x2002063c        -       0x0000000c   Zero   RW           94    .bss__ZZN9Page_Game8instanceEvE9_instance  main.o
-    0x20020648        -       0x00001000   Zero   RW         5641    HEAP                startup_stm32f769xx.o
-    0x20021648        -       0x00001000   Zero   RW         5640    STACK               startup_stm32f769xx.o
+    0x20020190   COMPRESSED   0x0000001e   Data   RW         1381    .data               page_menue.o
+    0x200201ae   COMPRESSED   0x0000003c   Data   RW         1427    .data               page_settings.o
+    0x200201ea   COMPRESSED   0x00000002   PAD
+    0x200201ec   COMPRESSED   0x00000074   Data   RW         2335    .data               lib.o
+    0x20020260   COMPRESSED   0x0000000c   Data   RW         1559    .data__ZZN10Page_Menue8instanceEvE9_instance  pages.o
+    0x2002026c   COMPRESSED   0x00000004   Data   RW           95    .data__ZZN12Page_History8instanceEvE9_instance  main.o
+    0x20020270   COMPRESSED   0x0000000c   Data   RW         1468    .data__ZZN13Page_Settings8instanceEvE9_instance  page_settings.o
+    0x2002027c   COMPRESSED   0x0000000c   Data   RW           92    .data__ZZN5Pages8instanceEvE9_instance  main.o
+    0x20020288   COMPRESSED   0x00000004   Data   RW           97    .data__ZZN5Style8instanceEvE9_instance  main.o
+    0x2002028c   COMPRESSED   0x00000008   Data   RW          501    .data__ZZN7Symbole8instanceEvE9_instance  field.o
+    0x20020294   COMPRESSED   0x00000004   Data   RW           93    .data__ZZN9Page_Game8instanceEvE9_instance  main.o
+    0x20020298        -       0x000001b0   Zero   RW            8    .bss                main.o
+    0x20020448        -       0x000000e4   Zero   RW         6545    .bss                c_w.l(rand.o)
+    0x2002052c        -       0x00000060   Zero   RW         6945    .bss                c_w.l(libspace.o)
+    0x2002058c        -       0x00000010   Zero   RW           96    .bss__ZZN12Page_History8instanceEvE9_instance  main.o
+    0x2002059c        -       0x00000032   Zero   RW           98    .bss__ZZN5Style8instanceEvE9_instance  main.o
+    0x200205ce   COMPRESSED   0x00000002   PAD
+    0x200205d0        -       0x0000000c   Zero   RW           94    .bss__ZZN9Page_Game8instanceEvE9_instance  main.o
+    0x200205dc   COMPRESSED   0x00000004   PAD
+    0x200205e0        -       0x00001000   Zero   RW         5641    HEAP                startup_stm32f769xx.o
+    0x200215e0        -       0x00001000   Zero   RW         5640    STACK               startup_stm32f769xx.o
 
 
 
@@ -6008,12 +6010,12 @@ Image component sizes
        210         24          0          8          0       4696   field.o
        268         24          0          0          0       3105   game.o
       7672        530        892        116      15560     217174   lib.o
-      2132        198       1177        401        510     863000   main.o
+      2132        198       1177        401        510     863004   main.o
        320         58          0         20          0       4100   page_game.o
-       560         76          0          0          0       4180   page_history.o
-       396         66          0        100          0       3172   page_menue.o
-       982        120          0        112          0       5520   page_settings.o
-      1112         74          0         12          0       8531   pages.o
+       560         76          0          0          0       4184   page_history.o
+       396         66          0         30          0       3172   page_menue.o
+       982        120          0         72          0       5520   page_settings.o
+      1112         74          0         12          0       8527   pages.o
          0          0          0          0          0     787800   rtos.o
         44          0          0          0          0        480   rtoscontext.o
         64         26        504          0       8192        888   startup_stm32f769xx.o
@@ -6022,9 +6024,9 @@ Image component sizes
        138          8         24          0          0       4264   touch_ft6206.o
 
     ----------------------------------------------------------------------
-     18980       1700       2872        772      24264    1946120   Object Totals
+     18980       1700       2872        664      24268    1946124   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        38          0          5          3          2          0   (incl. Padding)
+        38          0          5          5          6          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -6166,15 +6168,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     27736       2254       3388        772      24588    1927952   Grand Totals
-     27736       2254       3388        372      24588    1927952   ELF Image Totals (compressed)
-     27736       2254       3388        372          0          0   ROM Totals
+     27736       2254       3388        664      24592    1927956   Grand Totals
+     27736       2254       3388        368      24592    1927956   ELF Image Totals (compressed)
+     27736       2254       3388        368          0          0   ROM Totals
 
 ==============================================================================
 
     Total RO  Size (Code + RO Data)                31124 (  30.39kB)
-    Total RW  Size (RW Data + ZI Data)             25360 (  24.77kB)
-    Total ROM Size (Code + RO Data + RW Data)      31496 (  30.76kB)
+    Total RW  Size (RW Data + ZI Data)             25256 (  24.66kB)
+    Total ROM Size (Code + RO Data + RW Data)      31492 (  30.75kB)
 
 ==============================================================================
 

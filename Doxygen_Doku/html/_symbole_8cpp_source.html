@@ -86,108 +86,108 @@ $(document).ready(function(){initNavTree('_symbole_8cpp_source.html',''); initRe
 </div><!--header-->
 <div class="contents">
 <a href="_symbole_8cpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_project___headers_8h.html">./Project_Headers.h</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_symbole.html#a2bf6078786ea16bbac05ffdb0bc489f1">   16</a></span>&#160;<a class="code" href="class_symbole.html#a2bf6078786ea16bbac05ffdb0bc489f1">Symbole::Symbole</a>()</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_symbole.html#a627cb88f90f2e20ef96b00be02237c49">simP1</a> = 0;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_symbole.html#afca92d27473d0763925cc6f9866f992b">simP2</a> = 1;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_symbole.html#a616db868db8f0fce7785f981538123b2">   29</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_symbole.html#a616db868db8f0fce7785f981538123b2">Symbole::setPlayerSim</a>(<span class="keywordtype">short</span> p1,<span class="keywordtype">short</span> p2)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_symbole.html#a627cb88f90f2e20ef96b00be02237c49">simP1</a> = p1;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_symbole.html#afca92d27473d0763925cc6f9866f992b">simP2</a> = p2;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_symbole.html#aa0cc9c71ca4769fe6f2bd94cc05abad4">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_symbole.html#aa0cc9c71ca4769fe6f2bd94cc05abad4">Symbole::drawPiece</a>(<span class="keywordtype">short</span> corX,<span class="keywordtype">short</span> corY,<span class="keywordtype">short</span> player)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">short</span> activeSimColor = 0;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">short</span> activeSim = 0;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span>(player == 1)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        activeSim = <a class="code" href="class_symbole.html#a627cb88f90f2e20ef96b00be02237c49">simP1</a>;      </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        activeSimColor = <a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().<a class="code" href="class_style.html#adbd96aa5320c20ac9d7a2e2406f043b3">color_Player_1</a>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        activeSim = <a class="code" href="class_symbole.html#afca92d27473d0763925cc6f9866f992b">simP2</a>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        activeSimColor = <a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().<a class="code" href="class_style.html#a1777a52943555b1ea694200df1dde93e">color_Player_2</a>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">switch</span>(activeSim) </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    <a class="code" href="class_symbole.html#af71aa1dbb62026a9ec288d45ba5387fb">Symbole::drawX</a>(corX,corY,activeSimColor);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    <a class="code" href="class_symbole.html#a38cc1a8228989983825975dddee92f18">drawCircle</a>(corX,corY,activeSimColor);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    <a class="code" href="class_symbole.html#ae707ca625b80b160b92461253e48f972">drawSickle</a>(corX,corY,activeSimColor);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">case</span> 3:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    <a class="code" href="class_symbole.html#acd9888a21d594076d414731b0ea028ae">drawHammer</a>(corX,corY,activeSimColor);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_symbole.html#ae707ca625b80b160b92461253e48f972">   87</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_symbole.html#ae707ca625b80b160b92461253e48f972">Symbole::drawSickle</a>(<span class="keywordtype">short</span> corX,<span class="keywordtype">short</span> corY,<span class="keywordtype">short</span> color)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    corX = corX - 45;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    corY = corY - 45;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">//Kreis 1</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawCircle(corX+45,corY+35,30,color);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">//Kreis 2</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawCircle(corX+40,corY+30,24,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Backround);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">//Kreis 3</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawCircle(corX+20,corY+45,19,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Backround);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">//Kreis 4</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawCircle(corX+33,corY+54,11,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Backround);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">//Liniel</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawLine(corX+45,corY+58,corX+45,corY+80,14,color);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="class_symbole.html#acd9888a21d594076d414731b0ea028ae">  112</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_symbole.html#acd9888a21d594076d414731b0ea028ae">Symbole::drawHammer</a>(<span class="keywordtype">short</span> corX,<span class="keywordtype">short</span> corY,<span class="keywordtype">short</span> color)</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    corX = corX - 45;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    corY = corY - 45;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">//1.Linie</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawLine(corX+17,corY+21,corX+73,corY+21,18,color);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">//2. Linie</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawLine(corX+45,corY+28,corX+45,corY+80,20,color);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">//Kreis</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawCircle(corX+73,corY+12,11,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Backround);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_symbole.html#a38cc1a8228989983825975dddee92f18">  133</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_symbole.html#a38cc1a8228989983825975dddee92f18">Symbole::drawCircle</a>(<span class="keywordtype">short</span> corX,<span class="keywordtype">short</span> corY,<span class="keywordtype">short</span> color)</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;{</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawCircle(corX,corY,45,color);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawCircle(corX,corY,35,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Backround);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="class_symbole.html#af71aa1dbb62026a9ec288d45ba5387fb">  147</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_symbole.html#af71aa1dbb62026a9ec288d45ba5387fb">Symbole::drawX</a>(<span class="keywordtype">short</span> corX,<span class="keywordtype">short</span> corY,<span class="keywordtype">short</span> color)</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    corX = corX - 45;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    corY = corY - 45;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawLine(corX+7,corY+7,corX+83,corY+83,10,color);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawLine(corX+7,corY+83,corX+83,corY+7,10,color);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_project___headers_8h.html">./Project_Headers.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_symbole.html#a2bf6078786ea16bbac05ffdb0bc489f1">   14</a></span>&#160;<a class="code" href="class_symbole.html#a2bf6078786ea16bbac05ffdb0bc489f1">Symbole::Symbole</a>()</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_symbole.html#a627cb88f90f2e20ef96b00be02237c49">simP1</a> = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_symbole.html#afca92d27473d0763925cc6f9866f992b">simP2</a> = 1;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_symbole.html#a616db868db8f0fce7785f981538123b2">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_symbole.html#a616db868db8f0fce7785f981538123b2">Symbole::setPlayerSim</a>(<span class="keywordtype">short</span> p1,<span class="keywordtype">short</span> p2)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_symbole.html#a627cb88f90f2e20ef96b00be02237c49">simP1</a> = p1;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_symbole.html#afca92d27473d0763925cc6f9866f992b">simP2</a> = p2;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_symbole.html#aa0cc9c71ca4769fe6f2bd94cc05abad4">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_symbole.html#aa0cc9c71ca4769fe6f2bd94cc05abad4">Symbole::drawPiece</a>(<span class="keywordtype">short</span> corX,<span class="keywordtype">short</span> corY,<span class="keywordtype">short</span> player)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">short</span> activeSimColor = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">short</span> activeSim = 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span>(player == 1)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        activeSim = <a class="code" href="class_symbole.html#a627cb88f90f2e20ef96b00be02237c49">simP1</a>;      </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        activeSimColor = <a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().<a class="code" href="class_style.html#adbd96aa5320c20ac9d7a2e2406f043b3">color_Player_1</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        activeSim = <a class="code" href="class_symbole.html#afca92d27473d0763925cc6f9866f992b">simP2</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        activeSimColor = <a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().<a class="code" href="class_style.html#a1777a52943555b1ea694200df1dde93e">color_Player_2</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">switch</span>(activeSim) </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    <a class="code" href="class_symbole.html#af71aa1dbb62026a9ec288d45ba5387fb">Symbole::drawX</a>(corX,corY,activeSimColor);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    <a class="code" href="class_symbole.html#a38cc1a8228989983825975dddee92f18">drawCircle</a>(corX,corY,activeSimColor);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    <a class="code" href="class_symbole.html#ae707ca625b80b160b92461253e48f972">drawSickle</a>(corX,corY,activeSimColor);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    <a class="code" href="class_symbole.html#acd9888a21d594076d414731b0ea028ae">drawHammer</a>(corX,corY,activeSimColor);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_symbole.html#ae707ca625b80b160b92461253e48f972">   85</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_symbole.html#ae707ca625b80b160b92461253e48f972">Symbole::drawSickle</a>(<span class="keywordtype">short</span> corX,<span class="keywordtype">short</span> corY,<span class="keywordtype">short</span> color)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    corX = corX - 45;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    corY = corY - 45;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">//Kreis 1</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawCircle(corX+45,corY+35,30,color);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">//Kreis 2</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawCircle(corX+40,corY+30,24,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Backround);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">//Kreis 3</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawCircle(corX+20,corY+45,19,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Backround);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">//Kreis 4</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawCircle(corX+33,corY+54,11,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Backround);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">//Liniel</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawLine(corX+45,corY+58,corX+45,corY+80,14,color);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_symbole.html#acd9888a21d594076d414731b0ea028ae">  110</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_symbole.html#acd9888a21d594076d414731b0ea028ae">Symbole::drawHammer</a>(<span class="keywordtype">short</span> corX,<span class="keywordtype">short</span> corY,<span class="keywordtype">short</span> color)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    corX = corX - 45;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    corY = corY - 45;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">//1.Linie</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawLine(corX+17,corY+21,corX+73,corY+21,18,color);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">//2. Linie</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawLine(corX+45,corY+28,corX+45,corY+80,20,color);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">//Kreis</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawCircle(corX+73,corY+12,11,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Backround);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="class_symbole.html#a38cc1a8228989983825975dddee92f18">  131</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_symbole.html#a38cc1a8228989983825975dddee92f18">Symbole::drawCircle</a>(<span class="keywordtype">short</span> corX,<span class="keywordtype">short</span> corY,<span class="keywordtype">short</span> color)</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawCircle(corX,corY,45,color);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawCircle(corX,corY,35,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Backround);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="class_symbole.html#af71aa1dbb62026a9ec288d45ba5387fb">  145</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_symbole.html#af71aa1dbb62026a9ec288d45ba5387fb">Symbole::drawX</a>(<span class="keywordtype">short</span> corX,<span class="keywordtype">short</span> corY,<span class="keywordtype">short</span> color)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    corX = corX - 45;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    corY = corY - 45;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawLine(corX+7,corY+7,corX+83,corY+83,10,color);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.drawLine(corX+7,corY+83,corX+83,corY+7,10,color);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
 <div class="ttc" id="a_project___headers_8h_html"><div class="ttname"><a href="_project___headers_8h.html">Project_Headers.h</a></div></div>
-<div class="ttc" id="aclass_style_html_a1777a52943555b1ea694200df1dde93e"><div class="ttname"><a href="class_style.html#a1777a52943555b1ea694200df1dde93e">Style::color_Player_2</a></div><div class="ttdeci">short color_Player_2</div><div class="ttdef"><b>Definition:</b> <a href="_style_8h_source.html#l00035">Style.h:35</a></div></div>
-<div class="ttc" id="aclass_style_html_aa39efd917d75e51c7d470cbb84939e9e"><div class="ttname"><a href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a></div><div class="ttdeci">static Style &amp; instance()</div><div class="ttdoc">Zugriff auf die Instanz der Klasse von Auﬂerhalb.</div><div class="ttdef"><b>Definition:</b> <a href="_style_8h_source.html#l00014">Style.h:14</a></div></div>
-<div class="ttc" id="aclass_style_html_adbd96aa5320c20ac9d7a2e2406f043b3"><div class="ttname"><a href="class_style.html#adbd96aa5320c20ac9d7a2e2406f043b3">Style::color_Player_1</a></div><div class="ttdeci">short color_Player_1</div><div class="ttdef"><b>Definition:</b> <a href="_style_8h_source.html#l00034">Style.h:34</a></div></div>
-<div class="ttc" id="aclass_symbole_html_a2bf6078786ea16bbac05ffdb0bc489f1"><div class="ttname"><a href="class_symbole.html#a2bf6078786ea16bbac05ffdb0bc489f1">Symbole::Symbole</a></div><div class="ttdeci">Symbole()</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8cpp_source.html#l00016">Symbole.cpp:16</a></div></div>
-<div class="ttc" id="aclass_symbole_html_a38cc1a8228989983825975dddee92f18"><div class="ttname"><a href="class_symbole.html#a38cc1a8228989983825975dddee92f18">Symbole::drawCircle</a></div><div class="ttdeci">void drawCircle(short, short, short)</div><div class="ttdoc">Gibt einen hohlen Kreis aus.</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8cpp_source.html#l00133">Symbole.cpp:133</a></div></div>
-<div class="ttc" id="aclass_symbole_html_a616db868db8f0fce7785f981538123b2"><div class="ttname"><a href="class_symbole.html#a616db868db8f0fce7785f981538123b2">Symbole::setPlayerSim</a></div><div class="ttdeci">void setPlayerSim(short, short)</div><div class="ttdoc">Setzt Spieler Zeichen.</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8cpp_source.html#l00029">Symbole.cpp:29</a></div></div>
+<div class="ttc" id="aclass_style_html_a1777a52943555b1ea694200df1dde93e"><div class="ttname"><a href="class_style.html#a1777a52943555b1ea694200df1dde93e">Style::color_Player_2</a></div><div class="ttdeci">short color_Player_2</div><div class="ttdef"><b>Definition:</b> <a href="_style_8h_source.html#l00037">Style.h:37</a></div></div>
+<div class="ttc" id="aclass_style_html_aa39efd917d75e51c7d470cbb84939e9e"><div class="ttname"><a href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a></div><div class="ttdeci">static Style &amp; instance()</div><div class="ttdoc">Zugriff auf die Instanz der Klasse von Auﬂerhalb.</div><div class="ttdef"><b>Definition:</b> <a href="_style_8h_source.html#l00016">Style.h:16</a></div></div>
+<div class="ttc" id="aclass_style_html_adbd96aa5320c20ac9d7a2e2406f043b3"><div class="ttname"><a href="class_style.html#adbd96aa5320c20ac9d7a2e2406f043b3">Style::color_Player_1</a></div><div class="ttdeci">short color_Player_1</div><div class="ttdef"><b>Definition:</b> <a href="_style_8h_source.html#l00036">Style.h:36</a></div></div>
+<div class="ttc" id="aclass_symbole_html_a2bf6078786ea16bbac05ffdb0bc489f1"><div class="ttname"><a href="class_symbole.html#a2bf6078786ea16bbac05ffdb0bc489f1">Symbole::Symbole</a></div><div class="ttdeci">Symbole()</div><div class="ttdoc">Private Konstruktor der Klasse.</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8cpp_source.html#l00014">Symbole.cpp:14</a></div></div>
+<div class="ttc" id="aclass_symbole_html_a38cc1a8228989983825975dddee92f18"><div class="ttname"><a href="class_symbole.html#a38cc1a8228989983825975dddee92f18">Symbole::drawCircle</a></div><div class="ttdeci">void drawCircle(short, short, short)</div><div class="ttdoc">Gibt einen hohlen Kreis aus.</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8cpp_source.html#l00131">Symbole.cpp:131</a></div></div>
+<div class="ttc" id="aclass_symbole_html_a616db868db8f0fce7785f981538123b2"><div class="ttname"><a href="class_symbole.html#a616db868db8f0fce7785f981538123b2">Symbole::setPlayerSim</a></div><div class="ttdeci">void setPlayerSim(short, short)</div><div class="ttdoc">Setzt Spieler Zeichen.</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8cpp_source.html#l00027">Symbole.cpp:27</a></div></div>
 <div class="ttc" id="aclass_symbole_html_a627cb88f90f2e20ef96b00be02237c49"><div class="ttname"><a href="class_symbole.html#a627cb88f90f2e20ef96b00be02237c49">Symbole::simP1</a></div><div class="ttdeci">short simP1</div><div class="ttdoc">Symbole Player 1.</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8h_source.html#l00035">Symbole.h:35</a></div></div>
-<div class="ttc" id="aclass_symbole_html_aa0cc9c71ca4769fe6f2bd94cc05abad4"><div class="ttname"><a href="class_symbole.html#aa0cc9c71ca4769fe6f2bd94cc05abad4">Symbole::drawPiece</a></div><div class="ttdeci">void drawPiece(short, short, short)</div><div class="ttdoc">Gibt das Spieler Zeichen aus.</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8cpp_source.html#l00046">Symbole.cpp:46</a></div></div>
-<div class="ttc" id="aclass_symbole_html_acd9888a21d594076d414731b0ea028ae"><div class="ttname"><a href="class_symbole.html#acd9888a21d594076d414731b0ea028ae">Symbole::drawHammer</a></div><div class="ttdeci">void drawHammer(short, short, short)</div><div class="ttdoc">Gibt einen Hammer als Spieler Symbol aus.</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8cpp_source.html#l00112">Symbole.cpp:112</a></div></div>
-<div class="ttc" id="aclass_symbole_html_ae707ca625b80b160b92461253e48f972"><div class="ttname"><a href="class_symbole.html#ae707ca625b80b160b92461253e48f972">Symbole::drawSickle</a></div><div class="ttdeci">void drawSickle(short, short, short)</div><div class="ttdoc">Gibt eine Sichel als Spieler Symbol aus.</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8cpp_source.html#l00087">Symbole.cpp:87</a></div></div>
-<div class="ttc" id="aclass_symbole_html_af71aa1dbb62026a9ec288d45ba5387fb"><div class="ttname"><a href="class_symbole.html#af71aa1dbb62026a9ec288d45ba5387fb">Symbole::drawX</a></div><div class="ttdeci">void drawX(short, short, short)</div><div class="ttdoc">Gibt ein X aus.</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8cpp_source.html#l00147">Symbole.cpp:147</a></div></div>
+<div class="ttc" id="aclass_symbole_html_aa0cc9c71ca4769fe6f2bd94cc05abad4"><div class="ttname"><a href="class_symbole.html#aa0cc9c71ca4769fe6f2bd94cc05abad4">Symbole::drawPiece</a></div><div class="ttdeci">void drawPiece(short, short, short)</div><div class="ttdoc">Gibt das Spieler Zeichen aus.</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8cpp_source.html#l00044">Symbole.cpp:44</a></div></div>
+<div class="ttc" id="aclass_symbole_html_acd9888a21d594076d414731b0ea028ae"><div class="ttname"><a href="class_symbole.html#acd9888a21d594076d414731b0ea028ae">Symbole::drawHammer</a></div><div class="ttdeci">void drawHammer(short, short, short)</div><div class="ttdoc">Gibt einen Hammer als Spieler Symbol aus.</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8cpp_source.html#l00110">Symbole.cpp:110</a></div></div>
+<div class="ttc" id="aclass_symbole_html_ae707ca625b80b160b92461253e48f972"><div class="ttname"><a href="class_symbole.html#ae707ca625b80b160b92461253e48f972">Symbole::drawSickle</a></div><div class="ttdeci">void drawSickle(short, short, short)</div><div class="ttdoc">Gibt eine Sichel als Spieler Symbol aus.</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8cpp_source.html#l00085">Symbole.cpp:85</a></div></div>
+<div class="ttc" id="aclass_symbole_html_af71aa1dbb62026a9ec288d45ba5387fb"><div class="ttname"><a href="class_symbole.html#af71aa1dbb62026a9ec288d45ba5387fb">Symbole::drawX</a></div><div class="ttdeci">void drawX(short, short, short)</div><div class="ttdoc">Gibt ein X aus.</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8cpp_source.html#l00145">Symbole.cpp:145</a></div></div>
 <div class="ttc" id="aclass_symbole_html_afca92d27473d0763925cc6f9866f992b"><div class="ttname"><a href="class_symbole.html#afca92d27473d0763925cc6f9866f992b">Symbole::simP2</a></div><div class="ttdeci">short simP2</div><div class="ttdoc">Symbole Player 2.</div><div class="ttdef"><b>Definition:</b> <a href="_symbole_8h_source.html#l00037">Symbole.h:37</a></div></div>
-<div class="ttc" id="amain_8cpp_html_a9cfdc59922fc042bda22a60539d05a54"><div class="ttname"><a href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a></div><div class="ttdeci">cDevDisplayGraphic &amp; disp1</div><div class="ttdoc">Main Klasse des Projektes.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00012">main.cpp:12</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a9cfdc59922fc042bda22a60539d05a54"><div class="ttname"><a href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a></div><div class="ttdeci">cDevDisplayGraphic &amp; disp1</div><div class="ttdoc">Main Klasse des Projektes.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00030">main.cpp:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

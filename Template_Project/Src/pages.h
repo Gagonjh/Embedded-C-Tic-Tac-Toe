@@ -1,6 +1,6 @@
 /*!
- *  \brief     Dient der Ausgabe auf dem Display
- *  \details   Die Klasse dient als Parent für die einzelnen Ansichten. Sie stellt darüber hinaus funktionalitäten für die Child Klassen bereit und regelt den Aufruf dieser. Sie ist somit das Bindeglied zwischen der Ausgabe und dem funktionalen teil des Programmes.
+ *  \brief     	Dient der Ausgabe auf dem Display (Singelton)
+ *  \details   	Die Klasse dient als Parent für die einzelnen Ansichten. Sie stellt darüber hinaus funktionalitäten für die Child Klassen bereit und regelt den Aufruf dieser. Sie ist somit das Bindeglied zwischen der Ausgabe und dem funktionalen teil des Programmes.
  *	\author    	Joshua Hahn
  *  \author			Yasin Calli 
  *  \date      	15.06.2021
@@ -11,44 +11,38 @@
 	
 class Pages
 {
+//Konstruktor und Destruktor
+	public:
+		//! Zugriff auf die Instanz der Klasse von Außerhalb.
+		static Pages& instance()
+		{
+				static Pages _instance;
+				return _instance;
+		}
+		//! Destruktor Definition und Deklaration.
+		~Pages() {}
+	protected:
+			Pages();
+			//! Verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann.
+			Pages( const Pages& );
+			//! Verhindert weitere Instanz durch Kopie.
+			Pages & operator = (const Pages &);
 	
-	private:
-		short int page; //Aktuelle Seite
-		short int lastPage; //Seite des letzten Aufrufs
+//Variabeln
 	public:
 			unsigned int iCurrent_Page;
-	
-			//Konstruktor
-			static Pages& instance()
-				{
-					static Pages _instance;
-					return _instance;
-				}
-			~Pages() {}
+	private:
+			//!Aktuelle Seite
+			short int page;
+			//! Aktuelle Seite bei letzten Aufruf
+			short int lastPage;
 				
-			//Methoden
+//Methoden
+	public:
 			void drawpage(void);
 			void siteHeader(short int,short int,short int,short int,char*);
 			void draw_button(short int ,short int ,short int ,short int ,short int,short int,short int,short int,short int,short int, char*);
 			short int display_current_page(int, int);
 			short int isPressed(int,int,short int[][5],int);
-				
-		protected:
-			Pages();// verhindert, dass ein Objekt von außerhalb von N erzeugt wird.
-                    // protected, wenn man von der Klasse noch erben möchte
-			Pages( const Pages& );//verhindert, dass eine weitere Instanz via Kopier-Konstruktor erstellt werden kann
-				
-			Pages & operator = (const Pages &); //Verhindert weitere Instanz durch Kopie
-		  
-
-		
 };
-
-/*
-class Pages
-{
-	public:
-		
-};
-*/
 #endif

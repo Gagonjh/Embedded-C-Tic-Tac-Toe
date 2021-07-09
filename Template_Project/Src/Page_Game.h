@@ -1,14 +1,14 @@
 /*! 
- *  \brief     
- *  \details   
+ *  \brief     Spielseite (Singelton)
+ *  \details   Gibt die Spielseite aus und hat die Funktionalität um eine Revanche zu erstellen.
  *  \author    Joshua Hahn
- *  \date      05.07.2021
+ *  \date      21.06.2021
  */
 
 #ifndef PAGE_Game_H
 #define PAGE_Game_H
 
-//!Coordinaten und Weiterleitungsanweisung für die Seite.
+//!Koordinaten und Weiterleitungsanweisung für die Seite.
 extern short int iButtons_cor_G[2][5];
 
 class Page_Game : public Pages

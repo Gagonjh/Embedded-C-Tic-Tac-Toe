@@ -155,99 +155,99 @@ Variablen</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="main_8cpp_source.html#l00015">15</a> der Datei <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="class_cells.html">Cells</a> defaultCells;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="class_game.html">Game</a>* game;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="config_l_p_c1758_8h.html#a79cccfcfccdff4d537d26420ab010fe8">disp</a>.refresh();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_pages.html">Pages</a>&amp; pages_Instance = <a class="code" href="class_pages.html#a7f0daab4ea27b3d18b14075c0c690cf6">Pages::instance</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        uint8_t ranDOOM = 0;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">short</span> posX = -1;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">short</span> posY = -1; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">short</span> page = -1;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">short</span> gamestate = -2;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">//Fix falsche Startfarbe</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.setBackColor(<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Backround);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.setTextColor(<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Font);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="config_l_p_c1758_8h.html#a79cccfcfccdff4d537d26420ab010fe8">disp</a>.clear();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">while</span>(1)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        ranDOOM = (ranDOOM+1)%69;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">    #ifdef USE_GRAPHIC_DISPLAY</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="comment">//daten der toucheingabe</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            cDevControlPointer::cData <span class="keyword">event</span> = <a class="code" href="config_l_p_c1758_8h.html#a1d8203c417946ab05cf82a294a868dd3">pointer</a>.get();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">if</span>(event.flags == event.CTRL_DWN &amp;&amp;(posX == -1)&amp;&amp; (posY == -1))</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                posX = <span class="keyword">event</span>.posX;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                posY = <span class="keyword">event</span>.posY;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                posX = -1;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                posY = -1;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="comment">//Game</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">if</span>(page == 1)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">if</span>(gamestate == -2)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    game = <span class="keyword">new</span> <a class="code" href="class_game.html">Game</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    gamestate = -1;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(gamestate &gt;= 0 &amp;&amp; <a class="code" href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929">Page_Game::instance</a>().restart_state != 2)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    <a class="code" href="class_page___history.html#ae6c54cd017760e63cc4cfc9b41663619">Page_History::instance</a>().<a class="code" href="class_page___history.html#a265e2ca8e2e484eb8ad4d46100312a09">newWinner</a>(gamestate); </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    <a class="code" href="config_l_p_c1758_8h.html#a79cccfcfccdff4d537d26420ab010fe8">disp</a>.drawText(480,180, 18, gamestate == 0 ? <span class="stringliteral">&quot;Unentschieden!&quot;</span>:<span class="stringliteral">&quot;Spieler %d gewinnt!&quot;</span>, gamestate);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    <a class="code" href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929">Page_Game::instance</a>().<a class="code" href="class_page___game.html#a4459a3df3e03d1933dc994720debb2b3">restart_state</a> = 1;    </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    <a class="code" href="class_pages.html#a7f0daab4ea27b3d18b14075c0c690cf6">Pages::instance</a>().<a class="code" href="class_pages.html#a080537f2263be41ee5dfd15525d22a14">draw_button</a>(<a class="code" href="_page___game_8cpp.html#a7fc20d8d7b6075066342890ecb6fe3e5">iButtons_cor_G</a>[1][0],<a class="code" href="_page___game_8cpp.html#a7fc20d8d7b6075066342890ecb6fe3e5">iButtons_cor_G</a>[1][2],<a class="code" href="_page___game_8cpp.html#a7fc20d8d7b6075066342890ecb6fe3e5">iButtons_cor_G</a>[1][3]-<a class="code" href="_page___game_8cpp.html#a7fc20d8d7b6075066342890ecb6fe3e5">iButtons_cor_G</a>[1][2],<a class="code" href="_page___game_8cpp.html#a7fc20d8d7b6075066342890ecb6fe3e5">iButtons_cor_G</a>[1][1]-<a class="code" href="_page___game_8cpp.html#a7fc20d8d7b6075066342890ecb6fe3e5">iButtons_cor_G</a>[1][0],15,1,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Boxes,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Field,24,16,<span class="stringliteral">&quot;Revanche!&quot;</span>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    <span class="comment">//history überschreiben</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    gamestate = -3;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (gamestate == -1)</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    gamestate = game -&gt; ttt_classic(posX,posY,ranDOOM);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code" href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929">Page_Game::instance</a>().restart_state == 2)</div>
+<p class="definition">Definiert in Zeile <a class="el" href="main_8cpp_source.html#l00033">33</a> der Datei <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="class_cells.html">Cells</a> defaultCells;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="class_game.html">Game</a>* game;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="config_l_p_c1758_8h.html#a79cccfcfccdff4d537d26420ab010fe8">disp</a>.refresh();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="class_pages.html">Pages</a>&amp; pages_Instance = <a class="code" href="class_pages.html#a7f0daab4ea27b3d18b14075c0c690cf6">Pages::instance</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        uint8_t ranDOOM = 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">short</span> posX = -1;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">short</span> posY = -1; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">short</span> page = -1;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">short</span> gamestate = -2;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">//Fix falsche Startfarbe</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.setBackColor(<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Backround);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a>.setTextColor(<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Font);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="config_l_p_c1758_8h.html#a79cccfcfccdff4d537d26420ab010fe8">disp</a>.clear();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        ranDOOM = (ranDOOM+1)%69;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">    #ifdef USE_GRAPHIC_DISPLAY</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">//daten der toucheingabe</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            cDevControlPointer::cData <span class="keyword">event</span> = <a class="code" href="config_l_p_c1758_8h.html#a1d8203c417946ab05cf82a294a868dd3">pointer</a>.get();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">if</span>(event.flags == event.CTRL_DWN &amp;&amp;(posX == -1)&amp;&amp; (posY == -1))</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                posX = <span class="keyword">event</span>.posX;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                posY = <span class="keyword">event</span>.posY;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                posX = -1;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                posY = -1;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="comment">//Game</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">if</span>(page == 1)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">if</span>(gamestate == -2)</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    gamestate = -2;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    <a class="code" href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929">Page_Game::instance</a>().<a class="code" href="class_page___game.html#a4459a3df3e03d1933dc994720debb2b3">restart_state</a> = 0;    </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    <span class="keyword">delete</span> game;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>((page!= 1 &amp;&amp; gamestate != -2)) </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                gamestate = -2;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <a class="code" href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929">Page_Game::instance</a>().<a class="code" href="class_page___game.html#a4459a3df3e03d1933dc994720debb2b3">restart_state</a> = 0;    </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keyword">delete</span> game;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="comment">//Ausgabe der Page</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="comment">//disp.drawBitmap(20,20,30,30,Symbole::instance().test);</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        page = pages_Instance.<a class="code" href="class_pages.html#aa67d97814bd131499863a0af34c893da">display_current_page</a>(posX,posY);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="config_l_p_c1758_8h.html#a79cccfcfccdff4d537d26420ab010fe8">disp</a>.refresh();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">    #endif</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
-<div class="ttc" id="a_page___game_8cpp_html_a7fc20d8d7b6075066342890ecb6fe3e5"><div class="ttname"><a href="_page___game_8cpp.html#a7fc20d8d7b6075066342890ecb6fe3e5">iButtons_cor_G</a></div><div class="ttdeci">short int iButtons_cor_G[10][5]</div><div class="ttdef"><b>Definition:</b> <a href="_page___game_8cpp_source.html#l00017">Page_Game.cpp:17</a></div></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    game = <span class="keyword">new</span> <a class="code" href="class_game.html">Game</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    gamestate = -1;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(gamestate &gt;= 0 &amp;&amp; <a class="code" href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929">Page_Game::instance</a>().restart_state != 2)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    <a class="code" href="class_page___history.html#ae6c54cd017760e63cc4cfc9b41663619">Page_History::instance</a>().<a class="code" href="class_page___history.html#a265e2ca8e2e484eb8ad4d46100312a09">newWinner</a>(gamestate); </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    <a class="code" href="config_l_p_c1758_8h.html#a79cccfcfccdff4d537d26420ab010fe8">disp</a>.drawText(480,180, 18, gamestate == 0 ? <span class="stringliteral">&quot;Unentschieden!&quot;</span>:<span class="stringliteral">&quot;Spieler %d gewinnt!&quot;</span>, gamestate);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    <a class="code" href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929">Page_Game::instance</a>().<a class="code" href="class_page___game.html#a4459a3df3e03d1933dc994720debb2b3">restart_state</a> = 1;    </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    <a class="code" href="class_pages.html#a7f0daab4ea27b3d18b14075c0c690cf6">Pages::instance</a>().<a class="code" href="class_pages.html#a080537f2263be41ee5dfd15525d22a14">draw_button</a>(<a class="code" href="_page___game_8cpp.html#a55094e6535b869e7af22b3d94b7193ef">iButtons_cor_G</a>[1][0],<a class="code" href="_page___game_8cpp.html#a55094e6535b869e7af22b3d94b7193ef">iButtons_cor_G</a>[1][2],<a class="code" href="_page___game_8cpp.html#a55094e6535b869e7af22b3d94b7193ef">iButtons_cor_G</a>[1][3]-<a class="code" href="_page___game_8cpp.html#a55094e6535b869e7af22b3d94b7193ef">iButtons_cor_G</a>[1][2],<a class="code" href="_page___game_8cpp.html#a55094e6535b869e7af22b3d94b7193ef">iButtons_cor_G</a>[1][1]-<a class="code" href="_page___game_8cpp.html#a55094e6535b869e7af22b3d94b7193ef">iButtons_cor_G</a>[1][0],15,1,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Boxes,<a class="code" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a>().color_Field,24,16,<span class="stringliteral">&quot;Revanche!&quot;</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    <span class="comment">//history überschreiben</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    gamestate = -3;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (gamestate == -1)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    gamestate = game -&gt; ttt_classic(posX,posY,ranDOOM);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code" href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929">Page_Game::instance</a>().restart_state == 2)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    gamestate = -2;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    <a class="code" href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929">Page_Game::instance</a>().<a class="code" href="class_page___game.html#a4459a3df3e03d1933dc994720debb2b3">restart_state</a> = 0;    </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    <span class="keyword">delete</span> game;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>((page!= 1 &amp;&amp; gamestate != -2)) </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                gamestate = -2;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <a class="code" href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929">Page_Game::instance</a>().<a class="code" href="class_page___game.html#a4459a3df3e03d1933dc994720debb2b3">restart_state</a> = 0;    </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="keyword">delete</span> game;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="comment">//Ausgabe der Page</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="comment">//disp.drawBitmap(20,20,30,30,Symbole::instance().test);</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        page = pages_Instance.<a class="code" href="class_pages.html#aa67d97814bd131499863a0af34c893da">display_current_page</a>(posX,posY);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="config_l_p_c1758_8h.html#a79cccfcfccdff4d537d26420ab010fe8">disp</a>.refresh();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="ttc" id="a_page___game_8cpp_html_a55094e6535b869e7af22b3d94b7193ef"><div class="ttname"><a href="_page___game_8cpp.html#a55094e6535b869e7af22b3d94b7193ef">iButtons_cor_G</a></div><div class="ttdeci">short int iButtons_cor_G[2][5]</div><div class="ttdoc">Spielseite (Singelton)</div><div class="ttdef"><b>Definition:</b> <a href="_page___game_8cpp_source.html#l00009">Page_Game.cpp:9</a></div></div>
 <div class="ttc" id="aclass_cells_html"><div class="ttname"><a href="class_cells.html">Cells</a></div><div class="ttdoc">Felder auf dem Spielfeld.</div><div class="ttdef"><b>Definition:</b> <a href="_cells_8h_source.html#l00012">Cells.h:12</a></div></div>
 <div class="ttc" id="aclass_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdoc">Fuehrt Zuege aus.</div><div class="ttdef"><b>Definition:</b> <a href="_game_8h_source.html#l00012">Game.h:13</a></div></div>
-<div class="ttc" id="aclass_page___game_html_a18c31ac43ddadb0a6eb8889ecc7ad929"><div class="ttname"><a href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929">Page_Game::instance</a></div><div class="ttdeci">static Page_Game &amp; instance()</div><div class="ttdef"><b>Definition:</b> <a href="_page___game_8h_source.html#l00017">Page_Game.h:17</a></div></div>
-<div class="ttc" id="aclass_page___game_html_a4459a3df3e03d1933dc994720debb2b3"><div class="ttname"><a href="class_page___game.html#a4459a3df3e03d1933dc994720debb2b3">Page_Game::restart_state</a></div><div class="ttdeci">short restart_state</div><div class="ttdef"><b>Definition:</b> <a href="_page___game_8h_source.html#l00027">Page_Game.h:27</a></div></div>
-<div class="ttc" id="aclass_page___history_html_a265e2ca8e2e484eb8ad4d46100312a09"><div class="ttname"><a href="class_page___history.html#a265e2ca8e2e484eb8ad4d46100312a09">Page_History::newWinner</a></div><div class="ttdeci">void newWinner(short)</div><div class="ttdef"><b>Definition:</b> <a href="_page___history_8cpp_source.html#l00043">Page_History.cpp:43</a></div></div>
-<div class="ttc" id="aclass_page___history_html_ae6c54cd017760e63cc4cfc9b41663619"><div class="ttname"><a href="class_page___history.html#ae6c54cd017760e63cc4cfc9b41663619">Page_History::instance</a></div><div class="ttdeci">static Page_History &amp; instance()</div><div class="ttdef"><b>Definition:</b> <a href="_page___history_8h_source.html#l00017">Page_History.h:17</a></div></div>
-<div class="ttc" id="aclass_pages_html"><div class="ttname"><a href="class_pages.html">Pages</a></div><div class="ttdoc">Dient der Ausgabe auf dem Display.</div><div class="ttdef"><b>Definition:</b> <a href="_pages_8h_source.html#l00012">Pages.h:13</a></div></div>
-<div class="ttc" id="aclass_pages_html_a080537f2263be41ee5dfd15525d22a14"><div class="ttname"><a href="class_pages.html#a080537f2263be41ee5dfd15525d22a14">Pages::draw_button</a></div><div class="ttdeci">void draw_button(short int, short int, short int, short int, short int, short int, short int, short int, short int, short int, char *)</div><div class="ttdef"><b>Definition:</b> <a href="_pages_8cpp_source.html#l00044">Pages.cpp:44</a></div></div>
-<div class="ttc" id="aclass_pages_html_a7f0daab4ea27b3d18b14075c0c690cf6"><div class="ttname"><a href="class_pages.html#a7f0daab4ea27b3d18b14075c0c690cf6">Pages::instance</a></div><div class="ttdeci">static Pages &amp; instance()</div><div class="ttdef"><b>Definition:</b> <a href="_pages_8h_source.html#l00022">Pages.h:22</a></div></div>
-<div class="ttc" id="aclass_pages_html_aa67d97814bd131499863a0af34c893da"><div class="ttname"><a href="class_pages.html#aa67d97814bd131499863a0af34c893da">Pages::display_current_page</a></div><div class="ttdeci">short int display_current_page(int, int)</div><div class="ttdef"><b>Definition:</b> <a href="_pages_8cpp_source.html#l00092">Pages.cpp:92</a></div></div>
-<div class="ttc" id="aclass_style_html_aa39efd917d75e51c7d470cbb84939e9e"><div class="ttname"><a href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a></div><div class="ttdeci">static Style &amp; instance()</div><div class="ttdoc">Zugriff auf die Instanz der Klasse von Au�erhalb.</div><div class="ttdef"><b>Definition:</b> <a href="_style_8h_source.html#l00014">Style.h:14</a></div></div>
+<div class="ttc" id="aclass_page___game_html_a18c31ac43ddadb0a6eb8889ecc7ad929"><div class="ttname"><a href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929">Page_Game::instance</a></div><div class="ttdeci">static Page_Game &amp; instance()</div><div class="ttdoc">Zugriff auf die Instanz der Klasse von Au�erhalb.</div><div class="ttdef"><b>Definition:</b> <a href="_page___game_8h_source.html#l00019">Page_Game.h:19</a></div></div>
+<div class="ttc" id="aclass_page___game_html_a4459a3df3e03d1933dc994720debb2b3"><div class="ttname"><a href="class_page___game.html#a4459a3df3e03d1933dc994720debb2b3">Page_Game::restart_state</a></div><div class="ttdeci">short restart_state</div><div class="ttdoc">Dient als Schnitstelle zwischen dem Button Revance! und einer externen funktion die diese Variable ab...</div><div class="ttdef"><b>Definition:</b> <a href="_page___game_8h_source.html#l00037">Page_Game.h:37</a></div></div>
+<div class="ttc" id="aclass_page___history_html_a265e2ca8e2e484eb8ad4d46100312a09"><div class="ttname"><a href="class_page___history.html#a265e2ca8e2e484eb8ad4d46100312a09">Page_History::newWinner</a></div><div class="ttdeci">void newWinner(short)</div><div class="ttdoc">Speichert Gewinner.</div><div class="ttdef"><b>Definition:</b> <a href="_page___history_8cpp_source.html#l00043">Page_History.cpp:43</a></div></div>
+<div class="ttc" id="aclass_page___history_html_ae6c54cd017760e63cc4cfc9b41663619"><div class="ttname"><a href="class_page___history.html#ae6c54cd017760e63cc4cfc9b41663619">Page_History::instance</a></div><div class="ttdeci">static Page_History &amp; instance()</div><div class="ttdoc">Zugriff auf die Instanz der Klasse von Au�erhalb.</div><div class="ttdef"><b>Definition:</b> <a href="_page___history_8h_source.html#l00019">Page_History.h:19</a></div></div>
+<div class="ttc" id="aclass_pages_html"><div class="ttname"><a href="class_pages.html">Pages</a></div><div class="ttdoc">Dient der Ausgabe auf dem Display (Singelton)</div><div class="ttdef"><b>Definition:</b> <a href="_pages_8h_source.html#l00012">Pages.h:13</a></div></div>
+<div class="ttc" id="aclass_pages_html_a080537f2263be41ee5dfd15525d22a14"><div class="ttname"><a href="class_pages.html#a080537f2263be41ee5dfd15525d22a14">Pages::draw_button</a></div><div class="ttdeci">void draw_button(short int, short int, short int, short int, short int, short int, short int, short int, short int, short int, char *)</div><div class="ttdoc">Erstellt eine Kopfzeile mit Text.</div><div class="ttdef"><b>Definition:</b> <a href="_pages_8cpp_source.html#l00070">Pages.cpp:70</a></div></div>
+<div class="ttc" id="aclass_pages_html_a7f0daab4ea27b3d18b14075c0c690cf6"><div class="ttname"><a href="class_pages.html#a7f0daab4ea27b3d18b14075c0c690cf6">Pages::instance</a></div><div class="ttdeci">static Pages &amp; instance()</div><div class="ttdoc">Zugriff auf die Instanz der Klasse von Au�erhalb.</div><div class="ttdef"><b>Definition:</b> <a href="_pages_8h_source.html#l00017">Pages.h:17</a></div></div>
+<div class="ttc" id="aclass_pages_html_aa67d97814bd131499863a0af34c893da"><div class="ttname"><a href="class_pages.html#aa67d97814bd131499863a0af34c893da">Pages::display_current_page</a></div><div class="ttdeci">short int display_current_page(int, int)</div><div class="ttdoc">Kontrolliert die Seitenausgabe.</div><div class="ttdef"><b>Definition:</b> <a href="_pages_8cpp_source.html#l00114">Pages.cpp:114</a></div></div>
+<div class="ttc" id="aclass_style_html_aa39efd917d75e51c7d470cbb84939e9e"><div class="ttname"><a href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e">Style::instance</a></div><div class="ttdeci">static Style &amp; instance()</div><div class="ttdoc">Zugriff auf die Instanz der Klasse von Au�erhalb.</div><div class="ttdef"><b>Definition:</b> <a href="_style_8h_source.html#l00016">Style.h:16</a></div></div>
 <div class="ttc" id="aconfig_l_p_c1758_8h_html_a1d8203c417946ab05cf82a294a868dd3"><div class="ttname"><a href="config_l_p_c1758_8h.html#a1d8203c417946ab05cf82a294a868dd3">pointer</a></div><div class="ttdeci">cDevControlPointer pointer(touch)</div></div>
 <div class="ttc" id="aconfig_l_p_c1758_8h_html_a79cccfcfccdff4d537d26420ab010fe8"><div class="ttname"><a href="config_l_p_c1758_8h.html#a79cccfcfccdff4d537d26420ab010fe8">disp</a></div><div class="ttdeci">cDevDisplayGraphic disp(dispHw)</div></div>
-<div class="ttc" id="amain_8cpp_html_a9cfdc59922fc042bda22a60539d05a54"><div class="ttname"><a href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a></div><div class="ttdeci">cDevDisplayGraphic &amp; disp1</div><div class="ttdoc">Main Klasse des Projektes.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00012">main.cpp:12</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a9cfdc59922fc042bda22a60539d05a54"><div class="ttname"><a href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a></div><div class="ttdeci">cDevDisplayGraphic &amp; disp1</div><div class="ttdoc">Main Klasse des Projektes.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00030">main.cpp:30</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div class="dyncontent">
@@ -255,31 +255,31 @@ Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <map name="amain_8cpp_a840291bc02cba5474a4cb46a9b9566fe_cgraph" id="amain_8cpp_a840291bc02cba5474a4cb46a9b9566fe_cgraph">
 <area shape="rect" title=" " alt="" coords="5,761,56,788"/>
 <area shape="rect" href="config_l_p_c1758_8h.html#a79cccfcfccdff4d537d26420ab010fe8" title=" " alt="" coords="176,5,223,32"/>
-<area shape="rect" href="class_pages.html#aa67d97814bd131499863a0af34c893da" title=" " alt="" coords="104,457,295,484"/>
-<area shape="rect" href="class_pages.html#a080537f2263be41ee5dfd15525d22a14" title=" " alt="" coords="868,603,1005,629"/>
+<area shape="rect" href="class_pages.html#aa67d97814bd131499863a0af34c893da" title="Kontrolliert die Seitenausgabe." alt="" coords="104,457,295,484"/>
+<area shape="rect" href="class_pages.html#a080537f2263be41ee5dfd15525d22a14" title="Erstellt eine Kopfzeile mit Text." alt="" coords="868,603,1005,629"/>
 <area shape="rect" href="class_style.html#aa39efd917d75e51c7d470cbb84939e9e" title="Zugriff auf die Instanz der Klasse von Außerhalb." alt="" coords="1079,476,1188,503"/>
-<area shape="rect" href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929" title=" " alt="" coords="634,660,785,687"/>
-<area shape="rect" href="class_pages.html#a7f0daab4ea27b3d18b14075c0c690cf6" title=" " alt="" coords="651,123,767,149"/>
-<area shape="rect" href="class_page___history.html#ae6c54cd017760e63cc4cfc9b41663619" title=" " alt="" coords="381,711,538,737"/>
-<area shape="rect" href="class_page___history.html#a265e2ca8e2e484eb8ad4d46100312a09" title=" " alt="" coords="113,913,285,940"/>
+<area shape="rect" href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929" title="Zugriff auf die Instanz der Klasse von Außerhalb." alt="" coords="634,660,785,687"/>
+<area shape="rect" href="class_pages.html#a7f0daab4ea27b3d18b14075c0c690cf6" title="Zugriff auf die Instanz der Klasse von Außerhalb." alt="" coords="651,123,767,149"/>
+<area shape="rect" href="class_page___history.html#ae6c54cd017760e63cc4cfc9b41663619" title="Zugriff auf die Instanz der Klasse von Außerhalb." alt="" coords="381,711,538,737"/>
+<area shape="rect" href="class_page___history.html#a265e2ca8e2e484eb8ad4d46100312a09" title="Speichert Gewinner." alt="" coords="113,913,285,940"/>
 <area shape="rect" href="config_l_p_c1758_8h.html#a1d8203c417946ab05cf82a294a868dd3" title=" " alt="" coords="169,964,230,991"/>
-<area shape="rect" href="class_page___game.html#a8b2eeb747559703cc6fafcacc2bb8786" title=" " alt="" coords="343,407,576,433"/>
-<area shape="rect" href="class_page___game.html#a7476516a09b3fc41dc61869c7a3d8996" title=" " alt="" coords="631,460,788,487"/>
-<area shape="rect" href="class_page___history.html#ae350b9f956c556b9696451e7a1a595db" title=" " alt="" coords="364,173,555,214"/>
-<area shape="rect" href="class_page___menue.html#ac3d4204b3e18280065b9270d7d0b0171" title=" " alt="" coords="365,107,554,149"/>
-<area shape="rect" href="class_page___settings.html#a09ddc9ca9abc69c47397270865863f3a" title=" " alt="" coords="360,290,559,331"/>
-<area shape="rect" href="class_page___settings.html#acb02d664f883f3df7405ef0b1720e187" title=" " alt="" coords="624,240,795,267"/>
+<area shape="rect" href="class_page___game.html#a8b2eeb747559703cc6fafcacc2bb8786" title="Prüft ob ein Button gedrückt ist." alt="" coords="343,407,576,433"/>
+<area shape="rect" href="class_page___game.html#a7476516a09b3fc41dc61869c7a3d8996" title="Gibt den Inhalt der Seite aus." alt="" coords="631,460,788,487"/>
+<area shape="rect" href="class_page___history.html#ae350b9f956c556b9696451e7a1a595db" title="Prüft ob ein Button gedrückt ist." alt="" coords="364,173,555,214"/>
+<area shape="rect" href="class_page___menue.html#ac3d4204b3e18280065b9270d7d0b0171" title="Prüft ob ein Button gedrückt ist." alt="" coords="365,107,554,149"/>
+<area shape="rect" href="class_page___settings.html#a09ddc9ca9abc69c47397270865863f3a" title="Prüft ob ein Button gedrückt ist." alt="" coords="360,290,559,331"/>
+<area shape="rect" href="class_page___settings.html#acb02d664f883f3df7405ef0b1720e187" title="Gibt den Inhalt der Seite aus." alt="" coords="624,240,795,267"/>
 <area shape="rect" href="class_page___settings.html#a2a49d236fb838cc0d06b681f4a8a0d94" title=" " alt="" coords="627,409,791,436"/>
-<area shape="rect" href="class_page___history.html#a8c6d69be1cded874ec5c9661a552b2a4" title=" " alt="" coords="628,553,791,580"/>
-<area shape="rect" href="class_page___menue.html#a8e17887448ccdaf76b13a837172f88b0" title=" " alt="" coords="629,608,790,635"/>
-<area shape="rect" href="class_page___menue.html#af807c4a89113eea1594960bd9d0b3c53" title=" " alt="" coords="382,508,537,535"/>
-<area shape="rect" href="class_pages.html#af0a19281f53621c2d042b8285c23f768" title=" " alt="" coords="647,184,772,211"/>
+<area shape="rect" href="class_page___history.html#a8c6d69be1cded874ec5c9661a552b2a4" title="Gibt den Inhalt der Seite aus." alt="" coords="628,553,791,580"/>
+<area shape="rect" href="class_page___menue.html#a8e17887448ccdaf76b13a837172f88b0" title="Gibt den Inhalt der Seite aus." alt="" coords="629,608,790,635"/>
+<area shape="rect" href="class_page___menue.html#af807c4a89113eea1594960bd9d0b3c53" title="Zugriff auf die Instanz der Klasse von Außerhalb." alt="" coords="382,508,537,535"/>
+<area shape="rect" href="class_pages.html#af0a19281f53621c2d042b8285c23f768" title="Prüft ob Fläche gedrückt ist." alt="" coords="647,184,772,211"/>
 <area shape="rect" href="class_style.html#aa6aee0e26bc3795983006658bbbcfd60" title="Setzt Aktive Farbe." alt="" coords="626,343,793,385"/>
 <area shape="rect" href="class_symbole.html#a68c1d73355d8a5d18fc5106264a7c0f6" title="Zugriff auf die Instanz der Klasse von Außerhalb." alt="" coords="871,349,1002,376"/>
 <area shape="rect" href="class_symbole.html#a616db868db8f0fce7785f981538123b2" title="Setzt Spieler Zeichen." alt="" coords="857,400,1016,427"/>
-<area shape="rect" href="class_page___settings.html#aa5954d3ef6875f77510dac9049e8ebac" title=" " alt="" coords="843,115,1031,157"/>
-<area shape="rect" href="class_page___settings.html#ae48dcdbf3bd9f52680e55d53454066f1" title=" " alt="" coords="855,233,1018,274"/>
-<area shape="rect" href="class_pages.html#a9a6cfcf2dd0c1b981c55c036188d9cc7" title=" " alt="" coords="872,501,1001,528"/>
+<area shape="rect" href="class_page___settings.html#aa5954d3ef6875f77510dac9049e8ebac" title="Zeigt an was der Nutzer ausgewählt hat." alt="" coords="843,115,1031,157"/>
+<area shape="rect" href="class_page___settings.html#ae48dcdbf3bd9f52680e55d53454066f1" title="Zeigt an was der Nutzer ausgewählt hat." alt="" coords="855,233,1018,274"/>
+<area shape="rect" href="class_pages.html#a9a6cfcf2dd0c1b981c55c036188d9cc7" title="Erstellt eine Kopfzeile mit Text." alt="" coords="872,501,1001,528"/>
 </map>
 </div>
 
@@ -299,16 +299,14 @@ Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 </div><div class="memdoc">
 
 <p>Main Klasse des Projektes. </p>
-<p><br  />
-</p>
 <p>This class is used to demonstrate a number of section commands. </p><dl class="section author"><dt>Autor</dt><dd>Joshua Hahn </dd>
 <dd>
 Yasin Calli </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>08.06.2021 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="main_8cpp_source.html#l00012">12</a> der Datei <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="main_8cpp_source.html#l00030">30</a> der Datei <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Wird benutzt von <a class="el" href="_page___game_8cpp_source.html#l00039">Page_Game::buttonOnPagePressed()</a>, <a class="el" href="_page___settings_8cpp_source.html#l00069">Page_Settings::buttonOnPagePressed()</a>, <a class="el" href="_style_8cpp_source.html#l00058">Style::changeActiveColorTheme()</a>, <a class="el" href="_pages_8cpp_source.html#l00092">Pages::display_current_page()</a>, <a class="el" href="_pages_8cpp_source.html#l00044">Pages::draw_button()</a>, <a class="el" href="_symbole_8cpp_source.html#l00133">Symbole::drawCircle()</a>, <a class="el" href="_field_8cpp_source.html#l00007">Field::drawField()</a>, <a class="el" href="_symbole_8cpp_source.html#l00112">Symbole::drawHammer()</a>, <a class="el" href="_page___game_8cpp_source.html#l00032">Page_Game::drawpage()</a>, <a class="el" href="_page___history_8cpp_source.html#l00049">Page_History::drawpage()</a>, <a class="el" href="_page___menue_8cpp_source.html#l00024">Page_Menue::drawpage()</a>, <a class="el" href="_page___settings_8cpp_source.html#l00045">Page_Settings::drawpage()</a>, <a class="el" href="_pages_8cpp_source.html#l00019">Pages::drawpage()</a>, <a class="el" href="_symbole_8cpp_source.html#l00087">Symbole::drawSickle()</a>, <a class="el" href="_symbole_8cpp_source.html#l00147">Symbole::drawX()</a>, <a class="el" href="_page___settings_8cpp_source.html#l00024">Page_Settings::highlight_selected_colormode_button()</a>, <a class="el" href="_page___settings_8cpp_source.html#l00035">Page_Settings::highlight_selected_game_mode()</a>, <a class="el" href="main_8cpp_source.html#l00015">main()</a>, <a class="el" href="_page___game_8cpp_source.html#l00061">Page_Game::output_Current_Player()</a>, <a class="el" href="_pages_8cpp_source.html#l00029">Pages::siteHeader()</a> und <a class="el" href="_game_8cpp_source.html#l00011">Game::ttt_classic()</a>.</p>
+<p class="reference">Wird benutzt von <a class="el" href="_page___game_8cpp_source.html#l00045">Page_Game::buttonOnPagePressed()</a>, <a class="el" href="_page___settings_8cpp_source.html#l00087">Page_Settings::buttonOnPagePressed()</a>, <a class="el" href="_style_8cpp_source.html#l00056">Style::changeActiveColorTheme()</a>, <a class="el" href="_pages_8cpp_source.html#l00114">Pages::display_current_page()</a>, <a class="el" href="_pages_8cpp_source.html#l00070">Pages::draw_button()</a>, <a class="el" href="_symbole_8cpp_source.html#l00131">Symbole::drawCircle()</a>, <a class="el" href="_field_8cpp_source.html#l00007">Field::drawField()</a>, <a class="el" href="_symbole_8cpp_source.html#l00110">Symbole::drawHammer()</a>, <a class="el" href="_page___game_8cpp_source.html#l00030">Page_Game::drawpage()</a>, <a class="el" href="_page___history_8cpp_source.html#l00055">Page_History::drawpage()</a>, <a class="el" href="_page___menue_8cpp_source.html#l00021">Page_Menue::drawpage()</a>, <a class="el" href="_page___settings_8cpp_source.html#l00055">Page_Settings::drawpage()</a>, <a class="el" href="_pages_8cpp_source.html#l00025">Pages::drawpage()</a>, <a class="el" href="_symbole_8cpp_source.html#l00085">Symbole::drawSickle()</a>, <a class="el" href="_symbole_8cpp_source.html#l00145">Symbole::drawX()</a>, <a class="el" href="_page___settings_8cpp_source.html#l00023">Page_Settings::highlight_selected_colormode_button()</a>, <a class="el" href="_page___settings_8cpp_source.html#l00039">Page_Settings::highlight_selected_game_mode()</a>, <a class="el" href="main_8cpp_source.html#l00033">main()</a>, <a class="el" href="_page___game_8cpp_source.html#l00075">Page_Game::output_Current_Player()</a>, <a class="el" href="_pages_8cpp_source.html#l00042">Pages::siteHeader()</a> und <a class="el" href="_game_8cpp_source.html#l00011">Game::ttt_classic()</a>.</p>
 
 </div>
 </div>
@@ -324,9 +322,9 @@ Yasin Calli </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="main_8cpp_source.html#l00013">13</a> der Datei <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="main_8cpp_source.html#l00031">31</a> der Datei <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Wird benutzt von <a class="el" href="_page___settings_8cpp_source.html#l00069">Page_Settings::buttonOnPagePressed()</a>, <a class="el" href="_page___settings_8cpp_source.html#l00035">Page_Settings::highlight_selected_game_mode()</a> und <a class="el" href="_game_8cpp_source.html#l00011">Game::ttt_classic()</a>.</p>
+<p class="reference">Wird benutzt von <a class="el" href="_page___settings_8cpp_source.html#l00087">Page_Settings::buttonOnPagePressed()</a>, <a class="el" href="_page___settings_8cpp_source.html#l00039">Page_Settings::highlight_selected_game_mode()</a> und <a class="el" href="_game_8cpp_source.html#l00011">Game::ttt_classic()</a>.</p>
 
 </div>
 </div>

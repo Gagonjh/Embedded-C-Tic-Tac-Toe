@@ -5,11 +5,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
  
 
 #line 1 "Src\\./Project_Headers.h"
-
-
 
 
 
@@ -22411,8 +22427,8 @@ class cTaskHandler : public cList::Item
 
 #line 91 "Src\\./../../EmbSysLib/Src/lib.h"
 
-#line 13 "Src\\./Project_Headers.h"
-#line 14 "Src\\./Project_Headers.h"
+#line 11 "Src\\./Project_Headers.h"
+#line 12 "Src\\./Project_Headers.h"
 #line 1 "Src\\././datatypes.h"
 
 
@@ -22436,7 +22452,7 @@ typedef struct coordinates {
 	uint8_t player;
 } Coordinates;
 
-#line 15 "Src\\./Project_Headers.h"
+#line 13 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Controller.h"
 
 
@@ -22548,8 +22564,8 @@ class Controller {
 		short getcurrentPlayer(void);
 };
 
-#line 16 "Src\\./Project_Headers.h"
-#line 17 "Src\\./Project_Headers.h"
+#line 14 "Src\\./Project_Headers.h"
+#line 15 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Game.h"
 
 
@@ -22582,8 +22598,8 @@ class Game
 	
 };
 
-#line 18 "Src\\./Project_Headers.h"
-#line 19 "Src\\./Project_Headers.h"
+#line 16 "Src\\./Project_Headers.h"
+#line 17 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Pages.h"
 
 
@@ -22598,47 +22614,41 @@ class Game
 	
 class Pages
 {
+
+	public:
+		
+		static Pages& instance()
+		{
+				static Pages _instance;
+				return _instance;
+		}
+		
+		~Pages() {}
+	protected:
+			Pages();
+			
+			Pages( const Pages& );
+			
+			Pages & operator = (const Pages &);
 	
-	private:
-		short int page; 
-		short int lastPage; 
+
 	public:
 			unsigned int iCurrent_Page;
-	
+	private:
 			
-			static Pages& instance()
-				{
-					static Pages _instance;
-					return _instance;
-				}
-			~Pages() {}
+			short int page;
+			
+			short int lastPage;
 				
-			
+
+	public:
 			void drawpage(void);
 			void siteHeader(short int,short int,short int,short int,char*);
 			void draw_button(short int ,short int ,short int ,short int ,short int,short int,short int,short int,short int,short int, char*);
 			short int display_current_page(int, int);
 			short int isPressed(int,int,short int[][5],int);
-				
-		protected:
-			Pages();
-                    
-			Pages( const Pages& );
-				
-			Pages & operator = (const Pages &); 
-		  
-
-		
 };
-
-
-
-
-
-
-
- 
-#line 20 "Src\\./Project_Headers.h"
+#line 18 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Page_Menue.h"
 
 
@@ -22650,34 +22660,36 @@ class Pages
 
 
 
-extern short int iButtons_cor_M[10][5];
+
+extern short int iButtons_cor_M[3][5];
 
 class Page_Menue : public Pages
 {
+
 		public:
-						
-				static Page_Menue& instance()
+			
+			static Page_Menue& instance()
 			{
 				static Page_Menue _instance;
 				return _instance;
 			}
+			
 			~Page_Menue() {}
-		
-			void drawpage(void);
-			
-			short int buttonOnPagePressed(int,int);
-			
-			private:
-			
-			Page_Menue() {
-			} ;
-                    
-			Page_Menue( const Page_Menue& );
-				
-			Page_Menue & operator = (const Page_Menue &); 
-};
 
-#line 21 "Src\\./Project_Headers.h"
+		private:
+			
+			Page_Menue() {} ;
+      
+			Page_Menue( const Page_Menue& );
+			
+			Page_Menue & operator = (const Page_Menue &);
+
+
+		public:
+			void drawpage(void);
+			short int buttonOnPagePressed(int,int);			
+};
+#line 19 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Page_Settings.h"
 
 
@@ -22689,10 +22701,12 @@ class Page_Menue : public Pages
 
 
 
-extern short int iButtons_cor_S[10][5];
+
+extern short int iButtons_cor_S[6][5];
 
 class Page_Settings : public Pages
 {
+
 		public:
 			
 				static Page_Settings& instance()
@@ -22701,22 +22715,25 @@ class Page_Settings : public Pages
 				return _instance;
 			}
 			~Page_Settings() {}
-			
-		
-			void drawpage(void);
-				
-			short int buttonOnPagePressed(int,int);
-		
 		private:
+			
 			Page_Settings() {} ;
+			
+			Page_Settings( const Page_Settings& );
+			
+			Page_Settings & operator = (const Page_Settings &);
+
+
+		public:
+			void drawpage(void);
+			short int buttonOnPagePressed(int,int);
+				
+		private:
 			void highlight_selected_colormode_button();
 			void highlight_selected_game_mode();
-		
-			Page_Settings( const Page_Settings& );
-			Page_Settings & operator = (const Page_Settings &); 
 };
 
-#line 22 "Src\\./Project_Headers.h"
+#line 20 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Symbole.h"
 
 
@@ -22768,7 +22785,7 @@ class Symbole
 			void drawCircle(short,short,short);
 			void drawX(short,short,short);
 };
-#line 23 "Src\\./Project_Headers.h"
+#line 21 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Page_Game.h"
 
 
@@ -22815,7 +22832,7 @@ class Page_Game : public Pages
 		short int buttonOnPagePressed(int,int);		
 };
 
-#line 24 "Src\\./Project_Headers.h"
+#line 22 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Page_History.h"
 
 
@@ -22827,37 +22844,46 @@ class Page_Game : public Pages
 
 
 
-extern short int iButtons_cor_H[10][5];
+
+extern short int iButtons_cor_H[1][5];
 
 class Page_History : public Pages
 {
+
 		public:
 			
-				static Page_History& instance()
+			static Page_History& instance()
 			{
 				static Page_History _instance;
 				return _instance;
 			}
-			~Page_History();
 			
+			~Page_History();
+		private:
+			Page_History();
+			
+			Page_History( const Page_History& );
+			
+			Page_History & operator = (const Page_History &);
 		
+
+		private:
+			
+			short hOffset;
+			
+			short* winner;
+		
+
+		public:
 			void drawpage(void);
 			void newWinner(short);
-			short int buttonOnPagePressed(int,int);
-			
-		private:
-			short hOffset;
-			short* winner;
-			
-			Page_History();
-                    
-			Page_History( const Page_History& );
-				
-			Page_History & operator = (const Page_History &); 
+			short int buttonOnPagePressed(int,int);	
 };
 
-#line 25 "Src\\./Project_Headers.h"
+#line 23 "Src\\./Project_Headers.h"
 #line 1 "Src\\././Style.h"
+
+
 
 
 
@@ -22943,13 +22969,13 @@ class Style
 			
 };
 
-#line 26 "Src\\./Project_Headers.h"
+#line 24 "Src\\./Project_Headers.h"
 
 
 extern cDevDisplayGraphic& disp1;
 extern uint8_t gameMode;
 
-#line 10 "Src\\main.cpp"
+#line 28 "Src\\main.cpp"
 #line 1 "Src\\./configSTM32F7xx.h"
 
 
@@ -25079,7 +25105,7 @@ cDevDigital led( portJ, 13, cDevDigital::Out,  0 );
 cHwRTC_0 rtc(cHwRTC_0::LSI);
 
 
-#line 11 "Src\\main.cpp"
+#line 29 "Src\\main.cpp"
 
 cDevDisplayGraphic& disp1 = disp;
 uint8_t gameMode = 1;

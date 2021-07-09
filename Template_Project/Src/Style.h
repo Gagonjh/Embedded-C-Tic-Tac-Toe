@@ -1,7 +1,9 @@
 /*! 
- *  \author    	Joshua Hahn
- *  \date      	21.06.2021
- */
+*  \brief     	Definiert das Farbthema der Anwendung (Singelton)
+*  \details   	Die Klasse stellt unterschiedliche Farbthemen für den Nutzer zur Wahl zur verfügung. Die Klasse ist ein Singleton somit gibt es nur eine Instanz auf die man mit Style::instance(). zugreifen kann.
+*  \author    	Joshua Hahn
+*  \date      	21.06.2021
+*/
 
 #ifndef STYLE_H
 #define STYLE_H

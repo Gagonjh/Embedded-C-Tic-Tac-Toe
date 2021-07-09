@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['handleuserinput_69',['handleUserInput',['../class_controller.html#a9d70022d276d5398e260263a02dac0fc',1,'Controller']]],
-  ['highlight_5fselected_5fcolormode_5fbutton_70',['highlight_selected_colormode_button',['../class_page___settings.html#aa5954d3ef6875f77510dac9049e8ebac',1,'Page_Settings']]],
-  ['highlight_5fselected_5fgame_5fmode_71',['highlight_selected_game_mode',['../class_page___settings.html#ae48dcdbf3bd9f52680e55d53454066f1',1,'Page_Settings']]],
-  ['hoffset_72',['hOffset',['../class_page___history.html#a563d720e3c687691ecd0b7dbec5f14a5',1,'Page_History']]],
-  ['hwdsi_73',['hwDSI',['../config_s_t_m32_f7xx_8h.html#ab82dea9d6fab8fa0a84115624c9d8e5a',1,'configSTM32F7xx.h']]]
+  ['game_64',['Game',['../class_game.html',1,'Game'],['../class_game.html#ad59df6562a58a614fda24622d3715b65',1,'Game::Game()']]],
+  ['game_2ecpp_65',['Game.cpp',['../_game_8cpp.html',1,'']]],
+  ['game_2eh_66',['Game.h',['../_game_8h.html',1,'']]],
+  ['gamemode_67',['gameMode',['../main_8cpp.html#aa1f04c89745ecf0a24895b20e1756cc0',1,'gameMode():&#160;main.cpp'],['../_project___headers_8h.html#aa1f04c89745ecf0a24895b20e1756cc0',1,'gameMode():&#160;main.cpp']]],
+  ['getcurrentplayer_68',['getcurrentPlayer',['../class_controller.html#a19eef881fd3de6e9892c0d4bd96a7bc4',1,'Controller']]],
+  ['getgamestate_69',['getGameState',['../class_controller.html#acdd8e89140f2abb13ac6b1416bc27b58',1,'Controller']]]
 ];

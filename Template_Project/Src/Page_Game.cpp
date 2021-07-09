@@ -1,6 +1,4 @@
 /*! 
- *  \brief     	
- *  \details   	
  *  \author    	Joshua Hahn
  *  \author			Yasin Calli
  *  \date      	21.06.2021
@@ -25,8 +23,9 @@ Page_Game::Page_Game()
 
 /*!
 	\brief Gibt den Inhalt der Seite aus
-	\details Setzt die Notwendigen Farbwerte in der EmbSysLib. Und Zeichnet die Button mit der Vererbten funktion aus Pages.
+	\details Setzt die Notwendigen Farbwerte in der EmbSysLib. Und Zeichnet die Button mit der Vererbten funktion aus Pages. Überschreibt Pages::drawpage()
 	\sa Pages::draw_button()
+	\sa Pages::drawpage()
 */
 void Page_Game::drawpage()
 {
@@ -37,7 +36,7 @@ void Page_Game::drawpage()
 
 /*!
 	\brief Prüft ob ein Button gedrückt ist.
-	\details Nutzt die Vererbte funktion aus der Pages isPressed um sagen zu können ob ein Button gedrückt ist. Falls ja wird die gewünschte funktionaität aufgerufen.
+	\details Nutzt die Vererbte funktion aus der Pages isPressed um sagen zu können ob ein Button gedrückt ist. Falls ja wird die gewünschte Funktionaität aufgerufen.
 	\param X Koordinate der Touch Eingabe.
 	\param Y Koordinate der Touch Eingabe.
 	\return Gibt die Seite zurück auf die gewechselt werden soll. 

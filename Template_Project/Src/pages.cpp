@@ -1,6 +1,4 @@
 /*! 
- *  \brief     Dient der Ausgabe auf dem Display
- *  \details   Die Klasse dient als Parent für die einzelnen Ansichten. Sie stellt darüber hinaus funktionalitäten für die Child Klassen bereit und regelt den Aufruf dieser. Sie ist somit das Bindeglied zwischen der Ausgabe und dem funktionalen teil des Programmes.
  *  \author    Joshua Hahn
  *  \date      15.06.2021
  */
@@ -8,6 +6,10 @@
 
 #include "./Project_Headers.h"
 
+/*!
+	\brief Private Konstruktor der Klasse.
+	\details Initalisiert die Aktuelle Seite und die Letzte Seite. Damit Pages funktioniert müssen diese nicht gleich sein. Dies dient dazu das die seite nicht immer Refreshed wird.
+*/
 Pages::Pages() 
 {
 			//Menue& menueinstance = Menue::instance();
@@ -15,7 +17,11 @@ Pages::Pages()
 			lastPage = -1;
 }			
 
-
+/*!
+	\brief Gibt den Inhalt der Seite aus
+	\details Setzt die Notwendigen Farbwerte in der EmbSysLib. Und Zeichnet die Button mit der Vererbten funktion aus Pages. Diese spezielle sollte nie erreicht werden und dient nur als Default.
+	\sa Pages::draw_button()
+*/
 void Pages::drawpage(void)
 	{
     disp1.setBackColor(Style::instance().color_Backround);
@@ -24,8 +30,15 @@ void Pages::drawpage(void)
 		draw_button(80,200,60,200,15,1,Style::instance().color_Boxes,0x067D,24,16,"Hi");
 	}
 
-//Creates an box with a one line centerd text 
-	//Todo: Onclick funktion for highlight
+/*!
+	\brief Erstellt eine Kopfzeile mit Text
+	\details Der Text ist Zentriert.
+	\param Start koordinate X
+	\param Start koordinate Y
+	\param Höhe des Fonts
+	\param Länge eines Zeichens des Fonts
+	\param Text der Ausgegeben werden soll
+*/
 void Pages::siteHeader(short int box_offset_x,short int box_offset_y,short int font_height,short int font_length,char* content)
 	{
 		//short int disp_height = 480;
@@ -39,8 +52,21 @@ void Pages::siteHeader(short int box_offset_x,short int box_offset_y,short int f
 		disp1.drawText(box_offset_x+titel_offset,box_offset_y+box_height/2,titel_length,content);
 		}
 	
-//Makes an Box with round corners
-//ToDo: Fehler in der Endcoordinate,Umrandung wäre schön
+/*!
+	\brief Erstellt eine Kopfzeile mit Text
+	\details Der Text ist Zentriert. Die Funktion kann rekursiv Arbeiten um einen Rand um den Button zu erstellen. Die Ecken sind abgerundet.
+	\param Start koordinate X.
+	\param Start koordinate Y.
+	\param Höhe des Buttons.
+	\param Länge des Buttons.
+	\param Kurven Radius der Abgerundeten Ecken.
+	\param Mit oder Ohne Rand 1 = mit.
+	\param Farbe des Buttons.
+	\param Farbe des Randes des Buttons.
+	\param Höhe des Fonts
+	\param Länge eines Zeichens des Fonts
+	\param Text der Ausgegeben werden soll
+*/
 void Pages::draw_button(short int box_offset_x,short int box_offset_y,short int button_height,short int button_length,short int r,short int border,short int color,short int color_boarder,short int font_height,short int font_length,char* content)
 {
 	short int d = r*2;
@@ -77,22 +103,17 @@ void Pages::draw_button(short int box_offset_x,short int box_offset_y,short int 
 		float content_offset = button_length/2-((content_length/2)*(font_length));
 		disp1.drawText(box_offset_x+content_offset,box_offset_y+button_height/2-font_height/2,content_length,content);
 	}
-	
-	//disp1.drawText(box_offset_x+titel_offset,box_offset_y+box_height/2,titel_length,cTitel);
-	
-	//Testfunktion: Zeigt die 4 Ecken des eigentlichen quadrates als referenz
-	/*
-	disp1.drawPixel(box_offset_x,box_offset_y,0xFFFF);
-	disp1.drawPixel(box_offset_x+button_length,box_offset_y,0xFFFF);
-	disp1.drawPixel(box_offset_x,box_offset_y+button_height,0xFFFF);
-	disp1.drawPixel(box_offset_x+button_length,box_offset_y+button_height,0xFFFF);
-	*/
 }
 
+/*!
+	\brief Kontrolliert die Seitenausgabe
+	\details Prüft ob die Seite schon ausgegeben ist. Gibt die Touch Werte an die Aktuelle Seite aus zur auswertung muss deswegen zyklisch aufgerufen werden.
+	\param X Koordinate der Touch Eingabe.
+	\param Y Koordinate der Touch Eingabe.
+*/
 short int Pages::display_current_page(int posX,int posY)
 {
 	//Auswertung aller Button
-	//disp1.drawText(440,120,18, "%d",page); 	//Test
 	//Seite 0 Hautpmenü
 	if(page == 0 && (posX >= 0 || posY >= 0 ))
 	{
@@ -113,13 +134,11 @@ short int Pages::display_current_page(int posX,int posY)
 	{
 			page = Page_Settings::instance().buttonOnPagePressed(posX,posY);
 	}
-	if(page == -1)	//!Auffangen von Touches auf leerer fläche
+	if(page == -1)	//Auffangen von Touches auf leerer fläche
 	{
 		page = lastPage;
 	}
-	
 	//Ausgabe der aktuellen seite anhand ihrer Nummer
-	
 	if(page != lastPage)
 	{
 		disp1.clear();
@@ -130,14 +149,8 @@ short int Pages::display_current_page(int posX,int posY)
 				break;
 				case 1:
 					Page_Game::instance().drawpage();
-					//test case
-					//drawpage();
-					//disp1.drawCircle(80,80,60,0xEE02);
 				break;
 				case 2:
-					//test case,
-					//drawpage();
-					//disp1.drawCircle(80,80,60,0xEE02);
 				Page_History::instance().drawpage();
 
 				break;
@@ -145,18 +158,21 @@ short int Pages::display_current_page(int posX,int posY)
 					Page_Settings::instance().drawpage();
 				break;
 				default:
-				
 				break;
 			}
 	}
 	lastPage = page;
-	
-	//Anzeige der Seite
-	
-		
 	return lastPage;
 }
 
+/*!
+	\brief Prüft ob Fläche gedrückt ist.
+	\details Bekommt die Buttons der Seite übergeben und prüft ob die Touch eingabe auf dieser Liegt. gibt dann den letzten Wert des Arrays zurück ([*][4]).
+	\param X Koordinate der Touch Eingabe.
+	\param Y Koordinate der Touch Eingabe.
+	\param Button Array.
+	\param Zu Prüfender Button.
+*/
 short int Pages::isPressed(int posX,int posY,short int buttons_cor[][5],int button)
 {
 	if((posX > buttons_cor[button][0] && posX < buttons_cor[button][1]) && (posY > buttons_cor[button][2] && posY < buttons_cor[button][3]))

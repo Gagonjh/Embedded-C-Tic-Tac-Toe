@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['waitai_169',['waitAi',['../class_game.html#a4fcb4d5c5bdc5c189ebf536529ff0858',1,'Game']]],
-  ['winner_170',['winner',['../class_page___history.html#a3f2db45e8359fa7a83518b747545ab15',1,'Page_History']]]
+  ['udp_168',['udp',['../config_virtual_8h.html#ac3e2a480a59a1cd3c6973c1273e74e15',1,'configVirtual.h']]],
+  ['updiagonal_169',['upDiagonal',['../class_cells.html#a252dda2d927c021b83d401efd9e45dc3',1,'Cells']]]
 ];
