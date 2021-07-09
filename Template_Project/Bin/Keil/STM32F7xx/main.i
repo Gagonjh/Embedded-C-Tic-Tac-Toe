@@ -15,6 +15,8 @@
 
 
 
+
+
  
 
 
@@ -22975,7 +22977,7 @@ class Style
 extern cDevDisplayGraphic& disp1;
 extern uint8_t gameMode;
 
-#line 28 "Src\\main.cpp"
+#line 30 "Src\\main.cpp"
 #line 1 "Src\\./configSTM32F7xx.h"
 
 
@@ -25105,7 +25107,7 @@ cDevDigital led( portJ, 13, cDevDigital::Out,  0 );
 cHwRTC_0 rtc(cHwRTC_0::LSI);
 
 
-#line 29 "Src\\main.cpp"
+#line 31 "Src\\main.cpp"
 
 cDevDisplayGraphic& disp1 = disp;
 uint8_t gameMode = 1;

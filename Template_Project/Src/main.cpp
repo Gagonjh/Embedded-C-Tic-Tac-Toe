@@ -11,9 +11,11 @@
  * 	2. Nach dem Booten des Controllers erscheinen die Tic-Tac-Toe-Spielfläche mit den erforderlichen Einstellmöglichkeiten.
  * 	3. Der Spieler markiert das Feld, in dem sein Zeichen gesetzt werden soll, durch Berühren des Bildschirms. Mit ei ner angemessen Verzögerung besetzt dann der Computer ein Feld.
  * 	4. Die Spielentscheidung wird textuell ausgegeben. Mit Betätigung eines Buttons kann das Spiel jederzeit neu gestartet werden.
- *  \author    Yasin Calli
+ *  
+ *	Git: https://github.com/Gagonjh/Embedded-C-Tic-Tac-Toe
+ *  
+ *	\author    Yasin Calli
  *  \author    Joshua Hahn
- *
  */
 
 /*! 
