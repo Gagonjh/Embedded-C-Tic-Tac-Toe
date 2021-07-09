@@ -1,8 +1,8 @@
-/*! \mainpage Embed C++
+/*! \mainpage Embedded C++
  *
  * \section intro_sec Introduction
  *
- * Dies ist die Code Dokumentation in Embedeb C++
+ * Dies ist die Code Dokumentation in Embedded C++
  * 
  * Projekt: Tic Tac Toe
  * 
@@ -102,9 +102,7 @@ int main(void)
 			}
 			
 		//Ausgabe der Page
-		//disp.drawBitmap(20,20,30,30,Symbole::instance().test);
-		
-		
+	
 		page = pages_Instance.display_current_page(posX,posY);
     disp.refresh();
     #endif

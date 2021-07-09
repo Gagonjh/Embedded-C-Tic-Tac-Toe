@@ -25182,9 +25182,7 @@ int main(void)
 			}
 			
 		
-		
-		
-		
+	
 		page = pages_Instance.display_current_page(posX,posY);
     disp.refresh();
 
