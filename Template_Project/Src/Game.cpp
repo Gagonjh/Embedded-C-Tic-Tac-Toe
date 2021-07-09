@@ -20,7 +20,7 @@ short Game::ttt_classic(short posX,short posY, uint8_t ranDOOM)
 		//KI Zug
 		if(gameMode==1 && controller -> getcurrentPlayer() == 2)
 				{
-					if(waitAi == 20)
+					if(waitAi == 40)
 					{
 						controller -> aiMove(ranDOOM);
 						waitAi = 0;

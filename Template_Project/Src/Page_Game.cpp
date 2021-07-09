@@ -53,7 +53,10 @@ short int Page_Game::buttonOnPagePressed(int posX,int posY)
 	if(p == -1 && restart_state == 1)
 	{
 			p = Page_Game::instance().isPressed(posX,posY,iButtons_cor_G,1);
+			if(p == -2)
+			{
 			Page_Game::instance().restart_state = 2;
+			}
 	}
 	//! Falls man nicht auf eine Seite Springen soll wird eine -2 erwartet diese wird auf -1 zurückgesetzt damit die anderen button nicht mehr ausgewertet werden.
 	if(p==-2)
