@@ -1,4 +1,5 @@
-/*! 
+/*!
+ *  \class     Page_Game
  *  \brief     Spielseite (Singelton)
  *  \details   Gibt die Spielseite aus und hat die Funktionalität um eine Revanche zu erstellen.
  *  \author    Joshua Hahn

@@ -1,4 +1,5 @@
 /*! 
+ *  \class     Page_Settings
  *  \brief     Einstellungen des Programms. (Singelton)
  *  \details   Bietet dem Nutzer die Möglichkeit zwischen mehreren Farbthemas und Spielmodi zu wählen.
  *  \author    Joshua Hahn

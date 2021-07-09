@@ -1,4 +1,5 @@
 /*! 
+ *  \class     	Page_Menue
  *  \brief     	Das Hauptmenü. (Singelton)
  *  \details   	Gibt das Hauptmenü mit den Notwendigen Buttons aus und prüft ob diese gedrückt wurden.
  *  \author    	Joshua Hahn

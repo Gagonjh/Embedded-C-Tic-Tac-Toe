@@ -1,6 +1,4 @@
 /*! 
- *  \brief     	Steuerklasse der Eingabe und des Spielzustandes.
- *  \details   	Steuert die KI, behandelt Spielereingaben in einer Partie und gibt Informationen ueber die Partie zurueck.
  *  \author			Yasin Calli 
  *  \author    	Joshua Hahn
  */

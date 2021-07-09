@@ -25160,7 +25160,6 @@ int main(void)
 					disp.drawText(480,180, 18, gamestate == 0 ? "Unentschieden!":"Spieler %d gewinnt!", gamestate);
 					Page_Game::instance().restart_state = 1; 	
 					Pages::instance().draw_button(iButtons_cor_G[1][0],iButtons_cor_G[1][2],iButtons_cor_G[1][3]-iButtons_cor_G[1][2],iButtons_cor_G[1][1]-iButtons_cor_G[1][0],15,1,Style::instance().color_Boxes,Style::instance().color_Field,24,16,"Revanche!");
-					
 					gamestate = -3;
 				}
 				else if (gamestate == -1)

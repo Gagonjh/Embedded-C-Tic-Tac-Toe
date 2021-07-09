@@ -1,7 +1,6 @@
 /*! 
  *  \author    Joshua Hahn
  *  \date      21.06.2021
- *  \file 
  */
 
 #include "./Project_Headers.h"

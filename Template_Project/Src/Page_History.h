@@ -1,15 +1,19 @@
 /*! 
+ *  \class     Page_History
  *  \brief     Die Letzten Spiele (Singelton)
  *  \details   Gibt die Seite mit den Letzten Spielen aus und stellt die notwendige Funktionalität zur verfügung um diese zu verwalten.
  *  \author    Joshua Hahn
- *  \date      05.07.2021
+ *  \date      21.06.2021
  */
 
 #ifndef PAGE_HISTORY_H
 #define PAGE_HISTORY_H
 
+
+
 //!Koordinaten und Weiterleitungsanweisung für die Seite.
 extern short int iButtons_cor_H[1][5];
+
 
 class Page_History : public Pages
 {

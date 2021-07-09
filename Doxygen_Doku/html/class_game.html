@@ -101,7 +101,7 @@ Zusammengeh√∂rigkeiten von Game:</div>
 <div class="center"><img src="class_game__coll__graph.png" border="0" usemap="#a_game_coll__map" alt="Collaboration graph"/></div>
 <map name="a_game_coll__map" id="a_game_coll__map">
 <area shape="rect" title="Fuehrt Zuege aus." alt="" coords="35,273,93,300"/>
-<area shape="rect" href="class_controller.html" title=" " alt="" coords="25,184,103,211"/>
+<area shape="rect" href="class_controller.html" title="Steuerklasse der Eingabe und des Spielzustandes." alt="" coords="25,184,103,211"/>
 <area shape="rect" href="class_field.html" title="Bildet das Feld und die Spielsteine ab." alt="" coords="5,95,56,121"/>
 <area shape="rect" href="class_cells.html" title="Felder auf dem Spielfeld." alt="" coords="80,95,131,121"/>
 <area shape="rect" href="structcoordinates.html" title="Datentypen." alt="" coords="61,5,150,32"/>
@@ -154,14 +154,14 @@ Joshua Hahn </dd></dl>
 </div><div class="memdoc">
 
 <p>Kontruktor der <a class="el" href="class_game.html" title="Fuehrt Zuege aus.">Game</a> Klasse. </p>
-<p>Erstellt einen neuen <a class="el" href="class_controller.html">Controller</a> und intialisiert die KI-Zugverzoegerung. </p>
+<p>Erstellt einen neuen <a class="el" href="class_controller.html" title="Steuerklasse der Eingabe und des Spielzustandes.">Controller</a> und intialisiert die KI-Zugverzoegerung. </p>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_game_8cpp_source.html#l00042">42</a> der Datei <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_game.html#a88da61aa4eab9ed1c7c51fe6271491b3">controller</a> = <span class="keyword">new</span> <a class="code" href="class_controller.html">Controller</a>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_game.html#a4fcb4d5c5bdc5c189ebf536529ff0858">waitAi</a> = 0;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="ttc" id="aclass_controller_html"><div class="ttname"><a href="class_controller.html">Controller</a></div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00012">Controller.h:12</a></div></div>
+<div class="ttc" id="aclass_controller_html"><div class="ttname"><a href="class_controller.html">Controller</a></div><div class="ttdoc">Steuerklasse der Eingabe und des Spielzustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_controller_8h_source.html#l00014">Controller.h:14</a></div></div>
 <div class="ttc" id="aclass_game_html_a4fcb4d5c5bdc5c189ebf536529ff0858"><div class="ttname"><a href="class_game.html#a4fcb4d5c5bdc5c189ebf536529ff0858">Game::waitAi</a></div><div class="ttdeci">short unsigned waitAi</div><div class="ttdoc">Zugverzoegerung der KI.</div><div class="ttdef"><b>Definition:</b> <a href="_game_8h_source.html#l00025">Game.h:25</a></div></div>
 <div class="ttc" id="aclass_game_html_a88da61aa4eab9ed1c7c51fe6271491b3"><div class="ttname"><a href="class_game.html#a88da61aa4eab9ed1c7c51fe6271491b3">Game::controller</a></div><div class="ttdeci">Controller * controller</div><div class="ttdoc">Die Steuerung der Partie. Kontrolliert KI, Spielereingabe und Spielzustand.</div><div class="ttdef"><b>Definition:</b> <a href="_game_8h_source.html#l00019">Game.h:19</a></div></div>
 </div><!-- fragment -->
@@ -254,7 +254,7 @@ Joshua Hahn </dd></dl>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="ttc" id="aclass_page___game_html_a18c31ac43ddadb0a6eb8889ecc7ad929"><div class="ttname"><a href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929">Page_Game::instance</a></div><div class="ttdeci">static Page_Game &amp; instance()</div><div class="ttdoc">Zugriff auf die Instanz der Klasse von Auﬂerhalb.</div><div class="ttdef"><b>Definition:</b> <a href="_page___game_8h_source.html#l00019">Page_Game.h:19</a></div></div>
+<div class="ttc" id="aclass_page___game_html_a18c31ac43ddadb0a6eb8889ecc7ad929"><div class="ttname"><a href="class_page___game.html#a18c31ac43ddadb0a6eb8889ecc7ad929">Page_Game::instance</a></div><div class="ttdeci">static Page_Game &amp; instance()</div><div class="ttdoc">Zugriff auf die Instanz der Klasse von Auﬂerhalb.</div><div class="ttdef"><b>Definition:</b> <a href="_page___game_8h_source.html#l00020">Page_Game.h:20</a></div></div>
 <div class="ttc" id="aclass_page___game_html_a6be3e42f603aa0c0a315ec04a154ad80"><div class="ttname"><a href="class_page___game.html#a6be3e42f603aa0c0a315ec04a154ad80">Page_Game::output_Current_Player</a></div><div class="ttdeci">void output_Current_Player(short)</div><div class="ttdoc">Gibt den Spieler aus.</div><div class="ttdef"><b>Definition:</b> <a href="_page___game_8cpp_source.html#l00075">Page_Game.cpp:75</a></div></div>
 <div class="ttc" id="amain_8cpp_html_a9cfdc59922fc042bda22a60539d05a54"><div class="ttname"><a href="main_8cpp.html#a9cfdc59922fc042bda22a60539d05a54">disp1</a></div><div class="ttdeci">cDevDisplayGraphic &amp; disp1</div><div class="ttdoc">Main Klasse des Projektes.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00032">main.cpp:32</a></div></div>
 <div class="ttc" id="amain_8cpp_html_aa1f04c89745ecf0a24895b20e1756cc0"><div class="ttname"><a href="main_8cpp.html#aa1f04c89745ecf0a24895b20e1756cc0">gameMode</a></div><div class="ttdeci">uint8_t gameMode</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00033">main.cpp:33</a></div></div>
@@ -293,7 +293,7 @@ Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 </div><div class="memdoc">
 
 <p>Die Steuerung der Partie. Kontrolliert KI, Spielereingabe und Spielzustand. </p>
-<dl class="section see"><dt>Siehe auch</dt><dd><a class="el" href="class_controller.html">Controller</a> </dd></dl>
+<dl class="section see"><dt>Siehe auch</dt><dd><a class="el" href="class_controller.html" title="Steuerklasse der Eingabe und des Spielzustandes.">Controller</a> </dd></dl>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_game_8h_source.html#l00019">19</a> der Datei <a class="el" href="_game_8h_source.html">Game.h</a>.</p>
 
