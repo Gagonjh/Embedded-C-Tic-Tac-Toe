@@ -11,7 +11,7 @@
 short Game::ttt_classic(short posX,short posY, uint8_t ranDOOM)
 {
 		Page_Game::instance().output_Current_Player(controller -> getcurrentPlayer() );	//! Ausgabe des aktiven Spielers
-	if(posX<390 && posX > 100 && posY < 390 && posY > 100 && controller -> getcurrentPlayer() != 2) 
+	if(posX<390 && posX > 100 && posY < 390 && posY > 100 && (controller -> getcurrentPlayer() != 2 || gameMode != 1)) 
 		{
 			bool isInputValid = controller -> handleUserInput(posX, posY);
 			disp1.refresh();

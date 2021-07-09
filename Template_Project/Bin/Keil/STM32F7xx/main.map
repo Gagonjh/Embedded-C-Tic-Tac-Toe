@@ -104,8 +104,8 @@ Section Cross References
     game.o(i._ZN4Game11ttt_classicEssh) refers to main.o(.data__ZZN9Page_Game8instanceEvE9_instance) for guard variable for Page_Game::instance()::_instance
     game.o(i._ZN4Game11ttt_classicEssh) refers to main.o(.bss__ZZN9Page_Game8instanceEvE9_instance) for Page_Game::instance()::_instance
     game.o(i._ZN4Game11ttt_classicEssh) refers to main.o(i._ZN9Page_GameD1Ev) for Page_Game::~Page_Game()
-    game.o(i._ZN4Game11ttt_classicEssh) refers to main.o(.data) for disp1
     game.o(i._ZN4Game11ttt_classicEssh) refers to main.o(.data) for gameMode
+    game.o(i._ZN4Game11ttt_classicEssh) refers to main.o(.data) for disp1
     game.o(i._ZN4GameC1Ev) refers to h1_alloc.o(.text) for malloc
     game.o(i._ZN4GameC1Ev) refers to controller.o(i._ZN10ControllerC1Ev) for Controller::Controller()
     game.o(i._ZN4GameD1Ev) refers to controller.o(i._ZN10ControllerD1Ev) for Controller::~Controller()
@@ -4480,208 +4480,208 @@ Image Symbol Table
     i._ZN26cDevControlEncoderJoystick12getIncrementEv 0x080043f0   Section        0  lib.o(i._ZN26cDevControlEncoderJoystick12getIncrementEv)
     i._ZN26cDevControlEncoderJoystickC1EP11cDevDigitalS1_S1_P8cHwTimert 0x08004454   Section        0  lib.o(i._ZN26cDevControlEncoderJoystickC1EP11cDevDigitalS1_S1_P8cHwTimert)
     i._ZN4Game11ttt_classicEssh              0x080044a8   Section        0  game.o(i._ZN4Game11ttt_classicEssh)
-    i._ZN4GameC1Ev                           0x08004578   Section        0  game.o(i._ZN4GameC1Ev)
-    i._ZN4GameD1Ev                           0x08004590   Section        0  game.o(i._ZN4GameD1Ev)
-    i._ZN5Cells13rowIsCompleteEv             0x080045a8   Section        0  cells.o(i._ZN5Cells13rowIsCompleteEv)
-    i._ZN5Cells15initializeCellsEv           0x080046f0   Section        0  cells.o(i._ZN5Cells15initializeCellsEv)
-    i._ZN5Cells21initializeDefaultRowsEv     0x08004734   Section        0  cells.o(i._ZN5Cells21initializeDefaultRowsEv)
-    i._ZN5CellsC1Ev                          0x080047ba   Section        0  cells.o(i._ZN5CellsC1Ev)
-    i._ZN5CellsD1Ev                          0x080047ce   Section        0  cells.o(i._ZN5CellsD1Ev)
-    i._ZN5Field9drawFieldEv                  0x0800480c   Section        0  field.o(i._ZN5Field9drawFieldEv)
-    i._ZN5Field9drawTokenE11coordinates      0x0800488c   Section        0  field.o(i._ZN5Field9drawTokenE11coordinates)
-    i._ZN5Pages10siteHeaderEssssPc           0x080048dc   Section        0  pages.o(i._ZN5Pages10siteHeaderEssssPc)
-    i._ZN5Pages11draw_buttonEssssssssssPc    0x08004970   Section        0  pages.o(i._ZN5Pages11draw_buttonEssssssssssPc)
-    i._ZN5Pages20display_current_pageEii     0x08004b58   Section        0  pages.o(i._ZN5Pages20display_current_pageEii)
-    i._ZN5Pages8instanceEv                   0x08004c3c   Section        0  main.o(i._ZN5Pages8instanceEv)
-    i._ZN5Pages9isPressedEiiPA5_si           0x08004c78   Section        0  pages.o(i._ZN5Pages9isPressedEiiPA5_si)
-    i._ZN5PagesC1Ev                          0x08004cb0   Section        0  pages.o(i._ZN5PagesC1Ev)
-    i._ZN5PagesD1Ev                          0x08004cba   Section        0  main.o(i._ZN5PagesD1Ev)
-    i._ZN5Style22changeActiveColorThemeEs    0x08004cbc   Section        0  style.o(i._ZN5Style22changeActiveColorThemeEs)
-    i._ZN5Style8instanceEv                   0x08004d60   Section        0  main.o(i._ZN5Style8instanceEv)
-    i._ZN5StyleC1Ev                          0x08004d9c   Section        0  style.o(i._ZN5StyleC1Ev)
-    i._ZN5StyleD1Ev                          0x08004e30   Section        0  main.o(i._ZN5StyleD1Ev)
-    i._ZN5cList3addEPNS_4ItemE               0x08004e32   Section        0  lib.o(i._ZN5cList3addEPNS_4ItemE)
-    i._ZN5cList4Item6updateEv                0x08004e54   Section        0  lib.o(i._ZN5cList4Item6updateEv)
-    i._ZN5cList4ItemC1EPS_                   0x08004e58   Section        0  lib.o(i._ZN5cList4ItemC1EPS_)
-    i._ZN5cList9updateAllEv                  0x08004e78   Section        0  lib.o(i._ZN5cList9updateAllEv)
-    i._ZN5cListC1Ev                          0x08004e8e   Section        0  lib.o(i._ZN5cListC1Ev)
-    i._ZN6cHwADC3isrEv                       0x08004e94   Section        0  lib.o(i._ZN6cHwADC3isrEv)
-    i._ZN6cHwADC6enableEhh                   0x08004ee6   Section        0  lib.o(i._ZN6cHwADC6enableEhh)
-    i._ZN6cHwADC6updateEv                    0x08004f34   Section        0  lib.o(i._ZN6cHwADC6updateEv)
-    i._ZN6cHwADCC2EhP8cHwTimer               0x08004f60   Section        0  lib.o(i._ZN6cHwADCC2EhP8cHwTimer)
-    i._ZN6cHwDACC2Eh                         0x08004fb4   Section        0  lib.o(i._ZN6cHwDACC2Eh)
-    i._ZN6cHwDSI10writeShortEhh              0x08004fc0   Section        0  main.o(i._ZN6cHwDSI10writeShortEhh)
-    i._ZN6cHwDSI14DisplayRefreshEv           0x08004fe0   Section        0  disp_otm8009a.o(i._ZN6cHwDSI14DisplayRefreshEv)
-    i._ZN6cHwDSI4InitEttb                    0x08004ff0   Section        0  disp_otm8009a.o(i._ZN6cHwDSI4InitEttb)
-    i._ZN6cHwDSI9writeLongEPhj               0x08005184   Section        0  main.o(i._ZN6cHwDSI9writeLongEPhj)
-    i._ZN6cHwFMC10SDRAM_InitEv               0x080051c8   Section        0  main.o(i._ZN6cHwFMC10SDRAM_InitEv)
-    i._ZN6cHwFMC11SendCommandEjjj            0x0800526c   Section        0  main.o(i._ZN6cHwFMC11SendCommandEjjj)
-    i._ZN6cHwFMCC1ENS_7FMCtypeEb             0x080052ac   Section        0  main.o(i._ZN6cHwFMCC1ENS_7FMCtypeEb)
-    i._ZN6cHwRTCC2Ev                         0x080054b0   Section        0  lib.o(i._ZN6cHwRTCC2Ev)
-    i._ZN7Symbole10drawCircleEsss            0x080054bc   Section        0  symbole.o(i._ZN7Symbole10drawCircleEsss)
-    i._ZN7Symbole10drawHammerEsss            0x080054f4   Section        0  symbole.o(i._ZN7Symbole10drawHammerEsss)
-    i._ZN7Symbole10drawSickleEsss            0x08005578   Section        0  symbole.o(i._ZN7Symbole10drawSickleEsss)
-    i._ZN7Symbole12setPlayerSimEss           0x0800563c   Section        0  symbole.o(i._ZN7Symbole12setPlayerSimEss)
-    i._ZN7Symbole5drawXEsss                  0x08005644   Section        0  symbole.o(i._ZN7Symbole5drawXEsss)
-    i._ZN7Symbole8instanceEv                 0x080056a4   Section        0  style.o(i._ZN7Symbole8instanceEv)
-    i._ZN7Symbole9drawPieceEsss              0x080056e0   Section        0  symbole.o(i._ZN7Symbole9drawPieceEsss)
-    i._ZN7SymboleC1Ev                        0x08005752   Section        0  symbole.o(i._ZN7SymboleC1Ev)
-    i._ZN7SymboleD1Ev                        0x0800575c   Section        0  field.o(i._ZN7SymboleD1Ev)
-    i._ZN7cHwPort3Pin3clrEv                  0x0800575e   Section        0  lib.o(i._ZN7cHwPort3Pin3clrEv)
-    i._ZN7cHwPort3Pin3getEv                  0x08005768   Section        0  lib.o(i._ZN7cHwPort3Pin3getEv)
-    i._ZN7cHwPort3Pin3setEb                  0x08005782   Section        0  lib.o(i._ZN7cHwPort3Pin3setEb)
-    i._ZN7cHwPort3Pin3setEv                  0x0800579c   Section        0  lib.o(i._ZN7cHwPort3Pin3setEv)
-    i._ZN7cHwPort3Pin7setModeENS_4ModeE      0x080057a6   Section        0  lib.o(i._ZN7cHwPort3Pin7setModeENS_4ModeE)
-    i._ZN7cHwPort3PinC1ERS_h                 0x080057b4   Section        0  lib.o(i._ZN7cHwPort3PinC1ERS_h)
-    i._ZN7cSystem13delayMicroSecEt           0x080057c8   Section        0  lib.o(i._ZN7cSystem13delayMicroSecEt)
-    i._ZN7cSystem13delayMilliSecEt           0x080057de   Section        0  lib.o(i._ZN7cSystem13delayMilliSecEt)
-    i._ZN7cSystem15disableWatchdogEv         0x080057f8   Section        0  lib.o(i._ZN7cSystem15disableWatchdogEv)
-    i._ZN7cSystem15enableInterruptEv         0x080057fc   Section        0  lib.o(i._ZN7cSystem15enableInterruptEv)
-    i._ZN7cSystem16disableInterruptEv        0x08005818   Section        0  lib.o(i._ZN7cSystem16disableInterruptEv)
-    i._ZN7cSystemC1Eh                        0x08005828   Section        0  lib.o(i._ZN7cSystemC1Eh)
-    i._ZN8cHwADC_07startChEh                 0x0800583c   Section        0  lib.o(i._ZN8cHwADC_07startChEh)
-    i._ZN8cHwADC_08configChEhh               0x08005854   Section        0  lib.o(i._ZN8cHwADC_08configChEhh)
-    i._ZN8cHwADC_09getResultEv               0x08005894   Section        0  lib.o(i._ZN8cHwADC_09getResultEv)
-    i._ZN8cHwADC_0C1EP8cHwTimer              0x080058a0   Section        0  lib.o(i._ZN8cHwADC_0C1EP8cHwTimer)
-    i._ZN8cHwDAC_06enableEh                  0x080058f0   Section        0  lib.o(i._ZN8cHwDAC_06enableEh)
-    i._ZN8cHwDAC_0C1Ev                       0x08005924   Section        0  lib.o(i._ZN8cHwDAC_0C1Ev)
-    i._ZN8cHwRTC_0C1ENS_17RTC_ClockConfig_tE 0x08005944   Section        0  lib.o(i._ZN8cHwRTC_0C1ENS_17RTC_ClockConfig_tE)
-    i._ZN8cHwTimer10isrHandlerEv             0x08005a04   Section        0  lib.o(i._ZN8cHwTimer10isrHandlerEv)
-    i._ZN8cHwTimer12getCycleTimeEv           0x08005a0a   Section        0  lib.o(i._ZN8cHwTimer12getCycleTimeEv)
-    i._ZN8cHwTimer3addEPN5cList4ItemE        0x08005a0e   Section        0  lib.o(i._ZN8cHwTimer3addEPN5cList4ItemE)
-    i._ZN8cHwTouch7getPosXEv                 0x08005a14   Section        0  lib.o(i._ZN8cHwTouch7getPosXEv)
-    i._ZN8cHwTouch7getPosYEv                 0x08005a18   Section        0  lib.o(i._ZN8cHwTouch7getPosYEv)
-    i._ZN8cHwTouch9isTouchedEv               0x08005a1c   Section        0  lib.o(i._ZN8cHwTouch9isTouchedEv)
-    i._ZN8cHwTouchC2Ett                      0x08005a20   Section        0  lib.o(i._ZN8cHwTouchC2Ett)
-    i._ZN8cHwUSB_010EndpointIN11transmitZLPEv 0x08005a38   Section        0  lib.o(i._ZN8cHwUSB_010EndpointIN11transmitZLPEv)
-    i._ZN8cHwUSB_010EndpointIN11writeToFifoEv 0x08005a5c   Section        0  lib.o(i._ZN8cHwUSB_010EndpointIN11writeToFifoEv)
-    i._ZN8cHwUSB_010EndpointIN12clrInterruptEj 0x08005ab4   Section        0  lib.o(i._ZN8cHwUSB_010EndpointIN12clrInterruptEj)
-    i._ZN8cHwUSB_010EndpointIN12getInterruptEv 0x08005abc   Section        0  lib.o(i._ZN8cHwUSB_010EndpointIN12getInterruptEv)
-    i._ZN8cHwUSB_010EndpointIN6configEth     0x08005ae0   Section        0  lib.o(i._ZN8cHwUSB_010EndpointIN6configEth)
-    i._ZN8cHwUSB_010EndpointIN8transmitEb    0x08005b28   Section        0  lib.o(i._ZN8cHwUSB_010EndpointIN8transmitEb)
-    i._ZN8cHwUSB_011EndpointOUT10receiveZLPEv 0x08005b98   Section        0  lib.o(i._ZN8cHwUSB_011EndpointOUT10receiveZLPEv)
-    i._ZN8cHwUSB_011EndpointOUT12clrInterruptEj 0x08005bc0   Section        0  lib.o(i._ZN8cHwUSB_011EndpointOUT12clrInterruptEj)
-    i._ZN8cHwUSB_011EndpointOUT12getInterruptEv 0x08005bc8   Section        0  lib.o(i._ZN8cHwUSB_011EndpointOUT12getInterruptEv)
-    i._ZN8cHwUSB_011EndpointOUT12readFromFifoEt 0x08005bdc   Section        0  lib.o(i._ZN8cHwUSB_011EndpointOUT12readFromFifoEt)
-    i._ZN8cHwUSB_011EndpointOUT6configEth    0x08005c08   Section        0  lib.o(i._ZN8cHwUSB_011EndpointOUT6configEth)
-    i._ZN8cHwUSB_011EndpointOUT7receiveEv    0x08005c58   Section        0  lib.o(i._ZN8cHwUSB_011EndpointOUT7receiveEv)
-    i._ZN8cHwUSB_012clrInterruptEj           0x08005ca6   Section        0  lib.o(i._ZN8cHwUSB_012clrInterruptEj)
-    i._ZN8cHwUSB_014getInInterruptEv         0x08005cb4   Section        0  lib.o(i._ZN8cHwUSB_014getInInterruptEv)
-    i._ZN8cHwUSB_015getOutInterruptEv        0x08005cc8   Section        0  lib.o(i._ZN8cHwUSB_015getOutInterruptEv)
-    i._ZN8cHwUSB_018isInterruptPendingEj     0x08005cdc   Section        0  lib.o(i._ZN8cHwUSB_018isInterruptPendingEj)
-    i._ZN8cHwUSB_03isrEv                     0x08005cf4   Section        0  lib.o(i._ZN8cHwUSB_03isrEv)
-    i._ZN9Page_Game19buttonOnPagePressedEii  0x08005fcc   Section        0  page_game.o(i._ZN9Page_Game19buttonOnPagePressedEii)
-    i._ZN9Page_Game21output_Current_PlayerEs 0x0800603c   Section        0  page_game.o(i._ZN9Page_Game21output_Current_PlayerEs)
-    i._ZN9Page_Game8drawpageEv               0x08006074   Section        0  page_game.o(i._ZN9Page_Game8drawpageEv)
-    i._ZN9Page_Game8instanceEv               0x080060fc   Section        0  main.o(i._ZN9Page_Game8instanceEv)
-    i._ZN9Page_GameC1Ev                      0x08006138   Section        0  page_game.o(i._ZN9Page_GameC1Ev)
-    i._ZN9Page_GameD1Ev                      0x08006144   Section        0  main.o(i._ZN9Page_GameD1Ev)
-    i._ZN9cHwPort_N10setPinModeEhN7cHwPort4ModeE 0x08006146   Section        0  lib.o(i._ZN9cHwPort_N10setPinModeEhN7cHwPort4ModeE)
-    i._ZN9cHwPort_N3clrEj                    0x080061c0   Section        0  lib.o(i._ZN9cHwPort_N3clrEj)
-    i._ZN9cHwPort_N3getEv                    0x080061c8   Section        0  lib.o(i._ZN9cHwPort_N3getEv)
-    i._ZN9cHwPort_N3setEj                    0x080061ce   Section        0  lib.o(i._ZN9cHwPort_N3setEj)
-    i._ZN9cHwPort_NC1ENS_6PortIdE            0x080061d4   Section        0  lib.o(i._ZN9cHwPort_NC1ENS_6PortIdE)
-    i._ZN9cHwUART_N3isrEv                    0x080062a8   Section        0  lib.o(i._ZN9cHwUART_N3isrEv)
-    i._ZNK14cHwDisplayFont12getCharWidthEv   0x080062da   Section        0  lib.o(i._ZNK14cHwDisplayFont12getCharWidthEv)
-    i._ZNK14cHwDisplayFont13getCharHeightEv  0x080062e0   Section        0  lib.o(i._ZNK14cHwDisplayFont13getCharHeightEv)
-    i._ZdlPv                                 0x080062e6   Section        0  cells.o(i._ZdlPv)
-    i._Znaj                                  0x080062f0   Section        0  cells.o(i._Znaj)
-    i.__ARM_fpclassify                       0x080062f4   Section        0  fpclassify.o(i.__ARM_fpclassify)
-    i.__cxa_guard_acquire                    0x08006324   Section        0  cxa_guard_acquire.o(i.__cxa_guard_acquire)
-    i.__cxa_pure_virtual                     0x08006334   Section        0  lib.o(i.__cxa_pure_virtual)
-    i.__hardfp_sqrtf                         0x08006338   Section        0  sqrtf.o(i.__hardfp_sqrtf)
-    i.__sti___8_main_cpp_sys                 0x08006374   Section        0  main.o(i.__sti___8_main_cpp_sys)
-    __sti___8_main_cpp_sys                   0x08006375   Thumb Code   536  main.o(i.__sti___8_main_cpp_sys)
-    i._is_digit                              0x080065ac   Section        0  __printf_wp.o(i._is_digit)
-    i.main                                   0x080065bc   Section        0  main.o(i.main)
-    locale$$code                             0x080067d4   Section       44  lc_numeric_c.o(locale$$code)
-    locale$$code                             0x08006800   Section       44  lc_ctype_c.o(locale$$code)
-    t._Z5RANGEIsET_S0_S0_S0_                 0x0800682c   Section        0  lib.o(t._Z5RANGEIsET_S0_S0_S0_)
-    t._ZN5cFifoIN18cDevControlEncoder6tEventEE6isFullEv 0x0800683c   Section        0  lib.o(t._ZN5cFifoIN18cDevControlEncoder6tEventEE6isFullEv)
-    t._ZN5cFifoIN18cDevControlEncoder6tEventEElsERKS1_ 0x0800685a   Section        0  lib.o(t._ZN5cFifoIN18cDevControlEncoder6tEventEElsERKS1_)
-    x$fpl$d2f                                0x08006898   Section       98  d2f.o(x$fpl$d2f)
-    $v0                                      0x08006898   Number         0  d2f.o(x$fpl$d2f)
-    x$fpl$ddiv                               0x080068fc   Section      688  ddiv.o(x$fpl$ddiv)
-    $v0                                      0x080068fc   Number         0  ddiv.o(x$fpl$ddiv)
-    ddiv_entry                               0x08006903   Thumb Code     0  ddiv.o(x$fpl$ddiv)
-    x$fpl$dfixu                              0x08006bac   Section       90  dfixu.o(x$fpl$dfixu)
-    $v0                                      0x08006bac   Number         0  dfixu.o(x$fpl$dfixu)
-    x$fpl$dfltu                              0x08006c06   Section       38  dflt_clz.o(x$fpl$dfltu)
-    $v0                                      0x08006c06   Number         0  dflt_clz.o(x$fpl$dfltu)
-    x$fpl$dmul                               0x08006c2c   Section      340  dmul.o(x$fpl$dmul)
-    $v0                                      0x08006c2c   Number         0  dmul.o(x$fpl$dmul)
-    x$fpl$dnaninf                            0x08006d80   Section      156  dnaninf.o(x$fpl$dnaninf)
-    $v0                                      0x08006d80   Number         0  dnaninf.o(x$fpl$dnaninf)
-    x$fpl$dretinf                            0x08006e1c   Section       12  dretinf.o(x$fpl$dretinf)
-    $v0                                      0x08006e1c   Number         0  dretinf.o(x$fpl$dretinf)
-    x$fpl$fpinit                             0x08006e28   Section       10  fpinit.o(x$fpl$fpinit)
-    $v0                                      0x08006e28   Number         0  fpinit.o(x$fpl$fpinit)
-    x$fpl$fretinf                            0x08006e32   Section       10  fretinf.o(x$fpl$fretinf)
-    $v0                                      0x08006e32   Number         0  fretinf.o(x$fpl$fretinf)
-    x$fpl$printf1                            0x08006e3c   Section        4  printf1.o(x$fpl$printf1)
-    $v0                                      0x08006e3c   Number         0  printf1.o(x$fpl$printf1)
-    .constdata                               0x08006e40   Section     1157  main.o(.constdata)
-    x$fpl$usenofp                            0x08006e40   Section        0  usenofp.o(x$fpl$usenofp)
-    fontFont_8x12                            0x08006e40   Data        1157  main.o(.constdata)
-    .constdata                               0x080072c8   Section       54  cells.o(.constdata)
-    .constdata                               0x08007300   Section       60  lib.o(.constdata)
-    zeroAddr                                 0x08007300   Data           4  lib.o(.constdata)
-    broadcastAddr                            0x08007304   Data           4  lib.o(.constdata)
-    zeroAddrPhy                              0x08007308   Data           6  lib.o(.constdata)
-    broadcastAddrPhy                         0x0800730e   Data           6  lib.o(.constdata)
-    .constdata                               0x0800733c   Section        8  _printf_wctomb.o(.constdata)
-    initial_mbstate                          0x0800733c   Data           8  _printf_wctomb.o(.constdata)
-    .constdata                               0x08007344   Section       40  _printf_hex_int_ll_ptr.o(.constdata)
-    uc_hextab                                0x08007344   Data          20  _printf_hex_int_ll_ptr.o(.constdata)
-    lc_hextab                                0x08007358   Data          20  _printf_hex_int_ll_ptr.o(.constdata)
-    .constdata                               0x0800736c   Section       17  __printf_flags_ss_wp.o(.constdata)
-    maptable                                 0x0800736c   Data          17  __printf_flags_ss_wp.o(.constdata)
-    .constdata                               0x08007380   Section      148  bigflt0.o(.constdata)
-    tenpwrs_x                                0x08007380   Data          60  bigflt0.o(.constdata)
-    tenpwrs_i                                0x080073bc   Data          64  bigflt0.o(.constdata)
-    .constdata__ZTV10cHwDisplay              0x08007414   Section       32  lib.o(.constdata__ZTV10cHwDisplay)
-    .constdata__ZTV10cHwTimer_N              0x08007434   Section       28  lib.o(.constdata__ZTV10cHwTimer_N)
-    .constdata__ZTV11cDevDigital             0x08007450   Section       48  lib.o(.constdata__ZTV11cDevDigital)
-    .constdata__ZTV12cDevAnalogIn            0x08007480   Section       24  lib.o(.constdata__ZTV12cDevAnalogIn)
-    .constdata__ZTV12cHwI2Cmaster            0x08007498   Section       40  lib.o(.constdata__ZTV12cHwI2Cmaster)
-    .constdata__ZTV13cDevAnalogOut           0x080074c0   Section       20  lib.o(.constdata__ZTV13cDevAnalogOut)
-    .constdata__ZTV14cHwI2Cmaster_N          0x080074d4   Section       44  lib.o(.constdata__ZTV14cHwI2Cmaster_N)
-    .constdata__ZTV15cDevAnalogInADC         0x08007500   Section       24  lib.o(.constdata__ZTV15cDevAnalogInADC)
-    .constdata__ZTV15cHwTouch_FT6206         0x08007518   Section       24  touch_ft6206.o(.constdata__ZTV15cHwTouch_FT6206)
-    .constdata__ZTV16cDevAnalogOutDAC        0x08007530   Section       20  lib.o(.constdata__ZTV16cDevAnalogOutDAC)
-    .constdata__ZTV16cHwDisp_OTM8009A        0x08007544   Section       92  disp_otm8009a.o(.constdata__ZTV16cHwDisp_OTM8009A)
-    .constdata__ZTV17cHwDisplayGraphic       0x080075a0   Section       92  lib.o(.constdata__ZTV17cHwDisplayGraphic)
-    .constdata__ZTV18cDevControlEncoder      0x080075fc   Section       20  lib.o(.constdata__ZTV18cDevControlEncoder)
-    .constdata__ZTV18cDevControlPointer      0x08007610   Section       12  lib.o(.constdata__ZTV18cDevControlPointer)
-    .constdata__ZTV18cDevDisplayGraphic      0x0800761c   Section       72  lib.o(.constdata__ZTV18cDevDisplayGraphic)
-    .constdata__ZTV19cHwDisp_OTM8009Aram     0x08007664   Section       92  disp_otm8009a.o(.constdata__ZTV19cHwDisp_OTM8009Aram)
-    .constdata__ZTV26cDevControlEncoderJoystick 0x080076c0   Section       20  lib.o(.constdata__ZTV26cDevControlEncoderJoystick)
-    .constdata__ZTV6cHwADC                   0x080076d4   Section       40  lib.o(.constdata__ZTV6cHwADC)
-    .constdata__ZTV6cHwDAC                   0x080076fc   Section       20  lib.o(.constdata__ZTV6cHwDAC)
-    .constdata__ZTV6cHwDSI                   0x08007710   Section       16  main.o(.constdata__ZTV6cHwDSI)
-    .constdata__ZTV6cHwRTC                   0x08007720   Section       16  lib.o(.constdata__ZTV6cHwRTC)
-    .constdata__ZTV8cHwADC_0                 0x08007730   Section       40  lib.o(.constdata__ZTV8cHwADC_0)
-    .constdata__ZTV8cHwDAC_0                 0x08007758   Section       20  lib.o(.constdata__ZTV8cHwDAC_0)
-    .constdata__ZTV8cHwRTC_0                 0x0800776c   Section       16  lib.o(.constdata__ZTV8cHwRTC_0)
-    .constdata__ZTV8cHwTimer                 0x0800777c   Section       28  lib.o(.constdata__ZTV8cHwTimer)
-    .constdata__ZTV8cHwTouch                 0x08007798   Section       24  lib.o(.constdata__ZTV8cHwTouch)
-    .constdata__ZTV9cHwPort_N                0x080077b0   Section       32  lib.o(.constdata__ZTV9cHwPort_N)
-    .constdata__ZTVN12cHwI2Cmaster6DeviceE   0x080077d0   Section       60  lib.o(.constdata__ZTVN12cHwI2Cmaster6DeviceE)
-    .constdata__ZTVN5cList4ItemE             0x0800780c   Section       12  lib.o(.constdata__ZTVN5cList4ItemE)
-    .constdata__ZTVN7cHwPort3PinE            0x08007818   Section       28  lib.o(.constdata__ZTVN7cHwPort3PinE)
-    locale$$data                             0x08007854   Section       28  lc_numeric_c.o(locale$$data)
-    __lcnum_c_name                           0x08007858   Data           2  lc_numeric_c.o(locale$$data)
-    __lcnum_c_start                          0x08007860   Data           0  lc_numeric_c.o(locale$$data)
-    __lcnum_c_point                          0x0800786c   Data           0  lc_numeric_c.o(locale$$data)
-    __lcnum_c_thousands                      0x0800786e   Data           0  lc_numeric_c.o(locale$$data)
-    __lcnum_c_grouping                       0x0800786f   Data           0  lc_numeric_c.o(locale$$data)
-    locale$$data                             0x08007870   Section      272  lc_ctype_c.o(locale$$data)
-    __lcnum_c_end                            0x08007870   Data           0  lc_numeric_c.o(locale$$data)
-    __lcctype_c_name                         0x08007874   Data           2  lc_ctype_c.o(locale$$data)
-    __lcctype_c_start                        0x0800787c   Data           0  lc_ctype_c.o(locale$$data)
-    .init_array                              0x08007980   Section        4  main.o(.init_array)
-    __lcctype_c_end                          0x08007980   Data           0  lc_ctype_c.o(locale$$data)
-    .init_array                              0x08007984   Section        0  init_aeabi.o(.init_array)
+    i._ZN4GameC1Ev                           0x08004584   Section        0  game.o(i._ZN4GameC1Ev)
+    i._ZN4GameD1Ev                           0x0800459c   Section        0  game.o(i._ZN4GameD1Ev)
+    i._ZN5Cells13rowIsCompleteEv             0x080045b4   Section        0  cells.o(i._ZN5Cells13rowIsCompleteEv)
+    i._ZN5Cells15initializeCellsEv           0x080046fc   Section        0  cells.o(i._ZN5Cells15initializeCellsEv)
+    i._ZN5Cells21initializeDefaultRowsEv     0x08004740   Section        0  cells.o(i._ZN5Cells21initializeDefaultRowsEv)
+    i._ZN5CellsC1Ev                          0x080047c6   Section        0  cells.o(i._ZN5CellsC1Ev)
+    i._ZN5CellsD1Ev                          0x080047da   Section        0  cells.o(i._ZN5CellsD1Ev)
+    i._ZN5Field9drawFieldEv                  0x08004818   Section        0  field.o(i._ZN5Field9drawFieldEv)
+    i._ZN5Field9drawTokenE11coordinates      0x08004898   Section        0  field.o(i._ZN5Field9drawTokenE11coordinates)
+    i._ZN5Pages10siteHeaderEssssPc           0x080048e8   Section        0  pages.o(i._ZN5Pages10siteHeaderEssssPc)
+    i._ZN5Pages11draw_buttonEssssssssssPc    0x0800497c   Section        0  pages.o(i._ZN5Pages11draw_buttonEssssssssssPc)
+    i._ZN5Pages20display_current_pageEii     0x08004b64   Section        0  pages.o(i._ZN5Pages20display_current_pageEii)
+    i._ZN5Pages8instanceEv                   0x08004c48   Section        0  main.o(i._ZN5Pages8instanceEv)
+    i._ZN5Pages9isPressedEiiPA5_si           0x08004c84   Section        0  pages.o(i._ZN5Pages9isPressedEiiPA5_si)
+    i._ZN5PagesC1Ev                          0x08004cbc   Section        0  pages.o(i._ZN5PagesC1Ev)
+    i._ZN5PagesD1Ev                          0x08004cc6   Section        0  main.o(i._ZN5PagesD1Ev)
+    i._ZN5Style22changeActiveColorThemeEs    0x08004cc8   Section        0  style.o(i._ZN5Style22changeActiveColorThemeEs)
+    i._ZN5Style8instanceEv                   0x08004d6c   Section        0  main.o(i._ZN5Style8instanceEv)
+    i._ZN5StyleC1Ev                          0x08004da8   Section        0  style.o(i._ZN5StyleC1Ev)
+    i._ZN5StyleD1Ev                          0x08004e3c   Section        0  main.o(i._ZN5StyleD1Ev)
+    i._ZN5cList3addEPNS_4ItemE               0x08004e3e   Section        0  lib.o(i._ZN5cList3addEPNS_4ItemE)
+    i._ZN5cList4Item6updateEv                0x08004e60   Section        0  lib.o(i._ZN5cList4Item6updateEv)
+    i._ZN5cList4ItemC1EPS_                   0x08004e64   Section        0  lib.o(i._ZN5cList4ItemC1EPS_)
+    i._ZN5cList9updateAllEv                  0x08004e84   Section        0  lib.o(i._ZN5cList9updateAllEv)
+    i._ZN5cListC1Ev                          0x08004e9a   Section        0  lib.o(i._ZN5cListC1Ev)
+    i._ZN6cHwADC3isrEv                       0x08004ea0   Section        0  lib.o(i._ZN6cHwADC3isrEv)
+    i._ZN6cHwADC6enableEhh                   0x08004ef2   Section        0  lib.o(i._ZN6cHwADC6enableEhh)
+    i._ZN6cHwADC6updateEv                    0x08004f40   Section        0  lib.o(i._ZN6cHwADC6updateEv)
+    i._ZN6cHwADCC2EhP8cHwTimer               0x08004f6c   Section        0  lib.o(i._ZN6cHwADCC2EhP8cHwTimer)
+    i._ZN6cHwDACC2Eh                         0x08004fc0   Section        0  lib.o(i._ZN6cHwDACC2Eh)
+    i._ZN6cHwDSI10writeShortEhh              0x08004fcc   Section        0  main.o(i._ZN6cHwDSI10writeShortEhh)
+    i._ZN6cHwDSI14DisplayRefreshEv           0x08004fec   Section        0  disp_otm8009a.o(i._ZN6cHwDSI14DisplayRefreshEv)
+    i._ZN6cHwDSI4InitEttb                    0x08004ffc   Section        0  disp_otm8009a.o(i._ZN6cHwDSI4InitEttb)
+    i._ZN6cHwDSI9writeLongEPhj               0x08005190   Section        0  main.o(i._ZN6cHwDSI9writeLongEPhj)
+    i._ZN6cHwFMC10SDRAM_InitEv               0x080051d4   Section        0  main.o(i._ZN6cHwFMC10SDRAM_InitEv)
+    i._ZN6cHwFMC11SendCommandEjjj            0x08005278   Section        0  main.o(i._ZN6cHwFMC11SendCommandEjjj)
+    i._ZN6cHwFMCC1ENS_7FMCtypeEb             0x080052b8   Section        0  main.o(i._ZN6cHwFMCC1ENS_7FMCtypeEb)
+    i._ZN6cHwRTCC2Ev                         0x080054bc   Section        0  lib.o(i._ZN6cHwRTCC2Ev)
+    i._ZN7Symbole10drawCircleEsss            0x080054c8   Section        0  symbole.o(i._ZN7Symbole10drawCircleEsss)
+    i._ZN7Symbole10drawHammerEsss            0x08005500   Section        0  symbole.o(i._ZN7Symbole10drawHammerEsss)
+    i._ZN7Symbole10drawSickleEsss            0x08005584   Section        0  symbole.o(i._ZN7Symbole10drawSickleEsss)
+    i._ZN7Symbole12setPlayerSimEss           0x08005648   Section        0  symbole.o(i._ZN7Symbole12setPlayerSimEss)
+    i._ZN7Symbole5drawXEsss                  0x08005650   Section        0  symbole.o(i._ZN7Symbole5drawXEsss)
+    i._ZN7Symbole8instanceEv                 0x080056b0   Section        0  style.o(i._ZN7Symbole8instanceEv)
+    i._ZN7Symbole9drawPieceEsss              0x080056ec   Section        0  symbole.o(i._ZN7Symbole9drawPieceEsss)
+    i._ZN7SymboleC1Ev                        0x0800575e   Section        0  symbole.o(i._ZN7SymboleC1Ev)
+    i._ZN7SymboleD1Ev                        0x08005768   Section        0  field.o(i._ZN7SymboleD1Ev)
+    i._ZN7cHwPort3Pin3clrEv                  0x0800576a   Section        0  lib.o(i._ZN7cHwPort3Pin3clrEv)
+    i._ZN7cHwPort3Pin3getEv                  0x08005774   Section        0  lib.o(i._ZN7cHwPort3Pin3getEv)
+    i._ZN7cHwPort3Pin3setEb                  0x0800578e   Section        0  lib.o(i._ZN7cHwPort3Pin3setEb)
+    i._ZN7cHwPort3Pin3setEv                  0x080057a8   Section        0  lib.o(i._ZN7cHwPort3Pin3setEv)
+    i._ZN7cHwPort3Pin7setModeENS_4ModeE      0x080057b2   Section        0  lib.o(i._ZN7cHwPort3Pin7setModeENS_4ModeE)
+    i._ZN7cHwPort3PinC1ERS_h                 0x080057c0   Section        0  lib.o(i._ZN7cHwPort3PinC1ERS_h)
+    i._ZN7cSystem13delayMicroSecEt           0x080057d4   Section        0  lib.o(i._ZN7cSystem13delayMicroSecEt)
+    i._ZN7cSystem13delayMilliSecEt           0x080057ea   Section        0  lib.o(i._ZN7cSystem13delayMilliSecEt)
+    i._ZN7cSystem15disableWatchdogEv         0x08005804   Section        0  lib.o(i._ZN7cSystem15disableWatchdogEv)
+    i._ZN7cSystem15enableInterruptEv         0x08005808   Section        0  lib.o(i._ZN7cSystem15enableInterruptEv)
+    i._ZN7cSystem16disableInterruptEv        0x08005824   Section        0  lib.o(i._ZN7cSystem16disableInterruptEv)
+    i._ZN7cSystemC1Eh                        0x08005834   Section        0  lib.o(i._ZN7cSystemC1Eh)
+    i._ZN8cHwADC_07startChEh                 0x08005848   Section        0  lib.o(i._ZN8cHwADC_07startChEh)
+    i._ZN8cHwADC_08configChEhh               0x08005860   Section        0  lib.o(i._ZN8cHwADC_08configChEhh)
+    i._ZN8cHwADC_09getResultEv               0x080058a0   Section        0  lib.o(i._ZN8cHwADC_09getResultEv)
+    i._ZN8cHwADC_0C1EP8cHwTimer              0x080058ac   Section        0  lib.o(i._ZN8cHwADC_0C1EP8cHwTimer)
+    i._ZN8cHwDAC_06enableEh                  0x080058fc   Section        0  lib.o(i._ZN8cHwDAC_06enableEh)
+    i._ZN8cHwDAC_0C1Ev                       0x08005930   Section        0  lib.o(i._ZN8cHwDAC_0C1Ev)
+    i._ZN8cHwRTC_0C1ENS_17RTC_ClockConfig_tE 0x08005950   Section        0  lib.o(i._ZN8cHwRTC_0C1ENS_17RTC_ClockConfig_tE)
+    i._ZN8cHwTimer10isrHandlerEv             0x08005a10   Section        0  lib.o(i._ZN8cHwTimer10isrHandlerEv)
+    i._ZN8cHwTimer12getCycleTimeEv           0x08005a16   Section        0  lib.o(i._ZN8cHwTimer12getCycleTimeEv)
+    i._ZN8cHwTimer3addEPN5cList4ItemE        0x08005a1a   Section        0  lib.o(i._ZN8cHwTimer3addEPN5cList4ItemE)
+    i._ZN8cHwTouch7getPosXEv                 0x08005a20   Section        0  lib.o(i._ZN8cHwTouch7getPosXEv)
+    i._ZN8cHwTouch7getPosYEv                 0x08005a24   Section        0  lib.o(i._ZN8cHwTouch7getPosYEv)
+    i._ZN8cHwTouch9isTouchedEv               0x08005a28   Section        0  lib.o(i._ZN8cHwTouch9isTouchedEv)
+    i._ZN8cHwTouchC2Ett                      0x08005a2c   Section        0  lib.o(i._ZN8cHwTouchC2Ett)
+    i._ZN8cHwUSB_010EndpointIN11transmitZLPEv 0x08005a44   Section        0  lib.o(i._ZN8cHwUSB_010EndpointIN11transmitZLPEv)
+    i._ZN8cHwUSB_010EndpointIN11writeToFifoEv 0x08005a68   Section        0  lib.o(i._ZN8cHwUSB_010EndpointIN11writeToFifoEv)
+    i._ZN8cHwUSB_010EndpointIN12clrInterruptEj 0x08005ac0   Section        0  lib.o(i._ZN8cHwUSB_010EndpointIN12clrInterruptEj)
+    i._ZN8cHwUSB_010EndpointIN12getInterruptEv 0x08005ac8   Section        0  lib.o(i._ZN8cHwUSB_010EndpointIN12getInterruptEv)
+    i._ZN8cHwUSB_010EndpointIN6configEth     0x08005aec   Section        0  lib.o(i._ZN8cHwUSB_010EndpointIN6configEth)
+    i._ZN8cHwUSB_010EndpointIN8transmitEb    0x08005b34   Section        0  lib.o(i._ZN8cHwUSB_010EndpointIN8transmitEb)
+    i._ZN8cHwUSB_011EndpointOUT10receiveZLPEv 0x08005ba4   Section        0  lib.o(i._ZN8cHwUSB_011EndpointOUT10receiveZLPEv)
+    i._ZN8cHwUSB_011EndpointOUT12clrInterruptEj 0x08005bcc   Section        0  lib.o(i._ZN8cHwUSB_011EndpointOUT12clrInterruptEj)
+    i._ZN8cHwUSB_011EndpointOUT12getInterruptEv 0x08005bd4   Section        0  lib.o(i._ZN8cHwUSB_011EndpointOUT12getInterruptEv)
+    i._ZN8cHwUSB_011EndpointOUT12readFromFifoEt 0x08005be8   Section        0  lib.o(i._ZN8cHwUSB_011EndpointOUT12readFromFifoEt)
+    i._ZN8cHwUSB_011EndpointOUT6configEth    0x08005c14   Section        0  lib.o(i._ZN8cHwUSB_011EndpointOUT6configEth)
+    i._ZN8cHwUSB_011EndpointOUT7receiveEv    0x08005c64   Section        0  lib.o(i._ZN8cHwUSB_011EndpointOUT7receiveEv)
+    i._ZN8cHwUSB_012clrInterruptEj           0x08005cb2   Section        0  lib.o(i._ZN8cHwUSB_012clrInterruptEj)
+    i._ZN8cHwUSB_014getInInterruptEv         0x08005cc0   Section        0  lib.o(i._ZN8cHwUSB_014getInInterruptEv)
+    i._ZN8cHwUSB_015getOutInterruptEv        0x08005cd4   Section        0  lib.o(i._ZN8cHwUSB_015getOutInterruptEv)
+    i._ZN8cHwUSB_018isInterruptPendingEj     0x08005ce8   Section        0  lib.o(i._ZN8cHwUSB_018isInterruptPendingEj)
+    i._ZN8cHwUSB_03isrEv                     0x08005d00   Section        0  lib.o(i._ZN8cHwUSB_03isrEv)
+    i._ZN9Page_Game19buttonOnPagePressedEii  0x08005fd8   Section        0  page_game.o(i._ZN9Page_Game19buttonOnPagePressedEii)
+    i._ZN9Page_Game21output_Current_PlayerEs 0x08006048   Section        0  page_game.o(i._ZN9Page_Game21output_Current_PlayerEs)
+    i._ZN9Page_Game8drawpageEv               0x08006080   Section        0  page_game.o(i._ZN9Page_Game8drawpageEv)
+    i._ZN9Page_Game8instanceEv               0x08006108   Section        0  main.o(i._ZN9Page_Game8instanceEv)
+    i._ZN9Page_GameC1Ev                      0x08006144   Section        0  page_game.o(i._ZN9Page_GameC1Ev)
+    i._ZN9Page_GameD1Ev                      0x08006150   Section        0  main.o(i._ZN9Page_GameD1Ev)
+    i._ZN9cHwPort_N10setPinModeEhN7cHwPort4ModeE 0x08006152   Section        0  lib.o(i._ZN9cHwPort_N10setPinModeEhN7cHwPort4ModeE)
+    i._ZN9cHwPort_N3clrEj                    0x080061cc   Section        0  lib.o(i._ZN9cHwPort_N3clrEj)
+    i._ZN9cHwPort_N3getEv                    0x080061d4   Section        0  lib.o(i._ZN9cHwPort_N3getEv)
+    i._ZN9cHwPort_N3setEj                    0x080061da   Section        0  lib.o(i._ZN9cHwPort_N3setEj)
+    i._ZN9cHwPort_NC1ENS_6PortIdE            0x080061e0   Section        0  lib.o(i._ZN9cHwPort_NC1ENS_6PortIdE)
+    i._ZN9cHwUART_N3isrEv                    0x080062b4   Section        0  lib.o(i._ZN9cHwUART_N3isrEv)
+    i._ZNK14cHwDisplayFont12getCharWidthEv   0x080062e6   Section        0  lib.o(i._ZNK14cHwDisplayFont12getCharWidthEv)
+    i._ZNK14cHwDisplayFont13getCharHeightEv  0x080062ec   Section        0  lib.o(i._ZNK14cHwDisplayFont13getCharHeightEv)
+    i._ZdlPv                                 0x080062f2   Section        0  cells.o(i._ZdlPv)
+    i._Znaj                                  0x080062fc   Section        0  cells.o(i._Znaj)
+    i.__ARM_fpclassify                       0x08006300   Section        0  fpclassify.o(i.__ARM_fpclassify)
+    i.__cxa_guard_acquire                    0x08006330   Section        0  cxa_guard_acquire.o(i.__cxa_guard_acquire)
+    i.__cxa_pure_virtual                     0x08006340   Section        0  lib.o(i.__cxa_pure_virtual)
+    i.__hardfp_sqrtf                         0x08006344   Section        0  sqrtf.o(i.__hardfp_sqrtf)
+    i.__sti___8_main_cpp_sys                 0x08006380   Section        0  main.o(i.__sti___8_main_cpp_sys)
+    __sti___8_main_cpp_sys                   0x08006381   Thumb Code   536  main.o(i.__sti___8_main_cpp_sys)
+    i._is_digit                              0x080065b8   Section        0  __printf_wp.o(i._is_digit)
+    i.main                                   0x080065c8   Section        0  main.o(i.main)
+    locale$$code                             0x080067e0   Section       44  lc_numeric_c.o(locale$$code)
+    locale$$code                             0x0800680c   Section       44  lc_ctype_c.o(locale$$code)
+    t._Z5RANGEIsET_S0_S0_S0_                 0x08006838   Section        0  lib.o(t._Z5RANGEIsET_S0_S0_S0_)
+    t._ZN5cFifoIN18cDevControlEncoder6tEventEE6isFullEv 0x08006848   Section        0  lib.o(t._ZN5cFifoIN18cDevControlEncoder6tEventEE6isFullEv)
+    t._ZN5cFifoIN18cDevControlEncoder6tEventEElsERKS1_ 0x08006866   Section        0  lib.o(t._ZN5cFifoIN18cDevControlEncoder6tEventEElsERKS1_)
+    x$fpl$d2f                                0x080068a4   Section       98  d2f.o(x$fpl$d2f)
+    $v0                                      0x080068a4   Number         0  d2f.o(x$fpl$d2f)
+    x$fpl$ddiv                               0x08006908   Section      688  ddiv.o(x$fpl$ddiv)
+    $v0                                      0x08006908   Number         0  ddiv.o(x$fpl$ddiv)
+    ddiv_entry                               0x0800690f   Thumb Code     0  ddiv.o(x$fpl$ddiv)
+    x$fpl$dfixu                              0x08006bb8   Section       90  dfixu.o(x$fpl$dfixu)
+    $v0                                      0x08006bb8   Number         0  dfixu.o(x$fpl$dfixu)
+    x$fpl$dfltu                              0x08006c12   Section       38  dflt_clz.o(x$fpl$dfltu)
+    $v0                                      0x08006c12   Number         0  dflt_clz.o(x$fpl$dfltu)
+    x$fpl$dmul                               0x08006c38   Section      340  dmul.o(x$fpl$dmul)
+    $v0                                      0x08006c38   Number         0  dmul.o(x$fpl$dmul)
+    x$fpl$dnaninf                            0x08006d8c   Section      156  dnaninf.o(x$fpl$dnaninf)
+    $v0                                      0x08006d8c   Number         0  dnaninf.o(x$fpl$dnaninf)
+    x$fpl$dretinf                            0x08006e28   Section       12  dretinf.o(x$fpl$dretinf)
+    $v0                                      0x08006e28   Number         0  dretinf.o(x$fpl$dretinf)
+    x$fpl$fpinit                             0x08006e34   Section       10  fpinit.o(x$fpl$fpinit)
+    $v0                                      0x08006e34   Number         0  fpinit.o(x$fpl$fpinit)
+    x$fpl$fretinf                            0x08006e3e   Section       10  fretinf.o(x$fpl$fretinf)
+    $v0                                      0x08006e3e   Number         0  fretinf.o(x$fpl$fretinf)
+    x$fpl$printf1                            0x08006e48   Section        4  printf1.o(x$fpl$printf1)
+    $v0                                      0x08006e48   Number         0  printf1.o(x$fpl$printf1)
+    .constdata                               0x08006e4c   Section     1157  main.o(.constdata)
+    x$fpl$usenofp                            0x08006e4c   Section        0  usenofp.o(x$fpl$usenofp)
+    fontFont_8x12                            0x08006e4c   Data        1157  main.o(.constdata)
+    .constdata                               0x080072d4   Section       54  cells.o(.constdata)
+    .constdata                               0x0800730c   Section       60  lib.o(.constdata)
+    zeroAddr                                 0x0800730c   Data           4  lib.o(.constdata)
+    broadcastAddr                            0x08007310   Data           4  lib.o(.constdata)
+    zeroAddrPhy                              0x08007314   Data           6  lib.o(.constdata)
+    broadcastAddrPhy                         0x0800731a   Data           6  lib.o(.constdata)
+    .constdata                               0x08007348   Section        8  _printf_wctomb.o(.constdata)
+    initial_mbstate                          0x08007348   Data           8  _printf_wctomb.o(.constdata)
+    .constdata                               0x08007350   Section       40  _printf_hex_int_ll_ptr.o(.constdata)
+    uc_hextab                                0x08007350   Data          20  _printf_hex_int_ll_ptr.o(.constdata)
+    lc_hextab                                0x08007364   Data          20  _printf_hex_int_ll_ptr.o(.constdata)
+    .constdata                               0x08007378   Section       17  __printf_flags_ss_wp.o(.constdata)
+    maptable                                 0x08007378   Data          17  __printf_flags_ss_wp.o(.constdata)
+    .constdata                               0x0800738c   Section      148  bigflt0.o(.constdata)
+    tenpwrs_x                                0x0800738c   Data          60  bigflt0.o(.constdata)
+    tenpwrs_i                                0x080073c8   Data          64  bigflt0.o(.constdata)
+    .constdata__ZTV10cHwDisplay              0x08007420   Section       32  lib.o(.constdata__ZTV10cHwDisplay)
+    .constdata__ZTV10cHwTimer_N              0x08007440   Section       28  lib.o(.constdata__ZTV10cHwTimer_N)
+    .constdata__ZTV11cDevDigital             0x0800745c   Section       48  lib.o(.constdata__ZTV11cDevDigital)
+    .constdata__ZTV12cDevAnalogIn            0x0800748c   Section       24  lib.o(.constdata__ZTV12cDevAnalogIn)
+    .constdata__ZTV12cHwI2Cmaster            0x080074a4   Section       40  lib.o(.constdata__ZTV12cHwI2Cmaster)
+    .constdata__ZTV13cDevAnalogOut           0x080074cc   Section       20  lib.o(.constdata__ZTV13cDevAnalogOut)
+    .constdata__ZTV14cHwI2Cmaster_N          0x080074e0   Section       44  lib.o(.constdata__ZTV14cHwI2Cmaster_N)
+    .constdata__ZTV15cDevAnalogInADC         0x0800750c   Section       24  lib.o(.constdata__ZTV15cDevAnalogInADC)
+    .constdata__ZTV15cHwTouch_FT6206         0x08007524   Section       24  touch_ft6206.o(.constdata__ZTV15cHwTouch_FT6206)
+    .constdata__ZTV16cDevAnalogOutDAC        0x0800753c   Section       20  lib.o(.constdata__ZTV16cDevAnalogOutDAC)
+    .constdata__ZTV16cHwDisp_OTM8009A        0x08007550   Section       92  disp_otm8009a.o(.constdata__ZTV16cHwDisp_OTM8009A)
+    .constdata__ZTV17cHwDisplayGraphic       0x080075ac   Section       92  lib.o(.constdata__ZTV17cHwDisplayGraphic)
+    .constdata__ZTV18cDevControlEncoder      0x08007608   Section       20  lib.o(.constdata__ZTV18cDevControlEncoder)
+    .constdata__ZTV18cDevControlPointer      0x0800761c   Section       12  lib.o(.constdata__ZTV18cDevControlPointer)
+    .constdata__ZTV18cDevDisplayGraphic      0x08007628   Section       72  lib.o(.constdata__ZTV18cDevDisplayGraphic)
+    .constdata__ZTV19cHwDisp_OTM8009Aram     0x08007670   Section       92  disp_otm8009a.o(.constdata__ZTV19cHwDisp_OTM8009Aram)
+    .constdata__ZTV26cDevControlEncoderJoystick 0x080076cc   Section       20  lib.o(.constdata__ZTV26cDevControlEncoderJoystick)
+    .constdata__ZTV6cHwADC                   0x080076e0   Section       40  lib.o(.constdata__ZTV6cHwADC)
+    .constdata__ZTV6cHwDAC                   0x08007708   Section       20  lib.o(.constdata__ZTV6cHwDAC)
+    .constdata__ZTV6cHwDSI                   0x0800771c   Section       16  main.o(.constdata__ZTV6cHwDSI)
+    .constdata__ZTV6cHwRTC                   0x0800772c   Section       16  lib.o(.constdata__ZTV6cHwRTC)
+    .constdata__ZTV8cHwADC_0                 0x0800773c   Section       40  lib.o(.constdata__ZTV8cHwADC_0)
+    .constdata__ZTV8cHwDAC_0                 0x08007764   Section       20  lib.o(.constdata__ZTV8cHwDAC_0)
+    .constdata__ZTV8cHwRTC_0                 0x08007778   Section       16  lib.o(.constdata__ZTV8cHwRTC_0)
+    .constdata__ZTV8cHwTimer                 0x08007788   Section       28  lib.o(.constdata__ZTV8cHwTimer)
+    .constdata__ZTV8cHwTouch                 0x080077a4   Section       24  lib.o(.constdata__ZTV8cHwTouch)
+    .constdata__ZTV9cHwPort_N                0x080077bc   Section       32  lib.o(.constdata__ZTV9cHwPort_N)
+    .constdata__ZTVN12cHwI2Cmaster6DeviceE   0x080077dc   Section       60  lib.o(.constdata__ZTVN12cHwI2Cmaster6DeviceE)
+    .constdata__ZTVN5cList4ItemE             0x08007818   Section       12  lib.o(.constdata__ZTVN5cList4ItemE)
+    .constdata__ZTVN7cHwPort3PinE            0x08007824   Section       28  lib.o(.constdata__ZTVN7cHwPort3PinE)
+    locale$$data                             0x08007860   Section       28  lc_numeric_c.o(locale$$data)
+    __lcnum_c_name                           0x08007864   Data           2  lc_numeric_c.o(locale$$data)
+    __lcnum_c_start                          0x0800786c   Data           0  lc_numeric_c.o(locale$$data)
+    __lcnum_c_point                          0x08007878   Data           0  lc_numeric_c.o(locale$$data)
+    __lcnum_c_thousands                      0x0800787a   Data           0  lc_numeric_c.o(locale$$data)
+    __lcnum_c_grouping                       0x0800787b   Data           0  lc_numeric_c.o(locale$$data)
+    locale$$data                             0x0800787c   Section      272  lc_ctype_c.o(locale$$data)
+    __lcnum_c_end                            0x0800787c   Data           0  lc_numeric_c.o(locale$$data)
+    __lcctype_c_name                         0x08007880   Data           2  lc_ctype_c.o(locale$$data)
+    __lcctype_c_start                        0x08007888   Data           0  lc_ctype_c.o(locale$$data)
+    .init_array                              0x0800798c   Section        4  main.o(.init_array)
+    __lcctype_c_end                          0x0800798c   Data           0  lc_ctype_c.o(locale$$data)
+    .init_array                              0x08007990   Section        0  init_aeabi.o(.init_array)
     .ARM.__AT_0x20000000                     0x20000000   Section      160  lib.o(.ARM.__AT_0x20000000)
     .ARM.__AT_0x20000100                     0x20000100   Section     7620  lib.o(.ARM.__AT_0x20000100)
     .ARM.__AT_0x20002000                     0x20002000   Section      160  lib.o(.ARM.__AT_0x20002000)
@@ -5179,198 +5179,198 @@ Image Symbol Table
     cDevControlEncoderJoystick::getIncrement() 0x080043f1   Thumb Code    98  lib.o(i._ZN26cDevControlEncoderJoystick12getIncrementEv)
     cDevControlEncoderJoystick::cDevControlEncoderJoystick(cDevDigital*, cDevDigital*, cDevDigital*, cHwTimer*, unsigned short) 0x08004455   Thumb Code    80  lib.o(i._ZN26cDevControlEncoderJoystickC1EP11cDevDigitalS1_S1_P8cHwTimert)
     cDevControlEncoderJoystick::cDevControlEncoderJoystick__sub_object(cDevDigital*, cDevDigital*, cDevDigital*, cHwTimer*, unsigned short) 0x08004455   Thumb Code     0  lib.o(i._ZN26cDevControlEncoderJoystickC1EP11cDevDigitalS1_S1_P8cHwTimert)
-    Game::ttt_classic(short, short, unsigned char) 0x080044a9   Thumb Code   184  game.o(i._ZN4Game11ttt_classicEssh)
-    Game::Game()                             0x08004579   Thumb Code    24  game.o(i._ZN4GameC1Ev)
-    Game::Game__sub_object()                 0x08004579   Thumb Code     0  game.o(i._ZN4GameC1Ev)
-    Game::~Game()                            0x08004591   Thumb Code    24  game.o(i._ZN4GameD1Ev)
-    Game::~Game__sub_object()                0x08004591   Thumb Code     0  game.o(i._ZN4GameD1Ev)
-    Cells::rowIsComplete()                   0x080045a9   Thumb Code   328  cells.o(i._ZN5Cells13rowIsCompleteEv)
-    Cells::initializeCells()                 0x080046f1   Thumb Code    62  cells.o(i._ZN5Cells15initializeCellsEv)
-    Cells::initializeDefaultRows()           0x08004735   Thumb Code   134  cells.o(i._ZN5Cells21initializeDefaultRowsEv)
-    Cells::Cells()                           0x080047bb   Thumb Code    20  cells.o(i._ZN5CellsC1Ev)
-    Cells::Cells__sub_object()               0x080047bb   Thumb Code     0  cells.o(i._ZN5CellsC1Ev)
-    Cells::~Cells()                          0x080047cf   Thumb Code    62  cells.o(i._ZN5CellsD1Ev)
-    Cells::~Cells__sub_object()              0x080047cf   Thumb Code     0  cells.o(i._ZN5CellsD1Ev)
-    Field::drawField()                       0x0800480d   Thumb Code   122  field.o(i._ZN5Field9drawFieldEv)
-    Field::drawToken(coordinates)            0x0800488d   Thumb Code    62  field.o(i._ZN5Field9drawTokenE11coordinates)
-    Pages::siteHeader(short, short, short, short, char*) 0x080048dd   Thumb Code   144  pages.o(i._ZN5Pages10siteHeaderEssssPc)
-    Pages::draw_button(short, short, short, short, short, short, short, short, short, short, char*) 0x08004971   Thumb Code   478  pages.o(i._ZN5Pages11draw_buttonEssssssssssPc)
-    Pages::display_current_page(int, int)    0x08004b59   Thumb Code   222  pages.o(i._ZN5Pages20display_current_pageEii)
-    Pages::instance()                        0x08004c3d   Thumb Code    42  main.o(i._ZN5Pages8instanceEv)
-    Pages::isPressed(int, int, short(*)[5], int) 0x08004c79   Thumb Code    56  pages.o(i._ZN5Pages9isPressedEiiPA5_si)
-    Pages::Pages()                           0x08004cb1   Thumb Code    10  pages.o(i._ZN5PagesC1Ev)
-    Pages::Pages__sub_object()               0x08004cb1   Thumb Code     0  pages.o(i._ZN5PagesC1Ev)
-    Pages::~Pages()                          0x08004cbb   Thumb Code     2  main.o(i._ZN5PagesD1Ev)
-    Pages::~Pages__sub_object()              0x08004cbb   Thumb Code     0  main.o(i._ZN5PagesD1Ev)
-    Style::changeActiveColorTheme(short)     0x08004cbd   Thumb Code   158  style.o(i._ZN5Style22changeActiveColorThemeEs)
-    Style::instance()                        0x08004d61   Thumb Code    42  main.o(i._ZN5Style8instanceEv)
-    Style::Style()                           0x08004d9d   Thumb Code   134  style.o(i._ZN5StyleC1Ev)
-    Style::Style__sub_object()               0x08004d9d   Thumb Code     0  style.o(i._ZN5StyleC1Ev)
-    Style::~Style()                          0x08004e31   Thumb Code     2  main.o(i._ZN5StyleD1Ev)
-    Style::~Style__sub_object()              0x08004e31   Thumb Code     0  main.o(i._ZN5StyleD1Ev)
-    cList::add(cList::Item*)                 0x08004e33   Thumb Code    34  lib.o(i._ZN5cList3addEPNS_4ItemE)
-    cList::Item::update()                    0x08004e55   Thumb Code     2  lib.o(i._ZN5cList4Item6updateEv)
-    cList::Item::Item(cList*)                0x08004e59   Thumb Code    28  lib.o(i._ZN5cList4ItemC1EPS_)
-    cList::Item::Item__sub_object(cList*)    0x08004e59   Thumb Code     0  lib.o(i._ZN5cList4ItemC1EPS_)
-    cList::updateAll()                       0x08004e79   Thumb Code    22  lib.o(i._ZN5cList9updateAllEv)
-    cList::cList()                           0x08004e8f   Thumb Code     6  lib.o(i._ZN5cListC1Ev)
-    cList::cList__sub_object()               0x08004e8f   Thumb Code     0  lib.o(i._ZN5cListC1Ev)
-    cHwADC::isr()                            0x08004e95   Thumb Code    82  lib.o(i._ZN6cHwADC3isrEv)
-    cHwADC::enable(unsigned char, unsigned char) 0x08004ee7   Thumb Code    78  lib.o(i._ZN6cHwADC6enableEhh)
-    cHwADC::update()                         0x08004f35   Thumb Code    44  lib.o(i._ZN6cHwADC6updateEv)
-    cHwADC::cHwADC__sub_object(unsigned char, cHwTimer*) 0x08004f61   Thumb Code    78  lib.o(i._ZN6cHwADCC2EhP8cHwTimer)
-    cHwDAC::cHwDAC__sub_object(unsigned char) 0x08004fb5   Thumb Code     8  lib.o(i._ZN6cHwDACC2Eh)
-    cHwDSI::writeShort(unsigned char, unsigned char) 0x08004fc1   Thumb Code    26  main.o(i._ZN6cHwDSI10writeShortEhh)
-    cHwDSI::DisplayRefresh()                 0x08004fe1   Thumb Code    12  disp_otm8009a.o(i._ZN6cHwDSI14DisplayRefreshEv)
-    cHwDSI::Init(unsigned short, unsigned short, bool) 0x08004ff1   Thumb Code   356  disp_otm8009a.o(i._ZN6cHwDSI4InitEttb)
-    cHwDSI::writeLong(unsigned char*, unsigned) 0x08005185   Thumb Code    64  main.o(i._ZN6cHwDSI9writeLongEPhj)
-    cHwFMC::SDRAM_Init()                     0x080051c9   Thumb Code   146  main.o(i._ZN6cHwFMC10SDRAM_InitEv)
-    cHwFMC::SendCommand(unsigned, unsigned, unsigned) 0x0800526d   Thumb Code    62  main.o(i._ZN6cHwFMC11SendCommandEjjj)
-    cHwFMC::cHwFMC(cHwFMC::FMCtype, bool)    0x080052ad   Thumb Code   510  main.o(i._ZN6cHwFMCC1ENS_7FMCtypeEb)
-    cHwFMC::cHwFMC__sub_object(cHwFMC::FMCtype, bool) 0x080052ad   Thumb Code     0  main.o(i._ZN6cHwFMCC1ENS_7FMCtypeEb)
-    cHwRTC::cHwRTC__sub_object()             0x080054b1   Thumb Code     6  lib.o(i._ZN6cHwRTCC2Ev)
-    Symbole::drawCircle(short, short, short) 0x080054bd   Thumb Code    52  symbole.o(i._ZN7Symbole10drawCircleEsss)
-    Symbole::drawHammer(short, short, short) 0x080054f5   Thumb Code   126  symbole.o(i._ZN7Symbole10drawHammerEsss)
-    Symbole::drawSickle(short, short, short) 0x08005579   Thumb Code   190  symbole.o(i._ZN7Symbole10drawSickleEsss)
-    Symbole::setPlayerSim(short, short)      0x0800563d   Thumb Code     6  symbole.o(i._ZN7Symbole12setPlayerSimEss)
-    Symbole::drawX(short, short, short)      0x08005645   Thumb Code    92  symbole.o(i._ZN7Symbole5drawXEsss)
-    Symbole::instance()                      0x080056a5   Thumb Code    42  style.o(i._ZN7Symbole8instanceEv)
-    Symbole::drawPiece(short, short, short)  0x080056e1   Thumb Code   114  symbole.o(i._ZN7Symbole9drawPieceEsss)
-    Symbole::Symbole()                       0x08005753   Thumb Code    10  symbole.o(i._ZN7SymboleC1Ev)
-    Symbole::Symbole__sub_object()           0x08005753   Thumb Code     0  symbole.o(i._ZN7SymboleC1Ev)
-    Symbole::~Symbole()                      0x0800575d   Thumb Code     2  field.o(i._ZN7SymboleD1Ev)
-    Symbole::~Symbole__sub_object()          0x0800575d   Thumb Code     0  field.o(i._ZN7SymboleD1Ev)
-    cHwPort::Pin::clr()                      0x0800575f   Thumb Code    10  lib.o(i._ZN7cHwPort3Pin3clrEv)
-    cHwPort::Pin::get()                      0x08005769   Thumb Code    26  lib.o(i._ZN7cHwPort3Pin3getEv)
-    cHwPort::Pin::set(bool)                  0x08005783   Thumb Code    26  lib.o(i._ZN7cHwPort3Pin3setEb)
-    cHwPort::Pin::set()                      0x0800579d   Thumb Code    10  lib.o(i._ZN7cHwPort3Pin3setEv)
-    cHwPort::Pin::setMode(cHwPort::Mode)     0x080057a7   Thumb Code    12  lib.o(i._ZN7cHwPort3Pin7setModeENS_4ModeE)
-    cHwPort::Pin::Pin(cHwPort&, unsigned char) 0x080057b5   Thumb Code    16  lib.o(i._ZN7cHwPort3PinC1ERS_h)
-    cHwPort::Pin::Pin__sub_object(cHwPort&, unsigned char) 0x080057b5   Thumb Code     0  lib.o(i._ZN7cHwPort3PinC1ERS_h)
-    cSystem::delayMicroSec(unsigned short)   0x080057c9   Thumb Code    22  lib.o(i._ZN7cSystem13delayMicroSecEt)
-    cSystem::delayMilliSec(unsigned short)   0x080057df   Thumb Code    26  lib.o(i._ZN7cSystem13delayMilliSecEt)
-    cSystem::disableWatchdog()               0x080057f9   Thumb Code     2  lib.o(i._ZN7cSystem15disableWatchdogEv)
-    cSystem::enableInterrupt()               0x080057fd   Thumb Code    22  lib.o(i._ZN7cSystem15enableInterruptEv)
-    cSystem::disableInterrupt()              0x08005819   Thumb Code    12  lib.o(i._ZN7cSystem16disableInterruptEv)
-    cSystem::cSystem(unsigned char)          0x08005829   Thumb Code    18  lib.o(i._ZN7cSystemC1Eh)
-    cSystem::cSystem__sub_object(unsigned char) 0x08005829   Thumb Code     0  lib.o(i._ZN7cSystemC1Eh)
-    cHwADC_0::startCh(unsigned char)         0x0800583d   Thumb Code    18  lib.o(i._ZN8cHwADC_07startChEh)
-    cHwADC_0::configCh(unsigned char, unsigned char) 0x08005855   Thumb Code    60  lib.o(i._ZN8cHwADC_08configChEhh)
-    cHwADC_0::getResult()                    0x08005895   Thumb Code     8  lib.o(i._ZN8cHwADC_09getResultEv)
-    cHwADC_0::cHwADC_0(cHwTimer*)            0x080058a1   Thumb Code    64  lib.o(i._ZN8cHwADC_0C1EP8cHwTimer)
-    cHwADC_0::cHwADC_0__sub_object(cHwTimer*) 0x080058a1   Thumb Code     0  lib.o(i._ZN8cHwADC_0C1EP8cHwTimer)
-    cHwDAC_0::enable(unsigned char)          0x080058f1   Thumb Code    48  lib.o(i._ZN8cHwDAC_06enableEh)
-    cHwDAC_0::cHwDAC_0()                     0x08005925   Thumb Code    24  lib.o(i._ZN8cHwDAC_0C1Ev)
-    cHwDAC_0::cHwDAC_0__sub_object()         0x08005925   Thumb Code     0  lib.o(i._ZN8cHwDAC_0C1Ev)
-    cHwRTC_0::cHwRTC_0(cHwRTC_0::RTC_ClockConfig_t) 0x08005945   Thumb Code   176  lib.o(i._ZN8cHwRTC_0C1ENS_17RTC_ClockConfig_tE)
-    cHwRTC_0::cHwRTC_0__sub_object(cHwRTC_0::RTC_ClockConfig_t) 0x08005945   Thumb Code     0  lib.o(i._ZN8cHwRTC_0C1ENS_17RTC_ClockConfig_tE)
-    cHwTimer::isrHandler()                   0x08005a05   Thumb Code     6  lib.o(i._ZN8cHwTimer10isrHandlerEv)
-    cHwTimer::getCycleTime()                 0x08005a0b   Thumb Code     4  lib.o(i._ZN8cHwTimer12getCycleTimeEv)
-    cHwTimer::add(cList::Item*)              0x08005a0f   Thumb Code     6  lib.o(i._ZN8cHwTimer3addEPN5cList4ItemE)
-    cHwTouch::getPosX()                      0x08005a15   Thumb Code     4  lib.o(i._ZN8cHwTouch7getPosXEv)
-    cHwTouch::getPosY()                      0x08005a19   Thumb Code     4  lib.o(i._ZN8cHwTouch7getPosYEv)
-    cHwTouch::isTouched()                    0x08005a1d   Thumb Code     4  lib.o(i._ZN8cHwTouch9isTouchedEv)
-    cHwTouch::cHwTouch__sub_object(unsigned short, unsigned short) 0x08005a21   Thumb Code    18  lib.o(i._ZN8cHwTouchC2Ett)
-    cHwUSB_0::EndpointIN::transmitZLP()      0x08005a39   Thumb Code    34  lib.o(i._ZN8cHwUSB_010EndpointIN11transmitZLPEv)
-    cHwUSB_0::EndpointIN::writeToFifo()      0x08005a5d   Thumb Code    84  lib.o(i._ZN8cHwUSB_010EndpointIN11writeToFifoEv)
-    cHwUSB_0::EndpointIN::clrInterrupt(unsigned) 0x08005ab5   Thumb Code     8  lib.o(i._ZN8cHwUSB_010EndpointIN12clrInterruptEj)
-    cHwUSB_0::EndpointIN::getInterrupt()     0x08005abd   Thumb Code    32  lib.o(i._ZN8cHwUSB_010EndpointIN12getInterruptEv)
-    cHwUSB_0::EndpointIN::config(unsigned short, unsigned char) 0x08005ae1   Thumb Code    64  lib.o(i._ZN8cHwUSB_010EndpointIN6configEth)
-    cHwUSB_0::EndpointIN::transmit(bool)     0x08005b29   Thumb Code   106  lib.o(i._ZN8cHwUSB_010EndpointIN8transmitEb)
-    cHwUSB_0::EndpointOUT::receiveZLP()      0x08005b99   Thumb Code    40  lib.o(i._ZN8cHwUSB_011EndpointOUT10receiveZLPEv)
-    cHwUSB_0::EndpointOUT::clrInterrupt(unsigned) 0x08005bc1   Thumb Code     8  lib.o(i._ZN8cHwUSB_011EndpointOUT12clrInterruptEj)
-    cHwUSB_0::EndpointOUT::getInterrupt()    0x08005bc9   Thumb Code    14  lib.o(i._ZN8cHwUSB_011EndpointOUT12getInterruptEv)
-    cHwUSB_0::EndpointOUT::readFromFifo(unsigned short) 0x08005bdd   Thumb Code    42  lib.o(i._ZN8cHwUSB_011EndpointOUT12readFromFifoEt)
-    cHwUSB_0::EndpointOUT::config(unsigned short, unsigned char) 0x08005c09   Thumb Code    72  lib.o(i._ZN8cHwUSB_011EndpointOUT6configEth)
-    cHwUSB_0::EndpointOUT::receive()         0x08005c59   Thumb Code    78  lib.o(i._ZN8cHwUSB_011EndpointOUT7receiveEv)
-    cHwUSB_0::clrInterrupt(unsigned)         0x08005ca7   Thumb Code    12  lib.o(i._ZN8cHwUSB_012clrInterruptEj)
-    cHwUSB_0::getInInterrupt()               0x08005cb5   Thumb Code    16  lib.o(i._ZN8cHwUSB_014getInInterruptEv)
-    cHwUSB_0::getOutInterrupt()              0x08005cc9   Thumb Code    16  lib.o(i._ZN8cHwUSB_015getOutInterruptEv)
-    cHwUSB_0::isInterruptPending(unsigned)   0x08005cdd   Thumb Code    22  lib.o(i._ZN8cHwUSB_018isInterruptPendingEj)
-    cHwUSB_0::isr()                          0x08005cf5   Thumb Code   724  lib.o(i._ZN8cHwUSB_03isrEv)
-    Page_Game::buttonOnPagePressed(int, int) 0x08005fcd   Thumb Code   104  page_game.o(i._ZN9Page_Game19buttonOnPagePressedEii)
-    Page_Game::output_Current_Player(short)  0x0800603d   Thumb Code    28  page_game.o(i._ZN9Page_Game21output_Current_PlayerEs)
-    Page_Game::drawpage()                    0x08006075   Thumb Code   114  page_game.o(i._ZN9Page_Game8drawpageEv)
-    Page_Game::instance()                    0x080060fd   Thumb Code    42  main.o(i._ZN9Page_Game8instanceEv)
-    Page_Game::Page_Game()                   0x08006139   Thumb Code    12  page_game.o(i._ZN9Page_GameC1Ev)
-    Page_Game::Page_Game__sub_object()       0x08006139   Thumb Code     0  page_game.o(i._ZN9Page_GameC1Ev)
-    Page_Game::~Page_Game()                  0x08006145   Thumb Code     2  main.o(i._ZN9Page_GameD1Ev)
-    Page_Game::~Page_Game__sub_object()      0x08006145   Thumb Code     0  main.o(i._ZN9Page_GameD1Ev)
-    cHwPort_N::setPinMode(unsigned char, cHwPort::Mode) 0x08006147   Thumb Code   122  lib.o(i._ZN9cHwPort_N10setPinModeEhN7cHwPort4ModeE)
-    cHwPort_N::clr(unsigned)                 0x080061c1   Thumb Code     8  lib.o(i._ZN9cHwPort_N3clrEj)
-    cHwPort_N::get()                         0x080061c9   Thumb Code     6  lib.o(i._ZN9cHwPort_N3getEv)
-    cHwPort_N::set(unsigned)                 0x080061cf   Thumb Code     6  lib.o(i._ZN9cHwPort_N3setEj)
-    cHwPort_N::cHwPort_N(cHwPort_N::PortId)  0x080061d5   Thumb Code   164  lib.o(i._ZN9cHwPort_NC1ENS_6PortIdE)
-    cHwPort_N::cHwPort_N__sub_object(cHwPort_N::PortId) 0x080061d5   Thumb Code     0  lib.o(i._ZN9cHwPort_NC1ENS_6PortIdE)
-    cHwUART_N::isr()                         0x080062a9   Thumb Code    50  lib.o(i._ZN9cHwUART_N3isrEv)
-    cHwDisplayFont::getCharWidth() const     0x080062db   Thumb Code     6  lib.o(i._ZNK14cHwDisplayFont12getCharWidthEv)
-    cHwDisplayFont::getCharHeight() const    0x080062e1   Thumb Code     6  lib.o(i._ZNK14cHwDisplayFont13getCharHeightEv)
-    operator delete (void*)                  0x080062e7   Thumb Code    10  cells.o(i._ZdlPv)
-    operator new[] (unsigned)                0x080062f1   Thumb Code     4  cells.o(i._Znaj)
-    __ARM_fpclassify                         0x080062f5   Thumb Code    48  fpclassify.o(i.__ARM_fpclassify)
-    __cxa_guard_acquire                      0x08006325   Thumb Code    16  cxa_guard_acquire.o(i.__cxa_guard_acquire)
-    __cxa_pure_virtual                       0x08006335   Thumb Code     4  lib.o(i.__cxa_pure_virtual)
-    __hardfp_sqrtf                           0x08006339   Thumb Code    58  sqrtf.o(i.__hardfp_sqrtf)
-    _is_digit                                0x080065ad   Thumb Code    14  __printf_wp.o(i._is_digit)
-    main                                     0x080065bd   Thumb Code   458  main.o(i.main)
-    _get_lc_numeric                          0x080067d5   Thumb Code    44  lc_numeric_c.o(locale$$code)
-    _get_lc_ctype                            0x08006801   Thumb Code    44  lc_ctype_c.o(locale$$code)
-    T1 RANGE<short>(T1, T1, T1)              0x0800682d   Thumb Code    16  lib.o(t._Z5RANGEIsET_S0_S0_S0_)
-    cFifo<cDevControlEncoder::tEvent>::isFull() 0x0800683d   Thumb Code    30  lib.o(t._ZN5cFifoIN18cDevControlEncoder6tEventEE6isFullEv)
-    cFifo<cDevControlEncoder::tEvent>::operator <<(const cDevControlEncoder::tEvent&) 0x0800685b   Thumb Code    62  lib.o(t._ZN5cFifoIN18cDevControlEncoder6tEventEElsERKS1_)
-    __aeabi_d2f                              0x08006899   Thumb Code     0  d2f.o(x$fpl$d2f)
-    _d2f                                     0x08006899   Thumb Code    98  d2f.o(x$fpl$d2f)
-    __aeabi_ddiv                             0x080068fd   Thumb Code     0  ddiv.o(x$fpl$ddiv)
-    _ddiv                                    0x080068fd   Thumb Code   552  ddiv.o(x$fpl$ddiv)
-    __aeabi_d2uiz                            0x08006bad   Thumb Code     0  dfixu.o(x$fpl$dfixu)
-    _dfixu                                   0x08006bad   Thumb Code    90  dfixu.o(x$fpl$dfixu)
-    __aeabi_ui2d                             0x08006c07   Thumb Code     0  dflt_clz.o(x$fpl$dfltu)
-    _dfltu                                   0x08006c07   Thumb Code    38  dflt_clz.o(x$fpl$dfltu)
-    __aeabi_dmul                             0x08006c2d   Thumb Code     0  dmul.o(x$fpl$dmul)
-    _dmul                                    0x08006c2d   Thumb Code   332  dmul.o(x$fpl$dmul)
-    __fpl_dnaninf                            0x08006d81   Thumb Code   156  dnaninf.o(x$fpl$dnaninf)
-    __fpl_dretinf                            0x08006e1d   Thumb Code    12  dretinf.o(x$fpl$dretinf)
-    _fp_init                                 0x08006e29   Thumb Code    10  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x08006e31   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x08006e31   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fpl_fretinf                            0x08006e33   Thumb Code    10  fretinf.o(x$fpl$fretinf)
-    _printf_fp_dec                           0x08006e3d   Thumb Code     4  printf1.o(x$fpl$printf1)
-    __I$use$fp                               0x08006e40   Number         0  usenofp.o(x$fpl$usenofp)
-    vtable for cHwDisplay                    0x08007414   Data          32  lib.o(.constdata__ZTV10cHwDisplay)
-    vtable for cHwTimer_N                    0x08007434   Data          28  lib.o(.constdata__ZTV10cHwTimer_N)
-    vtable for cDevDigital                   0x08007450   Data          48  lib.o(.constdata__ZTV11cDevDigital)
-    vtable for cDevAnalogIn                  0x08007480   Data          24  lib.o(.constdata__ZTV12cDevAnalogIn)
-    vtable for cHwI2Cmaster                  0x08007498   Data          40  lib.o(.constdata__ZTV12cHwI2Cmaster)
-    vtable for cDevAnalogOut                 0x080074c0   Data          20  lib.o(.constdata__ZTV13cDevAnalogOut)
-    vtable for cHwI2Cmaster_N                0x080074d4   Data          44  lib.o(.constdata__ZTV14cHwI2Cmaster_N)
-    vtable for cDevAnalogInADC               0x08007500   Data          24  lib.o(.constdata__ZTV15cDevAnalogInADC)
-    vtable for cHwTouch_FT6206               0x08007518   Data          24  touch_ft6206.o(.constdata__ZTV15cHwTouch_FT6206)
-    vtable for cDevAnalogOutDAC              0x08007530   Data          20  lib.o(.constdata__ZTV16cDevAnalogOutDAC)
-    vtable for cHwDisp_OTM8009A              0x08007544   Data          92  disp_otm8009a.o(.constdata__ZTV16cHwDisp_OTM8009A)
-    vtable for cHwDisplayGraphic             0x080075a0   Data          92  lib.o(.constdata__ZTV17cHwDisplayGraphic)
-    vtable for cDevControlEncoder            0x080075fc   Data          20  lib.o(.constdata__ZTV18cDevControlEncoder)
-    vtable for cDevControlPointer            0x08007610   Data          12  lib.o(.constdata__ZTV18cDevControlPointer)
-    vtable for cDevDisplayGraphic            0x0800761c   Data          72  lib.o(.constdata__ZTV18cDevDisplayGraphic)
-    vtable for cHwDisp_OTM8009Aram           0x08007664   Data          92  disp_otm8009a.o(.constdata__ZTV19cHwDisp_OTM8009Aram)
-    vtable for cDevControlEncoderJoystick    0x080076c0   Data          20  lib.o(.constdata__ZTV26cDevControlEncoderJoystick)
-    vtable for cHwADC                        0x080076d4   Data          40  lib.o(.constdata__ZTV6cHwADC)
-    vtable for cHwDAC                        0x080076fc   Data          20  lib.o(.constdata__ZTV6cHwDAC)
-    vtable for cHwDSI                        0x08007710   Data          16  main.o(.constdata__ZTV6cHwDSI)
-    vtable for cHwRTC                        0x08007720   Data          16  lib.o(.constdata__ZTV6cHwRTC)
-    vtable for cHwADC_0                      0x08007730   Data          40  lib.o(.constdata__ZTV8cHwADC_0)
-    vtable for cHwDAC_0                      0x08007758   Data          20  lib.o(.constdata__ZTV8cHwDAC_0)
-    vtable for cHwRTC_0                      0x0800776c   Data          16  lib.o(.constdata__ZTV8cHwRTC_0)
-    vtable for cHwTimer                      0x0800777c   Data          28  lib.o(.constdata__ZTV8cHwTimer)
-    vtable for cHwTouch                      0x08007798   Data          24  lib.o(.constdata__ZTV8cHwTouch)
-    vtable for cHwPort_N                     0x080077b0   Data          32  lib.o(.constdata__ZTV9cHwPort_N)
-    vtable for cHwI2Cmaster::Device          0x080077d0   Data          60  lib.o(.constdata__ZTVN12cHwI2Cmaster6DeviceE)
-    vtable for cList::Item                   0x0800780c   Data          12  lib.o(.constdata__ZTVN5cList4ItemE)
-    vtable for cHwPort::Pin                  0x08007818   Data          28  lib.o(.constdata__ZTVN7cHwPort3PinE)
-    Region$$Table$$Base                      0x08007834   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08007854   Number         0  anon$$obj.o(Region$$Table)
-    __ctype                                  0x0800787d   Data           0  lc_ctype_c.o(locale$$data)
-    SHT$$INIT_ARRAY$$Base                    0x08007980   Number         0  main.o(.init_array)
-    SHT$$INIT_ARRAY$$Limit                   0x08007984   Number         0  init_aeabi.o(.init_array)
+    Game::ttt_classic(short, short, unsigned char) 0x080044a9   Thumb Code   196  game.o(i._ZN4Game11ttt_classicEssh)
+    Game::Game()                             0x08004585   Thumb Code    24  game.o(i._ZN4GameC1Ev)
+    Game::Game__sub_object()                 0x08004585   Thumb Code     0  game.o(i._ZN4GameC1Ev)
+    Game::~Game()                            0x0800459d   Thumb Code    24  game.o(i._ZN4GameD1Ev)
+    Game::~Game__sub_object()                0x0800459d   Thumb Code     0  game.o(i._ZN4GameD1Ev)
+    Cells::rowIsComplete()                   0x080045b5   Thumb Code   328  cells.o(i._ZN5Cells13rowIsCompleteEv)
+    Cells::initializeCells()                 0x080046fd   Thumb Code    62  cells.o(i._ZN5Cells15initializeCellsEv)
+    Cells::initializeDefaultRows()           0x08004741   Thumb Code   134  cells.o(i._ZN5Cells21initializeDefaultRowsEv)
+    Cells::Cells()                           0x080047c7   Thumb Code    20  cells.o(i._ZN5CellsC1Ev)
+    Cells::Cells__sub_object()               0x080047c7   Thumb Code     0  cells.o(i._ZN5CellsC1Ev)
+    Cells::~Cells()                          0x080047db   Thumb Code    62  cells.o(i._ZN5CellsD1Ev)
+    Cells::~Cells__sub_object()              0x080047db   Thumb Code     0  cells.o(i._ZN5CellsD1Ev)
+    Field::drawField()                       0x08004819   Thumb Code   122  field.o(i._ZN5Field9drawFieldEv)
+    Field::drawToken(coordinates)            0x08004899   Thumb Code    62  field.o(i._ZN5Field9drawTokenE11coordinates)
+    Pages::siteHeader(short, short, short, short, char*) 0x080048e9   Thumb Code   144  pages.o(i._ZN5Pages10siteHeaderEssssPc)
+    Pages::draw_button(short, short, short, short, short, short, short, short, short, short, char*) 0x0800497d   Thumb Code   478  pages.o(i._ZN5Pages11draw_buttonEssssssssssPc)
+    Pages::display_current_page(int, int)    0x08004b65   Thumb Code   222  pages.o(i._ZN5Pages20display_current_pageEii)
+    Pages::instance()                        0x08004c49   Thumb Code    42  main.o(i._ZN5Pages8instanceEv)
+    Pages::isPressed(int, int, short(*)[5], int) 0x08004c85   Thumb Code    56  pages.o(i._ZN5Pages9isPressedEiiPA5_si)
+    Pages::Pages()                           0x08004cbd   Thumb Code    10  pages.o(i._ZN5PagesC1Ev)
+    Pages::Pages__sub_object()               0x08004cbd   Thumb Code     0  pages.o(i._ZN5PagesC1Ev)
+    Pages::~Pages()                          0x08004cc7   Thumb Code     2  main.o(i._ZN5PagesD1Ev)
+    Pages::~Pages__sub_object()              0x08004cc7   Thumb Code     0  main.o(i._ZN5PagesD1Ev)
+    Style::changeActiveColorTheme(short)     0x08004cc9   Thumb Code   158  style.o(i._ZN5Style22changeActiveColorThemeEs)
+    Style::instance()                        0x08004d6d   Thumb Code    42  main.o(i._ZN5Style8instanceEv)
+    Style::Style()                           0x08004da9   Thumb Code   134  style.o(i._ZN5StyleC1Ev)
+    Style::Style__sub_object()               0x08004da9   Thumb Code     0  style.o(i._ZN5StyleC1Ev)
+    Style::~Style()                          0x08004e3d   Thumb Code     2  main.o(i._ZN5StyleD1Ev)
+    Style::~Style__sub_object()              0x08004e3d   Thumb Code     0  main.o(i._ZN5StyleD1Ev)
+    cList::add(cList::Item*)                 0x08004e3f   Thumb Code    34  lib.o(i._ZN5cList3addEPNS_4ItemE)
+    cList::Item::update()                    0x08004e61   Thumb Code     2  lib.o(i._ZN5cList4Item6updateEv)
+    cList::Item::Item(cList*)                0x08004e65   Thumb Code    28  lib.o(i._ZN5cList4ItemC1EPS_)
+    cList::Item::Item__sub_object(cList*)    0x08004e65   Thumb Code     0  lib.o(i._ZN5cList4ItemC1EPS_)
+    cList::updateAll()                       0x08004e85   Thumb Code    22  lib.o(i._ZN5cList9updateAllEv)
+    cList::cList()                           0x08004e9b   Thumb Code     6  lib.o(i._ZN5cListC1Ev)
+    cList::cList__sub_object()               0x08004e9b   Thumb Code     0  lib.o(i._ZN5cListC1Ev)
+    cHwADC::isr()                            0x08004ea1   Thumb Code    82  lib.o(i._ZN6cHwADC3isrEv)
+    cHwADC::enable(unsigned char, unsigned char) 0x08004ef3   Thumb Code    78  lib.o(i._ZN6cHwADC6enableEhh)
+    cHwADC::update()                         0x08004f41   Thumb Code    44  lib.o(i._ZN6cHwADC6updateEv)
+    cHwADC::cHwADC__sub_object(unsigned char, cHwTimer*) 0x08004f6d   Thumb Code    78  lib.o(i._ZN6cHwADCC2EhP8cHwTimer)
+    cHwDAC::cHwDAC__sub_object(unsigned char) 0x08004fc1   Thumb Code     8  lib.o(i._ZN6cHwDACC2Eh)
+    cHwDSI::writeShort(unsigned char, unsigned char) 0x08004fcd   Thumb Code    26  main.o(i._ZN6cHwDSI10writeShortEhh)
+    cHwDSI::DisplayRefresh()                 0x08004fed   Thumb Code    12  disp_otm8009a.o(i._ZN6cHwDSI14DisplayRefreshEv)
+    cHwDSI::Init(unsigned short, unsigned short, bool) 0x08004ffd   Thumb Code   356  disp_otm8009a.o(i._ZN6cHwDSI4InitEttb)
+    cHwDSI::writeLong(unsigned char*, unsigned) 0x08005191   Thumb Code    64  main.o(i._ZN6cHwDSI9writeLongEPhj)
+    cHwFMC::SDRAM_Init()                     0x080051d5   Thumb Code   146  main.o(i._ZN6cHwFMC10SDRAM_InitEv)
+    cHwFMC::SendCommand(unsigned, unsigned, unsigned) 0x08005279   Thumb Code    62  main.o(i._ZN6cHwFMC11SendCommandEjjj)
+    cHwFMC::cHwFMC(cHwFMC::FMCtype, bool)    0x080052b9   Thumb Code   510  main.o(i._ZN6cHwFMCC1ENS_7FMCtypeEb)
+    cHwFMC::cHwFMC__sub_object(cHwFMC::FMCtype, bool) 0x080052b9   Thumb Code     0  main.o(i._ZN6cHwFMCC1ENS_7FMCtypeEb)
+    cHwRTC::cHwRTC__sub_object()             0x080054bd   Thumb Code     6  lib.o(i._ZN6cHwRTCC2Ev)
+    Symbole::drawCircle(short, short, short) 0x080054c9   Thumb Code    52  symbole.o(i._ZN7Symbole10drawCircleEsss)
+    Symbole::drawHammer(short, short, short) 0x08005501   Thumb Code   126  symbole.o(i._ZN7Symbole10drawHammerEsss)
+    Symbole::drawSickle(short, short, short) 0x08005585   Thumb Code   190  symbole.o(i._ZN7Symbole10drawSickleEsss)
+    Symbole::setPlayerSim(short, short)      0x08005649   Thumb Code     6  symbole.o(i._ZN7Symbole12setPlayerSimEss)
+    Symbole::drawX(short, short, short)      0x08005651   Thumb Code    92  symbole.o(i._ZN7Symbole5drawXEsss)
+    Symbole::instance()                      0x080056b1   Thumb Code    42  style.o(i._ZN7Symbole8instanceEv)
+    Symbole::drawPiece(short, short, short)  0x080056ed   Thumb Code   114  symbole.o(i._ZN7Symbole9drawPieceEsss)
+    Symbole::Symbole()                       0x0800575f   Thumb Code    10  symbole.o(i._ZN7SymboleC1Ev)
+    Symbole::Symbole__sub_object()           0x0800575f   Thumb Code     0  symbole.o(i._ZN7SymboleC1Ev)
+    Symbole::~Symbole()                      0x08005769   Thumb Code     2  field.o(i._ZN7SymboleD1Ev)
+    Symbole::~Symbole__sub_object()          0x08005769   Thumb Code     0  field.o(i._ZN7SymboleD1Ev)
+    cHwPort::Pin::clr()                      0x0800576b   Thumb Code    10  lib.o(i._ZN7cHwPort3Pin3clrEv)
+    cHwPort::Pin::get()                      0x08005775   Thumb Code    26  lib.o(i._ZN7cHwPort3Pin3getEv)
+    cHwPort::Pin::set(bool)                  0x0800578f   Thumb Code    26  lib.o(i._ZN7cHwPort3Pin3setEb)
+    cHwPort::Pin::set()                      0x080057a9   Thumb Code    10  lib.o(i._ZN7cHwPort3Pin3setEv)
+    cHwPort::Pin::setMode(cHwPort::Mode)     0x080057b3   Thumb Code    12  lib.o(i._ZN7cHwPort3Pin7setModeENS_4ModeE)
+    cHwPort::Pin::Pin(cHwPort&, unsigned char) 0x080057c1   Thumb Code    16  lib.o(i._ZN7cHwPort3PinC1ERS_h)
+    cHwPort::Pin::Pin__sub_object(cHwPort&, unsigned char) 0x080057c1   Thumb Code     0  lib.o(i._ZN7cHwPort3PinC1ERS_h)
+    cSystem::delayMicroSec(unsigned short)   0x080057d5   Thumb Code    22  lib.o(i._ZN7cSystem13delayMicroSecEt)
+    cSystem::delayMilliSec(unsigned short)   0x080057eb   Thumb Code    26  lib.o(i._ZN7cSystem13delayMilliSecEt)
+    cSystem::disableWatchdog()               0x08005805   Thumb Code     2  lib.o(i._ZN7cSystem15disableWatchdogEv)
+    cSystem::enableInterrupt()               0x08005809   Thumb Code    22  lib.o(i._ZN7cSystem15enableInterruptEv)
+    cSystem::disableInterrupt()              0x08005825   Thumb Code    12  lib.o(i._ZN7cSystem16disableInterruptEv)
+    cSystem::cSystem(unsigned char)          0x08005835   Thumb Code    18  lib.o(i._ZN7cSystemC1Eh)
+    cSystem::cSystem__sub_object(unsigned char) 0x08005835   Thumb Code     0  lib.o(i._ZN7cSystemC1Eh)
+    cHwADC_0::startCh(unsigned char)         0x08005849   Thumb Code    18  lib.o(i._ZN8cHwADC_07startChEh)
+    cHwADC_0::configCh(unsigned char, unsigned char) 0x08005861   Thumb Code    60  lib.o(i._ZN8cHwADC_08configChEhh)
+    cHwADC_0::getResult()                    0x080058a1   Thumb Code     8  lib.o(i._ZN8cHwADC_09getResultEv)
+    cHwADC_0::cHwADC_0(cHwTimer*)            0x080058ad   Thumb Code    64  lib.o(i._ZN8cHwADC_0C1EP8cHwTimer)
+    cHwADC_0::cHwADC_0__sub_object(cHwTimer*) 0x080058ad   Thumb Code     0  lib.o(i._ZN8cHwADC_0C1EP8cHwTimer)
+    cHwDAC_0::enable(unsigned char)          0x080058fd   Thumb Code    48  lib.o(i._ZN8cHwDAC_06enableEh)
+    cHwDAC_0::cHwDAC_0()                     0x08005931   Thumb Code    24  lib.o(i._ZN8cHwDAC_0C1Ev)
+    cHwDAC_0::cHwDAC_0__sub_object()         0x08005931   Thumb Code     0  lib.o(i._ZN8cHwDAC_0C1Ev)
+    cHwRTC_0::cHwRTC_0(cHwRTC_0::RTC_ClockConfig_t) 0x08005951   Thumb Code   176  lib.o(i._ZN8cHwRTC_0C1ENS_17RTC_ClockConfig_tE)
+    cHwRTC_0::cHwRTC_0__sub_object(cHwRTC_0::RTC_ClockConfig_t) 0x08005951   Thumb Code     0  lib.o(i._ZN8cHwRTC_0C1ENS_17RTC_ClockConfig_tE)
+    cHwTimer::isrHandler()                   0x08005a11   Thumb Code     6  lib.o(i._ZN8cHwTimer10isrHandlerEv)
+    cHwTimer::getCycleTime()                 0x08005a17   Thumb Code     4  lib.o(i._ZN8cHwTimer12getCycleTimeEv)
+    cHwTimer::add(cList::Item*)              0x08005a1b   Thumb Code     6  lib.o(i._ZN8cHwTimer3addEPN5cList4ItemE)
+    cHwTouch::getPosX()                      0x08005a21   Thumb Code     4  lib.o(i._ZN8cHwTouch7getPosXEv)
+    cHwTouch::getPosY()                      0x08005a25   Thumb Code     4  lib.o(i._ZN8cHwTouch7getPosYEv)
+    cHwTouch::isTouched()                    0x08005a29   Thumb Code     4  lib.o(i._ZN8cHwTouch9isTouchedEv)
+    cHwTouch::cHwTouch__sub_object(unsigned short, unsigned short) 0x08005a2d   Thumb Code    18  lib.o(i._ZN8cHwTouchC2Ett)
+    cHwUSB_0::EndpointIN::transmitZLP()      0x08005a45   Thumb Code    34  lib.o(i._ZN8cHwUSB_010EndpointIN11transmitZLPEv)
+    cHwUSB_0::EndpointIN::writeToFifo()      0x08005a69   Thumb Code    84  lib.o(i._ZN8cHwUSB_010EndpointIN11writeToFifoEv)
+    cHwUSB_0::EndpointIN::clrInterrupt(unsigned) 0x08005ac1   Thumb Code     8  lib.o(i._ZN8cHwUSB_010EndpointIN12clrInterruptEj)
+    cHwUSB_0::EndpointIN::getInterrupt()     0x08005ac9   Thumb Code    32  lib.o(i._ZN8cHwUSB_010EndpointIN12getInterruptEv)
+    cHwUSB_0::EndpointIN::config(unsigned short, unsigned char) 0x08005aed   Thumb Code    64  lib.o(i._ZN8cHwUSB_010EndpointIN6configEth)
+    cHwUSB_0::EndpointIN::transmit(bool)     0x08005b35   Thumb Code   106  lib.o(i._ZN8cHwUSB_010EndpointIN8transmitEb)
+    cHwUSB_0::EndpointOUT::receiveZLP()      0x08005ba5   Thumb Code    40  lib.o(i._ZN8cHwUSB_011EndpointOUT10receiveZLPEv)
+    cHwUSB_0::EndpointOUT::clrInterrupt(unsigned) 0x08005bcd   Thumb Code     8  lib.o(i._ZN8cHwUSB_011EndpointOUT12clrInterruptEj)
+    cHwUSB_0::EndpointOUT::getInterrupt()    0x08005bd5   Thumb Code    14  lib.o(i._ZN8cHwUSB_011EndpointOUT12getInterruptEv)
+    cHwUSB_0::EndpointOUT::readFromFifo(unsigned short) 0x08005be9   Thumb Code    42  lib.o(i._ZN8cHwUSB_011EndpointOUT12readFromFifoEt)
+    cHwUSB_0::EndpointOUT::config(unsigned short, unsigned char) 0x08005c15   Thumb Code    72  lib.o(i._ZN8cHwUSB_011EndpointOUT6configEth)
+    cHwUSB_0::EndpointOUT::receive()         0x08005c65   Thumb Code    78  lib.o(i._ZN8cHwUSB_011EndpointOUT7receiveEv)
+    cHwUSB_0::clrInterrupt(unsigned)         0x08005cb3   Thumb Code    12  lib.o(i._ZN8cHwUSB_012clrInterruptEj)
+    cHwUSB_0::getInInterrupt()               0x08005cc1   Thumb Code    16  lib.o(i._ZN8cHwUSB_014getInInterruptEv)
+    cHwUSB_0::getOutInterrupt()              0x08005cd5   Thumb Code    16  lib.o(i._ZN8cHwUSB_015getOutInterruptEv)
+    cHwUSB_0::isInterruptPending(unsigned)   0x08005ce9   Thumb Code    22  lib.o(i._ZN8cHwUSB_018isInterruptPendingEj)
+    cHwUSB_0::isr()                          0x08005d01   Thumb Code   724  lib.o(i._ZN8cHwUSB_03isrEv)
+    Page_Game::buttonOnPagePressed(int, int) 0x08005fd9   Thumb Code   104  page_game.o(i._ZN9Page_Game19buttonOnPagePressedEii)
+    Page_Game::output_Current_Player(short)  0x08006049   Thumb Code    28  page_game.o(i._ZN9Page_Game21output_Current_PlayerEs)
+    Page_Game::drawpage()                    0x08006081   Thumb Code   114  page_game.o(i._ZN9Page_Game8drawpageEv)
+    Page_Game::instance()                    0x08006109   Thumb Code    42  main.o(i._ZN9Page_Game8instanceEv)
+    Page_Game::Page_Game()                   0x08006145   Thumb Code    12  page_game.o(i._ZN9Page_GameC1Ev)
+    Page_Game::Page_Game__sub_object()       0x08006145   Thumb Code     0  page_game.o(i._ZN9Page_GameC1Ev)
+    Page_Game::~Page_Game()                  0x08006151   Thumb Code     2  main.o(i._ZN9Page_GameD1Ev)
+    Page_Game::~Page_Game__sub_object()      0x08006151   Thumb Code     0  main.o(i._ZN9Page_GameD1Ev)
+    cHwPort_N::setPinMode(unsigned char, cHwPort::Mode) 0x08006153   Thumb Code   122  lib.o(i._ZN9cHwPort_N10setPinModeEhN7cHwPort4ModeE)
+    cHwPort_N::clr(unsigned)                 0x080061cd   Thumb Code     8  lib.o(i._ZN9cHwPort_N3clrEj)
+    cHwPort_N::get()                         0x080061d5   Thumb Code     6  lib.o(i._ZN9cHwPort_N3getEv)
+    cHwPort_N::set(unsigned)                 0x080061db   Thumb Code     6  lib.o(i._ZN9cHwPort_N3setEj)
+    cHwPort_N::cHwPort_N(cHwPort_N::PortId)  0x080061e1   Thumb Code   164  lib.o(i._ZN9cHwPort_NC1ENS_6PortIdE)
+    cHwPort_N::cHwPort_N__sub_object(cHwPort_N::PortId) 0x080061e1   Thumb Code     0  lib.o(i._ZN9cHwPort_NC1ENS_6PortIdE)
+    cHwUART_N::isr()                         0x080062b5   Thumb Code    50  lib.o(i._ZN9cHwUART_N3isrEv)
+    cHwDisplayFont::getCharWidth() const     0x080062e7   Thumb Code     6  lib.o(i._ZNK14cHwDisplayFont12getCharWidthEv)
+    cHwDisplayFont::getCharHeight() const    0x080062ed   Thumb Code     6  lib.o(i._ZNK14cHwDisplayFont13getCharHeightEv)
+    operator delete (void*)                  0x080062f3   Thumb Code    10  cells.o(i._ZdlPv)
+    operator new[] (unsigned)                0x080062fd   Thumb Code     4  cells.o(i._Znaj)
+    __ARM_fpclassify                         0x08006301   Thumb Code    48  fpclassify.o(i.__ARM_fpclassify)
+    __cxa_guard_acquire                      0x08006331   Thumb Code    16  cxa_guard_acquire.o(i.__cxa_guard_acquire)
+    __cxa_pure_virtual                       0x08006341   Thumb Code     4  lib.o(i.__cxa_pure_virtual)
+    __hardfp_sqrtf                           0x08006345   Thumb Code    58  sqrtf.o(i.__hardfp_sqrtf)
+    _is_digit                                0x080065b9   Thumb Code    14  __printf_wp.o(i._is_digit)
+    main                                     0x080065c9   Thumb Code   458  main.o(i.main)
+    _get_lc_numeric                          0x080067e1   Thumb Code    44  lc_numeric_c.o(locale$$code)
+    _get_lc_ctype                            0x0800680d   Thumb Code    44  lc_ctype_c.o(locale$$code)
+    T1 RANGE<short>(T1, T1, T1)              0x08006839   Thumb Code    16  lib.o(t._Z5RANGEIsET_S0_S0_S0_)
+    cFifo<cDevControlEncoder::tEvent>::isFull() 0x08006849   Thumb Code    30  lib.o(t._ZN5cFifoIN18cDevControlEncoder6tEventEE6isFullEv)
+    cFifo<cDevControlEncoder::tEvent>::operator <<(const cDevControlEncoder::tEvent&) 0x08006867   Thumb Code    62  lib.o(t._ZN5cFifoIN18cDevControlEncoder6tEventEElsERKS1_)
+    __aeabi_d2f                              0x080068a5   Thumb Code     0  d2f.o(x$fpl$d2f)
+    _d2f                                     0x080068a5   Thumb Code    98  d2f.o(x$fpl$d2f)
+    __aeabi_ddiv                             0x08006909   Thumb Code     0  ddiv.o(x$fpl$ddiv)
+    _ddiv                                    0x08006909   Thumb Code   552  ddiv.o(x$fpl$ddiv)
+    __aeabi_d2uiz                            0x08006bb9   Thumb Code     0  dfixu.o(x$fpl$dfixu)
+    _dfixu                                   0x08006bb9   Thumb Code    90  dfixu.o(x$fpl$dfixu)
+    __aeabi_ui2d                             0x08006c13   Thumb Code     0  dflt_clz.o(x$fpl$dfltu)
+    _dfltu                                   0x08006c13   Thumb Code    38  dflt_clz.o(x$fpl$dfltu)
+    __aeabi_dmul                             0x08006c39   Thumb Code     0  dmul.o(x$fpl$dmul)
+    _dmul                                    0x08006c39   Thumb Code   332  dmul.o(x$fpl$dmul)
+    __fpl_dnaninf                            0x08006d8d   Thumb Code   156  dnaninf.o(x$fpl$dnaninf)
+    __fpl_dretinf                            0x08006e29   Thumb Code    12  dretinf.o(x$fpl$dretinf)
+    _fp_init                                 0x08006e35   Thumb Code    10  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x08006e3d   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x08006e3d   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fpl_fretinf                            0x08006e3f   Thumb Code    10  fretinf.o(x$fpl$fretinf)
+    _printf_fp_dec                           0x08006e49   Thumb Code     4  printf1.o(x$fpl$printf1)
+    __I$use$fp                               0x08006e4c   Number         0  usenofp.o(x$fpl$usenofp)
+    vtable for cHwDisplay                    0x08007420   Data          32  lib.o(.constdata__ZTV10cHwDisplay)
+    vtable for cHwTimer_N                    0x08007440   Data          28  lib.o(.constdata__ZTV10cHwTimer_N)
+    vtable for cDevDigital                   0x0800745c   Data          48  lib.o(.constdata__ZTV11cDevDigital)
+    vtable for cDevAnalogIn                  0x0800748c   Data          24  lib.o(.constdata__ZTV12cDevAnalogIn)
+    vtable for cHwI2Cmaster                  0x080074a4   Data          40  lib.o(.constdata__ZTV12cHwI2Cmaster)
+    vtable for cDevAnalogOut                 0x080074cc   Data          20  lib.o(.constdata__ZTV13cDevAnalogOut)
+    vtable for cHwI2Cmaster_N                0x080074e0   Data          44  lib.o(.constdata__ZTV14cHwI2Cmaster_N)
+    vtable for cDevAnalogInADC               0x0800750c   Data          24  lib.o(.constdata__ZTV15cDevAnalogInADC)
+    vtable for cHwTouch_FT6206               0x08007524   Data          24  touch_ft6206.o(.constdata__ZTV15cHwTouch_FT6206)
+    vtable for cDevAnalogOutDAC              0x0800753c   Data          20  lib.o(.constdata__ZTV16cDevAnalogOutDAC)
+    vtable for cHwDisp_OTM8009A              0x08007550   Data          92  disp_otm8009a.o(.constdata__ZTV16cHwDisp_OTM8009A)
+    vtable for cHwDisplayGraphic             0x080075ac   Data          92  lib.o(.constdata__ZTV17cHwDisplayGraphic)
+    vtable for cDevControlEncoder            0x08007608   Data          20  lib.o(.constdata__ZTV18cDevControlEncoder)
+    vtable for cDevControlPointer            0x0800761c   Data          12  lib.o(.constdata__ZTV18cDevControlPointer)
+    vtable for cDevDisplayGraphic            0x08007628   Data          72  lib.o(.constdata__ZTV18cDevDisplayGraphic)
+    vtable for cHwDisp_OTM8009Aram           0x08007670   Data          92  disp_otm8009a.o(.constdata__ZTV19cHwDisp_OTM8009Aram)
+    vtable for cDevControlEncoderJoystick    0x080076cc   Data          20  lib.o(.constdata__ZTV26cDevControlEncoderJoystick)
+    vtable for cHwADC                        0x080076e0   Data          40  lib.o(.constdata__ZTV6cHwADC)
+    vtable for cHwDAC                        0x08007708   Data          20  lib.o(.constdata__ZTV6cHwDAC)
+    vtable for cHwDSI                        0x0800771c   Data          16  main.o(.constdata__ZTV6cHwDSI)
+    vtable for cHwRTC                        0x0800772c   Data          16  lib.o(.constdata__ZTV6cHwRTC)
+    vtable for cHwADC_0                      0x0800773c   Data          40  lib.o(.constdata__ZTV8cHwADC_0)
+    vtable for cHwDAC_0                      0x08007764   Data          20  lib.o(.constdata__ZTV8cHwDAC_0)
+    vtable for cHwRTC_0                      0x08007778   Data          16  lib.o(.constdata__ZTV8cHwRTC_0)
+    vtable for cHwTimer                      0x08007788   Data          28  lib.o(.constdata__ZTV8cHwTimer)
+    vtable for cHwTouch                      0x080077a4   Data          24  lib.o(.constdata__ZTV8cHwTouch)
+    vtable for cHwPort_N                     0x080077bc   Data          32  lib.o(.constdata__ZTV9cHwPort_N)
+    vtable for cHwI2Cmaster::Device          0x080077dc   Data          60  lib.o(.constdata__ZTVN12cHwI2Cmaster6DeviceE)
+    vtable for cList::Item                   0x08007818   Data          12  lib.o(.constdata__ZTVN5cList4ItemE)
+    vtable for cHwPort::Pin                  0x08007824   Data          28  lib.o(.constdata__ZTVN7cHwPort3PinE)
+    Region$$Table$$Base                      0x08007840   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08007860   Number         0  anon$$obj.o(Region$$Table)
+    __ctype                                  0x08007889   Data           0  lc_ctype_c.o(locale$$data)
+    SHT$$INIT_ARRAY$$Base                    0x0800798c   Number         0  main.o(.init_array)
+    SHT$$INIT_ARRAY$$Limit                   0x08007990   Number         0  init_aeabi.o(.init_array)
     DMARxDscrTab                             0x20000000   Data         160  lib.o(.ARM.__AT_0x20000000)
     Rx_Buff                                  0x20000100   Data        7620  lib.o(.ARM.__AT_0x20000100)
     DMATxDscrTab                             0x20002000   Data         160  lib.o(.ARM.__AT_0x20002000)
@@ -5462,9 +5462,9 @@ Memory Map of the image
 
   Image Entry point : 0x080001f9
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00007c88, Max: 0x00200000, ABSOLUTE, COMPRESSED[0x00007af8])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00007c94, Max: 0x00200000, ABSOLUTE, COMPRESSED[0x00007b04])
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00007984, Max: 0x00200000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00007990, Max: 0x00200000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -5735,197 +5735,197 @@ Memory Map of the image
     0x080043f0   0x080043f0   0x00000062   Code   RO         1792    i._ZN26cDevControlEncoderJoystick12getIncrementEv  lib.o
     0x08004452   0x08004452   0x00000002   PAD
     0x08004454   0x08004454   0x00000054   Code   RO         1793    i._ZN26cDevControlEncoderJoystickC1EP11cDevDigitalS1_S1_P8cHwTimert  lib.o
-    0x080044a8   0x080044a8   0x000000d0   Code   RO         1116    i._ZN4Game11ttt_classicEssh  game.o
-    0x08004578   0x08004578   0x00000018   Code   RO         1117    i._ZN4GameC1Ev      game.o
-    0x08004590   0x08004590   0x00000018   Code   RO         1118    i._ZN4GameD1Ev      game.o
-    0x080045a8   0x080045a8   0x00000148   Code   RO          832    i._ZN5Cells13rowIsCompleteEv  cells.o
-    0x080046f0   0x080046f0   0x00000044   Code   RO          833    i._ZN5Cells15initializeCellsEv  cells.o
-    0x08004734   0x08004734   0x00000086   Code   RO          834    i._ZN5Cells21initializeDefaultRowsEv  cells.o
-    0x080047ba   0x080047ba   0x00000014   Code   RO          835    i._ZN5CellsC1Ev     cells.o
-    0x080047ce   0x080047ce   0x0000003e   Code   RO          836    i._ZN5CellsD1Ev     cells.o
-    0x0800480c   0x0800480c   0x00000080   Code   RO          470    i._ZN5Field9drawFieldEv  field.o
-    0x0800488c   0x0800488c   0x00000050   Code   RO          471    i._ZN5Field9drawTokenE11coordinates  field.o
-    0x080048dc   0x080048dc   0x00000094   Code   RO         1483    i._ZN5Pages10siteHeaderEssssPc  pages.o
-    0x08004970   0x08004970   0x000001e8   Code   RO         1484    i._ZN5Pages11draw_buttonEssssssssssPc  pages.o
-    0x08004b58   0x08004b58   0x000000e4   Code   RO         1485    i._ZN5Pages20display_current_pageEii  pages.o
-    0x08004c3c   0x08004c3c   0x0000003c   Code   RO           48    i._ZN5Pages8instanceEv  main.o
-    0x08004c78   0x08004c78   0x00000038   Code   RO         1487    i._ZN5Pages9isPressedEiiPA5_si  pages.o
-    0x08004cb0   0x08004cb0   0x0000000a   Code   RO         1488    i._ZN5PagesC1Ev     pages.o
-    0x08004cba   0x08004cba   0x00000002   Code   RO           78    i._ZN5PagesD1Ev     main.o
-    0x08004cbc   0x08004cbc   0x000000a4   Code   RO         1160    i._ZN5Style22changeActiveColorThemeEs  style.o
-    0x08004d60   0x08004d60   0x0000003c   Code   RO           42    i._ZN5Style8instanceEv  main.o
-    0x08004d9c   0x08004d9c   0x00000094   Code   RO         1161    i._ZN5StyleC1Ev     style.o
-    0x08004e30   0x08004e30   0x00000002   Code   RO           72    i._ZN5StyleD1Ev     main.o
-    0x08004e32   0x08004e32   0x00000022   Code   RO         1800    i._ZN5cList3addEPNS_4ItemE  lib.o
-    0x08004e54   0x08004e54   0x00000002   Code   RO         4928    i._ZN5cList4Item6updateEv  lib.o
-    0x08004e56   0x08004e56   0x00000002   PAD
-    0x08004e58   0x08004e58   0x00000020   Code   RO         1803    i._ZN5cList4ItemC1EPS_  lib.o
-    0x08004e78   0x08004e78   0x00000016   Code   RO         1805    i._ZN5cList9updateAllEv  lib.o
-    0x08004e8e   0x08004e8e   0x00000006   Code   RO         1806    i._ZN5cListC1Ev     lib.o
-    0x08004e94   0x08004e94   0x00000052   Code   RO         4227    i._ZN6cHwADC3isrEv  lib.o
-    0x08004ee6   0x08004ee6   0x0000004e   Code   RO         1808    i._ZN6cHwADC6enableEhh  lib.o
-    0x08004f34   0x08004f34   0x0000002c   Code   RO         4220    i._ZN6cHwADC6updateEv  lib.o
-    0x08004f60   0x08004f60   0x00000054   Code   RO         1809    i._ZN6cHwADCC2EhP8cHwTimer  lib.o
-    0x08004fb4   0x08004fb4   0x0000000c   Code   RO         1810    i._ZN6cHwDACC2Eh    lib.o
-    0x08004fc0   0x08004fc0   0x00000020   Code   RO          101    i._ZN6cHwDSI10writeShortEhh  main.o
-    0x08004fe0   0x08004fe0   0x00000010   Code   RO         6182    i._ZN6cHwDSI14DisplayRefreshEv  disp_otm8009a.o
-    0x08004ff0   0x08004ff0   0x00000194   Code   RO         6169    i._ZN6cHwDSI4InitEttb  disp_otm8009a.o
-    0x08005184   0x08005184   0x00000044   Code   RO          107    i._ZN6cHwDSI9writeLongEPhj  main.o
-    0x080051c8   0x080051c8   0x000000a4   Code   RO           84    i._ZN6cHwFMC10SDRAM_InitEv  main.o
-    0x0800526c   0x0800526c   0x0000003e   Code   RO           54    i._ZN6cHwFMC11SendCommandEjjj  main.o
-    0x080052aa   0x080052aa   0x00000002   PAD
-    0x080052ac   0x080052ac   0x00000204   Code   RO           60    i._ZN6cHwFMCC1ENS_7FMCtypeEb  main.o
-    0x080054b0   0x080054b0   0x0000000c   Code   RO         1811    i._ZN6cHwRTCC2Ev    lib.o
-    0x080054bc   0x080054bc   0x00000038   Code   RO         1198    i._ZN7Symbole10drawCircleEsss  symbole.o
-    0x080054f4   0x080054f4   0x00000084   Code   RO         1199    i._ZN7Symbole10drawHammerEsss  symbole.o
-    0x08005578   0x08005578   0x000000c4   Code   RO         1200    i._ZN7Symbole10drawSickleEsss  symbole.o
-    0x0800563c   0x0800563c   0x00000006   Code   RO         1201    i._ZN7Symbole12setPlayerSimEss  symbole.o
-    0x08005642   0x08005642   0x00000002   PAD
-    0x08005644   0x08005644   0x00000060   Code   RO         1202    i._ZN7Symbole5drawXEsss  symbole.o
-    0x080056a4   0x080056a4   0x0000003c   Code   RO         1185    i._ZN7Symbole8instanceEv  style.o
-    0x080056e0   0x080056e0   0x00000072   Code   RO         1203    i._ZN7Symbole9drawPieceEsss  symbole.o
-    0x08005752   0x08005752   0x0000000a   Code   RO         1204    i._ZN7SymboleC1Ev   symbole.o
-    0x0800575c   0x0800575c   0x00000002   Code   RO          495    i._ZN7SymboleD1Ev   field.o
-    0x0800575e   0x0800575e   0x0000000a   Code   RO         4284    i._ZN7cHwPort3Pin3clrEv  lib.o
-    0x08005768   0x08005768   0x0000001a   Code   RO         4291    i._ZN7cHwPort3Pin3getEv  lib.o
-    0x08005782   0x08005782   0x0000001a   Code   RO         4107    i._ZN7cHwPort3Pin3setEb  lib.o
-    0x0800579c   0x0800579c   0x0000000a   Code   RO         4277    i._ZN7cHwPort3Pin3setEv  lib.o
-    0x080057a6   0x080057a6   0x0000000c   Code   RO         4270    i._ZN7cHwPort3Pin7setModeENS_4ModeE  lib.o
-    0x080057b2   0x080057b2   0x00000002   PAD
-    0x080057b4   0x080057b4   0x00000014   Code   RO         1826    i._ZN7cHwPort3PinC1ERS_h  lib.o
-    0x080057c8   0x080057c8   0x00000016   Code   RO         1875    i._ZN7cSystem13delayMicroSecEt  lib.o
-    0x080057de   0x080057de   0x0000001a   Code   RO         1876    i._ZN7cSystem13delayMilliSecEt  lib.o
-    0x080057f8   0x080057f8   0x00000002   Code   RO         1878    i._ZN7cSystem15disableWatchdogEv  lib.o
-    0x080057fa   0x080057fa   0x00000002   PAD
-    0x080057fc   0x080057fc   0x0000001c   Code   RO         1879    i._ZN7cSystem15enableInterruptEv  lib.o
-    0x08005818   0x08005818   0x00000010   Code   RO         1880    i._ZN7cSystem16disableInterruptEv  lib.o
-    0x08005828   0x08005828   0x00000012   Code   RO         1885    i._ZN7cSystemC1Eh   lib.o
-    0x0800583a   0x0800583a   0x00000002   PAD
-    0x0800583c   0x0800583c   0x00000018   Code   RO         4240    i._ZN8cHwADC_07startChEh  lib.o
-    0x08005854   0x08005854   0x00000040   Code   RO         1886    i._ZN8cHwADC_08configChEhh  lib.o
-    0x08005894   0x08005894   0x0000000c   Code   RO         4234    i._ZN8cHwADC_09getResultEv  lib.o
-    0x080058a0   0x080058a0   0x00000050   Code   RO         1887    i._ZN8cHwADC_0C1EP8cHwTimer  lib.o
-    0x080058f0   0x080058f0   0x00000034   Code   RO         4946    i._ZN8cHwDAC_06enableEh  lib.o
-    0x08005924   0x08005924   0x00000020   Code   RO         1888    i._ZN8cHwDAC_0C1Ev  lib.o
-    0x08005944   0x08005944   0x000000c0   Code   RO         1891    i._ZN8cHwRTC_0C1ENS_17RTC_ClockConfig_tE  lib.o
-    0x08005a04   0x08005a04   0x00000006   Code   RO         4202    i._ZN8cHwTimer10isrHandlerEv  lib.o
-    0x08005a0a   0x08005a0a   0x00000004   Code   RO         1892    i._ZN8cHwTimer12getCycleTimeEv  lib.o
-    0x08005a0e   0x08005a0e   0x00000006   Code   RO         1893    i._ZN8cHwTimer3addEPN5cList4ItemE  lib.o
-    0x08005a14   0x08005a14   0x00000004   Code   RO         5009    i._ZN8cHwTouch7getPosXEv  lib.o
-    0x08005a18   0x08005a18   0x00000004   Code   RO         5015    i._ZN8cHwTouch7getPosYEv  lib.o
-    0x08005a1c   0x08005a1c   0x00000004   Code   RO         5021    i._ZN8cHwTouch9isTouchedEv  lib.o
-    0x08005a20   0x08005a20   0x00000018   Code   RO         1894    i._ZN8cHwTouchC2Ett  lib.o
-    0x08005a38   0x08005a38   0x00000022   Code   RO         1895    i._ZN8cHwUSB_010EndpointIN11transmitZLPEv  lib.o
-    0x08005a5a   0x08005a5a   0x00000002   PAD
-    0x08005a5c   0x08005a5c   0x00000058   Code   RO         1896    i._ZN8cHwUSB_010EndpointIN11writeToFifoEv  lib.o
-    0x08005ab4   0x08005ab4   0x00000008   Code   RO         1897    i._ZN8cHwUSB_010EndpointIN12clrInterruptEj  lib.o
-    0x08005abc   0x08005abc   0x00000024   Code   RO         1898    i._ZN8cHwUSB_010EndpointIN12getInterruptEv  lib.o
-    0x08005ae0   0x08005ae0   0x00000048   Code   RO         1904    i._ZN8cHwUSB_010EndpointIN6configEth  lib.o
-    0x08005b28   0x08005b28   0x00000070   Code   RO         1907    i._ZN8cHwUSB_010EndpointIN8transmitEb  lib.o
-    0x08005b98   0x08005b98   0x00000028   Code   RO         1912    i._ZN8cHwUSB_011EndpointOUT10receiveZLPEv  lib.o
-    0x08005bc0   0x08005bc0   0x00000008   Code   RO         1913    i._ZN8cHwUSB_011EndpointOUT12clrInterruptEj  lib.o
-    0x08005bc8   0x08005bc8   0x00000014   Code   RO         1914    i._ZN8cHwUSB_011EndpointOUT12getInterruptEv  lib.o
-    0x08005bdc   0x08005bdc   0x0000002a   Code   RO         1915    i._ZN8cHwUSB_011EndpointOUT12readFromFifoEt  lib.o
-    0x08005c06   0x08005c06   0x00000002   PAD
-    0x08005c08   0x08005c08   0x00000050   Code   RO         1921    i._ZN8cHwUSB_011EndpointOUT6configEth  lib.o
-    0x08005c58   0x08005c58   0x0000004e   Code   RO         1922    i._ZN8cHwUSB_011EndpointOUT7receiveEv  lib.o
-    0x08005ca6   0x08005ca6   0x0000000c   Code   RO         1926    i._ZN8cHwUSB_012clrInterruptEj  lib.o
-    0x08005cb2   0x08005cb2   0x00000002   PAD
-    0x08005cb4   0x08005cb4   0x00000014   Code   RO         1927    i._ZN8cHwUSB_014getInInterruptEv  lib.o
-    0x08005cc8   0x08005cc8   0x00000014   Code   RO         1928    i._ZN8cHwUSB_015getOutInterruptEv  lib.o
-    0x08005cdc   0x08005cdc   0x00000016   Code   RO         1929    i._ZN8cHwUSB_018isInterruptPendingEj  lib.o
-    0x08005cf2   0x08005cf2   0x00000002   PAD
-    0x08005cf4   0x08005cf4   0x000002d8   Code   RO         4100    i._ZN8cHwUSB_03isrEv  lib.o
-    0x08005fcc   0x08005fcc   0x00000070   Code   RO         1263    i._ZN9Page_Game19buttonOnPagePressedEii  page_game.o
-    0x0800603c   0x0800603c   0x00000038   Code   RO         1264    i._ZN9Page_Game21output_Current_PlayerEs  page_game.o
-    0x08006074   0x08006074   0x00000088   Code   RO         1265    i._ZN9Page_Game8drawpageEv  page_game.o
-    0x080060fc   0x080060fc   0x0000003c   Code   RO           36    i._ZN9Page_Game8instanceEv  main.o
-    0x08006138   0x08006138   0x0000000c   Code   RO         1266    i._ZN9Page_GameC1Ev  page_game.o
-    0x08006144   0x08006144   0x00000002   Code   RO           66    i._ZN9Page_GameD1Ev  main.o
-    0x08006146   0x08006146   0x0000007a   Code   RO         1947    i._ZN9cHwPort_N10setPinModeEhN7cHwPort4ModeE  lib.o
-    0x080061c0   0x080061c0   0x00000008   Code   RO         4378    i._ZN9cHwPort_N3clrEj  lib.o
-    0x080061c8   0x080061c8   0x00000006   Code   RO         4384    i._ZN9cHwPort_N3getEv  lib.o
-    0x080061ce   0x080061ce   0x00000006   Code   RO         4366    i._ZN9cHwPort_N3setEj  lib.o
-    0x080061d4   0x080061d4   0x000000d4   Code   RO         1949    i._ZN9cHwPort_NC1ENS_6PortIdE  lib.o
-    0x080062a8   0x080062a8   0x00000032   Code   RO         1950    i._ZN9cHwUART_N3isrEv  lib.o
-    0x080062da   0x080062da   0x00000006   Code   RO         1952    i._ZNK14cHwDisplayFont12getCharWidthEv  lib.o
-    0x080062e0   0x080062e0   0x00000006   Code   RO         1953    i._ZNK14cHwDisplayFont13getCharHeightEv  lib.o
-    0x080062e6   0x080062e6   0x0000000a   Code   RO          881    i._ZdlPv            cells.o
-    0x080062f0   0x080062f0   0x00000004   Code   RO          875    i._Znaj             cells.o
-    0x080062f4   0x080062f4   0x00000030   Code   RO         7124    i.__ARM_fpclassify  m_wm.l(fpclassify.o)
-    0x08006324   0x08006324   0x00000010   Code   RO         6580    i.__cxa_guard_acquire  cpprt_w.l(cxa_guard_acquire.o)
-    0x08006334   0x08006334   0x00000004   Code   RO         1955    i.__cxa_pure_virtual  lib.o
-    0x08006338   0x08006338   0x0000003a   Code   RO         6717    i.__hardfp_sqrtf    m_wm.l(sqrtf.o)
-    0x08006372   0x08006372   0x00000002   PAD
-    0x08006374   0x08006374   0x00000238   Code   RO            4    i.__sti___8_main_cpp_sys  main.o
-    0x080065ac   0x080065ac   0x0000000e   Code   RO         6830    i._is_digit         c_w.l(__printf_wp.o)
-    0x080065ba   0x080065ba   0x00000002   PAD
-    0x080065bc   0x080065bc   0x00000218   Code   RO            5    i.main              main.o
-    0x080067d4   0x080067d4   0x0000002c   Code   RO         7088    locale$$code        c_w.l(lc_numeric_c.o)
-    0x08006800   0x08006800   0x0000002c   Code   RO         7135    locale$$code        c_w.l(lc_ctype_c.o)
-    0x0800682c   0x0800682c   0x00000010   Code   RO         4196    t._Z5RANGEIsET_S0_S0_S0_  lib.o
-    0x0800683c   0x0800683c   0x0000001e   Code   RO         4668    t._ZN5cFifoIN18cDevControlEncoder6tEventEE6isFullEv  lib.o
-    0x0800685a   0x0800685a   0x0000003e   Code   RO         4184    t._ZN5cFifoIN18cDevControlEncoder6tEventEElsERKS1_  lib.o
-    0x08006898   0x08006898   0x00000062   Code   RO         6695    x$fpl$d2f           fz_wm.l(d2f.o)
-    0x080068fa   0x080068fa   0x00000002   PAD
-    0x080068fc   0x080068fc   0x000002b0   Code   RO         6698    x$fpl$ddiv          fz_wm.l(ddiv.o)
-    0x08006bac   0x08006bac   0x0000005a   Code   RO         6705    x$fpl$dfixu         fz_wm.l(dfixu.o)
-    0x08006c06   0x08006c06   0x00000026   Code   RO         6709    x$fpl$dfltu         fz_wm.l(dflt_clz.o)
-    0x08006c2c   0x08006c2c   0x00000154   Code   RO         6715    x$fpl$dmul          fz_wm.l(dmul.o)
-    0x08006d80   0x08006d80   0x0000009c   Code   RO         6933    x$fpl$dnaninf       fz_wm.l(dnaninf.o)
-    0x08006e1c   0x08006e1c   0x0000000c   Code   RO         6935    x$fpl$dretinf       fz_wm.l(dretinf.o)
-    0x08006e28   0x08006e28   0x0000000a   Code   RO         7042    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x08006e32   0x08006e32   0x0000000a   Code   RO         6937    x$fpl$fretinf       fz_wm.l(fretinf.o)
-    0x08006e3c   0x08006e3c   0x00000004   Code   RO         6939    x$fpl$printf1       fz_wm.l(printf1.o)
-    0x08006e40   0x08006e40   0x00000000   Code   RO         6941    x$fpl$usenofp       fz_wm.l(usenofp.o)
-    0x08006e40   0x08006e40   0x00000485   Data   RO            9    .constdata          main.o
-    0x080072c5   0x080072c5   0x00000003   PAD
-    0x080072c8   0x080072c8   0x00000036   Data   RO          842    .constdata          cells.o
-    0x080072fe   0x080072fe   0x00000002   PAD
-    0x08007300   0x08007300   0x0000003c   Data   RO         2334    .constdata          lib.o
-    0x0800733c   0x0800733c   0x00000008   Data   RO         6789    .constdata          c_w.l(_printf_wctomb.o)
-    0x08007344   0x08007344   0x00000028   Data   RO         6818    .constdata          c_w.l(_printf_hex_int_ll_ptr.o)
-    0x0800736c   0x0800736c   0x00000011   Data   RO         6838    .constdata          c_w.l(__printf_flags_ss_wp.o)
-    0x0800737d   0x0800737d   0x00000003   PAD
-    0x08007380   0x08007380   0x00000094   Data   RO         7063    .constdata          c_w.l(bigflt0.o)
-    0x08007414   0x08007414   0x00000020   Data   RO         4782    .constdata__ZTV10cHwDisplay  lib.o
-    0x08007434   0x08007434   0x0000001c   Data   RO         4057    .constdata__ZTV10cHwTimer_N  lib.o
-    0x08007450   0x08007450   0x00000030   Data   RO         4041    .constdata__ZTV11cDevDigital  lib.o
-    0x08007480   0x08007480   0x00000018   Data   RO         4815    .constdata__ZTV12cDevAnalogIn  lib.o
-    0x08007498   0x08007498   0x00000028   Data   RO         4023    .constdata__ZTV12cHwI2Cmaster  lib.o
-    0x080074c0   0x080074c0   0x00000014   Data   RO         4077    .constdata__ZTV13cDevAnalogOut  lib.o
-    0x080074d4   0x080074d4   0x0000002c   Data   RO         4025    .constdata__ZTV14cHwI2Cmaster_N  lib.o
-    0x08007500   0x08007500   0x00000018   Data   RO         4075    .constdata__ZTV15cDevAnalogInADC  lib.o
-    0x08007518   0x08007518   0x00000018   Data   RO         6444    .constdata__ZTV15cHwTouch_FT6206  touch_ft6206.o
-    0x08007530   0x08007530   0x00000014   Data   RO         4079    .constdata__ZTV16cDevAnalogOutDAC  lib.o
-    0x08007544   0x08007544   0x0000005c   Data   RO         6189    .constdata__ZTV16cHwDisp_OTM8009A  disp_otm8009a.o
-    0x080075a0   0x080075a0   0x0000005c   Data   RO         4045    .constdata__ZTV17cHwDisplayGraphic  lib.o
-    0x080075fc   0x080075fc   0x00000014   Data   RO         4089    .constdata__ZTV18cDevControlEncoder  lib.o
-    0x08007610   0x08007610   0x0000000c   Data   RO         4095    .constdata__ZTV18cDevControlPointer  lib.o
-    0x0800761c   0x0800761c   0x00000048   Data   RO         4047    .constdata__ZTV18cDevDisplayGraphic  lib.o
-    0x08007664   0x08007664   0x0000005c   Data   RO         6168    .constdata__ZTV19cHwDisp_OTM8009Aram  disp_otm8009a.o
-    0x080076c0   0x080076c0   0x00000014   Data   RO         4091    .constdata__ZTV26cDevControlEncoderJoystick  lib.o
-    0x080076d4   0x080076d4   0x00000028   Data   RO         4049    .constdata__ZTV6cHwADC  lib.o
-    0x080076fc   0x080076fc   0x00000014   Data   RO         4790    .constdata__ZTV6cHwDAC  lib.o
-    0x08007710   0x08007710   0x00000010   Data   RO           91    .constdata__ZTV6cHwDSI  main.o
-    0x08007720   0x08007720   0x00000010   Data   RO         4773    .constdata__ZTV6cHwRTC  lib.o
-    0x08007730   0x08007730   0x00000028   Data   RO         4051    .constdata__ZTV8cHwADC_0  lib.o
-    0x08007758   0x08007758   0x00000014   Data   RO         4792    .constdata__ZTV8cHwDAC_0  lib.o
-    0x0800776c   0x0800776c   0x00000010   Data   RO         4055    .constdata__ZTV8cHwRTC_0  lib.o
-    0x0800777c   0x0800777c   0x0000001c   Data   RO         4015    .constdata__ZTV8cHwTimer  lib.o
-    0x08007798   0x08007798   0x00000018   Data   RO         4806    .constdata__ZTV8cHwTouch  lib.o
-    0x080077b0   0x080077b0   0x00000020   Data   RO         4027    .constdata__ZTV9cHwPort_N  lib.o
-    0x080077d0   0x080077d0   0x0000003c   Data   RO         4021    .constdata__ZTVN12cHwI2Cmaster6DeviceE  lib.o
-    0x0800780c   0x0800780c   0x0000000c   Data   RO         4769    .constdata__ZTVN5cList4ItemE  lib.o
-    0x08007818   0x08007818   0x0000001c   Data   RO         4771    .constdata__ZTVN7cHwPort3PinE  lib.o
-    0x08007834   0x08007834   0x00000020   Data   RO         7167    Region$$Table       anon$$obj.o
-    0x08007854   0x08007854   0x0000001c   Data   RO         7087    locale$$data        c_w.l(lc_numeric_c.o)
-    0x08007870   0x08007870   0x00000110   Data   RO         7134    locale$$data        c_w.l(lc_ctype_c.o)
-    0x08007980   0x08007980   0x00000004   Data   RO           13    .init_array         main.o
-    0x08007984   0x08007980   0x00000000   Data   RO         6575    .init_array         c_w.l(init_aeabi.o)
+    0x080044a8   0x080044a8   0x000000dc   Code   RO         1116    i._ZN4Game11ttt_classicEssh  game.o
+    0x08004584   0x08004584   0x00000018   Code   RO         1117    i._ZN4GameC1Ev      game.o
+    0x0800459c   0x0800459c   0x00000018   Code   RO         1118    i._ZN4GameD1Ev      game.o
+    0x080045b4   0x080045b4   0x00000148   Code   RO          832    i._ZN5Cells13rowIsCompleteEv  cells.o
+    0x080046fc   0x080046fc   0x00000044   Code   RO          833    i._ZN5Cells15initializeCellsEv  cells.o
+    0x08004740   0x08004740   0x00000086   Code   RO          834    i._ZN5Cells21initializeDefaultRowsEv  cells.o
+    0x080047c6   0x080047c6   0x00000014   Code   RO          835    i._ZN5CellsC1Ev     cells.o
+    0x080047da   0x080047da   0x0000003e   Code   RO          836    i._ZN5CellsD1Ev     cells.o
+    0x08004818   0x08004818   0x00000080   Code   RO          470    i._ZN5Field9drawFieldEv  field.o
+    0x08004898   0x08004898   0x00000050   Code   RO          471    i._ZN5Field9drawTokenE11coordinates  field.o
+    0x080048e8   0x080048e8   0x00000094   Code   RO         1483    i._ZN5Pages10siteHeaderEssssPc  pages.o
+    0x0800497c   0x0800497c   0x000001e8   Code   RO         1484    i._ZN5Pages11draw_buttonEssssssssssPc  pages.o
+    0x08004b64   0x08004b64   0x000000e4   Code   RO         1485    i._ZN5Pages20display_current_pageEii  pages.o
+    0x08004c48   0x08004c48   0x0000003c   Code   RO           48    i._ZN5Pages8instanceEv  main.o
+    0x08004c84   0x08004c84   0x00000038   Code   RO         1487    i._ZN5Pages9isPressedEiiPA5_si  pages.o
+    0x08004cbc   0x08004cbc   0x0000000a   Code   RO         1488    i._ZN5PagesC1Ev     pages.o
+    0x08004cc6   0x08004cc6   0x00000002   Code   RO           78    i._ZN5PagesD1Ev     main.o
+    0x08004cc8   0x08004cc8   0x000000a4   Code   RO         1160    i._ZN5Style22changeActiveColorThemeEs  style.o
+    0x08004d6c   0x08004d6c   0x0000003c   Code   RO           42    i._ZN5Style8instanceEv  main.o
+    0x08004da8   0x08004da8   0x00000094   Code   RO         1161    i._ZN5StyleC1Ev     style.o
+    0x08004e3c   0x08004e3c   0x00000002   Code   RO           72    i._ZN5StyleD1Ev     main.o
+    0x08004e3e   0x08004e3e   0x00000022   Code   RO         1800    i._ZN5cList3addEPNS_4ItemE  lib.o
+    0x08004e60   0x08004e60   0x00000002   Code   RO         4928    i._ZN5cList4Item6updateEv  lib.o
+    0x08004e62   0x08004e62   0x00000002   PAD
+    0x08004e64   0x08004e64   0x00000020   Code   RO         1803    i._ZN5cList4ItemC1EPS_  lib.o
+    0x08004e84   0x08004e84   0x00000016   Code   RO         1805    i._ZN5cList9updateAllEv  lib.o
+    0x08004e9a   0x08004e9a   0x00000006   Code   RO         1806    i._ZN5cListC1Ev     lib.o
+    0x08004ea0   0x08004ea0   0x00000052   Code   RO         4227    i._ZN6cHwADC3isrEv  lib.o
+    0x08004ef2   0x08004ef2   0x0000004e   Code   RO         1808    i._ZN6cHwADC6enableEhh  lib.o
+    0x08004f40   0x08004f40   0x0000002c   Code   RO         4220    i._ZN6cHwADC6updateEv  lib.o
+    0x08004f6c   0x08004f6c   0x00000054   Code   RO         1809    i._ZN6cHwADCC2EhP8cHwTimer  lib.o
+    0x08004fc0   0x08004fc0   0x0000000c   Code   RO         1810    i._ZN6cHwDACC2Eh    lib.o
+    0x08004fcc   0x08004fcc   0x00000020   Code   RO          101    i._ZN6cHwDSI10writeShortEhh  main.o
+    0x08004fec   0x08004fec   0x00000010   Code   RO         6182    i._ZN6cHwDSI14DisplayRefreshEv  disp_otm8009a.o
+    0x08004ffc   0x08004ffc   0x00000194   Code   RO         6169    i._ZN6cHwDSI4InitEttb  disp_otm8009a.o
+    0x08005190   0x08005190   0x00000044   Code   RO          107    i._ZN6cHwDSI9writeLongEPhj  main.o
+    0x080051d4   0x080051d4   0x000000a4   Code   RO           84    i._ZN6cHwFMC10SDRAM_InitEv  main.o
+    0x08005278   0x08005278   0x0000003e   Code   RO           54    i._ZN6cHwFMC11SendCommandEjjj  main.o
+    0x080052b6   0x080052b6   0x00000002   PAD
+    0x080052b8   0x080052b8   0x00000204   Code   RO           60    i._ZN6cHwFMCC1ENS_7FMCtypeEb  main.o
+    0x080054bc   0x080054bc   0x0000000c   Code   RO         1811    i._ZN6cHwRTCC2Ev    lib.o
+    0x080054c8   0x080054c8   0x00000038   Code   RO         1198    i._ZN7Symbole10drawCircleEsss  symbole.o
+    0x08005500   0x08005500   0x00000084   Code   RO         1199    i._ZN7Symbole10drawHammerEsss  symbole.o
+    0x08005584   0x08005584   0x000000c4   Code   RO         1200    i._ZN7Symbole10drawSickleEsss  symbole.o
+    0x08005648   0x08005648   0x00000006   Code   RO         1201    i._ZN7Symbole12setPlayerSimEss  symbole.o
+    0x0800564e   0x0800564e   0x00000002   PAD
+    0x08005650   0x08005650   0x00000060   Code   RO         1202    i._ZN7Symbole5drawXEsss  symbole.o
+    0x080056b0   0x080056b0   0x0000003c   Code   RO         1185    i._ZN7Symbole8instanceEv  style.o
+    0x080056ec   0x080056ec   0x00000072   Code   RO         1203    i._ZN7Symbole9drawPieceEsss  symbole.o
+    0x0800575e   0x0800575e   0x0000000a   Code   RO         1204    i._ZN7SymboleC1Ev   symbole.o
+    0x08005768   0x08005768   0x00000002   Code   RO          495    i._ZN7SymboleD1Ev   field.o
+    0x0800576a   0x0800576a   0x0000000a   Code   RO         4284    i._ZN7cHwPort3Pin3clrEv  lib.o
+    0x08005774   0x08005774   0x0000001a   Code   RO         4291    i._ZN7cHwPort3Pin3getEv  lib.o
+    0x0800578e   0x0800578e   0x0000001a   Code   RO         4107    i._ZN7cHwPort3Pin3setEb  lib.o
+    0x080057a8   0x080057a8   0x0000000a   Code   RO         4277    i._ZN7cHwPort3Pin3setEv  lib.o
+    0x080057b2   0x080057b2   0x0000000c   Code   RO         4270    i._ZN7cHwPort3Pin7setModeENS_4ModeE  lib.o
+    0x080057be   0x080057be   0x00000002   PAD
+    0x080057c0   0x080057c0   0x00000014   Code   RO         1826    i._ZN7cHwPort3PinC1ERS_h  lib.o
+    0x080057d4   0x080057d4   0x00000016   Code   RO         1875    i._ZN7cSystem13delayMicroSecEt  lib.o
+    0x080057ea   0x080057ea   0x0000001a   Code   RO         1876    i._ZN7cSystem13delayMilliSecEt  lib.o
+    0x08005804   0x08005804   0x00000002   Code   RO         1878    i._ZN7cSystem15disableWatchdogEv  lib.o
+    0x08005806   0x08005806   0x00000002   PAD
+    0x08005808   0x08005808   0x0000001c   Code   RO         1879    i._ZN7cSystem15enableInterruptEv  lib.o
+    0x08005824   0x08005824   0x00000010   Code   RO         1880    i._ZN7cSystem16disableInterruptEv  lib.o
+    0x08005834   0x08005834   0x00000012   Code   RO         1885    i._ZN7cSystemC1Eh   lib.o
+    0x08005846   0x08005846   0x00000002   PAD
+    0x08005848   0x08005848   0x00000018   Code   RO         4240    i._ZN8cHwADC_07startChEh  lib.o
+    0x08005860   0x08005860   0x00000040   Code   RO         1886    i._ZN8cHwADC_08configChEhh  lib.o
+    0x080058a0   0x080058a0   0x0000000c   Code   RO         4234    i._ZN8cHwADC_09getResultEv  lib.o
+    0x080058ac   0x080058ac   0x00000050   Code   RO         1887    i._ZN8cHwADC_0C1EP8cHwTimer  lib.o
+    0x080058fc   0x080058fc   0x00000034   Code   RO         4946    i._ZN8cHwDAC_06enableEh  lib.o
+    0x08005930   0x08005930   0x00000020   Code   RO         1888    i._ZN8cHwDAC_0C1Ev  lib.o
+    0x08005950   0x08005950   0x000000c0   Code   RO         1891    i._ZN8cHwRTC_0C1ENS_17RTC_ClockConfig_tE  lib.o
+    0x08005a10   0x08005a10   0x00000006   Code   RO         4202    i._ZN8cHwTimer10isrHandlerEv  lib.o
+    0x08005a16   0x08005a16   0x00000004   Code   RO         1892    i._ZN8cHwTimer12getCycleTimeEv  lib.o
+    0x08005a1a   0x08005a1a   0x00000006   Code   RO         1893    i._ZN8cHwTimer3addEPN5cList4ItemE  lib.o
+    0x08005a20   0x08005a20   0x00000004   Code   RO         5009    i._ZN8cHwTouch7getPosXEv  lib.o
+    0x08005a24   0x08005a24   0x00000004   Code   RO         5015    i._ZN8cHwTouch7getPosYEv  lib.o
+    0x08005a28   0x08005a28   0x00000004   Code   RO         5021    i._ZN8cHwTouch9isTouchedEv  lib.o
+    0x08005a2c   0x08005a2c   0x00000018   Code   RO         1894    i._ZN8cHwTouchC2Ett  lib.o
+    0x08005a44   0x08005a44   0x00000022   Code   RO         1895    i._ZN8cHwUSB_010EndpointIN11transmitZLPEv  lib.o
+    0x08005a66   0x08005a66   0x00000002   PAD
+    0x08005a68   0x08005a68   0x00000058   Code   RO         1896    i._ZN8cHwUSB_010EndpointIN11writeToFifoEv  lib.o
+    0x08005ac0   0x08005ac0   0x00000008   Code   RO         1897    i._ZN8cHwUSB_010EndpointIN12clrInterruptEj  lib.o
+    0x08005ac8   0x08005ac8   0x00000024   Code   RO         1898    i._ZN8cHwUSB_010EndpointIN12getInterruptEv  lib.o
+    0x08005aec   0x08005aec   0x00000048   Code   RO         1904    i._ZN8cHwUSB_010EndpointIN6configEth  lib.o
+    0x08005b34   0x08005b34   0x00000070   Code   RO         1907    i._ZN8cHwUSB_010EndpointIN8transmitEb  lib.o
+    0x08005ba4   0x08005ba4   0x00000028   Code   RO         1912    i._ZN8cHwUSB_011EndpointOUT10receiveZLPEv  lib.o
+    0x08005bcc   0x08005bcc   0x00000008   Code   RO         1913    i._ZN8cHwUSB_011EndpointOUT12clrInterruptEj  lib.o
+    0x08005bd4   0x08005bd4   0x00000014   Code   RO         1914    i._ZN8cHwUSB_011EndpointOUT12getInterruptEv  lib.o
+    0x08005be8   0x08005be8   0x0000002a   Code   RO         1915    i._ZN8cHwUSB_011EndpointOUT12readFromFifoEt  lib.o
+    0x08005c12   0x08005c12   0x00000002   PAD
+    0x08005c14   0x08005c14   0x00000050   Code   RO         1921    i._ZN8cHwUSB_011EndpointOUT6configEth  lib.o
+    0x08005c64   0x08005c64   0x0000004e   Code   RO         1922    i._ZN8cHwUSB_011EndpointOUT7receiveEv  lib.o
+    0x08005cb2   0x08005cb2   0x0000000c   Code   RO         1926    i._ZN8cHwUSB_012clrInterruptEj  lib.o
+    0x08005cbe   0x08005cbe   0x00000002   PAD
+    0x08005cc0   0x08005cc0   0x00000014   Code   RO         1927    i._ZN8cHwUSB_014getInInterruptEv  lib.o
+    0x08005cd4   0x08005cd4   0x00000014   Code   RO         1928    i._ZN8cHwUSB_015getOutInterruptEv  lib.o
+    0x08005ce8   0x08005ce8   0x00000016   Code   RO         1929    i._ZN8cHwUSB_018isInterruptPendingEj  lib.o
+    0x08005cfe   0x08005cfe   0x00000002   PAD
+    0x08005d00   0x08005d00   0x000002d8   Code   RO         4100    i._ZN8cHwUSB_03isrEv  lib.o
+    0x08005fd8   0x08005fd8   0x00000070   Code   RO         1263    i._ZN9Page_Game19buttonOnPagePressedEii  page_game.o
+    0x08006048   0x08006048   0x00000038   Code   RO         1264    i._ZN9Page_Game21output_Current_PlayerEs  page_game.o
+    0x08006080   0x08006080   0x00000088   Code   RO         1265    i._ZN9Page_Game8drawpageEv  page_game.o
+    0x08006108   0x08006108   0x0000003c   Code   RO           36    i._ZN9Page_Game8instanceEv  main.o
+    0x08006144   0x08006144   0x0000000c   Code   RO         1266    i._ZN9Page_GameC1Ev  page_game.o
+    0x08006150   0x08006150   0x00000002   Code   RO           66    i._ZN9Page_GameD1Ev  main.o
+    0x08006152   0x08006152   0x0000007a   Code   RO         1947    i._ZN9cHwPort_N10setPinModeEhN7cHwPort4ModeE  lib.o
+    0x080061cc   0x080061cc   0x00000008   Code   RO         4378    i._ZN9cHwPort_N3clrEj  lib.o
+    0x080061d4   0x080061d4   0x00000006   Code   RO         4384    i._ZN9cHwPort_N3getEv  lib.o
+    0x080061da   0x080061da   0x00000006   Code   RO         4366    i._ZN9cHwPort_N3setEj  lib.o
+    0x080061e0   0x080061e0   0x000000d4   Code   RO         1949    i._ZN9cHwPort_NC1ENS_6PortIdE  lib.o
+    0x080062b4   0x080062b4   0x00000032   Code   RO         1950    i._ZN9cHwUART_N3isrEv  lib.o
+    0x080062e6   0x080062e6   0x00000006   Code   RO         1952    i._ZNK14cHwDisplayFont12getCharWidthEv  lib.o
+    0x080062ec   0x080062ec   0x00000006   Code   RO         1953    i._ZNK14cHwDisplayFont13getCharHeightEv  lib.o
+    0x080062f2   0x080062f2   0x0000000a   Code   RO          881    i._ZdlPv            cells.o
+    0x080062fc   0x080062fc   0x00000004   Code   RO          875    i._Znaj             cells.o
+    0x08006300   0x08006300   0x00000030   Code   RO         7124    i.__ARM_fpclassify  m_wm.l(fpclassify.o)
+    0x08006330   0x08006330   0x00000010   Code   RO         6580    i.__cxa_guard_acquire  cpprt_w.l(cxa_guard_acquire.o)
+    0x08006340   0x08006340   0x00000004   Code   RO         1955    i.__cxa_pure_virtual  lib.o
+    0x08006344   0x08006344   0x0000003a   Code   RO         6717    i.__hardfp_sqrtf    m_wm.l(sqrtf.o)
+    0x0800637e   0x0800637e   0x00000002   PAD
+    0x08006380   0x08006380   0x00000238   Code   RO            4    i.__sti___8_main_cpp_sys  main.o
+    0x080065b8   0x080065b8   0x0000000e   Code   RO         6830    i._is_digit         c_w.l(__printf_wp.o)
+    0x080065c6   0x080065c6   0x00000002   PAD
+    0x080065c8   0x080065c8   0x00000218   Code   RO            5    i.main              main.o
+    0x080067e0   0x080067e0   0x0000002c   Code   RO         7088    locale$$code        c_w.l(lc_numeric_c.o)
+    0x0800680c   0x0800680c   0x0000002c   Code   RO         7135    locale$$code        c_w.l(lc_ctype_c.o)
+    0x08006838   0x08006838   0x00000010   Code   RO         4196    t._Z5RANGEIsET_S0_S0_S0_  lib.o
+    0x08006848   0x08006848   0x0000001e   Code   RO         4668    t._ZN5cFifoIN18cDevControlEncoder6tEventEE6isFullEv  lib.o
+    0x08006866   0x08006866   0x0000003e   Code   RO         4184    t._ZN5cFifoIN18cDevControlEncoder6tEventEElsERKS1_  lib.o
+    0x080068a4   0x080068a4   0x00000062   Code   RO         6695    x$fpl$d2f           fz_wm.l(d2f.o)
+    0x08006906   0x08006906   0x00000002   PAD
+    0x08006908   0x08006908   0x000002b0   Code   RO         6698    x$fpl$ddiv          fz_wm.l(ddiv.o)
+    0x08006bb8   0x08006bb8   0x0000005a   Code   RO         6705    x$fpl$dfixu         fz_wm.l(dfixu.o)
+    0x08006c12   0x08006c12   0x00000026   Code   RO         6709    x$fpl$dfltu         fz_wm.l(dflt_clz.o)
+    0x08006c38   0x08006c38   0x00000154   Code   RO         6715    x$fpl$dmul          fz_wm.l(dmul.o)
+    0x08006d8c   0x08006d8c   0x0000009c   Code   RO         6933    x$fpl$dnaninf       fz_wm.l(dnaninf.o)
+    0x08006e28   0x08006e28   0x0000000c   Code   RO         6935    x$fpl$dretinf       fz_wm.l(dretinf.o)
+    0x08006e34   0x08006e34   0x0000000a   Code   RO         7042    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x08006e3e   0x08006e3e   0x0000000a   Code   RO         6937    x$fpl$fretinf       fz_wm.l(fretinf.o)
+    0x08006e48   0x08006e48   0x00000004   Code   RO         6939    x$fpl$printf1       fz_wm.l(printf1.o)
+    0x08006e4c   0x08006e4c   0x00000000   Code   RO         6941    x$fpl$usenofp       fz_wm.l(usenofp.o)
+    0x08006e4c   0x08006e4c   0x00000485   Data   RO            9    .constdata          main.o
+    0x080072d1   0x080072d1   0x00000003   PAD
+    0x080072d4   0x080072d4   0x00000036   Data   RO          842    .constdata          cells.o
+    0x0800730a   0x0800730a   0x00000002   PAD
+    0x0800730c   0x0800730c   0x0000003c   Data   RO         2334    .constdata          lib.o
+    0x08007348   0x08007348   0x00000008   Data   RO         6789    .constdata          c_w.l(_printf_wctomb.o)
+    0x08007350   0x08007350   0x00000028   Data   RO         6818    .constdata          c_w.l(_printf_hex_int_ll_ptr.o)
+    0x08007378   0x08007378   0x00000011   Data   RO         6838    .constdata          c_w.l(__printf_flags_ss_wp.o)
+    0x08007389   0x08007389   0x00000003   PAD
+    0x0800738c   0x0800738c   0x00000094   Data   RO         7063    .constdata          c_w.l(bigflt0.o)
+    0x08007420   0x08007420   0x00000020   Data   RO         4782    .constdata__ZTV10cHwDisplay  lib.o
+    0x08007440   0x08007440   0x0000001c   Data   RO         4057    .constdata__ZTV10cHwTimer_N  lib.o
+    0x0800745c   0x0800745c   0x00000030   Data   RO         4041    .constdata__ZTV11cDevDigital  lib.o
+    0x0800748c   0x0800748c   0x00000018   Data   RO         4815    .constdata__ZTV12cDevAnalogIn  lib.o
+    0x080074a4   0x080074a4   0x00000028   Data   RO         4023    .constdata__ZTV12cHwI2Cmaster  lib.o
+    0x080074cc   0x080074cc   0x00000014   Data   RO         4077    .constdata__ZTV13cDevAnalogOut  lib.o
+    0x080074e0   0x080074e0   0x0000002c   Data   RO         4025    .constdata__ZTV14cHwI2Cmaster_N  lib.o
+    0x0800750c   0x0800750c   0x00000018   Data   RO         4075    .constdata__ZTV15cDevAnalogInADC  lib.o
+    0x08007524   0x08007524   0x00000018   Data   RO         6444    .constdata__ZTV15cHwTouch_FT6206  touch_ft6206.o
+    0x0800753c   0x0800753c   0x00000014   Data   RO         4079    .constdata__ZTV16cDevAnalogOutDAC  lib.o
+    0x08007550   0x08007550   0x0000005c   Data   RO         6189    .constdata__ZTV16cHwDisp_OTM8009A  disp_otm8009a.o
+    0x080075ac   0x080075ac   0x0000005c   Data   RO         4045    .constdata__ZTV17cHwDisplayGraphic  lib.o
+    0x08007608   0x08007608   0x00000014   Data   RO         4089    .constdata__ZTV18cDevControlEncoder  lib.o
+    0x0800761c   0x0800761c   0x0000000c   Data   RO         4095    .constdata__ZTV18cDevControlPointer  lib.o
+    0x08007628   0x08007628   0x00000048   Data   RO         4047    .constdata__ZTV18cDevDisplayGraphic  lib.o
+    0x08007670   0x08007670   0x0000005c   Data   RO         6168    .constdata__ZTV19cHwDisp_OTM8009Aram  disp_otm8009a.o
+    0x080076cc   0x080076cc   0x00000014   Data   RO         4091    .constdata__ZTV26cDevControlEncoderJoystick  lib.o
+    0x080076e0   0x080076e0   0x00000028   Data   RO         4049    .constdata__ZTV6cHwADC  lib.o
+    0x08007708   0x08007708   0x00000014   Data   RO         4790    .constdata__ZTV6cHwDAC  lib.o
+    0x0800771c   0x0800771c   0x00000010   Data   RO           91    .constdata__ZTV6cHwDSI  main.o
+    0x0800772c   0x0800772c   0x00000010   Data   RO         4773    .constdata__ZTV6cHwRTC  lib.o
+    0x0800773c   0x0800773c   0x00000028   Data   RO         4051    .constdata__ZTV8cHwADC_0  lib.o
+    0x08007764   0x08007764   0x00000014   Data   RO         4792    .constdata__ZTV8cHwDAC_0  lib.o
+    0x08007778   0x08007778   0x00000010   Data   RO         4055    .constdata__ZTV8cHwRTC_0  lib.o
+    0x08007788   0x08007788   0x0000001c   Data   RO         4015    .constdata__ZTV8cHwTimer  lib.o
+    0x080077a4   0x080077a4   0x00000018   Data   RO         4806    .constdata__ZTV8cHwTouch  lib.o
+    0x080077bc   0x080077bc   0x00000020   Data   RO         4027    .constdata__ZTV9cHwPort_N  lib.o
+    0x080077dc   0x080077dc   0x0000003c   Data   RO         4021    .constdata__ZTVN12cHwI2Cmaster6DeviceE  lib.o
+    0x08007818   0x08007818   0x0000000c   Data   RO         4769    .constdata__ZTVN5cList4ItemE  lib.o
+    0x08007824   0x08007824   0x0000001c   Data   RO         4771    .constdata__ZTVN7cHwPort3PinE  lib.o
+    0x08007840   0x08007840   0x00000020   Data   RO         7167    Region$$Table       anon$$obj.o
+    0x08007860   0x08007860   0x0000001c   Data   RO         7087    locale$$data        c_w.l(lc_numeric_c.o)
+    0x0800787c   0x0800787c   0x00000110   Data   RO         7134    locale$$data        c_w.l(lc_ctype_c.o)
+    0x0800798c   0x0800798c   0x00000004   Data   RO           13    .init_array         main.o
+    0x08007990   0x0800798c   0x00000000   Data   RO         6575    .init_array         c_w.l(init_aeabi.o)
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20020000, Load base: 0x08007984, Size: 0x00002648, Max: 0x00005c00, ABSOLUTE, COMPRESSED[0x00000174])
+    Execution Region RW_IRAM1 (Exec base: 0x20020000, Load base: 0x08007990, Size: 0x00002648, Max: 0x00005c00, ABSOLUTE, COMPRESSED[0x00000174])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -6006,7 +6006,7 @@ Image component sizes
        380          0          0          0          0       5112   controller.o
       3056        432        184          0          0      21804   disp_otm8009a.o
        210         24          0          8          0       4696   field.o
-       256         24          0          0          0       3097   game.o
+       268         24          0          0          0       3105   game.o
       7672        530        892        116      15560     217174   lib.o
       2132        198       1177        401        510     863000   main.o
        316         58          0         20          0       4096   page_game.o
@@ -6022,7 +6022,7 @@ Image component sizes
        138          8         24          0          0       4264   touch_ft6206.o
 
     ----------------------------------------------------------------------
-     18964       1700       2872        772      24264    1946108   Object Totals
+     18976       1700       2872        772      24264    1946116   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         38          0          5          3          2          0   (incl. Padding)
 
@@ -6166,15 +6166,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     27720       2254       3388        772      24588    1927940   Grand Totals
-     27720       2254       3388        372      24588    1927940   ELF Image Totals (compressed)
-     27720       2254       3388        372          0          0   ROM Totals
+     27732       2254       3388        772      24588    1927948   Grand Totals
+     27732       2254       3388        372      24588    1927948   ELF Image Totals (compressed)
+     27732       2254       3388        372          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                31108 (  30.38kB)
+    Total RO  Size (Code + RO Data)                31120 (  30.39kB)
     Total RW  Size (RW Data + ZI Data)             25360 (  24.77kB)
-    Total ROM Size (Code + RO Data + RW Data)      31480 (  30.74kB)
+    Total ROM Size (Code + RO Data + RW Data)      31492 (  30.75kB)
 
 ==============================================================================
 
